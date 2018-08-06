@@ -1,4 +1,4 @@
-<p style="text-align: center;"><img class="alignnone wp-image-35" src="https://devislandblog.files.wordpress.com/2018/04/botframeworkcover.png" alt="" width="440" height="330" /></p>
+Ôªø<p style="text-align: center;"><img class="alignnone wp-image-35" src="https://devislandblog.files.wordpress.com/2018/04/botframeworkcover.png" alt="" width="440" height="330" /></p>
 
 <h3><strong>Short introduction</strong></h3>
 Microsoft Bot Framework enables developers to create intelligent applications to communicate with users. In this article I would like to describe what exactly Microsoft Bot Framework offers and what are its key concepts and present how to create simple Bot in Azure portal.
@@ -7,14 +7,14 @@ Bot is an application which enables users to communicate with it with text, card
 
 Basically there are two types of bots:
 
-a. Simple bot with pattern matching ñ user sends message, bot analysis request and check whether there is a possible response
+a. Simple bot with pattern matching ‚Äì user sends message, bot analysis request and check whether there is a possible response
 
 b. More sophisticated bot which is using artificial intelligence including advanced connections and state tracking
 
 Sample conversation can look like:
 
 <img class="aligncenter wp-image-37 size-medium" src="https://devislandblog.files.wordpress.com/2018/04/conversationsample.png?w=300" alt="" width="300" height="245" />
-<h3><strong>Dictionary</strong><strong>†</strong></h3>
+<h3><strong>Dictionary</strong><strong>¬†</strong></h3>
 <strong>Microsoft Azure</strong>
 
 Microsoft Cloud Platform which enables set of cloud services that developers and IT professionals use to build, deploy, and manage applications through our global network of datacenters. One of available services is Bot Service described below.
@@ -66,17 +66,17 @@ The <a href="https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debu
 
 There are two possible ways to create the Bot:
 
-a. Using ready-to-go template available in Azure portal ñ with this approach you need to setup new Bot Service in Azure portal and at the end you have access to Bot source code for further modifications (if needed)
+a. Using ready-to-go template available in Azure portal ‚Äì with this approach you need to setup new Bot Service in Azure portal and at the end you have access to Bot source code for further modifications (if needed)
 b. Writing your Bot from scratch in Visual Studio using Bot Builder SDK and then publish it to Azure
-<strong>†</strong>
+<strong>¬†</strong>
 
 <strong>Create Bot with Bot Service available through Microsoft Azure portal</strong>
 
 In this section I would like to present how to create Bot through Microsoft Azure portal using Bot Service and App Service Plan.
 
 a. Sign in to Azure <a href="http://portal.azure.com">portal</a> with your Microsoft Account (Azure subscription is required here)
-b. Click ìnewî and select ìAI + Cognitive Servicesî
-c. Select ìWeb App Botî
+b. Click ‚Äúnew‚Äù and select ‚ÄúAI + Cognitive Services‚Äù
+c. Select ‚ÄúWeb App Bot‚Äù
 
 <img class="alignnone size-medium wp-image-41 aligncenter" src="https://devislandblog.files.wordpress.com/2018/04/azurebotservice1.png?w=300" alt="" width="300" height="242" />
 
@@ -84,11 +84,11 @@ d. Type the unique name of your bot, select subscription, resource group, locati
 
 <img class="alignnone size-medium wp-image-52 aligncenter" src="https://devislandblog.files.wordpress.com/2018/04/azurebotservice2.png?w=213" alt="" width="213" height="300" />
 
-e. In the next section you can select bot template. Template is start point for your bot. Basing on your choice selected source code is selected for bot which you can develop further with Bot Builder SDK. Select ìbasicî template.
+e. In the next section you can select bot template. Template is start point for your bot. Basing on your choice selected source code is selected for bot which you can develop further with Bot Builder SDK. Select ‚Äúbasic‚Äù template.
 
 <img class="size-medium wp-image-53 aligncenter" src="https://devislandblog.files.wordpress.com/2018/04/azurebotservice3.png?w=300" alt="" width="300" height="181" />
 
-f. Last thing is to setup App Service plan, create new Azure Storage (to store Bot data) and select location for Application Insights (to monitor performance of the Bot). At the end click ìCreateî button.
+f. Last thing is to setup App Service plan, create new Azure Storage (to store Bot data) and select location for Application Insights (to monitor performance of the Bot). At the end click ‚ÄúCreate‚Äù button.
 
 <img class="size-medium wp-image-55 aligncenter" src="https://devislandblog.files.wordpress.com/2018/04/azurebotservice4.png?w=200" alt="" width="200" height="300" />
 
@@ -96,7 +96,7 @@ f. Last thing is to setup App Service plan, create new Azure Storage (to store B
 
 &nbsp;
 
-g. Bot is ready for tests. Select ìTest in Web Chatî section.
+g. Bot is ready for tests. Select ‚ÄúTest in Web Chat‚Äù section.
 
 <img class="size-medium wp-image-58 aligncenter" src="https://devislandblog.files.wordpress.com/2018/04/azurebotservice6.png?w=300" alt="" width="300" height="146" />
 
@@ -104,7 +104,7 @@ g. Bot is ready for tests. Select ìTest in Web Chatî section.
 
 <img class="size-medium wp-image-61 aligncenter" src="https://devislandblog.files.wordpress.com/2018/04/azurebotservice8.png?w=300" alt="" width="300" height="197" />
 
-Of course you have full access to Bot source code. Select ìBuildî tab.
+Of course you have full access to Bot source code. Select ‚ÄúBuild‚Äù tab.
 
 a. You can open code in online editor:
 
@@ -124,4 +124,4 @@ Another nice feature is configuration where you can set Bot icon, title and desc
 <h3><strong>Wrapping up</strong></h3>
 Microsoft Bot Framework enables creating smart applications which can communicate with users with natural conversation flow. Developers are able to write specific functionality of bots using Bot Builder SDK available for NET C# and Node.js and host their bots on Microsoft Azure platform. If you would like to read more please refer to official <a href="https://docs.microsoft.com/en-us/azure/bot-service/">documentation.</a>
 
-In the next part I will show how to extend bot functionality and discuss botís source code opened in Visual Studio.
+In the next part I will show how to extend bot functionality and discuss bot‚Äôs source code opened in Visual Studio.
