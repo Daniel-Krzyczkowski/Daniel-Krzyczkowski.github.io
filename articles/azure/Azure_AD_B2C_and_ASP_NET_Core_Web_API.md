@@ -110,13 +110,11 @@ Add "Microsoft.AspNetCore.Authentication.JwtBearer" NuGet package:
 Then its time to add Azure B2C settings in "appsettings.json" file:
 
 [code language="csharp"]
-
 "AzureAdB2C": {
 "Tenant": "devisland.onmicrosoft.com",
 "ClientId": "93f4e299-xxxxx-4feb-8b0c-xxxxxxxxxxx",
 "Policy": "B2C_1_SignUpPolicy"
 }
-
 [/code]
 
 Copy "Tenant", "ClientId "and "Policy" from Azure portal.
