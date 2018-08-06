@@ -1,4 +1,4 @@
-<p style="text-align:center;"><img class="alignnone wp-image-35" src="https://devislandblog.files.wordpress.com/2018/04/botframeworkcover.png" alt="" width="440" height="330" /></p>
+<p style="text-align: center;"><img class="alignnone wp-image-35" src="https://devislandblog.files.wordpress.com/2018/04/botframeworkcover.png" alt="" width="440" height="330" /></p>
 
 <h3><strong>Short introduction</strong></h3>
 Microsoft Bot Framework enables developers to create intelligent applications to communicate with users. In this article I would like to describe what exactly Microsoft Bot Framework offers and what are its key concepts and present how to create simple Bot in Azure portal.
