@@ -3,4 +3,4 @@
 
 ### Articles
 
-[Link](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/images/logo.png) and ![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/images/logo.png)
+[Link](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/images/logo.png) and ![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/images/logo.png?raw=true)
