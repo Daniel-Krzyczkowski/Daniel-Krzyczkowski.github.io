@@ -1,4 +1,4 @@
-# Welcome on Dev Island blog
+# Welcome on Dev Island - this is jump start series
 
 
 ### Articles
