@@ -7,4 +7,4 @@
 
 
 ## Article number one - jump start
-[Article number one](#)
+[Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
