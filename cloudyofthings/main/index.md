@@ -8,10 +8,11 @@ Cloudy of Things is my special articles and code samples series related with Int
 ## Table of content
 
 
-[### 1. Internet of Things with Microsoft Azure cloud](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
+### 1. Internet of Things with Microsoft Azure cloud
+[Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
 ### 2. IoT device integration with Microsoft Azure IoT Hub
-[Open](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
+[Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
 ### 3. IoT device security with Microsoft Azure cloud
-[Open](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
+[Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
