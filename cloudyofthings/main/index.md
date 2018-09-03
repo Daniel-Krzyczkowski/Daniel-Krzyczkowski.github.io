@@ -6,14 +6,14 @@
 ## Table of content
 
 
-### :nut_and_bolt: 1. Article number one
+### :file_folder: 1. Article number one
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
-### :nut_and_bolt: 2. Article number two
+### :file_folder: 2. Article number two
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
-### :nut_and_bolt: 3. Article number three
+### :file_folder: 3. Article number three
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
-### :nut_and_bolt: 4. Article number four
+### :file_folder: 4. Article number four
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
