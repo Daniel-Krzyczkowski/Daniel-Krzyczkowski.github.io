@@ -6,14 +6,14 @@
 ## Table of content
 
 
-### Article number one
+### 1. Article number one
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
-### Article number two
+### 2. Article number two
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
-### Article number three
+### 3. Article number three
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
-### Article number four
+### 4. Article number four
 [Article 1](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
