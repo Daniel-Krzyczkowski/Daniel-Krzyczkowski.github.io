@@ -12,6 +12,8 @@ In this article I would like to present how to detect motion with Raspbery Pi 2 
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetector.png" alt="Solution diagram"/>
 </p>
 
+Raspbery Pi 2 device with Windows IoT core is connected to the Azure IoT Hub. This enables to send messages from device to the cloud.
+
 ## Demo
 Aaa
 
