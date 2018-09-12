@@ -4,7 +4,7 @@
 ![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
 
 ## Use case
-In this article I would like to present how to detect motion with Raspbery Pi 2 device with Windows IoT Core system connected to Microsoft Azure cloud.
+In this article I would like to present how to detect motion with Raspbery Pi 2 device running Windows IoT Core system, connected to Microsoft Azure cloud. Once motion is detected, there is SMS sent to my cell phone. Once you read this article you will have knowledge about connecting IoT Core device with Azure cloud, which sensors should be used and how to properly integrate services in Azure.
 
 ## Solution
 Aaa
