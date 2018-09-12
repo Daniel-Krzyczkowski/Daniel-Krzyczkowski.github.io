@@ -8,7 +8,9 @@ In this article I would like to present how to detect motion with Raspbery Pi 2 
 
 ## Solution
 
+<p align="center">
 ![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetector.png?raw=true)
+</p>
 
 ## Demo
 Aaa
