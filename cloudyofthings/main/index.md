@@ -8,5 +8,5 @@ Cloudy of Things is my special articles and code samples series related with Int
 ## Table of content
 
 
-### 1. Motion detector - automatic alerts with Windows IoT Core and Microsoft Azure cloud
+### 1. Motion detector - automatic SMS alerts with Windows IoT Core and Microsoft Azure cloud
 [Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
