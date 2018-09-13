@@ -267,15 +267,15 @@ This is my final project:
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure12.PNG?raw=true" alt="MotionDetectorAzure12.png"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure12.JPG?raw=true" alt="MotionDetectorAzure12.JPG"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure13.PNG?raw=true" alt="MotionDetectorAzure13.png"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure13.JPG?raw=true" alt="MotionDetectorAzure13.JPG"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure14.PNG?raw=true" alt="MotionDetectorAzure14.png"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure14.JPG?raw=true" alt="MotionDetectorAzure14.JPG"/>
 </p>
 
 
