@@ -122,6 +122,11 @@ AzureIoTHubService class:
     }
 ```
 
+### Microsoft Azure services configuration
+In this section you will find which services were used in the Azure cloud and how to configure them.
+
+
+
 ## Demo
 Aaa
 
