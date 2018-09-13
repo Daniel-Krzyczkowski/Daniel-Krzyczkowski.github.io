@@ -182,6 +182,44 @@ We want to have Azure Function which will send SMS notifications using Twilio AP
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure10.PNG?raw=true" alt="MotionDetectorAzure10.png"/>
 </p>
 
+Create HTTP Trigger Function App. Below I present the code you should use:
+
+```
+public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, ILogger logger)
+{
+    logger.LogInformation("C# HTTP trigger function processed a request.");
+
+    string content = await req.Content.ReadAsStringAsync();
+
+    logger.LogInformation("C# HTTP trigger function processed a request: " + content);
+
+    dynamic array = Newtonsoft.Json.JsonConvert.DeserializeObject(content);
+
+    foreach(var json in array)
+    {
+        logger.LogInformation($"Body: room number={json.RoomNumber}; datetime={json.EventProcessedUtcTime}; device={json.IoTHub.ConnectionDeviceId}");
+    }
+    
+    string accountSid = ConfigurationManager.AppSettings["TwilioAccountSid"];
+    string authToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
+    string fromNumber = ConfigurationManager.AppSettings["FromNumber"];
+    string toNumber = ConfigurationManager.AppSettings["ToNumber"];
+
+        TwilioClient.Init(accountSid, authToken);
+
+        var message = MessageResource.Create(
+            body: "MOTION DETECTED",
+            from: new PhoneNumber(fromNumber),
+            to: new PhoneNumber(toNumber)
+        );
+
+    return req.CreateResponse(HttpStatusCode.OK);
+}
+```
+
+### Azure Stream Analytics Job input and output configuration
+Aaa
+
 ## Demo
 Aaa
 
