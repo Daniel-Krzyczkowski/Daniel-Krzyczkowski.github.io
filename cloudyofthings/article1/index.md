@@ -128,10 +128,21 @@ In this section you will find which services were used in the Azure cloud and ho
 Azure IoT Hub
 Sign in to the portal and search for IoT Hub:
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure1.PNG?raw=true" alt="MotionDetectorAzure1.png"/>
+</p>
+
 Then type the name of the resource group (we will have all Azure services collected here) and name of your IoT Hub:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure2.PNG?raw=true" alt="MotionDetectorAzure2.png"/>
+</p>
 
 You can select either basic or free tier for tests. In the summary blade click create:
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure3.PNG?raw=true" alt="MotionDetectorAzure3.png"/>
+</p>
 
 ## Demo
 Aaa
