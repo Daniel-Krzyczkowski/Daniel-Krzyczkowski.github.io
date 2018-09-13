@@ -239,6 +239,10 @@ One important thing here - you should add project.json file to add two NuGet pac
 ### Azure Stream Analytics Job input and output configuration
 Now get back to the Stream Analytics Job in the Azure portal and click input tab. You should select previously created IoT Hub as an input. Then got to the output tab and select above Azure Function App. Last step is to update Query with below code:
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure8.PNG?raw=true" alt="MotionDetectorAzure8.png"/>
+</p>
+
 ```
 SELECT
     *
@@ -247,6 +251,8 @@ INTO
 FROM
     input
 ```
+
+We want to take whole data from the Azure IoT Hub and pass it to the Function App.
 
 ## Demo
 Aaa
