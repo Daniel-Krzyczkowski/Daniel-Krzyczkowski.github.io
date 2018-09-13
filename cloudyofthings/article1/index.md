@@ -168,6 +168,11 @@ Now we have to create Stream Analytics Job to get data from the Azure IoT Hub an
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure7.PNG?raw=true" alt="MotionDetectorAzure7.png"/>
 </p>
 
+We will configure Stream Analytics later in the article.
+
+### Azure Function App
+Aaa
+
 ## Demo
 Aaa
 
