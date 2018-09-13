@@ -259,7 +259,9 @@ We want to take whole data from the Azure IoT Hub and pass it to the Function Ap
 Important - remember to start Stream Analytics Job.
 
 ## Demo
-Aaa
+Once you launch the UWP application on the Raspberry Pi device you should receive SMS if motion was detected.
+This is my final project:
+
 
 ## Summary
 Aaa
