@@ -13,6 +13,7 @@ In this article I would like to present how to detect motion with Raspberry Pi 2
 </p>
 
 Raspberry Pi 2 device with Windows IoT Core system is connected to the Azure IoT Hub. This enables to send messages from device to the cloud. In this example motion sensor is used and once it detects motion, information is sent to the Azure. At the end I receive SMS notification. 
+
 Below there is flow presented:
 1. Motion sensor connected to the Raspberry Pi detects motion
 2. Raspberry Pi sends information to the Azure IoT Hub
