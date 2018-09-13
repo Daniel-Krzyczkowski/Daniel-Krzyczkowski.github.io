@@ -14,7 +14,7 @@ If you do not not how to setup Windows IoT Core device, please refer to my blog 
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetector.png?raw=true" alt="Solution diagram"/>
 </p>
 
-Raspberry Pi 2 device with Windows IoT Core system is connected to the Azure IoT Hub. This enables to send messages from device to the cloud. In this example motion sensor is used and once it detects motion, information is sent to the Azure. At the end I receive SMS notification. 
+Raspberry Pi 2 device with Windows IoT Core system is connected to the Azure IoT Hub. This enables to send messages from device to the cloud. In this example motion sensor (standard PIR sensor HC-SR501) is used and once it detects motion, information is sent to the Azure. At the end I receive SMS notification. 
 
 Below there is flow presented:
 1. Motion sensor connected to the Raspberry Pi detects motion
