@@ -33,7 +33,69 @@ In this section you will find how to create solution described above.
 ### Motion Detector UWP application for Windows IoT Core
 To detect motion from the sensor connected to the Raspberry Pi I wrote a Universal Windows Platform application. Whole source code you can find on my GitHub here.
 
-The most important part is in the MainPage class. We have to setup pins detection correctly.
+The most important part is in the MainPage class. We have to setup Gpio pin correctly:
+
+```
+ public sealed partial class MainPage : Page
+    {
+
+        private GpioController gpio;
+        private GpioPin sensor;
+        private AzureIoTHubService _azureIoTHubService;
+
+        public MainPage()
+        {
+            this.InitializeComponent();
+            this.InitializeComponent();
+
+            InitGPIO();
+            InitAzureIoTHub();
+        }
+
+        private void InitAzureIoTHub()
+        {
+            _azureIoTHubService = new AzureIoTHubService();
+        }
+
+        private void InitGPIO()
+        {
+            gpio = GpioController.GetDefault();
+            if (gpio == null)
+                return;
+            GpioStatus.Text = "Gpio initialized";
+
+            sensor = gpio.OpenPin(16);
+            sensor.SetDriveMode(GpioPinDriveMode.Input);
+            sensor.ValueChanged += Sensor_ValueChanged;
+        }
+
+        private async void Sensor_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs args)
+        {
+            if (args.Edge == GpioPinEdge.RisingEdge)
+            {
+                System.Diagnostics.Debug.WriteLine("MOTION DETECTED");
+
+                await _azureIoTHubService.SendDataToAzure(new Model.MotionEvent());
+
+                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                 () =>
+                 {
+                     textPlaceHolder.Text = "MOTION DETECTED";
+                 });
+            }
+
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("NO MOTION DETECTED");
+                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                 () =>
+                 {
+                     textPlaceHolder.Text = "NO MOTION DETECTED";
+                 });
+            }
+        }
+    }
+```
 
 ## Demo
 Aaa
