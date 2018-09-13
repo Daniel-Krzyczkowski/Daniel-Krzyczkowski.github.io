@@ -160,6 +160,9 @@ Once device is displayed on the list, click it and copy connection string with p
 ### Azure Stream Analytics Job
 Now we have to create Stream Analytics Job to get data from the Azure IoT Hub and pass it to the Azure Function. In the Azure portal search for Stream Analytics Job. Use the same resource group you created for the Azure IoT Hub. Type the name (feel free here) and do not change rest of proposed configuration:
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure6.PNG?raw=true" alt="MotionDetectorAzure6.png"/>
+</p>
 
 ## Demo
 Aaa
