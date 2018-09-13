@@ -262,6 +262,21 @@ Important - remember to start Stream Analytics Job.
 Once you launch the UWP application on the Raspberry Pi device you should receive SMS if motion was detected.
 This is my final project:
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure11.PNG?raw=true" alt="MotionDetectorAzure11.png"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure12.PNG?raw=true" alt="MotionDetectorAzure12.png"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure13.PNG?raw=true" alt="MotionDetectorAzure13.png"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure14.PNG?raw=true" alt="MotionDetectorAzure14.png"/>
+</p>
 
 ## Summary
 Aaa
