@@ -6,6 +6,8 @@
 ## Use case
 In this article I would like to present how to detect motion with Raspberry Pi 2 device running Windows IoT Core system, connected to Microsoft Azure cloud. Once motion is detected, there is SMS sent to my cell phone. Once you read this article you will have knowledge about connecting IoT Core device with Azure cloud, which sensors should be used and how to properly integrate services in Azure.
 
+If you do not not how to setup Windows IoT Core device, please refer to my blog post article [here](https://devislandblog.wordpress.com/2018/08/14/windows-10-iot-core-device-connected-to-the-microsoft-azure-cloud/)
+
 ## Solution
 
 <p align="center">
@@ -174,8 +176,92 @@ We will configure Stream Analytics later in the article.
 We want to have Azure Function which will send SMS notifications using Twilio API. In the Azure portal search for Function App. Use proposed configuration but remember to create it in the same resource group where Azure IoT Hub and Stream Analytics were created:
 
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure9.PNG?raw=true" alt="MotionDetectorAzure9.png"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure10.PNG?raw=true" alt="MotionDetectorAzure10.png"/>
+</p>
+
+Create HTTP Trigger Function App. Below I present the code you should use:
+
+```
+public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, ILogger logger)
+{
+    logger.LogInformation("C# HTTP trigger function processed a request.");
+
+    string content = await req.Content.ReadAsStringAsync();
+
+    logger.LogInformation("C# HTTP trigger function processed a request: " + content);
+
+    dynamic array = Newtonsoft.Json.JsonConvert.DeserializeObject(content);
+
+    foreach(var json in array)
+    {
+        logger.LogInformation($"Body: room number={json.RoomNumber}; datetime={json.EventProcessedUtcTime}; device={json.IoTHub.ConnectionDeviceId}");
+    }
+    
+    string accountSid = ConfigurationManager.AppSettings["TwilioAccountSid"];
+    string authToken = ConfigurationManager.AppSettings["TwilioAuthToken"];
+    string fromNumber = ConfigurationManager.AppSettings["FromNumber"];
+    string toNumber = ConfigurationManager.AppSettings["ToNumber"];
+
+        TwilioClient.Init(accountSid, authToken);
+
+        var message = MessageResource.Create(
+            body: "MOTION DETECTED",
+            from: new PhoneNumber(fromNumber),
+            to: new PhoneNumber(toNumber)
+        );
+
+    return req.CreateResponse(HttpStatusCode.OK);
+}
+```
+
+Values for TwlioClient are taken from the Function App Settings. You should have active Twilio account - its free and you can setup test number from which SMS will be sent for free. You can find full instruction [here](https://www.twilio.com/try-twilio).
+Once you setup Twilio test account you should obtaind TwilioAccountSid, TwilioAuthToken, FromNumber, ToNumber values. Copy them to the Function App settings in the Azure portal.
+
+One important thing here - you should add project.json file to add two NuGet packages. Below I present project.json file content:
+
+```
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Newtonsoft.Json": "11.0.2",
+        "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+        "Twilio": "5.16.4"
+      }
+    }
+   }
+}
+```
+
+### Azure Stream Analytics Job input and output configuration
+Now get back to the Stream Analytics Job in the Azure portal and click input tab. You should select previously created IoT Hub as an input. Then got to the output tab and select above Azure Function App. Last step is to update Query with below code:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure8.PNG?raw=true" alt="MotionDetectorAzure8.png"/>
+</p>
+
+```
+SELECT
+    *
+INTO
+    output
+FROM
+    input
+```
+
+We want to take whole data from the Azure IoT Hub and pass it to the Function App. 
+
+Important - remember to start Stream Analytics Job.
+
 ## Demo
-Aaa
+Once you launch the UWP application on the Raspberry Pi device you should receive SMS if motion was detected.
+This is my final project:
+
 
 ## Summary
 Aaa
