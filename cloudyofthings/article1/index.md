@@ -144,6 +144,15 @@ You can select either basic or free tier for tests. In the summary blade click c
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure3.PNG?raw=true" alt="MotionDetectorAzure3.png"/>
 </p>
 
+Open IoT devices tab and create new device - type the name of registered device (for instane MyRaspberryPi):
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure4.PNG?raw=true" alt="MotionDetectorAzure4.png"/>
+</p>
+
+Once device is displayed on the list, click it and copy connection string:
+
+
 ## Demo
 Aaa
 
