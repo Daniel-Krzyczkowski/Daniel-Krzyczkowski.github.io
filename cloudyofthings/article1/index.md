@@ -33,7 +33,7 @@ In this section you will find how to create solution described above.
 ### Motion Detector UWP application for Windows IoT Core
 To detect motion from the sensor connected to the Raspberry Pi I wrote a Universal Windows Platform application. Whole source code you can find on my GitHub here.
 
-The most important part is in the MainPage class. We have to setup Gpio pin correctly:
+The most important part is in the MainPage class. We have to setup Gpio pin correctly. In this case Gpio pin shuld be opened under pin number 16 mapped from the Raspberry Pi.
 
 ```
  public sealed partial class MainPage : Page
