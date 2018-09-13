@@ -21,6 +21,12 @@ Below there is flow presented:
 4. Stream Analytics calls Azure Function App (as its output for the Stream Analytics)
 5. Azure Function App calls Twilio API to send SMS notification
 
+Here is how motion sensor should be connected:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorSchema.png?raw=true" alt="Solution diagram"/>
+</p>
+
 ## Code and Configuration
 In this section you will find how to create solution described above.
 
