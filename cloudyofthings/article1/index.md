@@ -6,6 +6,8 @@
 ## Use case
 In this article I would like to present how to detect motion with Raspberry Pi 2 device running Windows IoT Core system, connected to Microsoft Azure cloud. Once motion is detected, there is SMS sent to my cell phone. Once you read this article you will have knowledge about connecting IoT Core device with Azure cloud, which sensors should be used and how to properly integrate services in Azure.
 
+If you do not not how to setup Windows IoT Core device, please refer to my blog post article [here](https://devislandblog.wordpress.com/2018/08/14/windows-10-iot-core-device-connected-to-the-microsoft-azure-cloud/)
+
 ## Solution
 
 <p align="center">
