@@ -123,8 +123,14 @@ AzureIoTHubService class:
 ```
 
 ### Microsoft Azure services configuration
-In this section you will find which services were used in the Azure cloud and how to configure them.
+In this section you will find which services were used in the Azure cloud and how to configure them. I assume that you have active Azure subscription.
 
+Azure IoT Hub
+Sign in to the portal and search for IoT Hub:
+
+Then type the name of the resource group (we will have all Azure services collected here) and name of your IoT Hub:
+
+You can select either basic or free tier for tests. In the summary blade click create:
 
 
 ## Demo
