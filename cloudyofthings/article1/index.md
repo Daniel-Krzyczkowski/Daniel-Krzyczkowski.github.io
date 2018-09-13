@@ -99,7 +99,7 @@ The most important part is in the MainPage class. We have to setup Gpio pin corr
     }
 ```
 
-AzureIoTHubService class:
+AzureIoTHubService class. We are sending MotionEvent with fake room number where motion was detected:
 
 ```
     public class AzureIoTHubService
