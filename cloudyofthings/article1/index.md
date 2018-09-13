@@ -31,7 +31,7 @@ Here is how motion sensor should be connected:
 In this section you will find how to create solution described above.
 
 ### Motion Detector UWP application for Windows IoT Core
-To detect motion from the sensor connected to the Raspberry Pi I wrote a Universal Windows Platform application. Whole source code you can find on my GitHub here.
+To detect motion from the sensor connected to the Raspberry Pi I wrote a Universal Windows Platform application. Whole source code you can find on my GitHub [here](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/tree/master/MotionDetector)
 
 The most important part is in the MainPage class. We have to setup Gpio pin correctly. We have to set DriveMode to "Input" so we would like to receive signal from the motion sensor. Then we hava ValueChanged event raised once there is edge change detected. If its "RisingEdge" it means that motion was detected - then we are using AzureIoTHubService instance to send this information to the Azure. AzureIoTHubService source code is presented below.
 
