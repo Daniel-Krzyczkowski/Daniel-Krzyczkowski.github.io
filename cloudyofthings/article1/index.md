@@ -252,7 +252,8 @@ FROM
     input
 ```
 
-We want to take whole data from the Azure IoT Hub and pass it to the Function App.
+We want to take whole data from the Azure IoT Hub and pass it to the Function App. 
+Important - Remember to start Stream Analytics Job.
 
 ## Demo
 Aaa
