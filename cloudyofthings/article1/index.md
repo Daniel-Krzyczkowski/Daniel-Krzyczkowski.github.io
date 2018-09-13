@@ -174,6 +174,14 @@ We will configure Stream Analytics later in the article.
 We want to have Azure Function which will send SMS notifications using Twilio API. In the Azure portal search for Function App. Use proposed configuration but remember to create it in the same resource group where Azure IoT Hub and Stream Analytics were created:
 
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure9.PNG?raw=true" alt="MotionDetectorAzure9.png"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure10.PNG?raw=true" alt="MotionDetectorAzure10.png"/>
+</p>
+
 ## Demo
 Aaa
 
