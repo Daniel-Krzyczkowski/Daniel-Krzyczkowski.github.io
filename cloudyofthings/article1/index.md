@@ -171,7 +171,8 @@ Now we have to create Stream Analytics Job to get data from the Azure IoT Hub an
 We will configure Stream Analytics later in the article.
 
 ### Azure Function App
-Aaa
+We want to have Azure Function which will send SMS notifications using Twilio API. In the Azure portal search for Function App. Use proposed configuration but remember to create it in the same resource group where Azure IoT Hub and Stream Analytics were created:
+
 
 ## Demo
 Aaa
