@@ -217,6 +217,25 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, ILogge
 }
 ```
 
+Values for TwlioClient are taken from the Function App Settings. You should have active Twilio account - its free and you can setup test number from which SMS will be sent for free. You can find full instruction [here](https://www.twilio.com/try-twilio).
+Once you setup Twilio test account you should obtaind TwilioAccountSid, TwilioAuthToken, FromNumber, ToNumber values. Copy them to the Function App settings in the Azure portal.
+
+One important thing here - you should add project.json file to add two NuGet packages. Below I present project.json file content:
+
+```
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Newtonsoft.Json": "11.0.2",
+        "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+        "Twilio": "5.16.4"
+      }
+    }
+   }
+}
+```
+
 ### Azure Stream Analytics Job input and output configuration
 Aaa
 
