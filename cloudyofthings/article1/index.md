@@ -97,6 +97,31 @@ The most important part is in the MainPage class. We have to setup Gpio pin corr
     }
 ```
 
+AzureIoTHubService:
+
+```
+    public class AzureIoTHubService
+    {
+        private DeviceClient _deviceClient;
+
+        public AzureIoTHubService()
+        {
+            _deviceClient = DeviceClient.CreateFromConnectionString("<<Azure IoT Hub Connection String>>", TransportType.Http1);
+        }
+
+        public async Task<bool> SendDataToAzure(MotionEvent motionEvent)
+        {
+            var messageString = JsonConvert.SerializeObject(motionEvent);
+            var message = new Message(Encoding.ASCII.GetBytes(messageString));
+
+            await _deviceClient.SendEventAsync(message);
+
+            Debug.WriteLine("{0} > Sending telemetry: {1}", DateTime.Now, messageString);
+            return true;
+        }
+    }
+```
+
 ## Demo
 Aaa
 
