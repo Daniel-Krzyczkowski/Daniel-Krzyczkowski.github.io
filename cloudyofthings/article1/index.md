@@ -21,6 +21,11 @@ Below there is flow presented:
 4. Stream Analytics calls Azure Function App (as its output for the Stream Analytics)
 5. Azure Function App calls Twilio API to send SMS notification
 
+## Code and Configuration
+In this section you will find how to create solution described above.
+
+###Motion Detector UWP application for Windows IoT Core
+To detect motion from the sensor connected to the Raspberry Pi I wrote a Universal Windows Platform application. Whole source code you can find on my GitHub here.
 
 ## Demo
 Aaa
