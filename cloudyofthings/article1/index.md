@@ -97,7 +97,7 @@ The most important part is in the MainPage class. We have to setup Gpio pin corr
     }
 ```
 
-AzureIoTHubService:
+AzureIoTHubService class:
 
 ```
     public class AzureIoTHubService
