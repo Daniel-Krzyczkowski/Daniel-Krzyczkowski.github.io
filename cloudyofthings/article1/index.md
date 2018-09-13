@@ -12,7 +12,13 @@ In this article I would like to present how to detect motion with Raspberry Pi 2
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetector.png" alt="Solution diagram"/>
 </p>
 
-Raspberry Pi 2 device with Windows IoT core is connected to the Azure IoT Hub. This enables to send messages from device to the cloud.
+Raspberry Pi 2 device with Windows IoT Core system is connected to the Azure IoT Hub. This enables to send messages from device to the cloud. In this example motion sensor is used and once it detects motion, information is sent to the Azure. At the end I receive SMS notification. Below there is flow presented:
+1. Motion sensor connected to the Raspberry Pi detects motion
+2. Raspberry Pi sends information to the Azure IoT Hub
+3. Azure Stream Analytics detects new data from Azure IoT Hub (which is input for the Stream Analytics)
+4. Stream Analytics calls Azure Function App (as its output for the Stream Analytics)
+5. Azure Function App calls Twilio API to send SMS notification
+
 
 ## Demo
 Aaa
