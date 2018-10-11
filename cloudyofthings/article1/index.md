@@ -248,7 +248,7 @@ One important thing here - you should add project.json file to add two NuGet pac
 
 ### Azure Function IoTHubTrigger
 
-Here I would like to say thanks to [Stefan Wick](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/issues/1) from Microsoft for a great hint!
+##### Here I would like to say thanks to [Stefan Wick](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/issues/1) from Microsoft for a great hint!
 
 As mentioned in the previous section with Azure Stream Analytics you can also use IoTHubTrigger to process the messages sent from the device to the Azure IoT Hub. Below I presented the steps how to configure IoTHubTrigger.
 
