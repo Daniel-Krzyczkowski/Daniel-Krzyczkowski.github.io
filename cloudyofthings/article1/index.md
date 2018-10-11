@@ -165,7 +165,7 @@ Once device is displayed on the list, click it and copy connection string with p
 
 ### Azure Stream Analytics Job
 
-##### IMPORTANT - use Stream Analytics for the further data analysis but you can also use simple solution with IoTHubTrigger presented in the next section. Here I would like to say thanks to [Stefan Wick](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/issues/1) from Microsoft for a great hint!
+##### IMPORTANT - use Stream Analytics for the further data analysis but you can also use simple solution with IoTHubTrigger presented further in the article.
 
 Now we have to create Stream Analytics Job to get data from the Azure IoT Hub and pass it to the Azure Function. In the Azure portal search for Stream Analytics Job. Use the same resource group you created for the Azure IoT Hub. Type the name (feel free here) and do not change rest of proposed configuration:
 
@@ -247,6 +247,8 @@ One important thing here - you should add project.json file to add two NuGet pac
 ```
 
 ### Azure Function IoTHubTrigger
+
+Here I would like to say thanks to [Stefan Wick](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/issues/1) from Microsoft for a great hint!
 
 As mentioned in the previous section with Azure Stream Analytics you can also use IoTHubTrigger to process the messages sent from the device to the Azure IoT Hub. Below I presented the steps how to configure IoTHubTrigger.
 
