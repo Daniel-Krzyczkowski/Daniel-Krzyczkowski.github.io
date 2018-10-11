@@ -4,6 +4,7 @@
 ![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
 
 ## Use case
+
 In this article I would like to present how to detect motion with Raspberry Pi 2 device running Windows IoT Core system, connected to Microsoft Azure cloud. Once motion is detected, there is SMS sent to my cell phone. Once you read this article you will have knowledge about connecting IoT Core device with Azure cloud, which sensors should be used and how to properly integrate services in Azure.
 
 If you do not not how to setup Windows IoT Core device, please refer to my blog post article [here](https://devislandblog.wordpress.com/2018/08/14/windows-10-iot-core-device-connected-to-the-microsoft-azure-cloud/)
@@ -30,9 +31,11 @@ Here is how motion sensor should be connected:
 </p>
 
 ## Code and Configuration
+
 In this section you will find how to create solution described above.
 
 ### Motion Detector UWP application for Windows IoT Core
+
 To detect motion from the sensor connected to the Raspberry Pi I wrote a Universal Windows Platform application. Whole source code you can find on my GitHub [here](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/tree/master/MotionDetector)
 
 The most important part is in the MainPage class. We have to setup Gpio pin correctly. We have to set DriveMode to "Input" so we would like to receive signal from the motion sensor. Then we hava ValueChanged event raised once there is edge change detected. If its "RisingEdge" it means that motion was detected - then we are using AzureIoTHubService instance to send this information to the Azure. AzureIoTHubService source code is presented below.
@@ -125,6 +128,7 @@ AzureIoTHubService class. We are sending MotionEvent with fake room number where
 ```
 
 ### Microsoft Azure services configuration
+
 In this section you will find which services were used in the Azure cloud and how to configure them. I assume that you have active Azure subscription.
 
 ### Azure IoT Hub
@@ -176,6 +180,7 @@ Now we have to create Stream Analytics Job to get data from the Azure IoT Hub an
 We will configure Stream Analytics later in the article.
 
 ### Azure Function App
+
 We want to have Azure Function which will send SMS notifications using Twilio API. In the Azure portal search for Function App. Use proposed configuration but remember to create it in the same resource group where Azure IoT Hub and Stream Analytics were created:
 
 
@@ -241,7 +246,32 @@ One important thing here - you should add project.json file to add two NuGet pac
 }
 ```
 
+### Azure Function IoTHubTrigger
+
+As mentioned in the previous section with Azure Stream Analytics you can also use IoTHubTrigger to process the messages sent from the device to the Azure IoT Hub. Below I presented the steps how to configure IoTHubTrigger.
+
+Open Functions blade and select "+" button to add new function:
+
+*image here
+
+Select "Event Hub Trigger C#" template:
+
+*image here
+
+Type the name: "MotionSensorDataTrigger" and in the "Event Hub connection" section click "New":
+
+*image here
+
+Select "IoT Hub" tab then select previously created IoT Hub and endpoint:
+
+*image here
+
+That's it! Now you can paste the code responsible for sending SMS messages there from the previous function. Check the logs to see what messages are received:
+
+*image here
+
 ### Azure Stream Analytics Job input and output configuration
+
 Now get back to the Stream Analytics Job in the Azure portal and click input tab. You should select previously created IoT Hub as an input. Then got to the output tab and select above Azure Function App. Last step is to update Query with below code:
 
 <p align="center">
@@ -262,6 +292,7 @@ We want to take whole data from the Azure IoT Hub and pass it to the Function Ap
 Important - remember to start Stream Analytics Job.
 
 ## Final project
+
 Once you launch the UWP application on the Raspberry Pi device you should receive SMS if motion was detected.
 This is my final project:
 
