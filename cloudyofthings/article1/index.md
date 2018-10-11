@@ -279,6 +279,14 @@ That's it! Now you can paste the code responsible for sending SMS messages there
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure19.PNG?raw=true" alt="MotionDetectorAzure19.png"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure20.PNG?raw=true" alt="MotionDetectorAzure20.png"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure21.PNG?raw=true" alt="MotionDetectorAzure21.png"/>
+</p>
+
 
 ### Azure Stream Analytics Job input and output configuration
 
