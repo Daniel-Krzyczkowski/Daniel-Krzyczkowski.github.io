@@ -252,23 +252,33 @@ As mentioned in the previous section with Azure Stream Analytics you can also us
 
 Open Functions blade and select "+" button to add new function:
 
-*image here
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure15_2.PNG?raw=true" alt="MotionDetectorAzure15_2.png"/>
+</p>
 
 Select "Event Hub Trigger C#" template:
 
-*image here
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure16.PNG?raw=true" alt="MotionDetectorAzure16.png"/>
+</p>
 
 Type the name: "MotionSensorDataTrigger" and in the "Event Hub connection" section click "New":
-
-*image here
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure17.PNG?raw=true" alt="MotionDetectorAzure17.png"/>
+</p>
 
 Select "IoT Hub" tab then select previously created IoT Hub and endpoint:
 
-*image here
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure18.PNG?raw=true" alt="MotionDetectorAzure18.png"/>
+</p>
 
 That's it! Now you can paste the code responsible for sending SMS messages there from the previous function. Check the logs to see what messages are received:
 
-*image here
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure19.PNG?raw=true" alt="MotionDetectorAzure19.png"/>
+</p>
+
 
 ### Azure Stream Analytics Job input and output configuration
 
