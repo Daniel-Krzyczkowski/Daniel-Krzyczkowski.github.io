@@ -11,7 +11,7 @@ In this article I would like to extend previous sample with face detection using
 
 ## Solution
 
-Aaa
+In the previous article I presented how to connect motion sensor with Raspberry Pi 2 device running Windows IoT Core system. This time we will add one more element - camera device. Once motion is detected by sensor - photo is taken and analyzied with Microsoft Cognotive Services Face API.
 
 ## Code and Configuration
 
