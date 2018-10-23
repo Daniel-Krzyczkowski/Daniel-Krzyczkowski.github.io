@@ -68,5 +68,9 @@ Aaa
 
 Aaa
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp3.png?raw=true" alt="Face detector test"/>
+</p>
+
 
 [Back](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
