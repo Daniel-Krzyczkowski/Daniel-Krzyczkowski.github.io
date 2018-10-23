@@ -22,6 +22,8 @@ Below there is flow presented:
 6. Azure Logic App receives analyzis result and retrieves taken image from the Azure Blob Storage
 7. An e-mail is created with image attachment and then sent to the specific address
 
+I also prepared UWP desktop application to scan and identify people. This enables to register people so Cognitive Services Face API can detect and analyze people from sent images. Application description is placed below in the article.
+
 ## Code and Configuration
 
 In this section you will find how to create solution described above.
