@@ -29,6 +29,14 @@ In this section you will find which services were used in the Azure cloud and ho
 
 Aaa
 
+### Azure Function IoTHubTrigger
+
+Aaa
+
+### Azure Logic App
+
+Aaa
+
 ## Final project
 
 Aaa
