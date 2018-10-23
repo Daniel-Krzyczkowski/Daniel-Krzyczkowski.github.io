@@ -5,6 +5,8 @@
 
 ## Use case
 
+In my previous article (you can find it here) I described how to connect motion sensor to the device with Windows IoT Core system and how to connect it with Azure IoT Hub to send SMS alerts once motion is detected.
+In this article I would like to extend previous sample with face detection using camera and Microsoft Cognitive Serivces (Face API service).
 
 
 [Back](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
