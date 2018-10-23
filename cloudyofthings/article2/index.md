@@ -30,6 +30,9 @@ In this section you will find how to create solution described above.
 
 ### Face Identifier UWP application - desktop app
 
+Face Identifier UWP applicaton is connected with Microsoft Cognitive Services Face API. You can use it to take picture of your (or your friend) face. Then you can register new group and person in the Face API so once IoT device detects motion and takes image it can be analyzied and recognized. Application is presented below:
+
+
 <p align="center">
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face detector app"/>
 </p>
