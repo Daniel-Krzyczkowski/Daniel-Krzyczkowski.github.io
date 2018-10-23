@@ -17,7 +17,7 @@ Below there is flow presented:
 1. Motion sensor connected to the Raspberry Pi detects motion
 2. Image is taken by connected camera device
 3. Image is analyzed by Microsoft Cognitive Services Face API service
-4. Analyzis result together with the taken image is sent to the Azure IoT Hub
+4. Analyzis result together with the taken image is sent to the Azure IoT Hub - image is saved in the Azure Blob Storage
 5. Azure Function is triggered to pass analyzis result to the Azure Logic App
 6. Azure Logic App receives analyzis result and retrieves taken image from the Azure Blob Storage
 7. An e-mail is created with image attachment and then sent to the specific address
