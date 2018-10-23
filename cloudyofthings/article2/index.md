@@ -10,11 +10,28 @@ In my previous article (you can find it [here](https://daniel-krzyczkowski.githu
 In this article I would like to extend previous sample with face detection using camera connected to the IoT device and Microsoft Cognitive Serivces (Face API service).
 
 ## Solution
+
 Aaa
 
 ## Code and Configuration
 
 In this section you will find how to create solution described above.
+
+### Face Detector UWP application for Windows IoT Core
+
+Aaa
+
+### Microsoft Azure services configuration
+
+In this section you will find which services were used in the Azure cloud and how to configure them. I assume that you have active Azure subscription.
+
+### Azure IoT Hub
+
+Aaa
+
+## Final project
+
+Aaa
 
 
 [Back](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
