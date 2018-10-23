@@ -30,7 +30,9 @@ In this section you will find how to create solution described above.
 
 ### Face Identifier UWP application - desktop app
 
-Aaa
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face detector app"/>
+</p>
 
 ### Face Detector UWP application for Windows IoT Core
 
