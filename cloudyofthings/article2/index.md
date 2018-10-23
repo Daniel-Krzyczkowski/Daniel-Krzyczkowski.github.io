@@ -17,7 +17,7 @@ In the previous article I presented how to connect motion sensor with Raspberry 
 
 In this section you will find how to create solution described above.
 
-### Face Identifiers UWP application - desktop app
+### Face Identifier UWP application - desktop app
 
 Aaa
 
