@@ -9,5 +9,7 @@ In my previous article (you can find it [here](https://daniel-krzyczkowski.githu
 
 In this article I would like to extend previous sample with face detection using camera connected to the IoT device and Microsoft Cognitive Serivces (Face API service).
 
+## Solution
+
 
 [Back](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
