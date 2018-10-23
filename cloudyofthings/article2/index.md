@@ -34,14 +34,19 @@ Face Identifier UWP applicaton is connected with Microsoft Cognitive Services Fa
 
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face detector app"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face identifier app"/>
 </p>
 
 As you can see I scaned my face and registered myself as "Daniel" in the "Home" group.
 
 ### Face Detector UWP application for Windows IoT Core
 
-Aaa
+Face Detector UWP application is created for IoT devices with Windows IoT Core system. Once motion is detected, camera connected to the device takes picture which is then analyzed by Microsoft Cognitive Services. Image and analyzis result are sent then to the Azure IoT Hub. Application is presented below:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
+</p>
+
 
 ### Microsoft Azure services configuration
 
