@@ -183,6 +183,15 @@ public class FaceRecognitionService
     }
 ```
 
+AzureIoTHubService class was extended with one more method - written to uplad taken image to the Azure Storage:
+
+```
+  public async Task SendImageToAzure(Stream imageStream)
+        {
+            await _deviceClient.UploadToBlobAsync($"Person.jpg", imageStream);
+        }
+```
+
 ### Microsoft Azure services configuration
 
 In this section you will find which services were used in the Azure cloud and how to configure them. I assume that you have active Azure subscription.
