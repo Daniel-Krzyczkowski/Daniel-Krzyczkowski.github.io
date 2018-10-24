@@ -379,6 +379,12 @@ Add next step called Send an email. Here you have to sign in to your Outlook acc
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector15.PNG?raw=true" alt="Face detector"/>
 </p>
 
+As you can see below there is body included with the analyzis result and room number where motion was detected.There is also image attached:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector16.PNG?raw=true" alt="Face detector"/>
+</p>
+
 ## Final project
 
 Aaa
