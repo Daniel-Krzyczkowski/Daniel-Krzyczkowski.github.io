@@ -186,10 +186,26 @@ public class FaceRecognitionService
 AzureIoTHubService class was extended with one more method - written to uplad taken image to the Azure Storage:
 
 ```
-public async Task SendImageToAzure(Stream imageStream)
-   {
-       await _deviceClient.UploadToBlobAsync($"Person.jpg", imageStream);
-   }
+     public async Task SendImageToAzure(Stream imageStream)
+     {
+          await _deviceClient.UploadToBlobAsync($"Person.jpg", imageStream);
+     }
+```
+
+In the MainPage class there is a method which prepares data (Face API analyzis result and image) to be send to the Azure IoT Hub:
+
+```
+        private async Task SendImageWithAnalysis(string analyzisResult)
+        {
+            var personPicture = await GetImageStream();
+            var motionEvent = new MotionEvent
+            {
+                RoomNumber = 1,
+                ImageAnalyzisResult = analyzisResult
+            };
+            await _azureIoTHubService.SendImageToAzure(personPicture);
+            await _azureIoTHubService.SendDataToAzure(motionEvent);
+        }
 ```
 
 ### Microsoft Azure services configuration
