@@ -391,9 +391,17 @@ Once email is sent we want to remove image from the Azure Storage so next step h
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector18.PNG?raw=true" alt="Face detector"/>
 </p>
 
+Final steps of the Logic App should look like below:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector19.PNG?raw=true" alt="Face detector"/>
+</p>
+
 ## Final project
 
-Aaa
+Once you scan and register yourself with Face Identifier UWP application, launch IoT device with Face Detector app. When motion is detected you should receive an email after few seconds:
+
+
 
 <p align="center">
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp3.JPG?raw=true" alt="Face detector test"/>
