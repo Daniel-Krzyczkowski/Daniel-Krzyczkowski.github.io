@@ -11,5 +11,5 @@ Cloudy of Things is my special articles and code samples series related with Int
 ### 1. Motion detector - automatic SMS alerts with Windows IoT Core and Microsoft Azure cloud
 [Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
-### 3. Face detector - automatic e-mail alerts with Windows IoT Core and Microsoft Azure cloud
+### 2. Face detector - automatic e-mail alerts with Windows IoT Core and Microsoft Azure cloud
 [Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article2/index)
