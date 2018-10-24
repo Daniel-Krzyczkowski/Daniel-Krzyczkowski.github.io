@@ -411,7 +411,7 @@ Once you scan and register yourself with Face Identifier UWP application, launch
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector20.png?raw=true" alt="Face detector app"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector20.PNG?raw=true" alt="Face detector app"/>
 </p>
 
 [Back](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
