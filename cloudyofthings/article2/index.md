@@ -266,6 +266,42 @@ Select "Event Hub Trigger C#" template. Type the name and select IoT Hub for the
 
 That's it! Now you can paste the code responsible for sending Face API analyzis received from the device to the Azure Logic App:
 
+```
+using System.Net;
+using Microsoft.Extensions.Logging.Abstractions;
+using System.Text;
+
+private static HttpClient httpClient = new HttpClient();
+
+public static void Run(string myEventHubMessage, ILogger logger)
+{
+    logger.LogInformation($"C# Event Hub trigger function processed a message: {myEventHubMessage}");
+
+    HttpContent content = new StringContent(myEventHubMessage, Encoding.UTF8, "application/json");
+    var response = httpClient.PostAsync("<<ADDRESS OF THE LOGIC APP TO HANDLE REQUESTS>>", content).Result; 
+    if (response.IsSuccessStatusCode)
+    {
+      logger.LogInformation("Status from the Logic App: " + response.StatusCode);
+    }
+
+}
+
+```
+Remember to add project.json file with below content so NuGet packages are correctly added:
+
+```
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Newtonsoft.Json": "11.0.2",
+        "Microsoft.Extensions.Logging.Abstractions": "2.1.1"
+      }
+    }
+   }
+}
+```
+We will store the logs in the Application Insights - if you do not have one please again refer to the [previous article.](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)
 
 
 ### Azure Logic App
