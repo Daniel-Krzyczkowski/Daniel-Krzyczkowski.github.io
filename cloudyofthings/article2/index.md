@@ -250,7 +250,19 @@ Azure IoT Hub is now connected with Azure Storage Account. Once image is taken b
 
 ### Azure Function IoTHubTrigger
 
-Aaa
+Once there is new information sent to the Azure IoT Hub we want to trigger Function App. Here we will use IoTHubTrigger.
+
+Open Functions blade and select "+" button to add new function:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorFunctionApp.PNG?raw=true" alt="Face detector"/>
+</p>
+
+Select "Event Hub Trigger C#" template:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector0.PNG?raw=true" alt="Face detector"/>
+</p>
 
 ### Azure Logic App
 
