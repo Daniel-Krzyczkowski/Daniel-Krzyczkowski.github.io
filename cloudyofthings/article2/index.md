@@ -214,7 +214,14 @@ In this section you will find which services were used in the Azure cloud and ho
 
 ### Azure IoT Hub
 
-We will use Azure IoT Hub created previously - if you do not have one please refer to the [previous article](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index) where all required steps are described.
+We will use Azure IoT Hub created previously - if you do not have one please refer to the [previous article](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index) where all required steps are described. We need to add file upload support (connect IoT Hub with Azure Storage Account) so please follow below steps:
+
+In the messaging setion select File upload then select Azure Storage Container:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector1.png?raw=true" alt="Face detector"/>
+</p>
+
 
 ### Azure Function IoTHubTrigger
 
