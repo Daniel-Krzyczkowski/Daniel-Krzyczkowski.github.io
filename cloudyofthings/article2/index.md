@@ -41,7 +41,7 @@ Face Identifier UWP applicaton is connected with Microsoft Cognitive Services Fa
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face identifier app"/>
 </p>
 
-As you can see I scaned my face and registered myself as "Daniel" in the "Home" group.
+As you can see I scaned my face and registered myself as "Daniel" in the "Home" group. Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/FacesIdentifier)
 
 ### Face Detector UWP application for Windows IoT Core
 
