@@ -125,6 +125,8 @@ The most important part is FaceRecognitionService class. There you can find all 
     }
 ```
 
+We are using FaceRecognitionService instance in the MainPage class so I encourage you to go through the source code of the app project.
+
 ### Face Detector UWP application for Windows IoT Core
 
 Face Detector UWP application is created for IoT devices with Windows IoT Core system. Once motion is detected, camera connected to the device takes picture which is then analyzed by Microsoft Cognitive Services. Image and analyzis result are sent then to the Azure IoT Hub. Application is presented below:
