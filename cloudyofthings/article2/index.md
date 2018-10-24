@@ -312,6 +312,12 @@ Now its time to configure Azure Logic App to send e-mail notifications with Face
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector7.PNG?raw=true" alt="Face detector"/>
 </p>
 
+Fill required data including name of the Logic App:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector12.PNG?raw=true" alt="Face detector"/>
+</p>
+
 Then select Templates from the top:
 
 <p align="center">
