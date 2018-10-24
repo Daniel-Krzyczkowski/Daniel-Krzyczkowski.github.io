@@ -255,7 +255,7 @@ Once there is new information sent to the Azure IoT Hub we want to trigger Funct
 Open Functions blade and select "+" button to add new function:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorFunctionApp.PNG?raw=true" alt="Face detector"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorFuncApp.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Select "Event Hub Trigger C#" template:
