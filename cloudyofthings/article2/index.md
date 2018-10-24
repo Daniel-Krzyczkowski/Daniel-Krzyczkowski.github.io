@@ -222,6 +222,31 @@ In the messaging setion select File upload then select Azure Storage Container:
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector1.PNG?raw=true" alt="Face detector"/>
 </p>
 
+Then if you do not have storage already select +Storage account and create it. If you already have one select it from the list:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector3.PNG?raw=true" alt="Face detector"/>
+</p>
+
+Click +Container and name it. This is the container where we will store taken image from IoT device:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector4.PNG?raw=true" alt="Face detector"/>
+</p>
+
+Select this container so IoT Hub will know where to store images:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector5.PNG?raw=true" alt="Face detector"/>
+</p>
+
+Save all settings:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector6.PNG?raw=true" alt="Face detector"/>
+</p>
+
+Azure IoT Hub is now connected with Azure Storage Account. Once image is taken by IoT device it is sent to the IoT Hub and then stored in the blob container.
 
 ### Azure Function IoTHubTrigger
 
