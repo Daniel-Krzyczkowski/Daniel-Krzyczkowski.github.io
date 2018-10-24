@@ -399,12 +399,15 @@ Final steps of the Logic App should look like below:
 
 ## Final project
 
-Once you scan and register yourself with Face Identifier UWP application, launch IoT device with Face Detector app. When motion is detected you should receive an email after few seconds:
-
+Once you scan and register yourself with Face Identifier UWP application, launch IoT device with Face Detector app. When motion is detected you should receive an email after short time:
 
 
 <p align="center">
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp3.JPG?raw=true" alt="Face detector test"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
 </p>
 
 
