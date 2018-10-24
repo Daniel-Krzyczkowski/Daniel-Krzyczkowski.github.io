@@ -306,7 +306,12 @@ We will store the logs in the Application Insights - if you do not have one plea
 
 ### Azure Logic App
 
-Aaa
+Now its time to configure Azure Logic App to send e-mail notifications with Face API analyzis result and taken image attached to the message. Go to the IoT Hub resource in Azure portal and open Events section and click Logic App tile:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector7.PNG?raw=true" alt="Face detector"/>
+</p>
+
 
 ## Final project
 
