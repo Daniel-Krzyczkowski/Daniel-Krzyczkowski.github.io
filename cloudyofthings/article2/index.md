@@ -312,6 +312,50 @@ Now its time to configure Azure Logic App to send e-mail notifications with Face
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector7.PNG?raw=true" alt="Face detector"/>
 </p>
 
+Then select Templates from the top:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector8.PNG?raw=true" alt="Face detector"/>
+</p>
+
+Select When a HTTP request is received trigger:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector9.PNG?raw=true" alt="Face detector"/>
+</p>
+
+This will generate first step for the Logic App:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector10.PNG?raw=true" alt="Face detector"/>
+</p>
+
+We need to define JSON schema for received messages:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector11.PNG?raw=true" alt="Face detector"/>
+</p>
+
+Paste below schema and save changes. Note that here we expecting to receive analyzis result and room number where motion was detected:
+
+```
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "ImageAnalyzisResult": {
+            "type": "string"
+        },
+        "RoomNumber": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "RoomNumber",
+        "ImageAnalyzisResult"
+    ],
+    "type": "object"
+}
+```
 
 ## Final project
 
