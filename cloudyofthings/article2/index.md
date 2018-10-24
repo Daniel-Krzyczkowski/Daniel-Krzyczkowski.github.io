@@ -219,7 +219,7 @@ We will use Azure IoT Hub created previously - if you do not have one please ref
 In the messaging setion select File upload then select Azure Storage Container:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector1.png?raw=true" alt="Face detector"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector1.PNG?raw=true" alt="Face detector"/>
 </p>
 
 
