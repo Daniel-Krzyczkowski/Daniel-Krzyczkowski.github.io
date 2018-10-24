@@ -385,6 +385,12 @@ As you can see below there is body included with the analyzis result and room nu
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector16.PNG?raw=true" alt="Face detector"/>
 </p>
 
+Once email is sent we want to remove image from the Azure Storage so next step has to be added:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector18.PNG?raw=true" alt="Face detector"/>
+</p>
+
 ## Final project
 
 Aaa
