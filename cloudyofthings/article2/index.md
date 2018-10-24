@@ -11,6 +11,10 @@ In this article I would like to extend previous sample with face detection using
 
 ## Solution
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorDiagram.png?raw=true" alt="Solution diagram"/>
+</p>
+
 In the previous article I presented how to connect motion sensor with Raspberry Pi 2 device running Windows IoT Core system. This time we will add one more element - camera device. Once motion is detected by sensor - photo is taken and analyzed with Microsoft Cognotive Services Face API. Then image together with analyzis result is sent to the Azure IoT Hub and then used with other components.
 
 Below there is flow presented:
