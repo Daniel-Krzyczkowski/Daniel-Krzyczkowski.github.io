@@ -363,6 +363,12 @@ Paste below schema and save changes. Note that here we expecting to receive anal
 }
 ```
 
+Add next step to the Logic App. We want to take image stored in the Azure Storage by name:
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector13.PNG?raw=true" alt="Face detector"/>
+</p>
+
 ## Final project
 
 Aaa
