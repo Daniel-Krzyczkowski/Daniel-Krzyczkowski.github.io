@@ -214,7 +214,7 @@ In this section you will find which services were used in the Azure cloud and ho
 
 ### Azure IoT Hub
 
-Aaa
+We will use Azure IoT Hub created previously - if you do not have one please refer to the [previous article](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index) where all required steps are described.
 
 ### Azure Function IoTHubTrigger
 
