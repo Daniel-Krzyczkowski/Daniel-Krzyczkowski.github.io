@@ -135,6 +135,9 @@ Face Detector UWP application is created for IoT devices with Windows IoT Core s
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
 </p>
 
+Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/tree/master/FaceDetector)
+
+I extended previous application (Motion Detector) with connected camera device and Microsoft Cognitive Services Face API.
 
 ### Microsoft Azure services configuration
 
