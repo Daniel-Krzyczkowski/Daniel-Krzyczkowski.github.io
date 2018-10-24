@@ -258,11 +258,15 @@ Open Functions blade and select "+" button to add new function:
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorFuncApp.PNG?raw=true" alt="Face detector"/>
 </p>
 
-Select "Event Hub Trigger C#" template:
+Select "Event Hub Trigger C#" template. Type the name and select IoT Hub for the Azure Event Hubs Trigger:
 
 <p align="center">
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector0.PNG?raw=true" alt="Face detector"/>
 </p>
+
+That's it! Now you can paste the code responsible for sending Face API analyzis received from the device to the Azure Logic App:
+
+
 
 ### Azure Logic App
 
