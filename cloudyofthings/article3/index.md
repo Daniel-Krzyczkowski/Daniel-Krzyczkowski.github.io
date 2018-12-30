@@ -91,7 +91,7 @@ Modules are kept as a Docker images in the Azure Container Registry. Azure IoT E
 
 ## Devices specification
 
-There was three Raspberry Pi2 devices used in the Azure Truck project. Two of them running Windows 10 IoT Core system and on of them ("Edge device") is running Raspian9. For the first two devices there is dedicated Universal Windows Application (UWP) created with IoT extension to provide communication between the app and the device and sensors. "Edge" device with IoT Edge runtime has module written in Python.
+There was two Raspberry Pi2 devices and one Raspberry Pi3 device used in the Azure Truck project. Two of them running Windows 10 IoT Core system and on of them ("Edge device") is running Raspian9. For the first two devices there is dedicated Universal Windows Application (UWP) created with IoT extension to provide communication between the app and the device and sensors. "Edge" device with IoT Edge runtime has module written in Python.
 
 Below there is a list of IoT sensors used in this project together with connection schemas.
 
@@ -101,7 +101,7 @@ Below there is a list of IoT sensors used in this project together with connecti
 
 #### Face detection devices
 
-- HDMI USB Camera
+- HD USB Camera
 - [Motion sensor](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview)
 - [LCD screen](https://www.adafruit.com/product/181)
 
