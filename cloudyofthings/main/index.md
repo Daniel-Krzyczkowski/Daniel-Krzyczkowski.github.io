@@ -14,5 +14,5 @@ Cloudy of Things is my special articles and code samples series related with Int
 ### 2. Face detector - automatic e-mail alerts with Windows IoT Core and Microsoft Azure cloud
 [Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article2/index)
 
-### 3.Azure Truck IoT
+### 3. Azure Truck IoT - Microsoft technologies used together inside the car
 [Read more](https://daniel-krzyczkowski.github.io/cloudyofthings/article3/index)
