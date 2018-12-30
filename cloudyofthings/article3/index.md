@@ -147,7 +147,7 @@ All devices were packed and mounted in our Azure Truck. You can see the final re
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/AzureTruckIoT8.png?raw=true" alt="Solution diagram"/>
 </p>
 
-I recommend to check our official Azure Truck Github repository, where presentations and samples are maintained:
+I recommend to check our official Azure Truck Github repository, where presentations and samples are published and maintained:
 [Azure Truck Github](https://github.com/AzureTruck)
 
 [Back](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
