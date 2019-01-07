@@ -11,11 +11,11 @@ Aaa
 
 Aaa
 
-## OPC UDA Standard Devices
+## Open-source cross-platform OPC UA support from Microsoft
 
 Aaa
 
-## Open-source cross-platform OPC UA support from Microsoft
+## OPC UDA Standard Devices
 
 Aaa
 
