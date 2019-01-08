@@ -59,9 +59,7 @@ At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expan
 
 There are many open source implementations of OPC UA (not only provided by Microsoft) in the different languages and with different licenses:
 
-#### open62541 - C library
-
-[](http://open62541.org/).
+[#### open62541 - C library](http://open62541.org/).
 
 #### UA.NET Standard - C# library (.NET Standard)
 
