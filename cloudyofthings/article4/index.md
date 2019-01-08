@@ -24,6 +24,9 @@ Openness and interoperability between hardware, software, and services will be k
 
 OPC Foundation - an organization whose task is to provide broad opportunities for interoperability in the field of automation, by creating and maintaining an open communication standard that allows transfer of process data, alarm and event data, historical data and batch data to devices from different manufacturers.
 
+[OPC Foundation official website](https://opcfoundation.org/)
+
+
 ## Open-source cross-platform OPC UA support from Microsoft
 
 Aaa
