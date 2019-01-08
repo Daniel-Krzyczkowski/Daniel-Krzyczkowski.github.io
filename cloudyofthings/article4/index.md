@@ -28,6 +28,9 @@ OPC Foundation - an organization whose task is to provide broad opportunities fo
 
 #### Open Platform Configurations Unified Architecture (OPC UA)
 
+The OPC UA standard is driven by the OPC Foundation described above.
+Adapting machines to become compatible with OPC UA is an un-intrusive and cost-effective way to connect factory assets and adapters to field buses are available through a rich ecosystem of vendors (mentioned below in the article). OPC UA is also called communication technology for Industry 4.0 and is essential to reaching this next level of connectivity in manufacturing facilities.
+
 There is a great video created by OPC Foundation which presents the whole idea of OPC UA (Open Platform Configurations Unified Architecture):
 
 [![OPC UA](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry2.jpg)](https://www.youtube.com/watch?v=-tDGzwsBokY "OPC UA")
