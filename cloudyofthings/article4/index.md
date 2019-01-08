@@ -22,6 +22,10 @@ Openness and interoperability between hardware, software, and services will be k
 
 #### OPC Foundation
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry3.PNG?raw=true" alt="OPC Foundation"/>
+</p>
+
 OPC Foundation - an organization whose task is to provide broad opportunities for interoperability in the field of automation, by creating and maintaining an open communication standard that allows transfer of process data, alarm and event data, historical data and batch data to devices from different manufacturers.
 
 [OPC Foundation official website](https://opcfoundation.org/)
