@@ -61,7 +61,7 @@ There are many open source implementations of OPC UA (not only provided by Micro
 
 #### open62541 - C library
 
-http://open62541.org/
+[](http://open62541.org/).
 
 #### UA.NET Standard - C# library (.NET Standard)
 
