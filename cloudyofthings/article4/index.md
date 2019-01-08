@@ -9,7 +9,7 @@ Before I introduce the Microsoft Azure cloud services for Internet of Things (Io
 
 #### Industry 4.0
 
-Industry 4.0 is a term connected with Industrial Revolution.
+Industry 4.0 is a term connected with the Industrial Revolution.
 
 ![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry1.PNG?raw=true)
 
