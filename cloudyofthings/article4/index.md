@@ -41,7 +41,9 @@ There is a great video created by OPC Foundation which presents the whole idea o
 
 ## Open-source cross-platform OPC UA support from Microsoft
 
-Microsoft has a long-standing partnership with the OPC Foundation is currently the number one open-source contributor to the OPC Foundation. Microsoft is also the only cloud vendor that uses both OPC UA client-server connections as well as the new OPC UA publish-subscribe connections all the way to the cloud and back. It means that Microsoft is in a unique position to make the rich OPC UA information model - for instance the semantic description of the machines, available in the cloud for enabling services (like Azure IoT Hub). At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expand product support of the OPC UA open-source software stack, which enables deep integration with Azure IoT, as well as the Universal Windows Platform (UWP).
+Microsoft has a long-standing partnership with the OPC Foundation is currently the number one open-source contributor to the OPC Foundation. Microsoft is also the only cloud vendor that uses both OPC UA client-server connections as well as the new OPC UA publish-subscribe connections all the way to the cloud and back. It means that Microsoft is in a unique position to make the rich OPC UA information model - for instance the semantic description of the machines, available in the cloud for enabling services (like Azure IoT Hub).
+
+At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expand product support of the OPC UA open-source software stack, which enables deep integration with Azure IoT, as well as the Universal Windows Platform (UWP). Microsoft will contribute a .NET Standard reference stack to the OPC Foundation GitHub open-source. As .NET Standard is platform-independent, this stack has the benefit of working on all common software platforms in market today, allowing the creation of OPC UA clients and servers.
 
 ## OPC UDA Standard Devices
 
