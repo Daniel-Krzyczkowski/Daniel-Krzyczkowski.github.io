@@ -93,7 +93,7 @@ With reference to the Azure cloud platform, it offers dedicated services for IoT
 #### Azure IoT Hub
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry7.PNG?raw=true" alt="Azure IoT Hub"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry7.png?raw=true" alt="Azure IoT Hub"/>
 </p>
 
 he Azure IoT Hub provides reliable and secure communication between IoT devices. It also establishes bi-directional communication between each device and the Azure cloud. With Azure IoT Hub you can send messages:
