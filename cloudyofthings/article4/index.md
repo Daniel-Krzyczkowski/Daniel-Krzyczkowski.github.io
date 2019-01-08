@@ -90,6 +90,14 @@ I mentioned that Industry 4.0 is about integration and communication betweend ha
 
 With reference to the Azure cloud platform, it offers dedicated services for IoT. Below I described some of them. It is worth to mentioned that all these services were build with commitment to the OPC UA standards.
 
+#### Azure IoT Hub
+
+Aaa
+
+#### Azure IoT Edge
+
+Aaa
+
 ## OPC UDA Standard Devices
 
 Aaa
