@@ -90,7 +90,7 @@ I mentioned that Industry 4.0 is about integration and communication betweend ha
 
 With reference to the Azure cloud platform, it offers dedicated services for IoT. Below I described some of them. It is worth to mentioned that all these services were build with commitment to the OPC UA standards.
 
-#### Azure IoT Hub
+### Azure IoT Hub
 
 <p align="center">
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry7.png?raw=true" alt="Azure IoT Hub"/>
@@ -101,7 +101,7 @@ he Azure IoT Hub provides reliable and secure communication between IoT devices.
 - **from a device to the cloud** – e.g. temperature values provided by a sensor connected to an IoT device, sent for analysis, and
 - **from the cloud to a device** – e.g. a message with software update payload.
 
-#### Azure IoT Edge
+### Azure IoT Edge
 
 <p align="center">
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry6.png?raw=true" alt="Azure IoT Edge"/>
