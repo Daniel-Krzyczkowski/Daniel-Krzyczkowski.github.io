@@ -179,7 +179,9 @@ You can see that UPC UA standards are adopted by increasing number of companies:
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry14.PNG?raw=true" alt="Microsoft Azure IoT Suite Connected Factory"/>
 </p>
 
-Connected Factory is one of the IoT Solution Accelerators created and provided by Microsoft. Currently, there are four solution accelerators available for you to deploy:
+Connected Factory is one of the IoT Solution Accelerators created and provided by Microsoft. The IoT solution accelerators are complete, ready-to-deploy IoT solutions that implement common IoT scenario. 
+
+Currently, there are four solution accelerators available for you to deploy:
 
 - [Remote Monitoring](https://docs.microsoft.com/en-us/azure/iot-accelerators/about-iot-accelerators#remote-monitoring)
 
