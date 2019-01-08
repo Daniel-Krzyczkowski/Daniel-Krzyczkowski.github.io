@@ -45,7 +45,7 @@ There is a great video created by OPC Foundation which presents the whole idea o
 
 One more important aspect - security. It is confirmed that OPC UA is secure by default. It means that all security features are turned on and already configured so there is no need to do this step manually and sees how an end-to-end solution can be secured. It was also confirmed by German Federal Office for Information Security (BSI):
 
-"An extensive analysis of the security functions in the specification of OPC UA confirmed that OPC UA was designed with a focus on security and does not contain systematic security vulnerabilities."
+*"An extensive analysis of the security functions in the specification of OPC UA confirmed that OPC UA was designed with a focus on security and does not contain systematic security vulnerabilities."*
 
 You can read more about it [here](https://opcconnect.opcfoundation.org/2016/06/bsi-security-check/).
 
