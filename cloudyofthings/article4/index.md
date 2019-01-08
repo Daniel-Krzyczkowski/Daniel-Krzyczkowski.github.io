@@ -129,6 +129,10 @@ Microsoft works close with IoT devices manufacturers to provide easier way to de
 
 ### Industrial IoT Starter Kit
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry12.PNG?raw=true" alt="IoT Starter Kit 2"/>
+</p>
+
 To make it easier to start integration and to verify your specific requirements there is production-ready starter kit created in cooperation between Microsoft, Softing and Hewlett Packard. It enables connecting your existing IoT devices with Azure cloud - it is working as a proxy between devices and the cloud.
 
 <p align="center">
