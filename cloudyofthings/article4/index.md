@@ -26,6 +26,12 @@ OPC Foundation - an organization whose task is to provide broad opportunities fo
 
 [OPC Foundation official website](https://opcfoundation.org/)
 
+#### Open Platform Configurations Unified Architecture (OPC UA)
+
+There is a great video created by OPC Foundation which presents the whole idea of OPC UA (Open Platform Configurations Unified Architecture):
+
+https://www.youtube.com/watch?v=-tDGzwsBokY
+
 
 ## Open-source cross-platform OPC UA support from Microsoft
 
