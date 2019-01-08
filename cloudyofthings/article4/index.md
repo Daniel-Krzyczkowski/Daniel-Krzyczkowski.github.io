@@ -90,18 +90,18 @@ I mentioned that Industry 4.0 is about integration and communication betweend ha
 
 With reference to the Azure cloud platform, it offers dedicated services for IoT. Below I described some of them. It is worth to mentioned that all these services were build with commitment to the OPC UA standards.
 
-#### Azure IoT Hub
+### Azure IoT Hub
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry5.PNG?raw=true" alt="Azure IoT Hub"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry7.png?raw=true" alt="Azure IoT Hub"/>
 </p>
 
 he Azure IoT Hub provides reliable and secure communication between IoT devices. It also establishes bi-directional communication between each device and the Azure cloud. With Azure IoT Hub you can send messages:
 
-- from a device to the cloud – e.g. temperature values provided by a sensor connected to an IoT device, sent for analysis, and
-- from the cloud to a device – e.g. a message with software update payload.
+- **from a device to the cloud** – e.g. temperature values provided by a sensor connected to an IoT device, sent for analysis, and
+- **from the cloud to a device** – e.g. a message with software update payload.
 
-#### Azure IoT Edge
+### Azure IoT Edge
 
 <p align="center">
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry6.png?raw=true" alt="Azure IoT Edge"/>
@@ -109,9 +109,31 @@ he Azure IoT Hub provides reliable and secure communication between IoT devices.
 
 Azure IoT Edge enables moving cloud analytics and custom business logic to IoT devices. The device can process logic directly without pushing data to the cloud.
 
+**The Azure IoT Edge runtime**
+
+The runtime enables custom logic and cloud logic on IoT Edge devices. It is located on the IoT Edge device, and executes management and communication operations. This can include maintaining Azure IoT Edge security standards on the device, installing and updating workloads or facilitating communication between the device and the cloud.
+
+**Module**
+IoT Edge modules are units that consist of custom logic (for instance to analyze temperature) or cloud logic (like Azure Functions, Azure Stream Analytics and Azure Machine Learning). The Azure Container Registry stores these modules as Docker containers.
+When a module is being deployed on a device, the IoT Hub contacts the Azure IoT Edge runtime, which in turn pulls the image from the Azure Container Registry and starts running it.
+
+**IoT Hub**
+
+The Azure IoT Edge runtime connects to Azure IoT Hub to facilitate communication between the Edge device and the cloud. If data has to be pushed to the cloud or a new module needs to be deployed on the device, it is done through the IoT Hub.
+
 ## OPC UDA Standard Devices
 
-Aaa
+Microsoft works close with IoT devices manufacturers to provide easier way to deploy OPC UA standards and to easier integration with Azure cloud services. These all devices are compatible with OPC UA standards and ready for production usage. They can be used as a proxy between factory fields and the Azure cloud.
+
+[Full list of OPC compatible devices](https://catalog.azureiotsolutions.com/alldevices?q=opc)
+
+### Industrial IoT Starter Kit
+
+To make it easier to start integration and to verify your specific requirements there is production-ready starter kit created in cooperation between Microsoft, Softing and Hewlett Packard. It enables connecting your existing IoT devices with Azure cloud - it is working as a proxy between devices and the cloud.
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry8.png?raw=true" alt="IoT Starter Kit"/>
+</p>
 
 ## Microsoft Azure IoT Suite Connected Factory
 
