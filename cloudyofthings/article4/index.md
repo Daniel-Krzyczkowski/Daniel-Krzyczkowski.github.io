@@ -177,6 +177,12 @@ You can see that UPC UA standards are adopted by increasing number of companies:
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry14.PNG?raw=true" alt="Microsoft Azure IoT Suite Connected Factory"/>
 </p>
 
+### Logical architecture
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry15.png?raw=true" alt="Logical architecture"/>
+</p>
+
 ## Microsoft Azure IoT protocol gateway
 
 Aaa
