@@ -81,7 +81,7 @@ Full list can be found here: https://github.com/open62541/open62541/wiki/List-of
 
 ## OPC UDA with Microsoft Azure cloud
 
-Aaa
+I mentioned that Industry 4.0 is about integration and communication betweend hardware, software and the cloud. This is why Microsoft announced to invest huge amount of money (5 billion $) in the IoT solutions. 
 
 ## OPC UDA Standard Devices
 
