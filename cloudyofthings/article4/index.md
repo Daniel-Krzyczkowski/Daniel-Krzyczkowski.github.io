@@ -9,7 +9,7 @@ Before I introduce the Microsoft Azure cloud services for Internet of Things (Io
 
 #### Industry 4.0
 
-Industry 4.0 is a term connected with
+Industry 4.0 is a term connected with Industrial Revolution.
 
 ## Open Platform Configurations Unified Architecture - OPC UA
 
