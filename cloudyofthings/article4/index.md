@@ -35,9 +35,19 @@ OPC Foundation - an organization whose task is to provide broad opportunities fo
 The OPC UA standard is driven by the OPC Foundation described above.
 Adapting machines to become compatible with OPC UA is an un-intrusive and cost-effective way to connect factory assets and adapters to field buses are available through a rich ecosystem of vendors (mentioned below in the article). OPC UA is also called communication technology for Industry 4.0 and is essential to reaching this next level of connectivity in manufacturing facilities.
 
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry4.PNG?raw=true" alt="OPC Foundation"/>
+</p>
+
 There is a great video created by OPC Foundation which presents the whole idea of OPC UA (Open Platform Configurations Unified Architecture):
 
 [![OPC UA](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry2.jpg)](https://www.youtube.com/watch?v=-tDGzwsBokY "OPC UA")
+
+One more important aspect - security. It is confirmed that OPC UA is secure by default. It means that all security features are turned on and already configured so there is no need to do this step manually and sees how an end-to-end solution can be secured. It was also confirmed by German Federal Office for Information Security (BSI):
+
+*"An extensive analysis of the security functions in the specification of OPC UA confirmed that OPC UA was designed with a focus on security and does not contain systematic security vulnerabilities."*
+
+You can read more about it [here](https://opcconnect.opcfoundation.org/2016/06/bsi-security-check/).
 
 ## Open-source cross-platform OPC UA support from Microsoft
 
@@ -48,8 +58,6 @@ At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expan
 ## List of Open Source OPC UA Implementations
 
 There are many open source implementations of OPC UA (not only provided by Microsoft) in the different languages and with different licenses:
-
-
 
 #### open62541 - C library
 
@@ -76,6 +84,12 @@ https://github.com/FreeOpcUa/python-opcua
 https://github.com/eclipse/milo
 
 Full list can be found here: https://github.com/open62541/open62541/wiki/List-of-Open-Source-OPC-UA-Implementations
+
+## OPC UDA with Microsoft Azure cloud
+
+I mentioned that Industry 4.0 is about integration and communication betweend hardware, software and the cloud. This is why Microsoft announced to invest huge amount of money (5 billion $) in the IoT solutions. 
+
+With reference to the Azure cloud platform, it offers dedicated services for IoT. Below I described some of them. It is worth to mentioned that all these services were build with commitment to the OPC UA standards.
 
 ## OPC UDA Standard Devices
 
