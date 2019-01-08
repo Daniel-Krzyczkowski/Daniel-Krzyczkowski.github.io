@@ -20,7 +20,9 @@ Openness and interoperability between hardware, software, and services will be k
 
 ## Open Platform Configurations Unified Architecture - OPC UA
 
-Aaa
+#### OPC Foundation
+
+OPC Foundation - an organization whose task is to provide broad opportunities for interoperability in the field of automation, by creating and maintaining an open communication standard that allows transfer of process data, alarm and event data, historical data and batch data to devices from different manufacturers.
 
 ## Open-source cross-platform OPC UA support from Microsoft
 
