@@ -135,6 +135,16 @@ To make it easier to start integration and to verify your specific requirements 
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry8.png?raw=true" alt="IoT Starter Kit"/>
 </p>
 
+As you can see in the picture above there are two important modules in this architecture:
+
+**OPC Proxy Module**
+
+Aaa
+
+**OPC Publisher Module**
+
+Aaa
+
 ## Microsoft Azure IoT Suite Connected Factory
 
 Aaa
