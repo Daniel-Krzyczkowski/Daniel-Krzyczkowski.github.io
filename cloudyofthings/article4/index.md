@@ -157,6 +157,9 @@ OPC Publisher Module integrates with existing IoT machines and devices, collects
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry12.PNG?raw=true" alt="Azure IoT Edge"/>
 </p>
 
+**Industrial IoT Starter Kit device works as both: OPC Proxy and OPC Publisher.**
+
+
 ## Microsoft Azure IoT Suite Connected Factory
 
 Aaa
