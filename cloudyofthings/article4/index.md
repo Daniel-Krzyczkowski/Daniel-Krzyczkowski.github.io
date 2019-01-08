@@ -45,11 +45,11 @@ Microsoft has a long-standing partnership with the OPC Foundation is currently t
 
 At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expand product support of the OPC UA open-source software stack, which enables deep integration with Azure IoT, as well as the Universal Windows Platform (UWP). Microsoft will contribute a .NET Standard reference stack to the OPC Foundation GitHub open-source. As .NET Standard is platform-independent, this stack has the benefit of working on all common software platforms in market today, allowing the creation of OPC UA clients and servers.
 
-## OPC UDA Standard Devices
+## List of Open Source OPC UA Implementations
 
 Aaa
 
-## List of Open Source OPC UA Implementations
+## OPC UDA Standard Devices
 
 Aaa
 
