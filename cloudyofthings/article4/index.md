@@ -136,7 +136,7 @@ Microsoft works close with IoT devices manufacturers to provide easier way to de
 To make it easier to start integration and to verify your specific requirements there is production-ready starter kit created in cooperation between Microsoft, Softing and Hewlett Packard. It enables connecting your existing IoT devices with Azure cloud - it is working as a proxy between devices and the cloud.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry8.PNG?raw=true" alt="IoT Starter Kit 2"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry8.png?raw=true" alt="IoT Starter Kit 2"/>
 </p>
 
 As you can see in the picture above there are two important modules in this architecture:
