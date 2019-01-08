@@ -41,7 +41,7 @@ Adapting machines to become compatible with OPC UA is an un-intrusive and cost-e
 
 There is a great video created by OPC Foundation which presents the whole idea of OPC UA (Open Platform Configurations Unified Architecture):
 
-[![OPC UA](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry2.jpg)](https://www.youtube.com/watch?v=-tDGzwsBokY "OPC UA")
+[![OPC UA](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry2.jpg?raw=true)](https://www.youtube.com/watch?v=-tDGzwsBokY "OPC UA")
 
 One more important aspect - security. It is confirmed that OPC UA is secure by default. It means that all security features are turned on and already configured so there is no need to do this step manually and sees how an end-to-end solution can be secured. It was also confirmed by German Federal Office for Information Security (BSI):
 
@@ -58,38 +58,56 @@ At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expan
 ## List of Open Source OPC UA Implementations
 
 There are many open source implementations of OPC UA (not only provided by Microsoft) in the different languages and with different licenses:
-
 #### open62541 - C library
 
-http://open62541.org/
+[open62541 - C library](http://open62541.org/)
 
 #### UA.NET Standard - C# library (.NET Standard)
 
-https://github.com/OPCFoundation/UA-.NETStandard
+[UA.NET Standard - C# library (.NET Standard)](https://github.com/OPCFoundation/UA-.NETStandard)
 
 #### node-opcua - JavaScript
 
-http://node-opcua.github.io/
+[node-opcua - JavaScript](http://node-opcua.github.io/)
 
 #### FreeOpcUa - C++ library
 
-http://freeopcua.github.io/
+[FreeOpcUa - C++ library](http://freeopcua.github.io/)
 
 #### Python FreeOpcUa - Python library
 
-https://github.com/FreeOpcUa/python-opcua
+[Python FreeOpcUa - Python library](https://github.com/FreeOpcUa/python-opcua)
 
 #### Eclipse Milo - Java
 
-https://github.com/eclipse/milo
+[Eclipse Milo - Java](https://github.com/eclipse/milo)
 
-Full list can be found here: https://github.com/open62541/open62541/wiki/List-of-Open-Source-OPC-UA-Implementations
+Full list can be found [here](https://github.com/open62541/open62541/wiki/List-of-Open-Source-OPC-UA-Implementations).
 
 ## OPC UDA with Microsoft Azure cloud
 
 I mentioned that Industry 4.0 is about integration and communication betweend hardware, software and the cloud. This is why Microsoft announced to invest huge amount of money (5 billion $) in the IoT solutions. 
 
 With reference to the Azure cloud platform, it offers dedicated services for IoT. Below I described some of them. It is worth to mentioned that all these services were build with commitment to the OPC UA standards.
+
+#### Azure IoT Hub
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry5.PNG?raw=true" alt="Azure IoT Hub"/>
+</p>
+
+he Azure IoT Hub provides reliable and secure communication between IoT devices. It also establishes bi-directional communication between each device and the Azure cloud. With Azure IoT Hub you can send messages:
+
+- from a device to the cloud – e.g. temperature values provided by a sensor connected to an IoT device, sent for analysis, and
+- from the cloud to a device – e.g. a message with software update payload.
+
+#### Azure IoT Edge
+
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry6.png?raw=true" alt="Azure IoT Edge"/>
+</p>
+
+Azure IoT Edge enables moving cloud analytics and custom business logic to IoT devices. The device can process logic directly without pushing data to the cloud.
 
 ## OPC UDA Standard Devices
 
