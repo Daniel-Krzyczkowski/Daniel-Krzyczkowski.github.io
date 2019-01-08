@@ -161,8 +161,8 @@ OPC Publisher Module integrates with existing IoT machines and devices, collects
 
 [Read full IoT Industrial specification](https://data-intelligence.softing.com/products/iot-gateways/industrial-iot-starter-kit/#tx-dftabs-tabContent1)
 
-I also recommend to see *Industrial Interoperability from Sensor to Cloud
-OPC UA Integration into Azure IoT Suite* document [available here(https://opcfoundation.org/wp-content/uploads/2016/10/Microsoft-OPC-UA-5-Clicks-To-Digital-Factory.pdf)
+I also recommend to see [Industrial Interoperability from Sensor to Cloud
+OPC UA Integration into Azure IoT Suite document](https://opcfoundation.org/wp-content/uploads/2016/10/Microsoft-OPC-UA-5-Clicks-To-Digital-Factory.pdf)
 
 
 ## Microsoft Azure IoT Suite Connected Factory
