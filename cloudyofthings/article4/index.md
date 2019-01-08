@@ -98,8 +98,8 @@ With reference to the Azure cloud platform, it offers dedicated services for IoT
 
 he Azure IoT Hub provides reliable and secure communication between IoT devices. It also establishes bi-directional communication between each device and the Azure cloud. With Azure IoT Hub you can send messages:
 
-- from a device to the cloud – e.g. temperature values provided by a sensor connected to an IoT device, sent for analysis, and
-- from the cloud to a device – e.g. a message with software update payload.
+- **from a device to the cloud** – e.g. temperature values provided by a sensor connected to an IoT device, sent for analysis, and
+- **from the cloud to a device** – e.g. a message with software update payload.
 
 #### Azure IoT Edge
 
@@ -108,6 +108,18 @@ he Azure IoT Hub provides reliable and secure communication between IoT devices.
 </p>
 
 Azure IoT Edge enables moving cloud analytics and custom business logic to IoT devices. The device can process logic directly without pushing data to the cloud.
+
+**The Azure IoT Edge runtime**
+
+The runtime enables custom logic and cloud logic on IoT Edge devices. It is located on the IoT Edge device, and executes management and communication operations. This can include maintaining Azure IoT Edge security standards on the device, installing and updating workloads or facilitating communication between the device and the cloud.
+
+**Module**
+IoT Edge modules are units that consist of custom logic (for instance to analyze temperature) or cloud logic (like Azure Functions, Azure Stream Analytics and Azure Machine Learning). The Azure Container Registry stores these modules as Docker containers.
+When a module is being deployed on a device, the IoT Hub contacts the Azure IoT Edge runtime, which in turn pulls the image from the Azure Container Registry and starts running it.
+
+**IoT Hub**
+
+The Azure IoT Edge runtime connects to Azure IoT Hub to facilitate communication between the Edge device and the cloud. If data has to be pushed to the cloud or a new module needs to be deployed on the device, it is done through the IoT Hub.
 
 ## OPC UDA Standard Devices
 
