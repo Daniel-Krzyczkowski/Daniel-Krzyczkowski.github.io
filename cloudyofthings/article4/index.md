@@ -127,7 +127,9 @@ Microsoft works close with IoT devices manufacturers to provide easier way to de
 
 [Full list of OPC compatible devices](https://catalog.azureiotsolutions.com/alldevices?q=opc)
 
-Aaa
+### Industrial IoT Starter Kit
+
+To start integration easier and to verify your specific requirements there is production-ready starter kit created in cooperation between Microsoft, Softing and Hewlett Packard.
 
 ## Microsoft Azure IoT Suite Connected Factory
 
