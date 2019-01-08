@@ -159,6 +159,8 @@ OPC Publisher Module integrates with existing IoT machines and devices, collects
 
 **Industrial IoT Starter Kit device works as both: OPC Proxy and OPC Publisher.**
 
+[Read full IoT Industrial specification](https://data-intelligence.softing.com/products/iot-gateways/industrial-iot-starter-kit/#tx-dftabs-tabContent1)
+
 
 ## Microsoft Azure IoT Suite Connected Factory
 
