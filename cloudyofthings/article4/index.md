@@ -83,6 +83,8 @@ Full list can be found here: https://github.com/open62541/open62541/wiki/List-of
 
 I mentioned that Industry 4.0 is about integration and communication betweend hardware, software and the cloud. This is why Microsoft announced to invest huge amount of money (5 billion $) in the IoT solutions. 
 
+With reference to the Azure cloud platform, it offers dedicated services for IoT. Below I described some of them. It is worth to mentioned that all these services were build with commitment to the OPC UA standards.
+
 ## OPC UDA Standard Devices
 
 Aaa
