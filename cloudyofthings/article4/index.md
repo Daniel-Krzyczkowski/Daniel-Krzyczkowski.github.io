@@ -58,30 +58,31 @@ At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expan
 ## List of Open Source OPC UA Implementations
 
 There are many open source implementations of OPC UA (not only provided by Microsoft) in the different languages and with different licenses:
+#### open62541 - C library
 
-[#### open62541 - C library](http://open62541.org/).
+[open62541 - C library](http://open62541.org/)
 
 #### UA.NET Standard - C# library (.NET Standard)
 
-https://github.com/OPCFoundation/UA-.NETStandard
+[UA.NET Standard - C# library (.NET Standard)](https://github.com/OPCFoundation/UA-.NETStandard)
 
 #### node-opcua - JavaScript
 
-http://node-opcua.github.io/
+[node-opcua - JavaScript](http://node-opcua.github.io/)
 
 #### FreeOpcUa - C++ library
 
-http://freeopcua.github.io/
+[FreeOpcUa - C++ library](http://freeopcua.github.io/)
 
 #### Python FreeOpcUa - Python library
 
-https://github.com/FreeOpcUa/python-opcua
+[Python FreeOpcUa - Python library](https://github.com/FreeOpcUa/python-opcua)
 
 #### Eclipse Milo - Java
 
-https://github.com/eclipse/milo
+[Eclipse Milo - Java](https://github.com/eclipse/milo)
 
-Full list can be found here: https://github.com/open62541/open62541/wiki/List-of-Open-Source-OPC-UA-Implementations
+Full list can be found [here](https://github.com/open62541/open62541/wiki/List-of-Open-Source-OPC-UA-Implementations).
 
 ## OPC UDA with Microsoft Azure cloud
 
