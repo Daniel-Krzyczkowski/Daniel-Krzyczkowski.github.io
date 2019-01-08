@@ -5,7 +5,11 @@
 
 ## Introduction
 
-Aaa
+Before I introduce the Microsoft Azure cloud services for Internet of Things (IoT), I would like to start from Industry 4.0 term.
+
+#### Industry 4.0
+
+Industry 4.0 is a term connected with
 
 ## Open Platform Configurations Unified Architecture - OPC UA
 
