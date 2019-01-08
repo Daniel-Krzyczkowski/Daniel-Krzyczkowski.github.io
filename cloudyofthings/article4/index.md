@@ -123,6 +123,10 @@ The Azure IoT Edge runtime connects to Azure IoT Hub to facilitate communication
 
 ## OPC UDA Standard Devices
 
+Microsoft works close with IoT devices manufacturers to provide easier way to deploy OPC UA standards and to easier integration with Azure cloud services. These all devices are compatible with OPC UA standards and ready for production usage. They can be used as a proxy between factory fields and the Azure cloud.
+
+[Full list of OPC compatible devices](https://catalog.azureiotsolutions.com/alldevices?q=opc)
+
 Aaa
 
 ## Microsoft Azure IoT Suite Connected Factory
