@@ -179,6 +179,18 @@ You can see that UPC UA standards are adopted by increasing number of companies:
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry14.PNG?raw=true" alt="Microsoft Azure IoT Suite Connected Factory"/>
 </p>
 
+Connected Factory is one of the IoT Solution Accelerators created and provided by Microsoft. Currently, there are four solution accelerators available for you to deploy:
+
+- [Remote Monitoring](https://docs.microsoft.com/en-us/azure/iot-accelerators/about-iot-accelerators#remote-monitoring)
+
+- [Connected Factory](https://docs.microsoft.com/en-us/azure/iot-accelerators/about-iot-accelerators#connected-factory)
+
+- [Predictive Maintenance](https://docs.microsoft.com/en-us/azure/iot-accelerators/about-iot-accelerators#predictive-maintenance)
+
+- [Device Simulation](https://docs.microsoft.com/en-us/azure/iot-accelerators/about-iot-accelerators#device-simulation)
+
+In this article we will concentrate on the Connected Factory.
+
 ### Logical architecture
 
 <p align="center">
