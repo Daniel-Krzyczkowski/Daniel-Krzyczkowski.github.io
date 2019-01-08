@@ -11,7 +11,9 @@ Before I introduce the Microsoft Azure cloud services for Internet of Things (Io
 
 Industry 4.0 is a term connected with the Industrial Revolution. Please lets first look at below image. There are four industrial revolutions presented. In this article we are talking about fourth one.
 
-![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry1.PNG?raw=true)
+<p align="center">
+  <img src="(https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry1.PNG?raw=true" alt="Industry revolution table"/>
+</p>
 
 The fourth industrial revolution - term which refers to the concept of the "industrial revolution" in connection with the contemporary mutual use of automation, data processing and exchange as well as manufacturing techniques. Definitionally, it is a collective term for the techniques and principles of the functioning of a value chain organization using or using cyber-physical systems, the Internet of Things (IoT) and cloud computing.
 Openness and interoperability between hardware, software, and services will be key in helping manufacturers transform how they operate and create solutions that benefit productivity. It is crucial to provide unified way to communicate between hardware, software and what is more - to communicate with the cloud services.
