@@ -43,6 +43,10 @@ There is a great video created by OPC Foundation which presents the whole idea o
 
 [![OPC UA](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry2.jpg)](https://www.youtube.com/watch?v=-tDGzwsBokY "OPC UA")
 
+One more important aspect - security. It is confirmed that OPC UA is secure by default. It means that all security features are turned on and already configured so there is no need to do this step manually and sees how an end-to-end solution can be secured. It was also confirmed by German Federal Office for Information Security (BSI):
+
+"An extensive analysis of the security functions in the specification of OPC UA confirmed that OPC UA was designed with a focus on security and does not contain systematic security vulnerabilities." You can read more about it [here](https://opcconnect.opcfoundation.org/2016/06/bsi-security-check/).
+
 ## Open-source cross-platform OPC UA support from Microsoft
 
 Microsoft has a long-standing partnership with the OPC Foundation is currently the number one open-source contributor to the OPC Foundation. Microsoft is also the only cloud vendor that uses both OPC UA client-server connections as well as the new OPC UA publish-subscribe connections all the way to the cloud and back. It means that Microsoft is in a unique position to make the rich OPC UA information model - for instance the semantic description of the machines, available in the cloud for enabling services (like Azure IoT Hub).
