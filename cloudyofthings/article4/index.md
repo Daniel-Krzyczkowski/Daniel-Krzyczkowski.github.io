@@ -53,8 +53,6 @@ At Hannover Messe 2016 Microsoft worked closely with the OPC Foundation to expan
 
 There are many open source implementations of OPC UA (not only provided by Microsoft) in the different languages and with different licenses:
 
-
-
 #### open62541 - C library
 
 http://open62541.org/
@@ -80,6 +78,10 @@ https://github.com/FreeOpcUa/python-opcua
 https://github.com/eclipse/milo
 
 Full list can be found here: https://github.com/open62541/open62541/wiki/List-of-Open-Source-OPC-UA-Implementations
+
+## OPC UDA with Microsoft Azure cloud
+
+Aaa
 
 ## OPC UDA Standard Devices
 
