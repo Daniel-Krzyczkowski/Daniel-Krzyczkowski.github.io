@@ -104,7 +104,7 @@ he Azure IoT Hub provides reliable and secure communication between IoT devices.
 #### Azure IoT Edge
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article5/assets/Industry5.PNG?raw=true" alt="Azure IoT Edge"/>
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article5/assets/Industry5.png?raw=true" alt="Azure IoT Edge"/>
 </p>
 
 Azure IoT Edge enables moving cloud analytics and custom business logic to IoT devices. The device can process logic directly without pushing data to the cloud.
