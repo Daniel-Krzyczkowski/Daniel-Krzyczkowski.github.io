@@ -164,6 +164,12 @@ OPC Publisher Module integrates with existing IoT machines and devices, collects
 I also recommend to see: [Industrial Interoperability from Sensor to Cloud
 OPC UA Integration into Azure IoT Suite document](https://opcfoundation.org/wp-content/uploads/2016/10/Microsoft-OPC-UA-5-Clicks-To-Digital-Factory.pdf)
 
+### OPC UA Gateway Partners
+
+You can see that UPC UA standards are adopted by increasing number of companies:
+<p align="center">
+  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry11.PNG?raw=true" alt="Azure IoT Edge"/>
+</p>
 
 ## Microsoft Azure IoT Suite Connected Factory
 
