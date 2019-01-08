@@ -157,6 +157,8 @@ OPC Publisher Module integrates with existing IoT machines and devices, collects
   <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry12.PNG?raw=true" alt="OPC Publisher Module"/>
 </p>
 
+It is important to mention that OPC has been based on a client/server architecture, and in the 2016 its architecture was enhanced with the inclusion of publish/subscribe to provide a solid infrastructure. This allows information integration from embedded devices to the cloud.
+
 **Industrial IoT Starter Kit device works as both: OPC Proxy and OPC Publisher.**
 
 [Read full IoT Industrial specification](https://data-intelligence.softing.com/products/iot-gateways/industrial-iot-starter-kit/#tx-dftabs-tabContent1)
