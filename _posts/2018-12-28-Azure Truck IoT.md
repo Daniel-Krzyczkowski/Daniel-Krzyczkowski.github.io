@@ -2,9 +2,9 @@
 title: "Azure Truck IoT"
 ---
 
-![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
+![Image](/images/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
 
-![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/AzureTruckIoT1.jpg?raw=true)
+![Image](/images/cloudyofthings/article3/assets/AzureTruckIoT1.jpg?raw=true)
 
 ## Project description
 
@@ -14,7 +14,7 @@ Azure Truck project was created to demonstrate how Microsoft technologies can be
 ## Solution
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/AzureTruckIoT6.png?raw=true" alt="Solution diagram"/>
+  <img src="/images/cloudyofthings/article3/assets/AzureTruckIoT6.png?raw=true" alt="Solution diagram"/>
 </p>
 
 IoT solution for Azure Truck consists of three Raspberry Pi devices connected with the Microsoft Azure Cloud. Each board has some sensors connected:
@@ -86,7 +86,7 @@ The Azure IoT Edge runtime connects to Azure IoT Hub to facilitate communication
 Modules are kept as a Docker images in the Azure Container Registry. Azure IoT Edge Runtime can pull images from here and run modules as Docker container.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/AzureTruckIoT5.png?raw=true" alt="Solution diagram"/>
+  <img src="/images/cloudyofthings/article3/assets/AzureTruckIoT5.png?raw=true" alt="Solution diagram"/>
 </p>
 
 
@@ -97,7 +97,7 @@ There was two Raspberry Pi2 devices and one Raspberry Pi3 device used in the Azu
 Below there is a list of IoT sensors used in this project together with connection schemas.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/AzureTruckIoT3.JPG?raw=true" alt="Solution diagram"/>
+  <img src="/images/cloudyofthings/article3/assets/AzureTruckIoT3.JPG?raw=true" alt="Solution diagram"/>
 </p>
 
 #### Face detection devices
@@ -107,7 +107,7 @@ Below there is a list of IoT sensors used in this project together with connecti
 - [LCD screen](https://www.adafruit.com/product/181)
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/FaceDetectorDeviceSchema.png?raw=true" alt="FaceDetectorDeviceSchema"/>
+  <img src="/images/cloudyofthings/article3/assets/FaceDetectorDeviceSchema.png?raw=true" alt="FaceDetectorDeviceSchema"/>
 </p>
 
 #### Sensors device (temperature, pressure, altitude and color)
@@ -119,7 +119,7 @@ Below there is a list of IoT sensors used in this project together with connecti
 - RGB diode
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/SensorsDeviceSchema.png?raw=true" alt="SensorsDeviceSchema"/>
+  <img src="/images/cloudyofthings/article3/assets/SensorsDeviceSchema.png?raw=true" alt="SensorsDeviceSchema"/>
 </p>
 
 #### Temperature Edge IoT device
@@ -127,7 +127,7 @@ Below there is a list of IoT sensors used in this project together with connecti
 - [Temperature sensor](https://www.adafruit.com/product/165)
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/IoTEdgeDeviceSchema.png?raw=true" alt="IoTEdgeDeviceSchema"/>
+  <img src="/images/cloudyofthings/article3/assets/IoTEdgeDeviceSchema.png?raw=true" alt="IoTEdgeDeviceSchema"/>
 </p>
 
 ## Project source code
@@ -141,11 +141,11 @@ Below there is a list of IoT sensors used in this project together with connecti
 All devices were packed and mounted in our Azure Truck. You can see the final result below.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/AzureTruckIoT7.png?raw=true" alt="Solution diagram"/>
+  <img src="/images/cloudyofthings/article3/assets/AzureTruckIoT7.png?raw=true" alt="Solution diagram"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article3/assets/AzureTruckIoT8.png?raw=true" alt="Solution diagram"/>
+  <img src="/images/cloudyofthings/article3/assets/AzureTruckIoT8.png?raw=true" alt="Solution diagram"/>
 </p>
 
 I recommend to check our official Azure Truck Github repository, where presentations and samples are published and maintained:
