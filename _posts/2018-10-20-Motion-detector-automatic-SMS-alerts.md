@@ -28,7 +28,7 @@ Below there is flow presented:
 Here is how motion sensor should be connected:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorSchema.png?raw=true" alt="Solution diagram"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorSchema.png?raw=true" alt="Solution diagram"/>
 </p>
 
 ## Code and Configuration
@@ -137,31 +137,31 @@ In this section you will find which services were used in the Azure cloud and ho
 Sign in to the portal and search for IoT Hub:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure1.PNG?raw=true" alt="MotionDetectorAzure1.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure1.PNG?raw=true" alt="MotionDetectorAzure1.png"/>
 </p>
 
 Then type the name of the resource group (we will have all Azure services collected here) and name of your IoT Hub:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure2.PNG?raw=true" alt="MotionDetectorAzure2.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure2.PNG?raw=true" alt="MotionDetectorAzure2.png"/>
 </p>
 
 You can select either basic or free tier for tests. In the summary blade click create:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure3.PNG?raw=true" alt="MotionDetectorAzure3.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure3.PNG?raw=true" alt="MotionDetectorAzure3.png"/>
 </p>
 
 Open IoT devices tab and create new device - type the name of registered device (for instane MyRaspberryPi):
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure4.PNG?raw=true" alt="MotionDetectorAzure4.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure4.PNG?raw=true" alt="MotionDetectorAzure4.png"/>
 </p>
 
 Once device is displayed on the list, click it and copy connection string with primary key:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure5.PNG?raw=true" alt="MotionDetectorAzure5.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure5.PNG?raw=true" alt="MotionDetectorAzure5.png"/>
 </p>
 
 ### Azure Stream Analytics Job
@@ -171,11 +171,11 @@ Once device is displayed on the list, click it and copy connection string with p
 Now we have to create Stream Analytics Job to get data from the Azure IoT Hub and pass it to the Azure Function. In the Azure portal search for Stream Analytics Job. Use the same resource group you created for the Azure IoT Hub. Type the name (feel free here) and do not change rest of proposed configuration:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure6.PNG?raw=true" alt="MotionDetectorAzure6.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure6.PNG?raw=true" alt="MotionDetectorAzure6.png"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure7.PNG?raw=true" alt="MotionDetectorAzure7.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure7.PNG?raw=true" alt="MotionDetectorAzure7.png"/>
 </p>
 
 We will configure Stream Analytics later in the article.
@@ -186,11 +186,11 @@ We want to have Azure Function which will send SMS notifications using Twilio AP
 
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure9.PNG?raw=true" alt="MotionDetectorAzure9.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure9.PNG?raw=true" alt="MotionDetectorAzure9.png"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure10.PNG?raw=true" alt="MotionDetectorAzure10.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure10.PNG?raw=true" alt="MotionDetectorAzure10.png"/>
 </p>
 
 Create HTTP Trigger Function App. Below I present the code you should use:
@@ -256,38 +256,38 @@ As mentioned in the previous section with Azure Stream Analytics you can also us
 Open Functions blade and select "+" button to add new function:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure15_2.PNG?raw=true" alt="MotionDetectorAzure15_2.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure15_2.PNG?raw=true" alt="MotionDetectorAzure15_2.png"/>
 </p>
 
 Select "Event Hub Trigger C#" template:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure16.PNG?raw=true" alt="MotionDetectorAzure16.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure16.PNG?raw=true" alt="MotionDetectorAzure16.png"/>
 </p>
 
 Type the name: "MotionSensorDataTrigger" and in the "Event Hub connection" section click "New":
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure17.PNG?raw=true" alt="MotionDetectorAzure17.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure17.PNG?raw=true" alt="MotionDetectorAzure17.png"/>
 </p>
 
 Select "IoT Hub" tab then select previously created IoT Hub and endpoint:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure18.PNG?raw=true" alt="MotionDetectorAzure18.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure18.PNG?raw=true" alt="MotionDetectorAzure18.png"/>
 </p>
 
 That's it! Now you can paste the code responsible for sending SMS messages there from the previous function. Check the logs to see what messages are received:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure19.PNG?raw=true" alt="MotionDetectorAzure19.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure19.PNG?raw=true" alt="MotionDetectorAzure19.png"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure20.PNG?raw=true" alt="MotionDetectorAzure20.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure20.PNG?raw=true" alt="MotionDetectorAzure20.png"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure21.PNG?raw=true" alt="MotionDetectorAzure21.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure21.PNG?raw=true" alt="MotionDetectorAzure21.png"/>
 </p>
 
 
@@ -296,7 +296,7 @@ That's it! Now you can paste the code responsible for sending SMS messages there
 Now get back to the Stream Analytics Job in the Azure portal and click input tab. You should select previously created IoT Hub as an input. Then got to the output tab and select above Azure Function App. Last step is to update Query with below code:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure8.PNG?raw=true" alt="MotionDetectorAzure8.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure8.PNG?raw=true" alt="MotionDetectorAzure8.png"/>
 </p>
 
 ```
@@ -318,24 +318,24 @@ Once you launch the UWP application on the Raspberry Pi device you should receiv
 This is my final project:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure11.png?raw=true" alt="MotionDetectorAzure11.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure11.png?raw=true" alt="MotionDetectorAzure11.png"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure12.JPG?raw=true" alt="MotionDetectorAzure12.JPG"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure12.JPG?raw=true" alt="MotionDetectorAzure12.JPG"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure13.JPG?raw=true" alt="MotionDetectorAzure13.JPG"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure13.JPG?raw=true" alt="MotionDetectorAzure13.JPG"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure14.JPG?raw=true" alt="MotionDetectorAzure14.JPG"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure14.JPG?raw=true" alt="MotionDetectorAzure14.JPG"/>
 </p>
 
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article1/assets/MotionDetectorAzure15.PNG?raw=true" alt="MotionDetectorAzure15.png"/>
+  <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure15.PNG?raw=true" alt="MotionDetectorAzure15.png"/>
 </p>
 
 
