@@ -85,7 +85,7 @@ There are many open source implementations of OPC UA (not only provided by Micro
 
 Full list can be found [here](https://github.com/open62541/open62541/wiki/List-of-Open-Source-OPC-UA-Implementations).
 
-## OPC UDA with Microsoft Azure cloud
+## OPC UA with Microsoft Azure cloud
 
 I mentioned that Industry 4.0 is about integration and communication betweend hardware, software and the cloud. This is why Microsoft announced to invest huge amount of money (5 billion $) in the IoT solutions. 
 
