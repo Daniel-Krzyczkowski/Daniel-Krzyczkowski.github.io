@@ -1,4 +1,4 @@
-remote_theme: "mmistakes/minimal-mistakes@4.14.2"
+theme: jekyll-theme-minimal
 logo: /cloudyofthings/mainassets/Author.png
 title: Daniel Krzyczkowski
 encoding: UTF-8
