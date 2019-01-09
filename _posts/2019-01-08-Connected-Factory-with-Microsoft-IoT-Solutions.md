@@ -210,6 +210,12 @@ To collect telemetry data from the devices Publisher module is used (one way com
 
 I recommend to check great Microsoft documentation available [here.](https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-connected-factory-sample-walkthrough)
 
+#### Security aspect
+
+It is crucial to mention about additional security aspects here. As I mentioned before OPC UA is secure by default. Microsoft additionally made whole Connected Factory solution secured by default - it means that when adopting this solutuion customers do not have to worry about security. What is more Microsoft Security Development Lifecycle (SDL) is applied so many different security aspects are tested and verified constantly. Additional security services such like Microsoft Azure Security & Trust Center.
+
+I recommend to watch the video called Azure Industrial IoT in details by Erich Barnstedt, Microsoft.
+
 
 ## Microsoft Azure IoT protocol Gateway
 
