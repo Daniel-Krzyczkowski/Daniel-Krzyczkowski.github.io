@@ -104,10 +104,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Daniel Krzyczkowski"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "Senior Software Developer and Microsoft MVP"
+  location         : "Poland - Warsaw"
   email            :
   links:
     - label: "Email"
