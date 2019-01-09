@@ -1,3 +1,7 @@
+---
+title: "Motion detector - automatic SMS alerts with Windows IoT Core and Microsoft Azure cloud"
+---
+
 # Motion detector - automatic SMS alerts with Windows IoT Core and Microsoft Azure cloud
 
 
