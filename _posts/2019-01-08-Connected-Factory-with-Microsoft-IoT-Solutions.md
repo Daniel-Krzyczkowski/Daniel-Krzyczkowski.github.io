@@ -214,7 +214,8 @@ I recommend to check great Microsoft documentation available [here.](https://doc
 
 It is crucial to mention about additional security aspects here. As I mentioned before OPC UA is secure by default. Microsoft additionally made whole Connected Factory solution secured by default - it means that when adopting this solutuion customers do not have to worry about security. What is more Microsoft Security Development Lifecycle (SDL) is applied so many different security aspects are tested and verified constantly. Additional security services such like Microsoft Azure Security & Trust Center.
 
-[I recommend to watch the video called Azure Industrial IoT in details by Erich Barnstedt, Microsoft](https://www.youtube.com/watch?v=QJ1DWTvGQxo)
+
+[![I recommend to watch the video called Azure Industrial IoT in details by Erich Barnstedt, Microsoft](/images/cloudyofthings/article4/assets/Industry18.PNG?raw=true)](https://www.youtube.com/watch?v=QJ1DWTvGQxo "I recommend to watch the video called Azure Industrial IoT in details by Erich Barnstedt, Microsoft")
 
 [You should also visit Microsoft Security Development Lifecycle website](https://www.microsoft.com/en-us/securityengineering/sdl/practices)
 
