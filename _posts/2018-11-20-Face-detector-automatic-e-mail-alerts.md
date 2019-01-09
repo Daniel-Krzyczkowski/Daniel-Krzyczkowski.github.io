@@ -2,7 +2,7 @@
 title: "Face detector - automatic e-mail alerts with Windows IoT Core and Microsoft Azure cloud"
 ---
 
-![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
+![Image](/images/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
 
 ## Use case
 
@@ -13,7 +13,7 @@ In this article I would like to extend previous sample with face detection using
 ## Solution
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorDiagram1.png?raw=true" alt="Solution diagram"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetectorDiagram1.png?raw=true" alt="Solution diagram"/>
 </p>
 
 In the previous article I presented how to connect motion sensor with Raspberry Pi 2 device running Windows IoT Core system. This time we will add one more element - camera device connected to the USB port. Once motion is detected by sensor - photo is taken and analyzed with Microsoft Cognotive Services Face API. Then image together with analyzis result is sent to the Azure IoT Hub and then used with other components.
@@ -39,7 +39,7 @@ Face Identifier UWP applicaton is connected with Microsoft Cognitive Services Fa
 
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face identifier app"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face identifier app"/>
 </p>
 
 As you can see I scaned my face and registered myself as "Daniel" in the "Home" group. Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/FacesIdentifier)
@@ -133,7 +133,7 @@ We are using FaceRecognitionService instance in the MainPage class so I encourag
 Face Detector UWP application is created for IoT devices with Windows IoT Core system. Once motion is detected, camera connected to the device takes picture which is then analyzed by Microsoft Cognitive Services. Image and analyzis result are sent then to the Azure IoT Hub. Application is presented below:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
 </p>
 
 Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/tree/master/FaceDetector)
@@ -220,31 +220,31 @@ We will use Azure IoT Hub created previously - if you do not have one please ref
 In the messaging setion select File upload then select Azure Storage Container:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector1.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector1.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Then if you do not have storage already select +Storage account and create it. If you already have one select it from the list:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector3.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector3.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Click +Container and name it. This is the container where we will store taken image from IoT device:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector4.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector4.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Select this container so IoT Hub will know where to store images:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector5.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector5.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Save all settings:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector6.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector6.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Azure IoT Hub is now connected with Azure Storage Account. Once image is taken by IoT device it is sent to the IoT Hub and then stored in the blob container.
@@ -256,13 +256,13 @@ Once there is new information sent to the Azure IoT Hub we want to trigger Funct
 Open Functions blade and select "+" button to add new function:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorFuncApp.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetectorFuncApp.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Select "Event Hub Trigger C#" template. Type the name and select IoT Hub for the Azure Event Hubs Trigger:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector0.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector0.PNG?raw=true" alt="Face detector"/>
 </p>
 
 That's it! Now you can paste the code responsible for sending Face API analyzis received from the device to the Azure Logic App:
@@ -310,37 +310,37 @@ We will store the logs in the Application Insights - if you do not have one plea
 Now its time to configure Azure Logic App to send e-mail notifications with Face API analyzis result and taken image attached to the message. Go to the IoT Hub resource in Azure portal and open Events section and click Logic App tile:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector7.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector7.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Fill required data including name of the Logic App:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector12.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector12.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Then select Templates from the top:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector8.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector8.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Select When a HTTP request is received trigger:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector9.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector9.PNG?raw=true" alt="Face detector"/>
 </p>
 
 This will generate first step for the Logic App:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector10.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector10.PNG?raw=true" alt="Face detector"/>
 </p>
 
 We need to define JSON schema for received messages:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector11.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector11.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Paste below schema and save changes. Note that here we expecting to receive analyzis result and room number where motion was detected:
@@ -367,35 +367,35 @@ Paste below schema and save changes. Note that here we expecting to receive anal
 Add next step to the Logic App. We want to take image stored in the Azure Storage by name:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector13.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector13.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Add next step called Send an email. Here you have to sign in to your Outlook account so you need to have one:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector14.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector14.PNG?raw=true" alt="Face detector"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector15.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector15.PNG?raw=true" alt="Face detector"/>
 </p>
 
 As you can see below there is body included with the analyzis result and room number where motion was detected.There is also image attached:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector16.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector16.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Once email is sent we want to remove image from the Azure Storage so next step has to be added:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector18.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector18.PNG?raw=true" alt="Face detector"/>
 </p>
 
 Final steps of the Logic App should look like below:
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector19.PNG?raw=true" alt="Face detector"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector19.PNG?raw=true" alt="Face detector"/>
 </p>
 
 ## Final project
@@ -404,15 +404,15 @@ Once you scan and register yourself with Face Identifier UWP application, launch
 
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp3.JPG?raw=true" alt="Face detector test"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetectorApp3.JPG?raw=true" alt="Face detector test"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article2/assets/FaceDetector20.PNG?raw=true" alt="Face detector app"/>
+  <img src="/images/cloudyofthings/article2/assets/FaceDetector20.PNG?raw=true" alt="Face detector app"/>
 </p>
 
 
