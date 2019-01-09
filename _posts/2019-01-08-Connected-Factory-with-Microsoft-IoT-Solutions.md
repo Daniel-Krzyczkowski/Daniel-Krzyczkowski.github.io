@@ -2,7 +2,7 @@
 title: "Industry 4.0 - Connected Factory with Microsoft IoT Solutions"
 ---
 
-![Image](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
+![Image](/images/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
 
 ## Introduction
 
@@ -13,7 +13,7 @@ Before I introduce the Microsoft Azure cloud services for Internet of Things (Io
 Industry 4.0 is a term connected with the Industrial Revolution. Please lets first look at below image. There are four industrial revolutions presented. In this article we are talking about fourth one.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry1.PNG?raw=true" alt="Industry revolution table"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry1.PNG?raw=true" alt="Industry revolution table"/>
 </p>
 
 The fourth industrial revolution - term which refers to the concept of the "industrial revolution" in connection with the contemporary mutual use of automation, data processing and exchange as well as manufacturing techniques. Definitionally, it is a collective term for the techniques and principles of the functioning of a value chain organization using or using cyber-physical systems, the Internet of Things (IoT) and cloud computing.
@@ -24,7 +24,7 @@ Openness and interoperability between hardware, software, and services will be k
 #### OPC Foundation
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry3.PNG?raw=true" alt="OPC Foundation"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry3.PNG?raw=true" alt="OPC Foundation"/>
 </p>
 
 OPC Foundation - an organization whose task is to provide broad opportunities for interoperability in the field of automation, by creating and maintaining an open communication standard that allows transfer of process data, alarm and event data, historical data and batch data to devices from different manufacturers.
@@ -37,12 +37,12 @@ The OPC UA standard is driven by the OPC Foundation described above.
 Adapting machines to become compatible with OPC UA is an un-intrusive and cost-effective way to connect factory assets and adapters to field buses are available through a rich ecosystem of vendors (mentioned below in the article). OPC UA is also called communication technology for Industry 4.0 and is essential to reaching this next level of connectivity in manufacturing facilities.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry9.PNG?raw=true" alt="OPC Foundation"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry9.PNG?raw=true" alt="OPC Foundation"/>
 </p>
 
 There is a great video created by OPC Foundation which presents the whole idea of OPC UA (Open Platform Configurations Unified Architecture):
 
-[![OPC UA](https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry2.jpg?raw=true)](https://www.youtube.com/watch?v=-tDGzwsBokY "OPC UA")
+[![OPC UA](/images/cloudyofthings/article4/assets/Industry2.jpg?raw=true)](https://www.youtube.com/watch?v=-tDGzwsBokY "OPC UA")
 
 One more important aspect - security. It is confirmed that OPC UA is secure by default. It means that all security features are turned on and already configured so there is no need to do this step manually and sees how an end-to-end solution can be secured. It was also confirmed by German Federal Office for Information Security (BSI):
 
@@ -94,7 +94,7 @@ With reference to the Azure cloud platform, it offers dedicated services for IoT
 ### Azure IoT Hub
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry7.png?raw=true" alt="Azure IoT Hub"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry7.png?raw=true" alt="Azure IoT Hub"/>
 </p>
 
 he Azure IoT Hub provides reliable and secure communication between IoT devices. It also establishes bi-directional communication between each device and the Azure cloud. With Azure IoT Hub you can send messages:
@@ -105,7 +105,7 @@ he Azure IoT Hub provides reliable and secure communication between IoT devices.
 ### Azure IoT Edge
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry6.png?raw=true" alt="Azure IoT Edge"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry6.png?raw=true" alt="Azure IoT Edge"/>
 </p>
 
 Azure IoT Edge enables moving cloud analytics and custom business logic to IoT devices. The device can process logic directly without pushing data to the cloud.
@@ -131,13 +131,13 @@ Microsoft works close with IoT devices manufacturers to provide easier way to de
 ### Industrial IoT Starter Kit
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry13.jpg?raw=true" alt="IoT Starter Kit 2"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry13.jpg?raw=true" alt="IoT Starter Kit 2"/>
 </p>
 
 To make it easier to start integration and to verify your specific requirements there is production-ready starter kit created in cooperation between Microsoft, Softing and Hewlett Packard. It enables connecting your existing IoT devices with Azure cloud - it is working as a proxy between devices and the cloud. Of course there are other devices like that too - ready for production use.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry8.png?raw=true" alt="IoT Starter Kit 2"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry8.png?raw=true" alt="IoT Starter Kit 2"/>
 </p>
 
 As you can see in the picture above there are two important modules in this architecture:
@@ -147,7 +147,7 @@ As you can see in the picture above there are two important modules in this arch
 OPC Proxy Module enables bi-directional communication between Azure cloud (Azure IoT Hub in this case) and IoT machines and devices. It means that with Proxy module we are able to collect data from the devices and send some data to them form the Azure cloud.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry10.PNG?raw=true" alt="OPC Proxy Module"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry10.PNG?raw=true" alt="OPC Proxy Module"/>
 </p>
 
 **OPC Publisher Module**
@@ -155,7 +155,7 @@ OPC Proxy Module enables bi-directional communication between Azure cloud (Azure
 OPC Publisher Module integrates with existing IoT machines and devices, collects the data generated by them and then converts this data so it can be send to the Azure cloud.
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry12.PNG?raw=true" alt="OPC Publisher Module"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry12.PNG?raw=true" alt="OPC Publisher Module"/>
 </p>
 
 It is important to mention that OPC has been based on a client/server architecture, and in the 2016 its architecture was enhanced with the inclusion of publish/subscribe to provide a solid infrastructure. This allows information integration from embedded devices to the cloud.
@@ -171,13 +171,13 @@ OPC UA Integration into Azure IoT Suite document](https://opcfoundation.org/wp-c
 
 You can see that UPC UA standards are adopted by increasing number of companies:
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry11.PNG?raw=true" alt="OPC UA Gateway Partners"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry11.PNG?raw=true" alt="OPC UA Gateway Partners"/>
 </p>
 
 ## Microsoft Azure IoT Suite Connected Factory
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry14.PNG?raw=true" alt="Microsoft Azure IoT Suite Connected Factory"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry14.PNG?raw=true" alt="Microsoft Azure IoT Suite Connected Factory"/>
 </p>
 
 Connected Factory is one of the IoT Solution Accelerators created and provided by Microsoft. The IoT solution accelerators are complete, ready-to-deploy IoT solutions that implement common IoT scenario. 
@@ -197,7 +197,7 @@ In this article we will concentrate on the Connected Factory.
 ### Logical architecture
 
 <p align="center">
-  <img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/blob/master/cloudyofthings/article4/assets/Industry15.png?raw=true" alt="Logical architecture"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry15.png?raw=true" alt="Logical architecture"/>
 </p>
 
 ## Microsoft Azure IoT protocol gateway
