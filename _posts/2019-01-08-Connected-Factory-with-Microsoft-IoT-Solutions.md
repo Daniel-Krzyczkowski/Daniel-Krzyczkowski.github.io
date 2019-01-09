@@ -205,13 +205,22 @@ Below there is presented logical architecture of the Connected Factory. Please n
 To collect telemetry data from the devices Publisher module is used (one way communication from the devices to the cloud):
 
 <p align="center">
-  <img src="/images/cloudyofthings/article4/assets/Industry16.png?raw=true" alt="Logical architecture"/>
+  <img src="/images/cloudyofthings/article4/assets/Industry16.png?raw=true" alt="Proxy architecture"/>
 </p>
 
+I recommend to check great Microsoft documentation available [here.](https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-connected-factory-sample-walkthrough)
 
-## Microsoft Azure IoT protocol gateway
 
-Aaa
+## Microsoft Azure IoT protocol Gateway
+
+There are some cases in which devices or field gateways might not be able to use one of these standard protocols and require protocol adaptation. Azure IoT Hub natively supports communication over the MQTT, AMQP, and HTTPS protocols and in case where this protocols cannot be used directly Microsoft Azure IoT Protocol Gateway is needed. The Azure IoT protocol gateway provides a programming model for building custom protocol adapters for variety of protocols.
+
+More information about how Protocol Gateway works can be found [here.](https://github.com/Azure/azure-iot-protocol-gateway/blob/master/README.md)
+
+<p align="center">
+  <img src="/images/cloudyofthings/article4/assets/Industry17.jpg?raw=true" alt="Logical architecture"/>
+</p>
+
 
 ## Additional resources
 
