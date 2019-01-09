@@ -151,4 +151,4 @@ All devices were packed and mounted in our Azure Truck. You can see the final re
 I recommend to check our official Azure Truck Github repository, where presentations and samples are published and maintained:
 [Azure Truck Github](https://github.com/AzureTruck)
 
-[Back](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
+[Back](https://daniel-krzyczkowski.github.io/)
