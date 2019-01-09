@@ -340,4 +340,4 @@ This is my final project:
 
 
 
-[Back to the main page](https://daniel-krzyczkowski.github.io/cloudyofthings/main/index)
+[Back](https://daniel-krzyczkowski.github.io/)
