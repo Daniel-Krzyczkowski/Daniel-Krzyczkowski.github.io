@@ -233,5 +233,7 @@ OPC UA Integration into Azure IoT Suite](https://opcfoundation.org/wp-content/up
 
 [Secured IoT Interoperability From Sensor to IT Enterprise](https://www.industryofthingsworld.com/wp-content/uploads/2018/10/Day-02_Stream-1_Stefan-Hoppe_OPC-Foundation.pdf)
 
+[Choosing Your Messaging Protocol: AMQP, MQTT, or STOMP](https://blogs.vmware.com/vfabric/2013/02/choosing-your-messaging-protocol-amqp-mqtt-or-stomp.html)
+
 
 [Back](https://daniel-krzyczkowski.github.io/)
