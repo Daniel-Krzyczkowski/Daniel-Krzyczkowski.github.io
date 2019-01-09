@@ -224,7 +224,14 @@ More information about how Protocol Gateway works can be found [here.](https://g
 
 ## Additional resources
 
-Aaa
+Below there are some interesting resources which are worth to check:
+
+[IoT Platforms in Europe (preliminary results)](https://www.pac-online.com/sites/pac-online.com/files/upload_path/PDFs/Status%20Quo%20of%20IoT%20Platforms%20Webinar%20170706.pdf)
+
+[Industrial Interoperability from Sensor to Cloud
+OPC UA Integration into Azure IoT Suite](https://opcfoundation.org/wp-content/uploads/2016/10/Microsoft-OPC-UA-5-Clicks-To-Digital-Factory.pdf)
+
+[Secured IoT Interoperability From Sensor to IT Enterprise](https://www.industryofthingsworld.com/wp-content/uploads/2018/10/Day-02_Stream-1_Stefan-Hoppe_OPC-Foundation.pdf)
 
 
 [Back](https://daniel-krzyczkowski.github.io/)
