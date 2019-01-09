@@ -196,9 +196,18 @@ In this article we will concentrate on the Connected Factory.
 
 ### Logical architecture
 
+Below there is presented logical architecture of the Connected Factory. Please note that in this case Proxy module is used to communicate with siulated devices (there is bi-directional communication):
+
 <p align="center">
   <img src="/images/cloudyofthings/article4/assets/Industry15.png?raw=true" alt="Logical architecture"/>
 </p>
+
+To collect telemetry data from the devices Publisher module is used (one way communication from the devices to the cloud):
+
+<p align="center">
+  <img src="/images/cloudyofthings/article4/assets/Industry16.png?raw=true" alt="Logical architecture"/>
+</p>
+
 
 ## Microsoft Azure IoT protocol gateway
 
