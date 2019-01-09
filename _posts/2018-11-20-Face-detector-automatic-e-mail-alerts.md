@@ -6,7 +6,7 @@ title: "Face detector - automatic e-mail alerts with Windows IoT Core and Micros
 
 ## Use case
 
-In my previous article (you can find it [here](https://daniel-krzyczkowski.github.io/cloudyofthings/article1/index)) I described how to connect motion sensor to the device with Windows IoT Core system and how to connect it with Microsoft Azure IoT Hub to send SMS alerts once motion is detected.
+In my previous article (you can find it [here](https://daniel-krzyczkowski.github.io/Motion-detector-automatic-SMS-alerts/)) I described how to connect motion sensor to the device with Windows IoT Core system and how to connect it with Microsoft Azure IoT Hub to send SMS alerts once motion is detected.
 
 In this article I would like to extend previous sample with face detection using camera connected to the IoT device and Microsoft Cognitive Serivces (Face API service). Once motion is detected, camera takes picture which is analyzed with Cognitive Services Face API. At the end there is an email notification send with taken image and analyzis result using Azure Logic App.
 
