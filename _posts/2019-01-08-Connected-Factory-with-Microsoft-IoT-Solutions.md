@@ -208,7 +208,7 @@ To collect telemetry data from the devices Publisher module is used (one way com
   <img src="/images/cloudyofthings/article4/assets/Industry16.png?raw=true" alt="Logical architecture"/>
 </p>
 
-I recommend to check great Microsoft documentation available [here](https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-connected-factory-sample-walkthrough)
+I recommend to check great Microsoft documentation available [here.](https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-connected-factory-sample-walkthrough)
 
 
 ## Microsoft Azure IoT protocol gateway
