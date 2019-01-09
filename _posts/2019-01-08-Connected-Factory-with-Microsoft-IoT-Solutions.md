@@ -222,7 +222,7 @@ More information about how Protocol Gateway works can be found [here.](https://g
 </p>
 
 
-## Additional resources
+## Additional resources and summary
 
 Below there are some interesting resources which are worth to check:
 
@@ -234,6 +234,8 @@ OPC UA Integration into Azure IoT Suite](https://opcfoundation.org/wp-content/up
 [Secured IoT Interoperability From Sensor to IT Enterprise](https://www.industryofthingsworld.com/wp-content/uploads/2018/10/Day-02_Stream-1_Stefan-Hoppe_OPC-Foundation.pdf)
 
 [Choosing Your Messaging Protocol: AMQP, MQTT, or STOMP](https://blogs.vmware.com/vfabric/2013/02/choosing-your-messaging-protocol-amqp-mqtt-or-stomp.html)
+
+I tried to include all helpful information in this article from many different sources but of course this is just a drop in the ocean. There is a lot more to learn and investigate to properly integrate cloud services with factories and IoT Enterprise solutions.
 
 
 [Back](https://daniel-krzyczkowski.github.io/)
