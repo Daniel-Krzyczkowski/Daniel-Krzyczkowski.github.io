@@ -122,12 +122,12 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "GitHub"
+    - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.linkedin.com/in/daniel-krzyczkowski-6a3910b4/"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/daniel-krzyczkowski"
 
 # Site Footer
 footer:
