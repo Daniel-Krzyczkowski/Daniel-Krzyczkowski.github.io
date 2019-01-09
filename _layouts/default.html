@@ -12,14 +12,13 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <div class="page__hero--overlay" style=" background-image: url('/images/cloudyofthings/mainassets/CloudyOfThings.png');">
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
-
-    <div class="page__hero--overlay" style=" background-image: url('/images/cloudyofthings/mainassets/CloudyOfThings.png');">
       
     <div class="initial-content">
       {{ content }}
