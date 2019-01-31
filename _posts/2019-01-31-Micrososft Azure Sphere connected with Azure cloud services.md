@@ -19,7 +19,7 @@ In this article you can find my latest project in which I used Microsoft Azure c
 ## Project structure and architecture
 
 <p align="center">
-<img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/tree/master/images/cloudyofthings/article5/CloudyOfThingsArchitecture.png?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article5/assets/CloudyOfThingsArchitecture.png?raw=true" alt="Solution architecture"/>
 </p>
 
 Above diagram presents the whole solution. There is Microsoft Azure Sphere device used with sensors and OLED screen connected. This device communicates with Azure IoT Hub and sends temperature and humidity data in the specific time intervals. Once Azure IoT Hub receives message, Azure Function App is triggered (each time some data is sent to the IoT Hub). Azure Function App is responsible for preparing received data and exporting it to the Azure Table Storage.
@@ -35,7 +35,7 @@ Below you can read about implementation details for each architecture component.
 ### Microsoft Azure Sphere
 
 <p align="center">
-<img src="https://github.com/Daniel-Krzyczkowski/Daniel-Krzyczkowski.github.io/tree/master/images/cloudyofthings/article5/AzureSphere.png?raw=true" alt="Azure Sphere Board"/>
+<img src="/images/cloudyofthings/article5/assets/AzureSphere.png?raw=true" alt="Azure Sphere Board"/>
 </p>
 
 Microsoft Azure Sphere provides product manufacturers with a chance to create secured, internet-connected devices that can be controlled, updated, monitored and maintained remotely. This is not only the board. This is whole solution for creating highly secured, connected Microcontroller (MCU) devices. You can read more about Azure Sphere specification in my article [here](https://predica.pl/blog/azure-sphere-iot/.)
