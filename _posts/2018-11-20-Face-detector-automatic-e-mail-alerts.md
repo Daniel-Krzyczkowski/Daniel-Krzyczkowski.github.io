@@ -42,7 +42,7 @@ Face Identifier UWP applicaton is connected with Microsoft Cognitive Services Fa
   <img src="/images/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face identifier app"/>
 </p>
 
-As you can see I scaned my face and registered myself as "Daniel" in the "Home" group. Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/FacesIdentifier)
+As you can see I scaned my face and registered myself as "Daniel" in the "Home" group. Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/tree/master/FacesIdentifier)
 
 The most important part is FaceRecognitionService class. There you can find all methods responsible creating group of known people, adding new person to the group (using image and name) or detecting it after training of Face API:
 
