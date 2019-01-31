@@ -2,7 +2,7 @@
 title: "Azure Truck IoT"
 ---
 
-![Image](/images/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
+![Image](/images/cloudyofthings/article3/assets/CloudyOfThingsArticle3.png?raw=true)
 
 ![Image](/images/cloudyofthings/article3/assets/AzureTruckIoT1.jpg?raw=true)
 
