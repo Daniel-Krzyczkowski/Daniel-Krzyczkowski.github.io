@@ -1,4 +1,6 @@
-﻿# Micrososft Azure Sphere connected with Azure cloud services
+﻿---
+title: "Micrososft Azure Sphere connected with Azure cloud services"
+---
 
 <p align="center">
 <img src="https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/blob/master/AzureIoT/AzureSphereProject/Assets/CloudyOfThingsAuthor.png?raw=true" alt="Windows IoT Core samples repository"/>
