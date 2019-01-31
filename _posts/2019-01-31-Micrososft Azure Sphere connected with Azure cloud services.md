@@ -1,5 +1,5 @@
 ﻿---
-title: "Micrososft Azure Sphere connected with Azure cloud services"
+title: "Microsoft Azure Sphere connected with Azure cloud services"
 ---
 
 <p align="center">
