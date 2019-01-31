@@ -10,8 +10,7 @@ title: "Micrososft Azure Sphere connected with Azure cloud services"
 
 Some time ago I jumped into Internet of Things topics connected with Microsoft Azure cloud. As a result I created my own series of articles about Azure IoT called **Cloudy of Things**.
 
-You can read them all here:
-[Cloudy of Things article series](https://daniel-krzyczkowski.github.io/)
+You can read them all on this blog.
 
 In this article you can find my latest project in which I used Microsoft Azure cloud services, Microsoft Azure Sphere device and Universal Windows Platform for app development.
 
