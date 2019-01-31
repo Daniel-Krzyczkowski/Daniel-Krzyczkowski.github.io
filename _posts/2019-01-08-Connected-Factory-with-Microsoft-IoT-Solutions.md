@@ -2,7 +2,7 @@
 title: "Industry 4.0 - Connected Factory with Microsoft IoT Solutions"
 ---
 
-![Image](/images/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
+![Image](/images/cloudyofthings/article4/assets/CloudyOfThingsArticle4.png?raw=true)
 
 ## Introduction
 
