@@ -42,7 +42,7 @@ Face Identifier UWP applicaton is connected with Microsoft Cognitive Services Fa
   <img src="/images/cloudyofthings/article2/assets/FaceDetectorApp1.png?raw=true" alt="Face identifier app"/>
 </p>
 
-As you can see I scaned my face and registered myself as "Daniel" in the "Home" group. Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/tree/master/FacesIdentifier)
+As you can see I scaned my face and registered myself as "Daniel" in the "Home" group. Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/FacesIdentifier)
 
 The most important part is FaceRecognitionService class. There you can find all methods responsible creating group of known people, adding new person to the group (using image and name) or detecting it after training of Face API:
 
@@ -136,7 +136,7 @@ Face Detector UWP application is created for IoT devices with Windows IoT Core s
   <img src="/images/cloudyofthings/article2/assets/FaceDetectorApp2.png?raw=true" alt="Face detector app"/>
 </p>
 
-Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/WindowsIoTCore/tree/master/FaceDetector)
+Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/tree/master/WindowsIoTCore/FaceDetector)
 
 I extended previous application (Motion Detector) with connected camera device and Microsoft Cognitive Services Face API. There is one more service added to the project called FaceRecognitionService (as in the Face Identifier app) which helps detect people from the images taken by camera device once motion is detected:
 
