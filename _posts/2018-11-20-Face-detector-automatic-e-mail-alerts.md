@@ -2,7 +2,7 @@
 title: "Face detector - automatic e-mail alerts with Windows IoT Core and Microsoft Azure cloud"
 ---
 
-![Image](/images/cloudyofthings/mainassets/CloudyOfThings.png?raw=true)
+![Image](/images/cloudyofthings/article2/assets/CloudyOfThingsArticle2.png?raw=true)
 
 ## Use case
 
