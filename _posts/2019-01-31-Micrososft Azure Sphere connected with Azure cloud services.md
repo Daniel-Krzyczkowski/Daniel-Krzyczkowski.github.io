@@ -3,7 +3,7 @@ title: "Micrososft Azure Sphere connected with Azure cloud services"
 ---
 
 <p align="center">
-<img src="/images/cloudyofthings/article5/assets/CloudyOfThingsAuthor.png?raw=true" alt="Windows IoT Core samples repository"/>
+<img src="/images/cloudyofthings/article5/assets/CloudyOfThingsArticle5.png?raw=true" alt="Windows IoT Core samples repository"/>
 </p>
 
 **TL;DR** 
