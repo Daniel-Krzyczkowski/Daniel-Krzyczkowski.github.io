@@ -14,6 +14,8 @@ You can read them all on this blog.
 
 In this article you can find my latest project in which I used Microsoft Azure cloud services, Microsoft Azure Sphere device and Universal Windows Platform for app development.
 
+[Source code is available here](https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/tree/master/AzureIoT/AzureSphereProject/SRC)
+
 ---
 
 ## Project structure and architecture
@@ -123,7 +125,7 @@ Azure Function App was created to capture data sent to the Azure IoT Hub. In thi
 <img src="/images/cloudyofthings/article5/assets/CloudyOfThingsFA1.png?raw=true" alt="Cloudy of Things Azure Function App"/>
 </p>
 
-Once data is received by the Function App it is prepared to be stored in the Azure Storage Table. Here is code fragment of that function (of course whole source code of this project is available in the repository here):
+Once data is received by the Function App it is prepared to be stored in the Azure Storage Table. Here is code fragment of that function (of course whole source code of this project is available in the repository [here](https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/tree/master/AzureIoT/AzureSphereProject/SRC)):
 
 ```C#
 public static async Task Run(string myEventHubMessage, ILogger log)
