@@ -2,7 +2,7 @@
 title: "Motion detector - automatic SMS alerts with Windows IoT Core and Microsoft Azure cloud"
 ---
 
-![Image](/images/cloudyofthings/mainassets/CloudyOfThingsArticle1.png?raw=true)
+![Image](/images/cloudyofthings/article1/assets/CloudyOfThingsArticle1.png?raw=true)
 
 ## Use case
 
