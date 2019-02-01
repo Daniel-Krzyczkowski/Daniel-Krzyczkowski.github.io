@@ -97,7 +97,7 @@ With reference to the Azure cloud platform, it offers dedicated services for IoT
   <img src="/images/cloudyofthings/article4/assets/Industry7.png?raw=true" alt="Azure IoT Hub"/>
 </p>
 
-he Azure IoT Hub provides reliable and secure communication between IoT devices. It also establishes bi-directional communication between each device and the Azure cloud. With Azure IoT Hub you can send messages:
+The Azure IoT Hub provides reliable and secure communication between IoT devices. It also establishes bi-directional communication between each device and the Azure cloud. With Azure IoT Hub you can send messages:
 
 - **from a device to the cloud** – e.g. temperature values provided by a sensor connected to an IoT device, sent for analysis, and
 - **from the cloud to a device** – e.g. a message with software update payload.
@@ -122,7 +122,7 @@ When a module is being deployed on a device, the IoT Hub contacts the Azure IoT 
 
 The Azure IoT Edge runtime connects to Azure IoT Hub to facilitate communication between the Edge device and the cloud. If data has to be pushed to the cloud or a new module needs to be deployed on the device, it is done through the IoT Hub.
 
-## OPC UDA Standard Devices
+## OPC UA Standard Devices
 
 Microsoft works close with IoT devices manufacturers to provide easier way to deploy OPC UA standards and to easier integration with Azure cloud services. These all devices are compatible with OPC UA standards and ready for production usage. They can be used as a proxy between factory fields and the Azure cloud.
 
