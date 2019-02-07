@@ -113,8 +113,8 @@ In this project IoT Hub is responsible for communication with Azure Sphere devic
 
 Below are some helpful links how to start with Azure IoT Hub and how to configure it with Azure Sphere device:
 
-* [Introduction to the Azure IoT Hub](https://docs.microsoft.com/da-dk/azure/iot-hub/about-iot-hub)
-* [Azure Sphere with Azure IoT Hub](https://docs.microsoft.com/en-us/azure-sphere/app-development/azure-iot)
+* [Introduction to the Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/about-iot-hub)
+* [Azure Sphere with Azure IoT Hub](https://docs.microsoft.com/azure-sphere/app-development/azure-iot)
 
 
 ### Microsoft Azure Function App
@@ -213,7 +213,7 @@ public class MessagingController : ControllerBase
 
 Credentials like connection string to the Azure Iot Hub or Azure Active Directory B2C parameters are stroed in the Azure Key Vault. Here I used Managed Service Identiy which enables authenticaton between Azure Web App and Azure AD to provide access to the KeyVaul without stroing any credentials in the "appsettings.json file".
 
-Read more here: [Tutorial: Use Azure Key Vault with an Azure web app in .NET](https://docs.microsoft.com/en-us/azure/key-vault/tutorial-net-create-vault-azure-web-app)
+Read more here: [Tutorial: Use Azure Key Vault with an Azure web app in .NET](https://docs.microsoft.com/azure/key-vault/tutorial-net-create-vault-azure-web-app)
 
 ### Azure Application Insights
 
@@ -223,7 +223,7 @@ Read more here: [Tutorial: Use Azure Key Vault with an Azure web app in .NET](ht
 
 Application Insights is an extensible Application Performance Management (APM) service for web developers on multiple platforms. It includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your application. I connected the Azure Application Insights with Azure Web App where Web API is hosted. Now I can monitor performance and review the requests sent to and from the Web API.
 
-[You can read more about Azure Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
+[You can read more about Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)
 
 ### Microsoft Azure Active Directory B2C
 
@@ -231,7 +231,7 @@ Azure Active Directory (Azure AD) is a multi-tenant, cloud-based directory and i
 
 Web API and UWP applications are secured by Azure AD B2C in this project.
 
-[You can read more about Azure AD B2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-overview)
+[You can read more about Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview)
 
 
 ### Azure Key Vault
@@ -242,7 +242,7 @@ Azure Key Vault is dedicated place to store any vulnerable data like passwords a
 <img src="/images/cloudyofthings/article5/assets/CloudyOfThingsKV1.PNG?raw=true" alt="Cloudy of Things Key Vault"/>
 </p>
 
-[You can read more about Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-overview)
+[You can read more about Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview)
 
 
 ### Universal Windows 10 Platform App
