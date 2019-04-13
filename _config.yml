@@ -13,7 +13,7 @@ logo: "/assets/images/author.jpg"
 float_logo: true # true, false (default)
 
 # blog cover
-cover: "/assets/images/blog_main_banner.png"
+cover: "/assets/images/background_image.jpg"
 
 name: 'Daniel Krzyczkowski'
 author: 'Daniel Krzyczkowski'
