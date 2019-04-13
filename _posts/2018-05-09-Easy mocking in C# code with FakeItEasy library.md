@@ -6,199 +6,256 @@ title: "Easy mocking in C# code with FakeItEasy library"
 <img src="/images/devisland/article6/assets/fakeit11.png?raw=true" alt="Easy mocking in C# code with FakeItEasy library"/>
 </p>
 
+&nbsp;
 <h3><strong>Short introduction</strong></h3>
-Web API access can be protected to avoid unauthorized access. In this article I would like to present how to configure Azure Active Directory B2C (Business-to-Consumer). Before that its worth to mention few words about Azure AD  (Azure AD).
-
-Azure Active Directory is a cloud identity provider service or Identity as a Service (IdaaS) provided by Microsoft.
-
-Azure AD B2C is a separate service (with same technology as standard Azure AD) which allows organizations to build a cloud identity directory for their customers.
-
-&nbsp;
-<h3><strong>Setup Azure Active Directory B2C</strong></h3>
-Once you sign in to <a href="https://portal.azure.com" target="_blank" rel="noopener">Microsoft Azure Portal</a> (Azure subscription is required here) click "Create resource" in the left top corner:
-<p style="text-align:center;"><img class="alignnone wp-image-234" src="/images/devisland/article6/assets/adb2c2.png?w=300" alt="" width="307" height="178" /></p>
-In search window type "azure b2c" and select "Azure Active Directory B2C" resource. Click "Create" button:
-<p style="text-align:center;"><img class="alignnone wp-image-236" src="/images/devisland/article6/assets/adb2c3.png?w=300" alt="" width="477" height="116" /></p>
-In the next tab select "Create a new Azure AD B2C Tenant":
-<p style="text-align:center;"><img class="alignnone wp-image-240" src="/images/devisland/article6/assets/adb2c4.png?w=300" alt="" width="471" height="146" /></p>
-Then provide your organization name, initial domain name and country. Click "Create" button:
-<p style="text-align:center;"><img class="alignnone wp-image-242" src="/images/devisland/article6/assets/adb2c5.png?w=191" alt="" width="245" height="386" /></p>
-Once AD is created you can manage it:
-
-<img class=" wp-image-244 aligncenter" src="/images/devisland/article6/assets/adb2c6.png?w=300" alt="" width="455" height="126" />
-
-&nbsp;
-<h3><strong>Connect Azure Active Directory B2C with Azure subscription</strong></h3>
-You can notice that alert about missing subscription is displayed:
-<p style="text-align:center;"><img class="alignnone wp-image-247" src="/images/devisland/article6/assets/adb2c7.png?w=300" alt="" width="493" height="207" /></p>
-Click on the alert to proceed. There is clear information displayed how to link AD B2C with Azure subscription:
-<p style="text-align:center;"><img class="alignnone wp-image-250" src="/images/devisland/article6/assets/adb2c8.png?w=300" alt="" width="507" height="282" /></p>
-Click "Switch Directories" and select directory with active Azure subscription. Once you switch, find Azure B2C under Marketplace:
-<p style="text-align:center;"><img class="alignnone wp-image-236" src="/images/devisland/article6/assets/adb2c3.png?w=300" alt="" width="501" height="122" /></p>
-Now select "Link an existing Azure AD B2C Tenant to my Azure subscription":
-<p style="text-align:center;"><img class="alignnone wp-image-254" src="/images/devisland/article6/assets/adb2c9.png?w=300" alt="" width="510" height="63" /></p>
-Choose Tenant, Subscription and optionally create new resource group (you can use existing):
-<p style="text-align:center;"><img class="alignnone wp-image-256" src="/images/devisland/article6/assets/adb2c10.png?w=204" alt="" width="244" height="359" /></p>
-<p style="text-align:center;"><img class="alignnone size-medium wp-image-258" src="/images/devisland/article6/assets/adb2c11.png?w=300" alt="" width="300" height="103" /></p>
-Once you click "Go to resource" and then click on the square with the name of your Tenant:
-<p style="text-align:center;"><img class="alignnone wp-image-260" src="/images/devisland/article6/assets/adb2c12.png?w=300" alt="" width="343" height="319" /></p>
-Azure AD B2C is ready:
-<p style="text-align:center;"><img class="alignnone wp-image-262" src="/images/devisland/article6/assets/adb2c13.png?w=300" alt="" width="486" height="270" /></p>
-
-<h3></h3>
-<h3><strong>Configure Sign up policy</strong></h3>
-Once Azure AD B2C is ready to use it is time to configure polices. Policies fully describe consumer identity experiences such as sign-up, sign-in, or profile editing.
-
-Example:
-
-sign-up policy allows you to control behaviors by configuring the following settings:
+Unit tests are inseparable element of software development cycle. They enable testing functionality of the program and bug detection on early stage of implementation. In this article I would like to present mocking library called Fake It Easy but before I present some code, let me do some introduction about terms from unit tests dictionary.
+<h3><strong>Unit tests dictionary</strong></h3>
 <ul>
- 	<li>Account types (social accounts such as Facebook or local accounts such as email addresses) that consumers can use to sign up for the application</li>
- 	<li>Attributes (for example, first name, postal code, and shoe size) to be collected from the consumer during sign-up</li>
+ 	<li><strong>Unit of source code</strong> - the smallest piece of a code that can be tested. In .NET C# it is usually method or class</li>
+ 	<li><strong>Unit tests</strong> - process through which units of source code are tested to verify if they work properly and are free of bugs</li>
+ 	<li><strong>Mocking</strong>  - process used in unit testing when the unit being tested has external dependencies (cannot work properly without external source code). In .NET C# example can be object of one class which depends on another object from different class. These dependency objects are called "replacement objects"</li>
 </ul>
-You can read more under <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-policies" target="_blank" rel="noopener">this</a> link.
-
-<strong>Sign-up policy</strong>
-
-Add sign-up policy. Click "Sign-up policy":
-<p style="text-align:center;"><img class="alignnone wp-image-268" src="/images/devisland/article6/assets/adb2c14.png?w=283" alt="" width="205" height="217" /></p>
-Click "Add" button. Blade with configuration should be displayed:
-<p style="text-align:center;"><img class="alignnone wp-image-271" src="/images/devisland/article6/assets/adb2c15.png?w=145" alt="" width="189" height="391" /></p>
-
+There are four types of "replacement objects" according to <a href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank" rel="noopener">Martin Flower's article:</a>
 <ul>
- 	<li>Name - field where you can type the name of the policy</li>
- 	<li>Identity providers - here you can select whether you want to register user with e-mail and password or with for instance with Facebook</li>
- 	<li>Sign-up attributes - you can specify which attributes should be collected during registration, like City or Surname:</li>
+ 	<li><strong>Dummies </strong>-  objects are passed around but never actually used. Usually they are just used to fill parameter lists in method call</li>
+ 	<li><strong>Fakes</strong> - have the same behavior as the thing that it replaces. They have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example)</li>
+ 	<li><strong>Stubs</strong> -  objects which have a "fixed" set of "canned" responses that are specific to test you setup. They have hard-coded responses to an expected request</li>
+ 	<li><strong>Mocks</strong> - have a set of expectations about calls that are made. If these expectations are not met, the test is fail. A mock is not setup in a predetermined way so you have code that does it in your test</li>
 </ul>
-<p style="text-align:center;"><img class="alignnone wp-image-274" src="/images/devisland/article6/assets/adb2c16.png?w=300" alt="" width="475" height="253" /></p>
+Tests written with mocks usually follow below pattern:
 
-<ul>
- 	<li>Application claims - claims returned in token after successful authentication (the same like above)</li>
- 	<li>Multifactor authenticaton - you can enable multi-factor authentication</li>
- 	<li>Page UI customization - you can provide your custom UI for registration with Azure AD B2C</li>
-</ul>
-I will select collect "Display Name" during registration and from claims:
+<em>initialize -&gt; set expectations -&gt; exercise -&gt; verify </em>
 
-<img class=" wp-image-279 aligncenter" src="/images/devisland/article6/assets/adb2c17.png?w=300" alt="" width="395" height="158" />
+Stub would follow below pattern:
 
-and standard registration with email and password as "Identity Provider":
-<p style="text-align:center;"><img class="alignnone wp-image-280" src="/images/devisland/article6/assets/adb2c18.png?w=300" alt="" width="373" height="128" /></p>
-Once you click "Create" button policy should be displayed:
-<p style="text-align:center;"><img class="alignnone wp-image-282" src="/images/devisland/article6/assets/adb2c19.png?w=257" alt="" width="316" height="369" /></p>
+<em>initialize -&gt; exercise -&gt; verify.</em>
 
-<h3><strong>Register application</strong></h3>
-<p style="text-align:center;">Once policies are defined it is time to register Web API applciation. Click "Application" section and then "Add":
-<img class="alignnone wp-image-285" src="/images/devisland/article6/assets/adb2c20.png?w=300" alt="" width="454" height="280" /></p>
-To register Web Api application few details have to be provided:
-<ul>
- 	<li>Name - name of the application</li>
- 	<li>Web App/Web API - turn on to indicate that you want to register Web API application</li>
- 	<li>Allow implicit flow - this option should be enabled if your app needs to use OpenID Connect sign in</li>
- 	<li>Reply URL - URL to which app should redirect after successful authentication. For Web API it can be just localhost as we do not have any UI</li>
- 	<li>App ID URI - optional attribute to specify unique Uri to identify your application. Add "api" at the end of the address</li>
- 	<li>Native client - should be disabled because we will not use mobile or desktop application</li>
-</ul>
-<p style="text-align:center;"><img class="alignnone wp-image-289" src="/images/devisland/article6/assets/adb2c21.png?w=268" alt="" width="360" height="402" /></p>
-Once you click "Create" button application should be displayed on the list:
-<p style="text-align:center;"><img class="alignnone wp-image-292" src="/images/devisland/article6/assets/adb2c22.png?w=300" alt="" width="390" height="375" /></p>
-&nbsp;
+...and one more thing: Mocks != Stubs
+<h3><strong>FakeItEasy library</strong></h3>
+<a href="http://fakeiteasy.readthedocs.io/en/stable/" target="_blank" rel="noopener">FakeItEasy</a> is an easy mocking library for .NET which enables creating all types of fake objects, mocks and stubs. I would like to present some cool features of it.
 
-Application is registered. Now its time to setup ASP .NET Core Web Api application.
+<strong>Create Unit Tests project in Visual Studio</strong>
 
-&nbsp;
-<h3><strong>Integrate ASP .NET Core Web API with Azure AD B2C</strong></h3>
-In Visual Studio select Web Application template and then choose API:
-<p style="text-align:center;"><img class="alignnone wp-image-297" src="/images/devisland/article6/assets/adb2c23.png?w=300" alt="" width="423" height="261" /></p>
-<p style="text-align:center;"><img class="alignnone wp-image-299" src="/images/devisland/article6/assets/adb2c24.png?w=300" alt="" width="426" height="278" /></p>
-Add "Microsoft.AspNetCore.Authentication.JwtBearer" NuGet package:
+<img class=" wp-image-515 aligncenter" src="/images/devisland/article6/assets/fakeit12.png?w=300" alt="" width="531" height="326" />
 
-<img class=" wp-image-301 aligncenter" src="/images/devisland/article6/assets/adb2c25.png?w=300" alt="" width="432" height="141" />
-
-Then its time to add Azure B2C settings in "appsettings.json" file:
+FakeItEasy can be used with different testing frameworks. In this case I will use MS Test framework. Rename inital class to "FakeItEasyTests":
 
 [code language="csharp"]
-
-"AzureAdB2C": {
-"Tenant": "devisland.onmicrosoft.com",
-"ClientId": "93f4e299-xxxxx-4feb-8b0c-xxxxxxxxxxx",
-"Policy": "B2C_1_SignUpPolicy"
-}
-
-[/code]
-
-Copy "Tenant", "ClientId "and "Policy" from Azure portal.
-
-Now its time to integrate Azure AD B2C authentication in Startup.cs class.
-
-"ConfigureServies" method should look like below:
-
-[code language="csharp"]
- public void ConfigureServices(IServiceCollection services)
+   [TestClass]
+    public class FakeItEasyTests
+    {
+        [TestInitialize]
+        public void TestInitialize()
         {
-            services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-                 .AddJwtBearer(jwtOptions =>
-                 {
-                     jwtOptions.Authority = $"https://login.microsoftonline.com/tfp/{Configuration["AzureAdB2C:Tenant"]}/{Configuration["AzureAdB2C:Policy"]}/v2.0/";
-                     jwtOptions.Audience = Configuration["AzureAdB2C:ClientId"];
-                     jwtOptions.Events = new JwtBearerEvents
-                     {
-                         OnAuthenticationFailed = AuthenticationFailed
-                     };
-                 });
 
-            services.AddMvc();
         }
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+        }
+    }
 [/code]
 
-"Configure" method should look like below. "app.UseAuthentication" should be added:
+Before we start using FakeItEasy I would like to shortly describe class attributes:
+<ul>
+ 	<li><strong>TestClass</strong> - attribute which indicated class that contains test methods</li>
+ 	<li><strong>TestInitialize</strong> - method which is invoked before each test</li>
+ 	<li><strong>TestMethod</strong> - method which contains test code and assertions</li>
+</ul>
+&nbsp;
+
+<strong>Add FakeItEasy NuGet package</strong>
+
+FakeItEasy library is available through NuGet packages manager. Install it:
+
+<img class=" wp-image-521 aligncenter" src="/images/devisland/article6/assets/fakeit13.png?w=300" alt="" width="523" height="225" />
+
+Project is ready! Now its time to see some nice mocking features provided by FakeItEasy.
+
+<strong>FakeItEasy library in action</strong>
+
+Below I pasted some examples how to use library and how easily you can prepare mocks in the unit tests.
+
+<strong>Create fake objects</strong>
+
+Creating fake objects with is simple. FakeItEasy enables creating fake objects from:
+<ul>
+ 	<li>interfaces</li>
+ 	<li>classes that are not sealed, static and have at least one public or protected constructor whose arguments FakeItEasy can construct or obtain
+delegates</li>
+</ul>
+Now if fake is created its methods and properties can be overridden under condition that they are:
+<ul>
+ 	<li>virtual</li>
+ 	<li>abstract</li>
+ 	<li>an interface method when an interface is being faked</li>
+</ul>
+Let me show simple example. There are four classes:
+<ul>
+ 	<li>Car</li>
+ 	<li>PetrolStation</li>
+ 	<li>Distributor</li>
+ 	<li>Transaction</li>
+</ul>
+Car class additionally implements IVehicle interface.
 
 [code language="csharp"]
- public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    public class Car : IVehicle
+    {
+        private string _plateNumber;
+        public string PlateNumber => _plateNumber;
+
+        public Car(string plateNumber)
         {
-            if (env.IsDevelopment())
+            _plateNumber = plateNumber;
+        }
+
+        public void CheckEngineStatus()
+        {
+            Console.WriteLine("Engine OK");
+        }
+
+        public void OpenFuelTank()
+        {
+            Console.WriteLine("Fuel tank opened");
+        }
+    }
+[/code]
+
+
+[code language="csharp"]
+public class PetrolStation
+    {
+        public Distributor GetDistributorForVehicle(string plateNumber)
+        {
+            return new Distributor();
+        }
+    }
+[/code]
+
+
+[code language="csharp"]
+ public class Distributor
+    {
+        public virtual decimal getFuelPrice()
+        {
+            return 4.50M;
+        }
+
+        public void RefuelTheVehicle(IVehicle vehicle)
+        {
+            vehicle.OpenFuelTank();
+        }
+    }
+[/code]
+
+
+[code language="csharp"]
+ public class Transaction
+    {
+        private bool _isCompleted;
+        public decimal getFuelTotalPrice(Distributor distributor, int liters)
+        {
+            return liters * distributor.getFuelPrice();
+        }
+
+        public virtual void Finish()
+        {
+            _isCompleted = true;
+        }
+    }
+[/code]
+
+
+[code language="csharp"]
+    public interface IVehicle
+    {
+        void CheckEngineStatus();
+        void OpenFuelTank();
+    }
+[/code]
+
+Now I can easily create fakes in the tests:
+
+[code language="csharp"]
+var distributor = A.Fake<Distributor>();
+var car = A.Fake<Car>(x => x.WithArgumentsForConstructor(() => new Car("WB 82112")));
+var petrolStation = A.Fake<PetrolStation>();
+var transaction = A.Fake<Transaction>();
+var vehicle = A.Fake<IVehicle>();
+[/code]
+
+Please note that I can create fake object from concrete class or from interface - car and vehicle.
+
+Now it is possible to set specific expectations what should happened when invoking concentrate code:
+
+[code language="csharp"]
+A.CallTo(() => distributor.getFuelPrice()).MustHaveHappenedOnceExactly();
+A.CallTo(() => transaction.Finish()).DoesNothing();
+[/code]
+
+In above fragment of code I set expectations that distributor's "getFuelPrice" method will be called once and "Finish" method call on transaction will have not result or impact.
+
+I can also configure exceptions expectations:
+
+[code language="csharp"]
+   A.CallTo(() => vehicle.CheckEngineStatus()).Throws<NotImplementedException>();
+
+            try
             {
-                app.UseDeveloperExceptionPage();
+                vehicle.CheckEngineStatus();
             }
-            app.UseAuthentication();
+            catch (Exception ex)
+            {
+                var exceptionType = ex.GetType();
+                Assert.AreEqual(exceptionType, typeof(NotImplementedException));
+            }
+[/code]
 
-            app.UseMvc();
+Whole sample test method can look like below:
+
+[code language="csharp"]
+ [TestMethod]
+        public void TestMethod1()
+        {
+            var distributor = A.Fake<Distributor>();
+            var car = A.Fake<Car>(x => x.WithArgumentsForConstructor(() => new Car("WB 82112")));
+            var petrolStation = A.Fake<PetrolStation>();
+            var transaction = A.Fake<Transaction>();
+            var vehicle = A.Fake<IVehicle>();
+
+            transaction.getFuelTotalPrice(distributor, 4);
+
+            A.CallTo(() => distributor.getFuelPrice()).MustHaveHappenedOnceExactly();
+            A.CallTo(() => transaction.Finish()).DoesNothing();
+
+            A.CallTo(() => vehicle.CheckEngineStatus()).Throws<NotImplementedException>();
+
+            try
+            {
+                vehicle.CheckEngineStatus();
+            }
+            catch (Exception ex)
+            {
+                var exceptionType = ex.GetType();
+                Assert.AreEqual(exceptionType, typeof(NotImplementedException));
+            }
         }
 [/code]
 
-Last change - add "Authentication" attribute in "ValuesController" generated as default controller to prevent unauthorized access:
+FakeItEeasy provides easy way to create Dummies too so you can use them as a constructor parameters:
 
 [code language="csharp"]
-    [Authorize]
-    [Route("api/[controller]")]
-    public class ValuesController : Controller
+distributor.RefuelTheCar(A.Dummy<Car>());
 [/code]
 
-Rebuild project to check if everything was configured as expected.
+It is also possible to specify return values for method calls:
 
-&nbsp;
-<h3>Test entire solution</h3>
-Now its time to test Azure AD B2C authentication with ASP .NET Core Web API.
+[code language="csharp"]
+A.CallTo(() => distributor.getFuelPrice()).Returns(4.5M).Once();
+[/code]
 
-In Azure portal open "B2C_1_SignUpPolicy" policy and click "Run now" button:
-
-<img class=" wp-image-309 aligncenter" src="/images/devisland/article6/assets/adb2c26.png?w=300" alt="" width="379" height="308" />
-
-Registration page should be displayed. Please note that there is additional field called "Display Name" we configured in the policy:
-<p style="text-align:center;"><img class="alignnone wp-image-311" src="/images/devisland/article6/assets/adb2c27.png?w=300" alt="" width="366" height="349" /></p>
-Fill all required data. After successful authentication token should be returned in URL:
-<p style="text-align:center;"><img class="alignnone wp-image-313" src="/images/devisland/article6/assets/adb2c28.png?w=300" alt="" width="586" height="23" /></p>
-Copy the token. I use <a href="https://www.getpostman.com/" target="_blank" rel="noopener">Postman</a> to test API requests.
-
-If I invoke "api/values" endpoint without token API will return 401 unauthorized http status:
-
-<img class=" wp-image-316 aligncenter" src="/images/devisland/article6/assets/adb2c29.png?w=300" alt="" width="485" height="183" />
-
-After adding token in header I am able to get values from API:
-<p style="text-align:center;"><img class="alignnone wp-image-320" src="/images/devisland/article6/assets/adb2c30.png?w=300" alt="" width="490" height="198" /></p>
-
-<h3></h3>
+This is just a small piece of features that FakeItEasy offers!
 <h3><strong>Wrapping up</strong></h3>
-In this article I presented how to configure Azure Active Directory B2C and integrate authentication in ASP .NET Core Web API project. I encourage you to test different policies setup and to integrate your Azure AD B2C with identity providers like Facebook or Google. Source code of the DevIslandWebApi project is available on my Github <a href="https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/AzureB2CWebApi" target="_blank" rel="noopener">here.</a>
+In this article I explained differences between dummies, fakes, mocks and stubs. I presented great mocking library for .NET C# called FakeItEasy. I encourage you to go through official documentation available <a href="https://fakeiteasy.github.io/" target="_blank" rel="noopener">here</a> to see more extra features. Pre-configured sample is available on my <a href="https://github.com/Daniel-Krzyczkowski/NetCsharp/tree/master/FakeItEasySamples" target="_blank" rel="noopener">GitHub</a>.
