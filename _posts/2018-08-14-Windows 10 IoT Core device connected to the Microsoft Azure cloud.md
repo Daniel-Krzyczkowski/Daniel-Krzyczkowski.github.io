@@ -3,7 +3,7 @@ title: "Windows 10 IoT Core device connected to the Microsoft Azure cloud"
 ---
 
 <p align="center">
-<img src="/images/devisland/article11/assets/winiotcore1_1.jpg.png?raw=true" alt="Windows 10 IoT Core device connected to the Microsoft Azure cloud"/>
+<img src="/images/devisland/article11/assets/winiotcore1_1.jpg?raw=true" alt="Windows 10 IoT Core device connected to the Microsoft Azure cloud"/>
 </p>
 
 
