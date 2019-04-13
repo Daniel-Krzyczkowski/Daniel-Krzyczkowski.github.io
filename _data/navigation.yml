@@ -2,8 +2,6 @@
 main:
   - title: "Posts"
     url: /year-archive/
-  - title: "Dev Island blog"
-    url: http://devisland.pl/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Collections"
