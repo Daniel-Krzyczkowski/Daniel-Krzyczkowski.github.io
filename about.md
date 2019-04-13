@@ -8,3 +8,5 @@ permalink: /about/
 
 He is passionate about Microsoft technologies. He loves learning new things about cloud and mobile development.
 Main part of these activities is to share knowledge about C# programming language, Microsoft Azure, IoT and Universal Windows Platform.
+
+![Image](/assets/images/danielmvp_updated.png?raw=true)
