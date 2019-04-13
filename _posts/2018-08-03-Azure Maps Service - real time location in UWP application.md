@@ -244,6 +244,6 @@ You can test solution locally or publish ASP .NET Core Web API on Azure as Web A
 </ul>
 Final result should look like below:
 
-<img class="alignnone wp-image-1157 aligncenter" src="https://devislandblog.files.wordpress.com/2018/07/azuremaps1.png?w=300" alt="" width="529" height="351" />
+<img class="alignnone wp-image-1157 aligncenter" src="/images/devisland/article10/assets/azuremaps1.png?w=300" alt="" width="529" height="351" />
 <h3><strong>Wrapping up</strong></h3>
 In this article I presented how to configure Azure Maps service together with Azure SignalR Service and pass real-time location data to UWP application including display of the current route. You can test this PoC yourself. You can find source code on my GitHub - <a href="https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/AzureSignalRTransportApp" target="_blank" rel="noopener">Web API app</a>, <a href="https://github.com/Daniel-Krzyczkowski/NetCsharp/tree/master/TransportAppSimulator" target="_blank" rel="noopener">console test app</a>, <a href="https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/AzureMapsApp" target="_blank" rel="noopener">UWP application.</a>
