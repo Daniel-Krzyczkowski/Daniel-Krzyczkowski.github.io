@@ -44,7 +44,7 @@ Inside "Hubs" folder add new class called "TransportHub". Inside "Model" folder 
 
 "TransportHub" class is responsible for handling messages from clients and broadcasting them to all connected clients:
 
-[code language="csharp"]
+```
     public class TransportHub : Hub
     {
         /// <summary>
@@ -56,43 +56,43 @@ Inside "Hubs" folder add new class called "TransportHub". Inside "Model" folder 
             Clients.All.SendAsync("broadcastMessage", locationUpdate);
         }
     }
-[/code]
+```
 
 "LocationUpdate" class looks like below. "DriverName" field will be displayed in UWP application:
 
-[code language="csharp"]
+```
     public class LocationUpdate
     {
         public string DriverName;
         public double Latitude;
         public double Longitude;
     }
-[/code]
+```
 
 Now in "appsettings.json" file create new section called "AzureSignalR" and add "ConnectionString" property:
 
-[code language="csharp"]
+```
   "AzureSignalR":
   {
     "ConnectionString": "<<Connection string from Azure portal>>"
   }
-[/code]
+```
 
 Last step is to setup Azure SignalR Service in "Startup" class.
 
 "ConfigureServices" method should look like below. We need to add SignalR Service with configuration from "appsettings.json" file:
 
-[code language="csharp"]
+```
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddSignalR().AddAzureSignalR(Configuration["AzureSignalR:ConnectionString"]);
         }
-[/code]
+```
 
 "Configure" method should look like below. We have to map endpoint to enable communication with "TransportHub" from clients:
 
-[code language="csharp"]
+```
        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -107,7 +107,7 @@ Last step is to setup Azure SignalR Service in "Startup" class.
                 routes.MapHub<TransportHub>("/transport");
             });
         }
-[/code]
+```
 
 I published Web API source code on my GitHub so you can review the code <a href="https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/AzureSignalRTransportApp" target="_blank" rel="noopener">here.</a>
 <h3><strong>Setup .NET Core Console App</strong></h3>
@@ -117,7 +117,7 @@ Add "Microsoft.AspNetCore.SignalR.Client" NuGet. Please note that at the moment 
 <p style="text-align:center;"><img class="alignnone wp-image-654" src="/images/devisland/article7/assets/signalrservice12.png?w=300" alt="" width="483" height="127" /></p>
 Please add new class called "ClientSignalR". This class will be responsible for connecting with "TransportHub", sending messages to hub and receiving them from the hub:
 
-[code language="csharp"]
+```
  public class ClientSignalR
     {
         private HubConnection _hub;
@@ -192,22 +192,22 @@ Please add new class called "ClientSignalR". This class will be responsible for 
 
         public event Action<LocationUpdate> OnMessageReceived;
     }
-[/code]
+```
 
 Add another class called "LocationUpdate" - the same like in Web API project:
 
-[code language="csharp"]
+```
     public class LocationUpdate
     {
         public string DriverName;
         public double Latitude = 52.2326;
         public double Longitude = 20.7810;
     }
-[/code]
+```
 
 Now "Program" class should look like below. New ClientSignalR instance is created. I used RX Extensions here to send new location update after each two seconds. Initialize method requires URL under which SignalR Hub is available. After two seconds new location is generated for two fake drivers:
 
-[code language="csharp"]
+```
  class Program
     {
         static void Main(string[] args)
@@ -247,7 +247,7 @@ Now "Program" class should look like below. New ClientSignalR instance is create
             Console.ReadKey();
         }
     }
-[/code]
+```
 
 I published Console app source code on my GitHub <a href="https://github.com/Daniel-Krzyczkowski/NetCsharp/tree/master/TransportAppSimulator" target="_blank" rel="noopener">here.</a>
 <h3><strong>Setup Universal Windows Platform app</strong></h3>
@@ -263,7 +263,7 @@ The same classes called "ClientSignalR" and "LocationUpdate" will be used in thi
 
 Now create "Utils" folder and create "MapManager" class. It will be responsible for map setup and displaying push pins with drivers location:
 
-[code language="csharp"]
+```
     public class MapManager
     {
         private MapControl _map;
@@ -342,11 +342,11 @@ Now create "Utils" folder and create "MapManager" class. It will be responsible 
             }
         }
     }
-[/code]
+```
 
 Update "MainPage.xaml.cs" code. Once page is opened hub client connects with "TransportHub" to receive location updates:
 
-[code language="csharp"]
+```
  public sealed partial class MainPage : Page
     {
         private ClientSignalR _hubClient;
@@ -398,7 +398,7 @@ Update "MainPage.xaml.cs" code. Once page is opened hub client connects with "Tr
             });
         }
     }
-[/code]
+```
 
 "MainPage.xaml" file should contain map control and connection status label. Please review full code on my GitHub <a href="https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/AzureSignalRTransportApp" target="_blank" rel="noopener">here.</a>
 <h3><strong>Test solution</strong></h3>

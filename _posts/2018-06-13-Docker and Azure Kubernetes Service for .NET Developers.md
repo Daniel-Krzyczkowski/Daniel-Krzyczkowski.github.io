@@ -99,7 +99,7 @@ Docker host is the underlying Operating System (OS) on which you will run Docke
 
 A text file that contains instructions for how to build a Docker image. Below there is Dockerfile from our sample ASP .NET Core Web API project:
 
-[code language="csharp"]
+```
 FROM microsoft/aspnetcore:2.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -120,7 +120,7 @@ WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "Sample.WebAPI.dll"]
 }
-[/code]
+```
 
 As I mentioned before  Docker image can base on the other Docker images so you can choose a base image that contains the elements you need, and then copy in your own application on top. In our case ASP .NET Core base images provided by Microsoft was used.
 
@@ -128,7 +128,7 @@ As I mentioned before  Docker image can base on the other Docker images so you
 
 Docker compose YAML file specifies one or more containers that make up a single application or system. Within this file you have to specify the images that need to be started inside Docker containers, what are their dependencies or under which ports they should be available. Sample Docker Compose file content looks like below (taken from our simple Web API project). Docker Compose is also a command-line tool so using a single command (docker-compose up) you can deploy the whole multi-container application.
 
-[code language="csharp"]
+```
 version: '3.4'
 
 services:
@@ -137,7 +137,7 @@ services:
     build:
       context: .
       dockerfile: Sample.WebAPI/Dockerfile
-[/code]
+```
 
 <strong>Images repository</strong>
 
@@ -380,7 +380,7 @@ ServiceAccount YAML file contains configuration for pods used in Kubernetes. Th
 
 At the end of the file add imagePullSecrets section to provide access to ACR secret:
 
-[code language="csharp"]
+```
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -394,7 +394,7 @@ secrets:
 - name: default-token-txw4m
 imagePullSecrets:
 - name: devislandacr-connection
-[/code]
+```
 
 Update file on Kubernetes using below command:
 
@@ -454,7 +454,7 @@ If we want to access our Web API hosted as microservice in Kubernetes we have to
 
 Now we have to update ingress resource (ingress.yaml file) so ingress controller knows the mapping of different micro-services (in our case one with sample Web API application):
 
-[code language="csharp"]
+```
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -473,7 +473,7 @@ spec:
         backend:
           serviceName: devisland-sample-webapi-service
           servicePort: 8080
-[/code]
+```
 
 Use below command to apply changes. Remember to change "serviceName" if you chose different:
 
@@ -483,7 +483,7 @@ kubectl apply -f ingress.yaml
 
 Then we have to update ingress service file with our public static IP address obtained earlier:
 
-[code language="csharp"]
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -516,13 +516,13 @@ spec:
     release: devisland-nginx
   sessionAffinity: None
   type: LoadBalancer
-[/code]
+```
 
 kubectl apply -f ingress-service.yaml
 
 Then we have to create Service for our Web API application with sample-web-service-api.yaml file:
 
-[code language="csharp"]
+```
 apiVersion: v1 
 kind: Service 
 metadata: 
@@ -536,13 +536,13 @@ spec:
   - name: http 
     port: 8080 
     targetPort: 80
-[/code]
+```
 
 kubectl apply -f sample-web-service-api.yaml
 
 Once we defined Service for our Web API app we have to create Deployment with sample-webapi-deployment.yaml file. Note that in this file we are defining number of pods and from which container registry Docker image should be pulled:
 
-[code language="csharp"]
+```
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
@@ -564,7 +564,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-[/code]
+```
 
 <img class=" wp-image-1133 aligncenter" src="/images/devisland/article9/assets/aks39.png?w=300" alt="" width="685" height="205" />
 

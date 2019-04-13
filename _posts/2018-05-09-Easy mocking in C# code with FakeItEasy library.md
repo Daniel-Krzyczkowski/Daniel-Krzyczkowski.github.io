@@ -40,7 +40,7 @@ Stub would follow below pattern:
 
 FakeItEasy can be used with different testing frameworks. In this case I will use MS Test framework. Rename inital class to "FakeItEasyTests":
 
-[code language="csharp"]
+```
    [TestClass]
     public class FakeItEasyTests
     {
@@ -55,7 +55,7 @@ FakeItEasy can be used with different testing frameworks. In this case I will us
         {
         }
     }
-[/code]
+```
 
 Before we start using FakeItEasy I would like to shortly describe class attributes:
 <ul>
@@ -100,7 +100,7 @@ Let me show simple example. There are four classes:
 </ul>
 Car class additionally implements IVehicle interface.
 
-[code language="csharp"]
+```
     public class Car : IVehicle
     {
         private string _plateNumber;
@@ -121,10 +121,10 @@ Car class additionally implements IVehicle interface.
             Console.WriteLine("Fuel tank opened");
         }
     }
-[/code]
+```
 
 
-[code language="csharp"]
+```
 public class PetrolStation
     {
         public Distributor GetDistributorForVehicle(string plateNumber)
@@ -132,10 +132,10 @@ public class PetrolStation
             return new Distributor();
         }
     }
-[/code]
+```
 
 
-[code language="csharp"]
+```
  public class Distributor
     {
         public virtual decimal getFuelPrice()
@@ -148,10 +148,10 @@ public class PetrolStation
             vehicle.OpenFuelTank();
         }
     }
-[/code]
+```
 
 
-[code language="csharp"]
+```
  public class Transaction
     {
         private bool _isCompleted;
@@ -165,41 +165,41 @@ public class PetrolStation
             _isCompleted = true;
         }
     }
-[/code]
+```
 
 
-[code language="csharp"]
+```
     public interface IVehicle
     {
         void CheckEngineStatus();
         void OpenFuelTank();
     }
-[/code]
+```
 
 Now I can easily create fakes in the tests:
 
-[code language="csharp"]
+```
 var distributor = A.Fake<Distributor>();
 var car = A.Fake<Car>(x => x.WithArgumentsForConstructor(() => new Car("WB 82112")));
 var petrolStation = A.Fake<PetrolStation>();
 var transaction = A.Fake<Transaction>();
 var vehicle = A.Fake<IVehicle>();
-[/code]
+```
 
 Please note that I can create fake object from concrete class or from interface - car and vehicle.
 
 Now it is possible to set specific expectations what should happened when invoking concentrate code:
 
-[code language="csharp"]
+```
 A.CallTo(() => distributor.getFuelPrice()).MustHaveHappenedOnceExactly();
 A.CallTo(() => transaction.Finish()).DoesNothing();
-[/code]
+```
 
 In above fragment of code I set expectations that distributor's "getFuelPrice" method will be called once and "Finish" method call on transaction will have not result or impact.
 
 I can also configure exceptions expectations:
 
-[code language="csharp"]
+```
    A.CallTo(() => vehicle.CheckEngineStatus()).Throws<NotImplementedException>();
 
             try
@@ -211,11 +211,11 @@ I can also configure exceptions expectations:
                 var exceptionType = ex.GetType();
                 Assert.AreEqual(exceptionType, typeof(NotImplementedException));
             }
-[/code]
+```
 
 Whole sample test method can look like below:
 
-[code language="csharp"]
+```
  [TestMethod]
         public void TestMethod1()
         {
@@ -242,19 +242,19 @@ Whole sample test method can look like below:
                 Assert.AreEqual(exceptionType, typeof(NotImplementedException));
             }
         }
-[/code]
+```
 
 FakeItEeasy provides easy way to create Dummies too so you can use them as a constructor parameters:
 
-[code language="csharp"]
+```
 distributor.RefuelTheCar(A.Dummy<Car>());
-[/code]
+```
 
 It is also possible to specify return values for method calls:
 
-[code language="csharp"]
+```
 A.CallTo(() => distributor.getFuelPrice()).Returns(4.5M).Once();
-[/code]
+```
 
 This is just a small piece of features that FakeItEasy offers!
 <h3><strong>Wrapping up</strong></h3>

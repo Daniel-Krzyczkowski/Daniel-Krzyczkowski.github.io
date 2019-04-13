@@ -26,7 +26,7 @@ First class we will review is called "MessagesController" and its located in "Co
 <p style="text-align:center;"><img src="/images/devisland/article3/assets/botf6.png?w=273" alt="" width="273" height="300" /></p>
 
 
-[code language="csharp"]
+```
  [BotAuthentication]
     public class MessagesController : ApiController
     {
@@ -81,7 +81,7 @@ First class we will review is called "MessagesController" and its located in "Co
             return null;
         }
     }
-[/code]
+```
 
 <strong>BotAuthentication</strong>
 
@@ -109,7 +109,7 @@ Second class we will review is called "EchoDialog" and its located in "Dialogs" 
 <p style="text-align:center;"><img src="/images/devisland/article3/assets/botf4.png?w=300" alt="" width="300" height="258" /></p>
 
 
-[code language="csharp"]
+```
 
   [Serializable]
     public class EchoDialog : IDialog<object>
@@ -157,7 +157,7 @@ Second class we will review is called "EchoDialog" and its located in "Dialogs" 
         }
     }
 
-[/code]
+```
 
 <strong>IDialog</strong>
 

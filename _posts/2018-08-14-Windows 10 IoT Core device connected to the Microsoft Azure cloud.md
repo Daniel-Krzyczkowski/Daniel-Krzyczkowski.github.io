@@ -106,18 +106,11 @@ Install <a href="http://Microsoft.Azure.Devices.Client" target="_blank" rel="no
 
 Once you install the package we can move forward to the code implementation. Please note that sample contains comments in the code so you know what is happening:
 
-[code language="csharp"]
+```
     /// 
-    
-
 <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-
-
-
-
-
 
     public sealed partial class MainPage : Page
     {
@@ -291,11 +284,11 @@ Once you install the package we can move forward to the code implementation. Ple
         int res;
 
     }
-[/code]
+```
 
 I created new simple class called "AzureIoTHubService" which is responsible for initializing connection with Azure IoT Hub and sending data:
 
-[code language="csharp"]
+```
     public class AzureIoTHubService
     {
         private DeviceClient _deviceClient;
@@ -316,7 +309,7 @@ I created new simple class called "AzureIoTHubService" which is responsible for 
             return true;
         }
     }
-[/code]
+```
 
 "DeviceClient" class is provided by NuGet package we added earlier.
 
@@ -324,7 +317,7 @@ Replace connection string with the one you generated in Azure portal.
 
 Now in "MainPage" class initialize "AzureIoTHubService". I changed the default code a little bit so each half of second new message is send to Azure:
 
-[code language="csharp"]
+```
             timer.Tick += async (s, e) =>
             {
                 SpiDisplay.TransferFullDuplex(writeBuffer, readBuffer);
@@ -337,7 +330,7 @@ Now in "MainPage" class initialize "AzureIoTHubService". I changed the default c
                 if (res > 0)
                     await _azureIoTHubService.SendDataToAzure(forceSensorValue);
             };
-[/code]
+```
 
 You can review whole source code of the app on my GitHub <a href="https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/TempForceSensorWin10IoT" target="_blank" rel="noopener">here.</a>
 <h3><strong>Setup device components</strong></h3>
@@ -375,13 +368,13 @@ Changing date and time is more complicated. You can do it with Power Shell. To i
 
 I used below script to update date and time:
 
-[code language="csharp"]
+```
 [minwinpc]: PS C:\Data\Users\Administrator\Documents> set-date
 
 cmdlet Set-Date at command pipeline position 1
 Supply values for the following parameters:
 Date: 08/14/2018 16:46:00PM
-[/code]
+```
 
 Result will be visible on the console:
 Tuesday, August 14, 2018 4:46:00 PM

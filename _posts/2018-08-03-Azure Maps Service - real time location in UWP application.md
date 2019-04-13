@@ -40,7 +40,7 @@ We will comunicate with Azure Maps REST API using RestSharp. Clone project from 
 
 Now open "MapService" class from "Services" folder:
 
-[code language="csharp"]
+```
 public interface IMapService
     {
         Task<DirectionsResponse> GetDirections(DirectionsRequest directionsRequest);
@@ -68,7 +68,7 @@ public interface IMapService
             return directions;
         }
     }
-[/code]
+```
 
 As you can see we have to pass from and to coordinates (latitude and longitude). We have to also provide map key copied from Azure portal - it is passed in "subscription-key" header. In this case we are using directions endpoint to retrieve route between two points on the map.
 
@@ -76,7 +76,7 @@ In the "Model" folder you can find two classed related with Azure Maps API reque
 
 When you open MapsController class you should see Post method with "DirectionsRequst" parameter:
 
-[code language="csharp"]
+```
  public class MapController : Controller
     {
         private IMapService _mapService;
@@ -95,12 +95,12 @@ When you open MapsController class you should see Post method with "DirectionsRe
             return Ok(directions);
         }
     }
-[/code]
+```
 
 <h3><strong>Setup .NET Core Console App</strong></h3>
 I modified the code of test console application. We are using it to simulate position change of the driver - then we are displaying new position on the map in the UWP application. You can find updated code <a href="https://github.com/Daniel-Krzyczkowski/NetCsharp/tree/master/TransportAppSimulator" target="_blank" rel="noopener">here.</a>
 
-[code language="csharp"]
+```
     class Program
     {
         static void Main(string[] args)
@@ -179,14 +179,14 @@ I modified the code of test console application. We are using it to simulate pos
             Console.ReadKey();
         }
     }
-[/code]
+```
 
 <h3><strong>Setup Universal Windows Platform app</strong></h3>
 I used previously created UWP application and added functionality related with displaying route on the map. Now application displays route using Azure Maps and live location updates using Signal R Service. You can see updated source code <a href="https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/AzureMapsApp" target="_blank" rel="noopener">here.</a>
 
 Open "Services" folder and "MapService" class. As you can see I am using RestSharp to make request to previously created Web API and retrieve directions data to display route on the map.
 
-[code language="csharp"]
+```
  public class MapService
     {
         private RestClient _restClient;
@@ -205,11 +205,11 @@ Open "Services" folder and "MapService" class. As you can see I am using RestSha
             return directions;
         }
     }
-[/code]
+```
 
 Now open "MapManager" class - here I added "DisplayRoute" method. As a parameter there is response from Azure Maps - "DirectionsResponse". New MapPolyline object is created. Please note that path property is instantiated with response from Azure Maps to display the route. Then new list with map elements is created and at the end we are adding new layer to the map with the route:
 
-[code language="csharp"]
+```
 public void DisplayRoute(DirectionsResponse directions)
         {
             MapPolyline routeLine = new MapPolyline()
@@ -233,7 +233,7 @@ public void DisplayRoute(DirectionsResponse directions)
 
             _map.Layers.Add(LinesLayer);
         }
-[/code]
+```
 
 <h3><strong>Test solution</strong></h3>
 You can test solution locally or publish ASP .NET Core Web API on Azure as Web App. To test on localhost launch applications in such order:

@@ -15,11 +15,11 @@ I assume that you are familiar with the first article and you already have previ
 <h3><strong>IQueryable&lt;T&gt; vs IEnumerable&lt;T&gt;</strong></h3>
 Please look at the lines below - we will use them in our code:
 
-[code language="csharp"]
+```
 IEnumerable<Car> enumerableOwners = _applicationDbContext.Cars;
 
 IQueryable<Car> queryableOwners = _applicationDbContext.Cars;
-[/code]
+```
 
 Both lines of code are doing the same thing. Get all records from Cars table so at the end below SQL query will be executed:
 
@@ -27,10 +27,10 @@ Both lines of code are doing the same thing. Get all records from Cars table so 
 
 Now look at the lines below. If we add some query to above example difference will be huge:
 
-[code language="csharp"]
+```
 var enumerableCar = _applicationDbContext.Cars.ToList().Where(x => x.Id == id).SingleOrDefault();
 var queryableCar = _applicationDbContext.Cars.Where(x => x.Id == id).SingleOrDefault();
-[/code]
+```
 
 In the first line we applied <strong>local query</strong>. It means that all rows from Cars table will be loaded to the memory and then query will be executed (where condition). Here we should remember that for big collections it can be harmful and has big impact related with performance.
 
@@ -38,7 +38,7 @@ In the second line of above code we applied <strong>interpreted query</strong>.
 
 To sum up when working with big collections in the database we should always try to use IQueryable. I added each case in the code sample:
 
-[code language="csharp"]
+```
         public async Task<Car> GetAsync(Guid id)
         {
             // All cars will be loaded to the memory first and then Where condition will be applied:
@@ -56,7 +56,7 @@ To sum up when working with big collections in the database we should always try
             return await _applicationDbContext.Cars
                .SingleOrDefaultAsync(x => x.Id == id);
         }
-[/code]
+```
 
 <h3></h3>
 <h3><strong>Using Linq Experssions</strong></h3>
@@ -70,7 +70,7 @@ Sometimes you would like to transform model returned from the database to the Da
  	<li>ModifiedBy</li>
 </ul>
 
-[code language="csharp"]
+```
     public class Car : IEntity
     {
         public Guid Id { get; set; }
@@ -84,11 +84,11 @@ Sometimes you would like to transform model returned from the database to the Da
         public DateTime ModifiedOn { get; set; }
         public Guid? ModifiedBy { get; set; }
     }
-[/code]
+```
 
 Now I would like to return list of cars from my ASP .NET Core Web API. I do not want to include above four properties. I just want to return Id, registration number, brand, model and ownerId. Here we will use Linq.Expression to transform Car object to the CarDTO which will be returned from the API. "CarDTO" class looks like below:
 
-[code language="csharp"]
+```
     public class CarDTO
     {
         public Guid Id { get; set; }
@@ -97,11 +97,11 @@ Now I would like to return list of cars from my ASP .NET Core Web API. I do not 
         public string Model { get; set; }
         public Guid OwnerId { get; set; }
     }
-[/code]
+```
 
 Lets create mapper and use Linq.Expression. This mapper will be responsible for mapping "Car" instance to "CarDTO" instance:
 
-[code language="csharp"]
+```
     public interface ICarsMapper
     {
         Expression<Func<Car, CarDTO>> MapToDTO { get; }
@@ -123,13 +123,13 @@ Lets create mapper and use Linq.Expression. This mapper will be responsible for 
             };
         }
     }
-[/code]
+```
 
 As you can see we have Expression with Delegate which has "Car"instance as parameter and "CarDTO" as result. In the constructor of the mapper we are doing magic transformation.
 
 Now lets get back to the Cars repository. To make it easier I will add one more method into it called "GetCarDTO" at the end of the class:
 
-[code language="csharp"]
+```
         public async Task<CarDTO> GetCarDTO(Guid id)
         {
             var carDTO = await _applicationDbContext.Cars
@@ -139,7 +139,7 @@ Now lets get back to the Cars repository. To make it easier I will add one more 
 
             return carDTO;
         }
-[/code]
+```
 
 We used "CarsMapper" to transform "Car" instance to the "CarDTO" instance in the single query - find car with specific id, then transform it to the "CarDTO" instance and return it.
 This is just a small sample to present how Linq.Expressions can be used. This topic is enormous so I recommend you to read more about it.
@@ -148,7 +148,7 @@ This is just a small sample to present how Linq.Expressions can be used. This to
 <h3><strong>Changes tracking</strong></h3>
 It is possible to track changes when we are working on the data models in our code. For instance we can change phone number of the car owner. We can easily track changes and get all modified entities with "ChangeTracker" provided by Entity Framework Core. Please look at the below method located in the "ApplicationDbContext" class:
 
-[code language="csharp"]
+```
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default(CancellationToken))
         {
             var addedAuditedEntities = ChangeTracker.Entries<IEntity>()
@@ -161,7 +161,7 @@ It is possible to track changes when we are working on the data models in our co
 
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
-[/code]
+```
 
 As you can see you we have easy access to all added and edited entities. Important note here! No changes are send to the database until we invoke "SaveChangesAsync" method.
 
@@ -171,12 +171,12 @@ As mentioned in the previous article we know that we should apply migration and 
 
 To enable automatic migrations add below code in the "Startup" class in the "ConfigureServices" method:
 
-[code language="csharp"]
+```
 services.BuildServiceProvider()
     .GetService<ApplicationDbContext>()
     .Database
     .Migrate();
-[/code]
+```
 
 Now once you start you ASP .NET Core app Entity Framework will apply all migrations if needed.
 
@@ -189,16 +189,16 @@ The term Fluent API refers to a pattern of programming where method calls are ch
 
 General idea is to write code like below using Fluent API to configure the table that a type maps to:
 
-[code language="csharp"]
+```
    modelBuilder.Entity<Car>()
        .HasOne<Owner>()
        .WithMany()
        .HasForeignKey(a => a.OwnerId);
-[/code]
+```
 
 "DbContext" class has a method called "OnModelCreating" that takes an instance of "ModelBuilder" as a parameter. In our example "OnModelCreating" method:
 
-[code language="csharp"]
+```
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Car>()
@@ -210,7 +210,7 @@ General idea is to write code like below using Fluent API to configure the table
                 .Property(b => b.RegistrationNumber)
                 .HasMaxLength(7);
         }
-[/code]
+```
 
 We can setup relation between Cars and Onwers. Car has one owner (with unique ID) which can have many cars.
 
@@ -218,7 +218,7 @@ We can setup relation between Cars and Onwers. Car has one owner (with unique ID
 
 We do not have to use Fluent API - there is alternative called Data Annotations. Then constraints from above code will look like below:
 
-[code language="csharp"]
+```
     public class Car : IEntity
     {
         public Guid Id { get; set; }
@@ -230,7 +230,7 @@ We do not have to use Fluent API - there is alternative called Data Annotations.
         public Guid OwnerId { get; set; }
         public Owner Owner { get; set; }
     }
-[/code]
+```
 
 &nbsp;
 
@@ -245,7 +245,7 @@ Once we described difference between Fluent API and Data Annotatons we can move 
 
 Lets look at below example to make it easier to understand:
 
-[code language="csharp"]
+```
     public class CarEntityConfiguration : IEntityTypeConfiguration<Car>
     {
         public void Configure(EntityTypeBuilder<Car> builder)
@@ -260,11 +260,11 @@ Lets look at below example to make it easier to understand:
                .HasMaxLength(7);
         }
     }
-[/code]
+```
 
 "CarEntityConfiguration" class has one method implemented from the "IEntityTypeConfiguration" interface called "Configure". Inside this method we can setup all the constrains which we added earlier in the "OnModelCreating" method inside "ApplicationDbContext" class. Now we can replace the code inside this method with one single line:
 
-[code language="csharp"]
+```
  protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Car>()
@@ -278,7 +278,7 @@ Lets look at below example to make it easier to understand:
 
             modelBuilder.ApplyConfiguration(new CarEntityConfiguration());
         }
-[/code]
+```
 
 &nbsp;
 <h3><strong>Wrapping up</strong></h3>

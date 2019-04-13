@@ -180,7 +180,7 @@ Extract zip file and open project in Visual Studio.
 
 First of all add below settings inside <em>appSettings </em>tag in WebConfig file:
 
-[code language="csharp"]
+```
   <appSettings>
    <add key="MicrosoftAppId" value="" />
    <add key="MicrosoftAppPassword" value="" />
@@ -189,7 +189,7 @@ First of all add below settings inside <em>appSettings </em>tag in WebConfig fil
    <add key="LuisAPIHostName" value="" />
    <add key="AzureWebJobsStorage" value="" />
   </appSettings>
-[/code]
+```
 
 You can get all these values from Azure portal, from "Application settings" tab mentioned earlier:
 
@@ -197,7 +197,7 @@ You can get all these values from Azure portal, from "Application settings" tab 
 
 Now open "LuisDialog.cs" file. You can see that there is pre-definied code for default intents from LUIS portal:
 
-[code language="csharp"]
+```
 // Go to https://luis.ai and create a new intent, then train/publish your luis app.
 // Finally replace "Greeting" with the name of your newly created intent in the following handler
         [LuisIntent("Greeting")]
@@ -217,11 +217,11 @@ Now open "LuisDialog.cs" file. You can see that there is pre-definied code for d
         {
             await this.ShowLuisResult(context, result);
         }
-[/code]
+```
 
 Now lets add three additional intents I defined in the LUIS portal: TwistedAnkle, HeadAke and SoarThroat. I also refactored the code so bot now can individually answer each utterance send by users connected with these three intents:
 
-[code language="csharp"]
+```
  [Serializable]
     public class BasicLuisDialog : LuisDialog<object>
     {
@@ -294,7 +294,7 @@ Now lets add three additional intents I defined in the LUIS portal: TwistedAnkle
             context.Wait(MessageReceived);
         }
     }
-[/code]
+```
 
 Please note that each reply has "Text", "Speak" and "Attachments" properties. This is because we want Cortana to say response to the user, write answer on Cortana's canvas and also display attachment - in this case image.
 
@@ -385,7 +385,7 @@ For more please refer to great <a href="https://help.knowledge.store/getting_st
 
 This is my conversation flow defined. Cortana will welcome user and thank ask what happened. Basing on the user input Crotana suggests what to do.
 
-[code language="csharp"]
+```
 SAY "Hello! How can I help you?"
 GET_INPUT
 
@@ -418,7 +418,7 @@ IMAGE "https://images.emedicinehealth.com/images/4453/4453-4463-9005-25019tn.jpg
 
 display_image_leg:
 IMAGE "https://injuryhealthblog.com/wp-content/uploads/2017/11/shutterstock_227120620-min.jpg"
-[/code]
+```
 
 5. Publish skill so you can invoke it from Cortana. In "Publish" tab type:
 

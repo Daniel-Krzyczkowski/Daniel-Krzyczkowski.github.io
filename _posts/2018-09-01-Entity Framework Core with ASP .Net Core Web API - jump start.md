@@ -22,7 +22,7 @@ First of all Entity Framework needs to know how it should translate entities lik
 
 <strong>Entity</strong> - An entity is a class which is mapped to an Entity Framework context, and has an identity - property which uniquely identifies its instance. An entity is usually persisted on its own table in the database. Below I pasted example of Entity:
 
-[code language="csharp"]
+```
 public class Car
     {
         public Guid Id { get; set; }
@@ -33,11 +33,11 @@ public class Car
         public string Brand { get; set; }
         public string Model { get; set; }
     }
-[/code]
+```
 
 <strong>Context</strong> - Exposes a number of entity collections. Context can be thought of as a box in which we can make changes to a collection of entities and then apply those changes in the database. In the code it is represented by class that inherits from DbContext (provided by Entity Framework Core) and exposes a number of entity collections in the form of DbSet&lt;T&gt; properties. Below I pasted example of DbContext:
 
-[code language="csharp"]
+```
 public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -47,7 +47,7 @@ public class ApplicationDbContext : IdentityDbContext
 
         public DbSet<Car> Cars { get; set; }
     }
-[/code]
+```
 
 <b>Relationships </b>- Represented by a foreign key constraint in the database, relationship is about how two entities relate to each other. For instance there is Car entity with property called OwnerId which is foreign key and created relationship between Car and Owner entities.
 
@@ -55,7 +55,7 @@ You can read more about relationships under <a href="https://docs.microsoft.com
 
 <b>Data Annotations</b>- Enables overriding EF Core's default behavior by using attributes which can be placed on a class or property to specify metadata about that class or property. Below I pasted example of using data annotations. This is the first option to override EF mapping configuration. Second one is described below - Fluent API.
 
-[code language="csharp"]
+```
 [Table("Cars", Schema = "dbo")]
 public class Car
     {
@@ -69,11 +69,11 @@ public class Car
         public string Brand { get; set; }
         public string Model { get; set; }
     }
-[/code]
+```
 
 <b>Fluent API</b>- Another way to override conventions of Entity Framework Core is to use Fluent API which is based on a Fluent API design pattern. It is more elegant than Data Annotations approach because everything is set in the single class (discussed later). Below I pasted example of Fluent API:
 
-[code language="csharp"]
+```
  modelBuilder.Entity<Car>()
                 .Property(b => b.VIN)
                 .HasMaxLength(15);
@@ -81,7 +81,7 @@ public class Car
 modelBuilder.Entity<Car>()
                 .Property(b => b.RegistrationNumber)
                 .HasMaxLength(6);
-[/code]
+```
 
 <strong>Data Annotations versus Fluent API</strong>
 
@@ -123,7 +123,7 @@ I prepared code sample available on <a href="https://github.com/Daniel-Krzyczko
 
 First of all we have to setup "ApplicationDbContext" class which inherits from DbContext and should be located in the "EntityFrameworkCoreJumpStart.Data" project. We will have two DbSets: Cars and Owners:
 
-[code language="csharp"]
+```
   public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -146,7 +146,7 @@ First of all we have to setup "ApplicationDbContext" class which inherits from D
                 .HasMaxLength(7);
         }
     }
-[/code]
+```
 
 As you can see we are using Fluent API in the "OnModelCreating" method. This is the place where we are setting up relation between cars and owners - car can have only one owner. What is more, registration number cannot be longer than 7 characters.
 
@@ -154,7 +154,7 @@ Note that in the constructor there is parameter "DbContextOptions&lt;Application
 
 Car entity looks like below:
 
-[code language="csharp"]
+```
     public class Car : IEntity
     {
         public Guid Id { get; set; }
@@ -165,13 +165,13 @@ Car entity looks like below:
 
         public Guid OwnerId { get; set; }
     }
-[/code]
+```
 
 &nbsp;
 
 Owner entity looks like below:
 
-[code language="csharp"]
+```
     public class Owner : IEntity
     {
         public Guid Id { get; set; }
@@ -182,40 +182,40 @@ Owner entity looks like below:
 
         public string PhoneNumber { get; set; }
     }
-[/code]
+```
 
 Note that each class implements interface called "IEntity". In this interface there is one property - "Id" which should be found in each Entity.
 
-[code language="csharp"]
+```
     public interface IEntity
     {
         Guid Id { get; set; }
     }
-[/code]
+```
 
 Now in the Web API project in the "Startup" class we have to indicate that we are using Entity Framework and database connection:
 
-[code language="csharp"]
+```
 services.AddDbContext<ApplicationDbContext>(options =>
               options.UseSqlServer(
                   Configuration.GetConnectionString("ApplicationDbContext")
               )
           );
-[/code]
+```
 
 Connection string should be retrieved from "appsettings.json" file:
 
-[code language="csharp"]
+```
     "ConnectionStrings": {
       "ApplicationDbContext": "<<Connection string>>"
     }
-[/code]
+```
 
 We want to make it possible to easily add, delete, update and list Cars and Owners. Code responsible for these operations is contained by below repositories.
 
 Owners:
 
-[code language="csharp"]
+```
 public class OwnersRepository : IGenericRepository<Owner>
     {
         private readonly ApplicationDbContext _applicationDbContext;
@@ -283,11 +283,11 @@ public class OwnersRepository : IGenericRepository<Owner>
             return existingOwner;
         }
     }
-[/code]
+```
 
 Cars:
 
-[code language="csharp"]
+```
  public class CarsRepository : IGenericRepository<Car>
     {
         private readonly ApplicationDbContext _applicationDbContext;
@@ -354,11 +354,11 @@ Cars:
             return existingCar;
         }
     }
-[/code]
+```
 
 Both of above classes implements generic interface called "IGenericRepository":
 
-[code language="csharp"]
+```
     public interface IGenericRepository<TEntity> where TEntity : class, IEntity
     {
         Task<TEntity> GetAsync(Guid id);
@@ -367,14 +367,14 @@ Both of above classes implements generic interface called "IGenericRepository":
         Task<bool> DeleteAsync(Guid id);
         Task<IEnumerable<TEntity>> AllAsync();
     }
-[/code]
+```
 
 Remember to register repositories in the IoC container in the "Startup" class:
 
-[code language="csharp"]
+```
    services.AddScoped<IGenericRepository<Owner>, OwnersRepository>();
    services.AddScoped<IGenericRepository<Car>, CarsRepository>();
-[/code]
+```
 
 Remember to update connection string in the "appsettings.json" file so you can access database.
 
@@ -382,7 +382,7 @@ In the "EntityFrameworkCoreJumpStart.WebAPI" project we have two separate contro
 
 CarsController looks like below. As you can see we are using "CarsRepository" here:
 
-[code language="csharp"]
+```
     [Route("api/[controller]")]
     public class CarsController : ControllerBase
     {
@@ -450,11 +450,11 @@ CarsController looks like below. As you can see we are using "CarsRepository" he
             return NoContent();
         }
     }
-[/code]
+```
 
 OwnersController looks like below. As you can see we are using "OwnersRepository" here:
 
-[code language="csharp"]
+```
     [Route("api/[controller]")]
     public class OwnersController : ControllerBase
     {
@@ -522,7 +522,7 @@ OwnersController looks like below. As you can see we are using "OwnersRepositor
             return NoContent();
         }
     }
-[/code]
+```
 
 Now its time to initialize the database with Cars and Owners tables with prepared schema.
 <h3><strong>Database initialization and migrations</strong></h3>
@@ -530,7 +530,7 @@ Once application code is ready and all models are defined, it is time to initial
 
 We need one more class to be added called "ApplicationDbContextFactory". This context factory is used by entity framework database migration mechanism only:
 
-[code language="csharp"]
+```
     public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         public ApplicationDbContext CreateDbContext(string[] args)
@@ -542,7 +542,7 @@ We need one more class to be added called "ApplicationDbContextFactory". This c
             return new ApplicationDbContext(builder.Options);
         }
     }
-[/code]
+```
 
 Now its time to add initial migration. To achieve that open "Package Manager Console" and change default project to "EntityFrameworkCoreJumpStart.Data":
 
@@ -550,13 +550,13 @@ Now its time to add initial migration. To achieve that open "Package Manager Con
 
 Type below command to create initial migration:
 
-[code language="csharp"]
+```
 Add-Migration Initial
-[/code]
+```
 
 After few seconds Initial Migration auto-generated code should be displayed:
 
-[code language="csharp"]
+```
  public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -611,7 +611,7 @@ After few seconds Initial Migration auto-generated code should be displayed:
                 name: "Owners");
         }
     }
-[/code]
+```
 
 Note that new folder called "Migrations" was created:
 
@@ -619,9 +619,9 @@ Note that new folder called "Migrations" was created:
 
 Use below command to apply changes in the database (to create tables):
 
-[code language="csharp"]
+```
 Update-Database
-[/code]
+```
 
 Once update is finished you should see confirmation in the console window. Now its time to check tables.
 You can use <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017" target="_blank" rel="noopener">SQL Server Management Studio</a> to access database and display tables:
