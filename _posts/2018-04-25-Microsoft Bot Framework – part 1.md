@@ -3,7 +3,7 @@ title: "Microsoft Bot Framework – part 1"
 ---
 
 <p align="center">
-<img src="/images/devisland/article2/assets/botframeworkcover.png.png?raw=true" alt="Windows IoT Core samples repository"/>
+<img src="/images/devisland/article2/assets/botframeworkcover.png?raw=true" alt="Microsoft Bot Framework – part 1"/>
 </p>
 
 <h3><strong>Short introduction</strong></h3>
