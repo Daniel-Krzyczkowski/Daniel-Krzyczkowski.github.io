@@ -20,15 +20,15 @@ To simulate real-time transport data I prepared three applications for this solu
 <h3><strong>Setup Azure Maps Service</strong></h3>
 Open <a href="http://portal.azure.com" target="_blank" rel="noopener">Microsoft Azure</a> portal. Type "Azure Maps" in search window:
 
-<img class=" wp-image-1169 aligncenter" src="https://devislandblog.files.wordpress.com/2018/08/azuremaps2.png?w=300" alt="" width="453" height="151" />
+<img class=" wp-image-1169 aligncenter" src="/images/devisland/article10/assets/azuremaps2.png?w=300" alt="" width="453" height="151" />
 
 Fill required information like name of the service (used later with full URL):
 
-<img class=" wp-image-1171 aligncenter" src="https://devislandblog.files.wordpress.com/2018/08/azuremaps3.png?w=300" alt="" width="435" height="374" />
+<img class=" wp-image-1171 aligncenter" src="/images/devisland/article10/assets/azuremaps3.png?w=300" alt="" width="435" height="374" />
 
 Once service is created open the tab and select "Keys" section:
 
-<img class=" wp-image-1173 aligncenter" src="https://devislandblog.files.wordpress.com/2018/08/azuremaps4.png?w=300" alt="" width="438" height="334" />
+<img class=" wp-image-1173 aligncenter" src="/images/devisland/article10/assets/azuremaps4.png?w=300" alt="" width="438" height="334" />
 
 Copy Primary Key because we will use it later in Web API application setup.
 <h3><strong>Setup ASP .NET Core Web API</strong></h3>
@@ -36,7 +36,7 @@ We will use ASP .NET Core Web API application created in the previous article a
 
 We will comunicate with Azure Maps REST API using RestSharp. Clone project from my Github <a href="https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/AzureSignalRTransportApp" target="_blank" rel="noopener">here</a> , open it. You should see that RestSharp NuGet package is added:
 
-<img class=" wp-image-1184 aligncenter" src="https://devislandblog.files.wordpress.com/2018/08/azuremaps5.png?w=300" alt="" width="695" height="153" />
+<img class=" wp-image-1184 aligncenter" src="/images/devisland/article10/assets/azuremaps5.png?w=300" alt="" width="695" height="153" />
 
 Now open "MapService" class from "Services" folder:
 
