@@ -11,19 +11,19 @@ title: "Microsoft Bot Framework – part 2"
 Microsoft Bot Framework enables developers to create intelligent applications to communicate with users. In the first part I described some key concepts connected with Bot Framework and in this article I would like to discuss the source code of created Bot.
 <h3><strong>Basic bot source code</strong></h3>
 During Bot creation in Microsft Azure portal (described in part 1) I chose "Basic C#" template for Bot. Now lets discover how source code of such Bot looks like.
-<p style="text-align:center;"><img src="/images/devisland/article3/botf1.png?w=287" alt="" width="287" height="300" /></p>
+<p style="text-align:center;"><img src="/images/devisland/article3/assets/botf1.png?w=287" alt="" width="287" height="300" /></p>
 &nbsp;
 
 Download source code of your Bot from Azure Portal:
-<p style="text-align:center;"><img src="/images/devisland/article3/botf2.png?w=775" alt="" width="545" height="194" /></p>
+<p style="text-align:center;"><img src="/images/devisland/article3/assets/botf2.png?w=775" alt="" width="545" height="194" /></p>
 Open project in Visual Studio:
 
-<img src="/images/devisland/article3/botf3.png?w=255" alt="" width="265" height="312" />
+<img src="/images/devisland/article3/assets/botf3.png?w=255" alt="" width="265" height="312" />
 
 &nbsp;
 
 First class we will review is called "MessagesController" and its located in "Controllers" folder:
-<p style="text-align:center;"><img src="/images/devisland/article3/botf6.png?w=273" alt="" width="273" height="300" /></p>
+<p style="text-align:center;"><img src="/images/devisland/article3/assets/botf6.png?w=273" alt="" width="273" height="300" /></p>
 
 
 [code language="csharp"]
@@ -87,13 +87,13 @@ First class we will review is called "MessagesController" and its located in "Co
 
 It is important to secure access to the Bot. To prevent unauthorized access "MessagesController" class has "BotAuthentication" attribute. To access Bot you have to provide "MicrosoftAppId" and "MicrosoftAppPassword". You can find them in Azure portal in your Bot settings:
 
-<img src="/images/devisland/article3/botf81.png?w=158" alt="" width="166" height="316" />
-<p style="text-align:center;"><img src="/images/devisland/article3/botf91.png?w=300" alt="" width="300" height="62" /></p>
+<img src="/images/devisland/article3/assets/botf81.png?w=158" alt="" width="166" height="316" />
+<p style="text-align:center;"><img src="/images/devisland/article3/assets/botf91.png?w=300" alt="" width="300" height="62" /></p>
 Now with AppId and Password you can test connection to your Bot from Bot Emulator:
-<p style="text-align:center;"><img src="/images/devisland/article3/botf7.png?w=300" alt="" width="308" height="156" /></p>
+<p style="text-align:center;"><img src="/images/devisland/article3/assets/botf7.png?w=300" alt="" width="308" height="156" /></p>
 You have to paste AppId and Password in "Web.config" file:
 
-<img src="/images/devisland/article3/botf10.png?w=300" alt="" width="415" height="61" />
+<img src="/images/devisland/article3/assets/botf10.png?w=300" alt="" width="415" height="61" />
 
 <b>Activity</b>
 
@@ -106,7 +106,7 @@ Conversation represents channel between Bot and user through which new activitie
 <b>EchoDialog</b>
 
 Second class we will review is called "EchoDialog" and its located in "Dialogs" folder:
-<p style="text-align:center;"><img src="/images/devisland/article3/botf4.png?w=300" alt="" width="300" height="258" /></p>
+<p style="text-align:center;"><img src="/images/devisland/article3/assets/botf4.png?w=300" alt="" width="300" height="258" /></p>
 
 
 [code language="csharp"]
@@ -169,14 +169,14 @@ Like apps and websites, bots have a UI, but it is made up of dialogs, rather tha
 
 Below there is a diagram to show comparsion between the screen flow of a traditional application compared to the dialog flow of a bot:
 
-<img src="/images/devisland/article3/botf5.png?w=300" alt="" width="462" height="203" />
+<img src="/images/devisland/article3/assets/botf5.png?w=300" alt="" width="462" height="203" />
 
 When one dialog invokes another, the Bot Builder adds the new dialog to the top of the dialog stack. The dialog that is on top of the stack is in control of the conversation.
 
 <strong>IDialogContext</strong>
 
 IDialogContext interface represents context of current conversation between user and Bot. Below you can see inheritance diagram for IDialogContext:
-<p style="text-align:center;"><img src="/images/devisland/article3/botf11.png" alt="" width="217" height="233" /></p>
+<p style="text-align:center;"><img src="/images/devisland/article3/assets/botf11.png" alt="" width="217" height="233" /></p>
 Please note that "MessageReceivedAsync" method has two parameters: context and argument. It means that for each new message sent to Bot there is specific context and argument assigned.
 
 &nbsp;
