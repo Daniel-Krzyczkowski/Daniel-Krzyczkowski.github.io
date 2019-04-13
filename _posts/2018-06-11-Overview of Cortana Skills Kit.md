@@ -1,9 +1,9 @@
 ﻿---
-title: "Real-time data with Microsoft Azure SignalR Service"
+title: "Overview of Cortana Skills Kit"
 ---
 
 <p align="center">
-<img src="/images/devisland/article8/assets/cortanaskills1.png?raw=true" alt="Real-time data with Microsoft Azure SignalR Service"/>
+<img src="/images/devisland/article8/assets/cortanaskills1.png?raw=true" alt="Overview of Cortana Skills Kit"/>
 </p>
 
 <h3><strong>Short introduction</strong></h3>
