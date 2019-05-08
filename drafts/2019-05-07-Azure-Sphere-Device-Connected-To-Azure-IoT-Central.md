@@ -70,3 +70,6 @@ When prompted, log in with the credentials you use for Azure IoT Central.
 Copy the information from the output into the app_manifest.json file in Visual Studio.
 In the manifest file you should see that there is new address added to the "AllowedConnections" section that targets your Azure IoT Central application.
 
+### Prepare Azure IoT Central dashboard to display data from humidity and temperature sensors
+
+Aaa
