@@ -76,12 +76,30 @@ Once device is connected with the Azure IoT Central we can prepare dashboards to
 
 1. Open "Device templates" tab:
 
-2. Click "New Measurement"
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere3.png?raw=true" alt="Solution architecture"/>
+</p>
 
-3. Select "Telemetry"
+2. Click "New Measurement":
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere4.png?raw=true" alt="Solution architecture"/>
+</p>
+
+3. Select "Telemetry":
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere5.png?raw=true" alt="Solution architecture"/>
+</p>
 
 4. Provide details about temperature telemetry:
 
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere6.png?raw=true" alt="Solution architecture"/>
+</p>
+
 Now repeat the same above steps for the humidity:
 
-
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere7.png?raw=true" alt="Solution architecture"/>
+</p>
