@@ -77,31 +77,31 @@ Once device is connected with the Azure IoT Central we can prepare dashboards to
 1. Open "Device templates" tab:
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere3.PNG?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere3.PNG?raw=true" alt=""/>
 </p>
 
 2. Click "New Measurement":
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere4.PNG?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere4.PNG?raw=true" alt=""/>
 </p>
 
 3. Select "Telemetry":
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere5.PNG?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere5.PNG?raw=true" alt=""/>
 </p>
 
 4. Provide details about temperature telemetry:
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere6.PNG?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere6.PNG?raw=true" alt=""/>
 </p>
 
 Now repeat the same above steps for the humidity:
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere7.PNG?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere7.PNG?raw=true" alt=""/>
 </p>
 
 ##### Please note that in the text box called "Field name" you should provide the exact name of the field included in the data send from the device. Below you can see sample application code fragment where I set "Temperature" and "Humidity" values in JSON payload sent to IoT Central:
@@ -120,16 +120,20 @@ if (humidityDataSize > 0)
 
 Once you got your Azure Sphere device prepared, run the sample application I provided. After few minutes you should see data coming to the Azure IoT Central.
 
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere10.PNG?raw=true" alt=""/>
+</p>
+
 Now open "Device Explorer" tab and select template for the Azure Sphere device:
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere8.PNG?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere8.PNG?raw=true" alt=""/>
 </p>
 
 In the "Measuremnts" tab you should be able to see the data coming from the device:
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere9.PNG?raw=true" alt="Solution architecture"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere9.PNG?raw=true" alt=""/>
 </p>
 
 ## Final project presentation
