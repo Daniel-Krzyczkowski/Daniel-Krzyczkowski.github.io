@@ -20,3 +20,6 @@ In this article you can find my latest project in which I connected Azure Sphere
 
 ## Project structure and architecture
 
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere2.png?raw=true" alt="Solution architecture"/>
+</p>
