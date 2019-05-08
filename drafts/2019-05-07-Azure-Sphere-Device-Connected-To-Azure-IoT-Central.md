@@ -104,6 +104,18 @@ Now repeat the same above steps for the humidity:
 <img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere7.PNG?raw=true" alt="Solution architecture"/>
 </p>
 
+##### Please note that in the text box called "Field name" you should provide the exact name of the field included in the data send from the device. Below you can see sample application code fragment where I set "Temperature" and "Humidity" values in JSON payload sent to IoT Central:
+
+```C#
+if (tempDataSize > 0)
+		SendTelemetry("Temperature", tempBuffer);
+```
+
+```C#
+if (humidityDataSize > 0)
+		SendTelemetry("Humidity", humidityBuffer);
+```
+
 ### Connect device with sensors and run sample application
 
 Now open "Device Explorer" tab and select template for the Azure Sphere device:
