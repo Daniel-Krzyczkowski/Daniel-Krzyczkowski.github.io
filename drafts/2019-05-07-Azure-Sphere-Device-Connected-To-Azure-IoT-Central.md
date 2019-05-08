@@ -45,3 +45,30 @@ There are few prerequisites you have to complete to be able to display data from
 Once steps above are completed you can configure sample application from my repository to work with your Azure Sphere device.
 All above steps are well documented by Microsoft under [this](https://docs.microsoft.com/en-us/azure-sphere/app-development/setup-iot-central#step-4-verify-the-tenant-ca-certificate) link.
 
+Once Azure IoT Central application is ready and you versified Azure Sphere tenant with certificate we can proceed with code sample setup.
+
+To configure the sample application, you'll need to supply the following information in the app_manifest.json file for AzureIoT:
+
+The Tenant ID for your Azure Sphere device
+The Scope ID for your Azure IoT Central application
+The IoT hub URL for your Azure IoT Central application
+The Azure DPS global endpoint address
+Follow these steps to gather the information and configure the application:
+
+1. Open AzureIoT.sln in Visual Studio.
+
+2. In Solution Explorer, find the app_manifest.json file and open it.
+
+3. In an Azure Sphere Developer Command Prompt, issue the following command to get the tenant ID. Copy the returned value and paste it into the DeviceAuthentication field of the app_manifest.json file:
+
+4. azsphere tenant show-selected
+
+5. In an Azure Sphere Developer Command Prompt, run the ShowIoTCentralConfig.exe program from the sample repository (the ShowIoTCentralConfig program is located in the AzureIoT\Tools folder). For example:
+
+ShowIoTCentralConfig
+
+When prompted, log in with the credentials you use for Azure IoT Central.
+
+Copy the information from the output into the app_manifest.json file in Visual Studio.
+In the manifest file you should see that there is new address added to the "AllowedConnections" section that targets your Azure IoT Central application.
+
