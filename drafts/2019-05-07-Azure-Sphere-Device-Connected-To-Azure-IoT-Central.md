@@ -144,7 +144,30 @@ Now once device is connected with Azure IoT Central there is an option to create
 
 2. Now you can type the name of the new dashboard and select some elements like image and charts:
 
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere11.PNG?raw=true" alt="Image not found"/>
+</p>
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere12.PNG?raw=true" alt="Image not found"/>
+</p>
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere13.PNG?raw=true" alt="Image not found"/>
+</p>
 
 ## Final project presentation
 
-Aaa
+This is my final project:
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere14.PNG?raw=true" alt="Image not found"/>
+</p>
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere15.PNG?raw=true" alt="Image not found"/>
+</p>
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere16.PNG?raw=true" alt="Image not found"/>
+</p>
