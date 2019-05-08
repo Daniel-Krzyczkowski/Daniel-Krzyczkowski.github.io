@@ -72,4 +72,16 @@ In the manifest file you should see that there is new address added to the "Allo
 
 ### Prepare Azure IoT Central dashboard to display data from humidity and temperature sensors
 
-Aaa
+Once device is connected with the Azure IoT Central we can prepare dashboards to display temperature and humidity values. Below steps present how to do it:
+
+1. Open "Device templates" tab:
+
+2. Click "New Measurement"
+
+3. Select "Telemetry"
+
+4. Provide details about temperature telemetry:
+
+Now repeat the same above steps for the humidity:
+
+
