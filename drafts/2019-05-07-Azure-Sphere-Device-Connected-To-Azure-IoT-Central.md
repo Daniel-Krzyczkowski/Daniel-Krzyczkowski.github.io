@@ -118,6 +118,8 @@ if (humidityDataSize > 0)
 
 ### Connect device with sensors and run sample application
 
+Once you got your Azure Sphere device prepared, run the sample application I provided. After few minutes you should see data coming to the Azure IoT Central.
+
 Now open "Device Explorer" tab and select template for the Azure Sphere device:
 
 <p align="center">
@@ -130,4 +132,6 @@ In the "Measuremnts" tab you should be able to see the data coming from the devi
 <img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere9.PNG?raw=true" alt="Solution architecture"/>
 </p>
 
+## Final project presentation
 
+Aaa
