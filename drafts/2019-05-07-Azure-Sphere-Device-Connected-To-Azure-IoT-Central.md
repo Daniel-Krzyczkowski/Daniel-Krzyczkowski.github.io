@@ -1,9 +1,9 @@
 ﻿---
-title: "Virtual mapping of the physical environment with Azure Digital Twins"
+title: "Azure Sphere Device Connected To Azure IoT Central"
 ---
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/AzureDigitalTwins1.png?raw=true" alt="Virtual mapping of the physical environment with Azure Digital Twins"/>
+<img src="/images/cloudyofthings/article6/assets/AzureDigitalTwins1.png?raw=true" alt="Azure Sphere Device Connected To Azure IoT Central"/>
 </p>
 
 **TL;DR** 
@@ -12,7 +12,7 @@ Some time ago I jumped into Internet of Things topics connected with Microsoft A
 
 You can read them all on this blog.
 
-In this article you can find my latest project in which I used Microsoft Azure Digital Twins cloud service to connect IoT devices and create virtual mapping of the physical spaces.
+In this article you can find my latest project in which I connected Azure Sphere IoT device to the Azure IoT Central service to display data from sensors and take up some actions.
 
 [Source code for this project is available here](https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/tree/master/AzureIoT/AzureSphereProject/SRC)
 
