@@ -177,11 +177,11 @@ This is my final project:
 This is only beginning - now once device is connected and we have some measurements collected it is possible to take some actions! Below for instance I prepared rule for the temperature measurement - if temperature increase I will be notified by e-mail message:
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere18.png?raw=true" alt="Image not found"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere18.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere17.png?raw=true" alt="Image not found"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere17.PNG?raw=true" alt="Image not found"/>
 </p>
 
 I encourage you to read more about rules and action [here.](https://docs.microsoft.com/en-us/azure/iot-central/tutorial-configure-rules)
