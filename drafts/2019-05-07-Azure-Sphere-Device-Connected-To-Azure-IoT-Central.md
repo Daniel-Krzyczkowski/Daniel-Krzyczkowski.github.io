@@ -63,9 +63,7 @@ Follow these steps to gather the information and configure the application:
 
 4. azsphere tenant show-selected
 
-5. In an Azure Sphere Developer Command Prompt, run the ShowIoTCentralConfig.exe program from the sample repository (the ShowIoTCentralConfig program is located in the AzureIoT\Tools folder). For example:
-
-ShowIoTCentralConfig
+5. In an Azure Sphere Developer Command Prompt, run the ShowIoTCentralConfig.exe program from the sample repository (the ShowIoTCentralConfig program is located in the AzureIoT\Tools folder). Just type: ShowIoTCentralConfig
 
 When prompted, log in with the credentials you use for Azure IoT Central.
 
