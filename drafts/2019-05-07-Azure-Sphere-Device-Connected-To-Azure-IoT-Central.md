@@ -165,9 +165,9 @@ This is my final project:
 </p>
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere15.PNG?raw=true" alt="Image not found"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere15.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere16.PNG?raw=true" alt="Image not found"/>
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere16.png?raw=true" alt="Image not found"/>
 </p>
