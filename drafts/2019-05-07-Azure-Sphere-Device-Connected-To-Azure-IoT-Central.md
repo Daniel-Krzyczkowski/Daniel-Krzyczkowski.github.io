@@ -136,6 +136,15 @@ In the "Measuremnts" tab you should be able to see the data coming from the devi
 <img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere9.PNG?raw=true" alt="Image not found"/>
 </p>
 
+### Create main dashboard with data
+
+Now once device is connected with Azure IoT Central there is an option to create custom dashboards. Let's see how to do it.
+
+1. In the main dashboard click "+New":
+
+2. Now you can type the name of the new dashboard and select some elements like image and charts:
+
+
 ## Final project presentation
 
 Aaa
