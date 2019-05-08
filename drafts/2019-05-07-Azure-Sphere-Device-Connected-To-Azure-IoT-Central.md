@@ -108,12 +108,12 @@ Now repeat the same above steps for the humidity:
 
 ```C#
 if (tempDataSize > 0)
-		SendTelemetry("Temperature", tempBuffer);
+	SendTelemetry("Temperature", tempBuffer);
 ```
 
 ```C#
 if (humidityDataSize > 0)
-		SendTelemetry("Humidity", humidityBuffer);
+	SendTelemetry("Humidity", humidityBuffer);
 ```
 
 ### Connect device with sensors and run sample application
