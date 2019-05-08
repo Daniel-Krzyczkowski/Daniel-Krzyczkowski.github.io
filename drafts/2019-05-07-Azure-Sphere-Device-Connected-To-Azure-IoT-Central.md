@@ -23,3 +23,15 @@ In this article you can find my latest project in which I connected Azure Sphere
 <p align="center">
 <img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere2.png?raw=true" alt="Solution architecture"/>
 </p>
+
+Above diagram presents the whole solution. As you can see it is simple - Azure Sphere IoT device is directly connected to the Azure IoT Central. This is huge advantage because we do not have to create complex architecture.
+
+### Microsoft Azure Sphere
+
+In this project I used Microsoft Azure Sphere Development Board from [Seeed Studio](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-EU-Version-p-3134.html)
+
+Temperature/Humidity sensor and OLED screen were took from [Grove Starter Kit for Azure Sphere MT3620 Development Kit](https://www.seeedstudio.com/Grove-Starter-Kit-for-Azure-Sphere-MT3620-Development-Kit-p-3150.html)
+
+### Azure IoT Central connection with Azure Sphere device
+
+Aaa
