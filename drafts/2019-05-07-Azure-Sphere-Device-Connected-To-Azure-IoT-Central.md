@@ -34,4 +34,14 @@ Temperature/Humidity sensor and OLED screen were took from [Grove Starter Kit fo
 
 ### Azure IoT Central connection with Azure Sphere device
 
-Aaa
+There are few prerequisites you have to complete to be able to display data from sensors connected to the Azure Sphere in the Azure IoT Central portal:
+
+1. Create Azure IoT Central application
+2. Download the tenant authentication CA certificate
+3. Upload the tenant CA certificate to Azure IoT Central and generate a verification code
+4. Verify the tenant CA certificate
+5. Use the validation certificate to verify the tenant identity
+
+Once steps above are completed you can configure sample application from my repository to work with your Azure Sphere device.
+All above steps are well documented by Microsoft under [this](https://docs.microsoft.com/en-us/azure-sphere/app-development/setup-iot-central#step-4-verify-the-tenant-ca-certificate) link.
+
