@@ -103,3 +103,19 @@ Now repeat the same above steps for the humidity:
 <p align="center">
 <img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere7.PNG?raw=true" alt="Solution architecture"/>
 </p>
+
+### Connect device with sensors and run sample application
+
+Now open "Device Explorer" tab and select template for the Azure Sphere device:
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere8.PNG?raw=true" alt="Solution architecture"/>
+</p>
+
+In the "Measuremnts" tab you should be able to see the data coming from the device:
+
+<p align="center">
+<img src="/images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere9.PNG?raw=true" alt="Solution architecture"/>
+</p>
+
+
