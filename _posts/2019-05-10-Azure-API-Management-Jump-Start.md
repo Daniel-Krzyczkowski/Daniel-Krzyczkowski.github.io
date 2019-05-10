@@ -9,10 +9,6 @@ title: "Azure API Managemnet - Jump Start"
 I prepared workshop for the one of the Servless meetups and would like to share it here on my blog. Below you can find theoretical introduction to the Azure API Management service. Workshop steps are available in my Github repository linked below.
 
 <p align="center">
-<img src="/images/devisland/article16/assets/ApiManagement2.PNG?raw=true" alt="Azure API Managemnet - Jump Start"/>
-</p>
-
-<p align="center">
 <img src="/images/devisland/article16/assets/ApiManagement3.PNG?raw=true" alt="Azure API Managemnet - Jump Start"/>
 </p>
 
