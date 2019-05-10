@@ -22,7 +22,7 @@ First of all Entity Framework needs to know how it should translate entities lik
 
 <strong>Entity</strong> - An entity is a class which is mapped to an Entity Framework context, and has an identity - property which uniquely identifies its instance. An entity is usually persisted on its own table in the database. Below I pasted example of Entity:
 
-```
+```csharp
 public class Car
     {
         public Guid Id { get; set; }
@@ -37,7 +37,7 @@ public class Car
 
 <strong>Context</strong> - Exposes a number of entity collections. Context can be thought of as a box in which we can make changes to a collection of entities and then apply those changes in the database. In the code it is represented by class that inherits from DbContext (provided by Entity Framework Core) and exposes a number of entity collections in the form of DbSet&lt;T&gt; properties. Below I pasted example of DbContext:
 
-```
+```csharp
 public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -55,7 +55,7 @@ You can read more about relationships under <a href="https://docs.microsoft.com
 
 <b>Data Annotations</b>- Enables overriding EF Core's default behavior by using attributes which can be placed on a class or property to specify metadata about that class or property. Below I pasted example of using data annotations. This is the first option to override EF mapping configuration. Second one is described below - Fluent API.
 
-```
+```csharp
 [Table("Cars", Schema = "dbo")]
 public class Car
     {
@@ -123,7 +123,7 @@ I prepared code sample available on <a href="https://github.com/Daniel-Krzyczko
 
 First of all we have to setup "ApplicationDbContext" class which inherits from DbContext and should be located in the "EntityFrameworkCoreJumpStart.Data" project. We will have two DbSets: Cars and Owners:
 
-```
+```csharp
   public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -154,7 +154,7 @@ Note that in the constructor there is parameter "DbContextOptions&lt;Application
 
 Car entity looks like below:
 
-```
+```csharp
     public class Car : IEntity
     {
         public Guid Id { get; set; }
@@ -171,7 +171,7 @@ Car entity looks like below:
 
 Owner entity looks like below:
 
-```
+```csharp
     public class Owner : IEntity
     {
         public Guid Id { get; set; }
@@ -186,7 +186,7 @@ Owner entity looks like below:
 
 Note that each class implements interface called "IEntity". In this interface there is one property - "Id" which should be found in each Entity.
 
-```
+```csharp
     public interface IEntity
     {
         Guid Id { get; set; }
@@ -195,7 +195,7 @@ Note that each class implements interface called "IEntity". In this interface th
 
 Now in the Web API project in the "Startup" class we have to indicate that we are using Entity Framework and database connection:
 
-```
+```csharp
 services.AddDbContext<ApplicationDbContext>(options =>
               options.UseSqlServer(
                   Configuration.GetConnectionString("ApplicationDbContext")
@@ -205,7 +205,7 @@ services.AddDbContext<ApplicationDbContext>(options =>
 
 Connection string should be retrieved from "appsettings.json" file:
 
-```
+```csharp
     "ConnectionStrings": {
       "ApplicationDbContext": "<<Connection string>>"
     }
@@ -215,7 +215,7 @@ We want to make it possible to easily add, delete, update and list Cars and Owne
 
 Owners:
 
-```
+```csharp
 public class OwnersRepository : IGenericRepository<Owner>
     {
         private readonly ApplicationDbContext _applicationDbContext;
@@ -287,7 +287,7 @@ public class OwnersRepository : IGenericRepository<Owner>
 
 Cars:
 
-```
+```csharp
  public class CarsRepository : IGenericRepository<Car>
     {
         private readonly ApplicationDbContext _applicationDbContext;
@@ -358,7 +358,7 @@ Cars:
 
 Both of above classes implements generic interface called "IGenericRepository":
 
-```
+```csharp
     public interface IGenericRepository<TEntity> where TEntity : class, IEntity
     {
         Task<TEntity> GetAsync(Guid id);
@@ -371,7 +371,7 @@ Both of above classes implements generic interface called "IGenericRepository":
 
 Remember to register repositories in the IoC container in the "Startup" class:
 
-```
+```csharp
    services.AddScoped<IGenericRepository<Owner>, OwnersRepository>();
    services.AddScoped<IGenericRepository<Car>, CarsRepository>();
 ```
@@ -382,7 +382,7 @@ In the "EntityFrameworkCoreJumpStart.WebAPI" project we have two separate contro
 
 CarsController looks like below. As you can see we are using "CarsRepository" here:
 
-```
+```csharp
     [Route("api/[controller]")]
     public class CarsController : ControllerBase
     {
@@ -454,7 +454,7 @@ CarsController looks like below. As you can see we are using "CarsRepository" he
 
 OwnersController looks like below. As you can see we are using "OwnersRepository" here:
 
-```
+```csharp
     [Route("api/[controller]")]
     public class OwnersController : ControllerBase
     {
@@ -530,7 +530,7 @@ Once application code is ready and all models are defined, it is time to initial
 
 We need one more class to be added called "ApplicationDbContextFactory". This context factory is used by entity framework database migration mechanism only:
 
-```
+```csharp
     public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         public ApplicationDbContext CreateDbContext(string[] args)
@@ -550,13 +550,13 @@ Now its time to add initial migration. To achieve that open "Package Manager Con
 
 Type below command to create initial migration:
 
-```
+```csharp
 Add-Migration Initial
 ```
 
 After few seconds Initial Migration auto-generated code should be displayed:
 
-```
+```csharp
  public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -619,7 +619,7 @@ Note that new folder called "Migrations" was created:
 
 Use below command to apply changes in the database (to create tables):
 
-```
+```csharp
 Update-Database
 ```
 

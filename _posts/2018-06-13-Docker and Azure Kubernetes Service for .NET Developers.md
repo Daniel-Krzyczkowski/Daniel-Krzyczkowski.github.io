@@ -522,7 +522,7 @@ kubectl apply -f ingress-service.yaml
 
 Then we have to create Service for our Web API application with sample-web-service-api.yaml file:
 
-```
+```csharp
 apiVersion: v1 
 kind: Service 
 metadata: 
@@ -542,7 +542,7 @@ kubectl apply -f sample-web-service-api.yaml
 
 Once we defined Service for our Web API app we have to create Deployment with sample-webapi-deployment.yaml file. Note that in this file we are defining number of pods and from which container registry Docker image should be pulled:
 
-```
+```csharp
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:

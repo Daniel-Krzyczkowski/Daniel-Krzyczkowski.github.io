@@ -46,7 +46,7 @@ As you can see I scaned my face and registered myself as "Daniel" in the "Home" 
 
 The most important part is FaceRecognitionService class. There you can find all methods responsible creating group of known people, adding new person to the group (using image and name) or detecting it after training of Face API:
 
-```
+```csharp
     public class FaceRecognitionService
     {
         public event EventHandler<string> TrainingStatusChanged;
@@ -140,7 +140,7 @@ Whole source code you can find on my GitHub [here.](https://github.com/Daniel-Kr
 
 I extended previous application (Motion Detector) with connected camera device and Microsoft Cognitive Services Face API. There is one more service added to the project called FaceRecognitionService (as in the Face Identifier app) which helps detect people from the images taken by camera device once motion is detected:
 
-```
+```csharp
 public class FaceRecognitionService
     {
         public FaceRecognitionService()
@@ -195,7 +195,7 @@ AzureIoTHubService class was extended with one more method - written to uplad ta
 
 In the MainPage class there is a method which prepares data (Face API analyzis result and image) to be send to the Azure IoT Hub:
 
-```
+```csharp
         private async Task SendImageWithAnalysis(string analyzisResult)
         {
             var personPicture = await GetImageStream();
@@ -267,7 +267,7 @@ Select "Event Hub Trigger C#" template. Type the name and select IoT Hub for the
 
 That's it! Now you can paste the code responsible for sending Face API analyzis received from the device to the Azure Logic App:
 
-```
+```csharp
 using System.Net;
 using Microsoft.Extensions.Logging.Abstractions;
 using System.Text;
@@ -290,7 +290,7 @@ public static void Run(string myEventHubMessage, ILogger logger)
 ```
 Remember to add project.json file with below content so NuGet packages are correctly added:
 
-```
+```csharp
 {
   "frameworks": {
     "net46":{
@@ -345,7 +345,7 @@ We need to define JSON schema for received messages:
 
 Paste below schema and save changes. Note that here we expecting to receive analyzis result and room number where motion was detected:
 
-```
+```csharp
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {

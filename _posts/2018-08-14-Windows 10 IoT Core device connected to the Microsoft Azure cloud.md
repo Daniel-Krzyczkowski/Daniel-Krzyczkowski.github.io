@@ -106,7 +106,7 @@ Install <a href="http://Microsoft.Azure.Devices.Client" target="_blank" rel="no
 
 Once you install the package we can move forward to the code implementation. Please note that sample contains comments in the code so you know what is happening:
 
-```
+```csharp
     /// 
 <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -288,7 +288,7 @@ Once you install the package we can move forward to the code implementation. Ple
 
 I created new simple class called "AzureIoTHubService" which is responsible for initializing connection with Azure IoT Hub and sending data:
 
-```
+```csharp
     public class AzureIoTHubService
     {
         private DeviceClient _deviceClient;
@@ -317,7 +317,7 @@ Replace connection string with the one you generated in Azure portal.
 
 Now in "MainPage" class initialize "AzureIoTHubService". I changed the default code a little bit so each half of second new message is send to Azure:
 
-```
+```csharp
             timer.Tick += async (s, e) =>
             {
                 SpiDisplay.TransferFullDuplex(writeBuffer, readBuffer);

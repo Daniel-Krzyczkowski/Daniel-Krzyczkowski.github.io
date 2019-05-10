@@ -40,7 +40,7 @@ Stub would follow below pattern:
 
 FakeItEasy can be used with different testing frameworks. In this case I will use MS Test framework. Rename inital class to "FakeItEasyTests":
 
-```
+```csharp
    [TestClass]
     public class FakeItEasyTests
     {
@@ -100,7 +100,7 @@ Let me show simple example. There are four classes:
 </ul>
 Car class additionally implements IVehicle interface.
 
-```
+```csharp
     public class Car : IVehicle
     {
         private string _plateNumber;
@@ -124,7 +124,7 @@ Car class additionally implements IVehicle interface.
 ```
 
 
-```
+```csharp
 public class PetrolStation
     {
         public Distributor GetDistributorForVehicle(string plateNumber)
@@ -135,7 +135,7 @@ public class PetrolStation
 ```
 
 
-```
+```csharp
  public class Distributor
     {
         public virtual decimal getFuelPrice()
@@ -151,7 +151,7 @@ public class PetrolStation
 ```
 
 
-```
+```csharp
  public class Transaction
     {
         private bool _isCompleted;
@@ -168,7 +168,7 @@ public class PetrolStation
 ```
 
 
-```
+```csharp
     public interface IVehicle
     {
         void CheckEngineStatus();
@@ -199,7 +199,7 @@ In above fragment of code I set expectations that distributor's "getFuelPrice" m
 
 I can also configure exceptions expectations:
 
-```
+```csharp
    A.CallTo(() => vehicle.CheckEngineStatus()).Throws<NotImplementedException>();
 
             try
@@ -215,7 +215,7 @@ I can also configure exceptions expectations:
 
 Whole sample test method can look like below:
 
-```
+```csharp
  [TestMethod]
         public void TestMethod1()
         {

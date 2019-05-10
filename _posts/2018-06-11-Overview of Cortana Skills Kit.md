@@ -180,7 +180,7 @@ Extract zip file and open project in Visual Studio.
 
 First of all add below settings inside <em>appSettings </em>tag in WebConfig file:
 
-```
+```csharp
   <appSettings>
    <add key="MicrosoftAppId" value="" />
    <add key="MicrosoftAppPassword" value="" />
@@ -197,7 +197,7 @@ You can get all these values from Azure portal, from "Application settings" tab 
 
 Now open "LuisDialog.cs" file. You can see that there is pre-definied code for default intents from LUIS portal:
 
-```
+```csharp
 // Go to https://luis.ai and create a new intent, then train/publish your luis app.
 // Finally replace "Greeting" with the name of your newly created intent in the following handler
         [LuisIntent("Greeting")]
@@ -221,7 +221,7 @@ Now open "LuisDialog.cs" file. You can see that there is pre-definied code for d
 
 Now lets add three additional intents I defined in the LUIS portal: TwistedAnkle, HeadAke and SoarThroat. I also refactored the code so bot now can individually answer each utterance send by users connected with these three intents:
 
-```
+```csharp
  [Serializable]
     public class BasicLuisDialog : LuisDialog<object>
     {

@@ -15,7 +15,7 @@ I assume that you are familiar with the first article and you already have previ
 <h3><strong>IQueryable&lt;T&gt; vs IEnumerable&lt;T&gt;</strong></h3>
 Please look at the lines below - we will use them in our code:
 
-```
+```csharp
 IEnumerable<Car> enumerableOwners = _applicationDbContext.Cars;
 
 IQueryable<Car> queryableOwners = _applicationDbContext.Cars;
@@ -27,7 +27,7 @@ Both lines of code are doing the same thing. Get all records from Cars table so 
 
 Now look at the lines below. If we add some query to above example difference will be huge:
 
-```
+```csharp
 var enumerableCar = _applicationDbContext.Cars.ToList().Where(x => x.Id == id).SingleOrDefault();
 var queryableCar = _applicationDbContext.Cars.Where(x => x.Id == id).SingleOrDefault();
 ```
@@ -38,7 +38,7 @@ In the second line of above code we applied <strong>interpreted query</strong>.
 
 To sum up when working with big collections in the database we should always try to use IQueryable. I added each case in the code sample:
 
-```
+```csharp
         public async Task<Car> GetAsync(Guid id)
         {
             // All cars will be loaded to the memory first and then Where condition will be applied:
@@ -70,7 +70,7 @@ Sometimes you would like to transform model returned from the database to the Da
  	<li>ModifiedBy</li>
 </ul>
 
-```
+```csharp
     public class Car : IEntity
     {
         public Guid Id { get; set; }
@@ -88,7 +88,7 @@ Sometimes you would like to transform model returned from the database to the Da
 
 Now I would like to return list of cars from my ASP .NET Core Web API. I do not want to include above four properties. I just want to return Id, registration number, brand, model and ownerId. Here we will use Linq.Expression to transform Car object to the CarDTO which will be returned from the API. "CarDTO" class looks like below:
 
-```
+```csharp
     public class CarDTO
     {
         public Guid Id { get; set; }
@@ -101,7 +101,7 @@ Now I would like to return list of cars from my ASP .NET Core Web API. I do not 
 
 Lets create mapper and use Linq.Expression. This mapper will be responsible for mapping "Car" instance to "CarDTO" instance:
 
-```
+```csharp
     public interface ICarsMapper
     {
         Expression<Func<Car, CarDTO>> MapToDTO { get; }
@@ -129,7 +129,7 @@ As you can see we have Expression with Delegate which has "Car"instance as param
 
 Now lets get back to the Cars repository. To make it easier I will add one more method into it called "GetCarDTO" at the end of the class:
 
-```
+```csharp
         public async Task<CarDTO> GetCarDTO(Guid id)
         {
             var carDTO = await _applicationDbContext.Cars
@@ -148,7 +148,7 @@ This is just a small sample to present how Linq.Expressions can be used. This to
 <h3><strong>Changes tracking</strong></h3>
 It is possible to track changes when we are working on the data models in our code. For instance we can change phone number of the car owner. We can easily track changes and get all modified entities with "ChangeTracker" provided by Entity Framework Core. Please look at the below method located in the "ApplicationDbContext" class:
 
-```
+```csharp
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default(CancellationToken))
         {
             var addedAuditedEntities = ChangeTracker.Entries<IEntity>()
@@ -171,7 +171,7 @@ As mentioned in the previous article we know that we should apply migration and 
 
 To enable automatic migrations add below code in the "Startup" class in the "ConfigureServices" method:
 
-```
+```csharp
 services.BuildServiceProvider()
     .GetService<ApplicationDbContext>()
     .Database
@@ -189,7 +189,7 @@ The term Fluent API refers to a pattern of programming where method calls are ch
 
 General idea is to write code like below using Fluent API to configure the table that a type maps to:
 
-```
+```csharp
    modelBuilder.Entity<Car>()
        .HasOne<Owner>()
        .WithMany()
@@ -198,7 +198,7 @@ General idea is to write code like below using Fluent API to configure the table
 
 "DbContext" class has a method called "OnModelCreating" that takes an instance of "ModelBuilder" as a parameter. In our example "OnModelCreating" method:
 
-```
+```csharp
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Car>()
@@ -218,7 +218,7 @@ We can setup relation between Cars and Onwers. Car has one owner (with unique ID
 
 We do not have to use Fluent API - there is alternative called Data Annotations. Then constraints from above code will look like below:
 
-```
+```csharp
     public class Car : IEntity
     {
         public Guid Id { get; set; }
@@ -245,7 +245,7 @@ Once we described difference between Fluent API and Data Annotatons we can move 
 
 Lets look at below example to make it easier to understand:
 
-```
+```csharp
     public class CarEntityConfiguration : IEntityTypeConfiguration<Car>
     {
         public void Configure(EntityTypeBuilder<Car> builder)
@@ -264,7 +264,7 @@ Lets look at below example to make it easier to understand:
 
 "CarEntityConfiguration" class has one method implemented from the "IEntityTypeConfiguration" interface called "Configure". Inside this method we can setup all the constrains which we added earlier in the "OnModelCreating" method inside "ApplicationDbContext" class. Now we can replace the code inside this method with one single line:
 
-```
+```csharp
  protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Car>()

@@ -41,7 +41,7 @@ To detect motion from the sensor connected to the Raspberry Pi I wrote a Univers
 
 The most important part is in the MainPage class. We have to setup Gpio pin correctly. We have to set DriveMode to "Input" so we would like to receive signal from the motion sensor. Then we hava ValueChanged event raised once there is edge change detected. If its "RisingEdge" it means that motion was detected - then we are using AzureIoTHubService instance to send this information to the Azure. AzureIoTHubService source code is presented below.
 
-```
+```csharp
  public sealed partial class MainPage : Page
     {
 
@@ -105,7 +105,7 @@ The most important part is in the MainPage class. We have to setup Gpio pin corr
 
 AzureIoTHubService class. We are sending MotionEvent with fake room number where motion was detected:
 
-```
+```csharp
     public class AzureIoTHubService
     {
         private DeviceClient _deviceClient;
@@ -195,7 +195,7 @@ We want to have Azure Function which will send SMS notifications using Twilio AP
 
 Create HTTP Trigger Function App. Below I present the code you should use:
 
-```
+```csharp
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, ILogger logger)
 {
     logger.LogInformation("C# HTTP trigger function processed a request.");
@@ -233,7 +233,7 @@ Once you setup Twilio test account you should obtaind TwilioAccountSid, TwilioAu
 
 One important thing here - you should add project.json file to add two NuGet packages. Below I present project.json file content:
 
-```
+```csharp
 {
   "frameworks": {
     "net46":{
@@ -299,7 +299,7 @@ Now get back to the Stream Analytics Job in the Azure portal and click input tab
   <img src="/images/cloudyofthings/article1/assets/MotionDetectorAzure8.PNG?raw=true" alt="MotionDetectorAzure8.png"/>
 </p>
 
-```
+```csharp
 SELECT
     *
 INTO

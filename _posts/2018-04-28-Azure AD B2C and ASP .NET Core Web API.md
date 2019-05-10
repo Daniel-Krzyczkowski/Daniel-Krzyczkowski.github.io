@@ -116,8 +116,7 @@ Add "Microsoft.AspNetCore.Authentication.JwtBearer" NuGet package:
 
 Then its time to add Azure B2C settings in "appsettings.json" file:
 
-```
-
+```csharp
 "AzureAdB2C": {
 "Tenant": "devisland.onmicrosoft.com",
 "ClientId": "93f4e299-xxxxx-4feb-8b0c-xxxxxxxxxxx",
@@ -132,7 +131,7 @@ Now its time to integrate Azure AD B2C authentication in Startup.cs class.
 
 "ConfigureServies" method should look like below:
 
-```
+```csharp
  public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(options =>
@@ -155,7 +154,7 @@ Now its time to integrate Azure AD B2C authentication in Startup.cs class.
 
 "Configure" method should look like below. "app.UseAuthentication" should be added:
 
-```
+```csharp
  public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -170,7 +169,7 @@ Now its time to integrate Azure AD B2C authentication in Startup.cs class.
 
 Last change - add "Authentication" attribute in "ValuesController" generated as default controller to prevent unauthorized access:
 
-```
+```csharp
     [Authorize]
     [Route("api/[controller]")]
     public class ValuesController : Controller
