@@ -106,12 +106,12 @@ Now repeat the same above steps for the humidity:
 
 ##### Please note that in the text box called "Field name" you should provide the exact name of the field included in the data send from the device. Below you can see sample application code fragment where I set "Temperature" and "Humidity" values in JSON payload sent to IoT Central:
 
-```C#
+```C
 if (tempDataSize > 0)
 	SendTelemetry("Temperature", tempBuffer);
 ```
 
-```C#
+```C
 if (humidityDataSize > 0)
 	SendTelemetry("Humidity", humidityBuffer);
 ```
