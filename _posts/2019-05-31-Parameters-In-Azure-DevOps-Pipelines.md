@@ -129,4 +129,4 @@ Creat new release and verify logs:
 
 ## Summary
 
-In this article I presented how to inject Variables into PowerShell scripts which are the part of the Build and Release pipelines. Of course this is just a simple example but you can also use this method for more advanced scripts.
+In this article I presented how to inject Variables into PowerShell scripts which are the part of the Build and Release pipelines. Of course this is just a simple example but you can also use this method for more advanced scripts and scenarios. For instance you could get secrets from the Azure Key Vault, load them into Variables Groups and then access them from the PowerShell script.
