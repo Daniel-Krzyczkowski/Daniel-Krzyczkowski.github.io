@@ -31,7 +31,7 @@ These are declared in the "Variables" tab in the Build configuration:
 </p>
 
 
-```C
+```csharp
 [CmdletBinding()]
 param (
     $ApiManagementServiceName,
@@ -53,12 +53,12 @@ Now let's analyze build step. For this example lets add only one step with Power
 
 As you can see in the "Arguments" field we have to declare which Variables we want to pass to the PowerShell script as parameters:
 
-```C
+```csharp
 -ApiManagementServiceName $(ApiManagementServiceName) -ApiManagementServiceResourceGroup $(ApiManagementServiceResourceGroup)
 ```
 Now in the PowerShell script we can get these Variables as params:
 
-```C
+```csharp
 [CmdletBinding()]
 param (
     $ApiManagementServiceName,
@@ -68,7 +68,7 @@ param (
 
 Then we can use them normally in the script:
 
-```C
+```csharp
 $apimServiceName = $ApiManagementServiceName
 $resourceGroupName = $ApiManagementServiceResourceGroup
 

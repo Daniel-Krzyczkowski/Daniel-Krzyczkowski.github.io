@@ -55,7 +55,7 @@ Both of them use Azure IoT Hub C SDK to provide bidirectional communication betw
 
 This is the fagment of main.c file with method to send messages to the cloud using Azure IoT Hub C SDK:
 
-```C
+```csharp
 static void SendMessageToIotHub(char * messageToBeSent)
 {
 	if (connectedToIoTHub) {
@@ -71,7 +71,7 @@ static void SendMessageToIotHub(char * messageToBeSent)
 
 Here is the code fragment that contains reading sensor values and sending them using above method:
 
-```C
+```csharp
 		GroveTempHumiSHT31_Read(sht31);
 		float newTempValue = GroveTempHumiSHT31_GetTemperature(sht31);
 		float newHumidityValue = GroveTempHumiSHT31_GetHumidity(sht31);
@@ -84,7 +84,7 @@ Here is the code fragment that contains reading sensor values and sending them u
 
 As mentioned it is also possible to display messages from the IoT Hub, here is the code fragment:
 
-```C
+```csharp
 		static void MessageReceived(const char *payload)
 		{
 			Log_Debug("Message received from the Azure IoT Hub: %d\n", payload);
@@ -127,7 +127,7 @@ Azure Function App was created to capture data sent to the Azure IoT Hub. In thi
 
 Once data is received by the Function App it is prepared to be stored in the Azure Storage Table. Here is code fragment of that function (of course whole source code of this project is available in the repository [here](https://github.com/Daniel-Krzyczkowski/WindowsIoT-AzureIoT/tree/master/AzureIoT/AzureSphereProject/SRC)):
 
-```csharp
+```csharpsharp
 public static async Task Run(string myEventHubMessage, ILogger log)
 {
     log.LogInformation($"C# Event Hub trigger function processed a message: {myEventHubMessage}");
@@ -157,7 +157,7 @@ I wanted to provide an easy way to cumminicate with Azure Sphere device. In this
 
 Below is code fragment for "MessagingController" and for the "DeviceDataController":
 
-```csharp
+```csharpsharp
     public class DeviceDataController : ControllerBase
     {
         private readonly ISensorDataService<SensorData> _dataService;
@@ -185,7 +185,7 @@ Below is code fragment for "MessagingController" and for the "DeviceDataControll
     }
 ```
 
-```csharp
+```csharpsharp
 public class MessagingController : ControllerBase
     {
         private readonly IMessagingService _messagingService;
@@ -257,7 +257,7 @@ Azure Key Vault is dedicated place to store any vulnerable data like passwords a
 
 Universal Windows Platform application was created to display sensors data and to enable sending messages to the Azure Sphere device. As you can see on the screens there is temperature and humidity data visualisation and also place to send text message wchich will be displayed on the OLED screen at the end. Here is the code fragment of "SensorsDataService" which is responsible for pulling temperature and humidity data from the Web API:
 
-```csharp
+```csharpsharp
 public async Task<IEnumerable<SensorData>> GetData(SensorDataType dataType)
         {
             if (dataType == SensorDataType.Temperature)
@@ -280,7 +280,7 @@ public async Task<IEnumerable<SensorData>> GetData(SensorDataType dataType)
 
 UWP application is secured by Azure Active Directory B2C. You have to login first and then access to the Web API is granted. "AuthenticationService" is responsible for the login process. Here is the code fragment:
 
-```csharp
+```csharpsharp
         public async Task<AuthenticationResult> Authenticate()
         {
             AuthenticationResult authResult = null;
