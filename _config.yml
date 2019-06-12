@@ -106,8 +106,8 @@ analytics:
 author:
   name             : "Daniel Krzyczkowski"
   avatar           : "/images/Author.png"
-  bio              : "Senior Software Developer @ Predica and Microsoft Most Valuable Professional"
-  location         : "Poland - Warsaw"
+  bio              : "Principal Software Engineer @ Predica and Microsoft Most Valuable Professional"
+  location       : "Poland - Warsaw"
   email            :
   links:
     - label: "Email"
