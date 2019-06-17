@@ -1,6 +1,6 @@
 ﻿---
 title: "PowerShell parameters in the Azure DevOps pipelines"
-header.teaser: "/images/devisland/article17/assets/PowerShellParametersAzureDevOps1.PNG?raw=true"
+teaser: "/images/devisland/article17/assets/PowerShellParametersAzureDevOps1.PNG?raw=true"
 ---
 
 <p align="center">
