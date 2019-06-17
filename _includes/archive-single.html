@@ -14,12 +14,7 @@
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | relative_url }}"
-          {% endif %}
+        <img src="/images/devisland/article17/assets/PowerShellParametersAzureDevOps1.PNG?raw=true"
           alt="">
       </div>
     {% endif %}
