@@ -1,5 +1,6 @@
 ﻿---
 title: "Microsoft Azure Sphere connected with Azure cloud services"
+excerpt: "In this article you can find my latest project in which I used Microsoft Azure cloud services, Microsoft Azure Sphere device and Universal Windows Platform for app development."
 ---
 
 <p align="center">

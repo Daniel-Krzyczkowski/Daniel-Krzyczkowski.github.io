@@ -1,5 +1,6 @@
 ﻿---
 title: "Overview of Cortana Skills Kit"
+excerpt: "Lets dive into Cortana Skills Kit."
 ---
 
 <p align="center">

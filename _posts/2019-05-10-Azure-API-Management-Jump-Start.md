@@ -1,5 +1,6 @@
 ﻿---
 title: "Azure API Managemnet - Jump Start"
+excerpt: "I prepared workshop for the one of the Servless meetups and would like to share it here on my blog."
 ---
 
 <p align="center">

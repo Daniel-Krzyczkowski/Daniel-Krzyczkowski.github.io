@@ -1,5 +1,6 @@
 ﻿---
 title: "Real-time data with Microsoft Azure SignalR Service"
+excerpt: "In this article I would like to present my Proof of Concept (PoC) how to use Azure SignalR Service with Univeral Windows Application (UWP) to display real-time data about transport (similar to Uber map)."
 ---
 
 <p align="center">

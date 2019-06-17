@@ -1,5 +1,6 @@
 ---
 title: "Motion detector - automatic SMS alerts with Windows IoT Core and Microsoft Azure cloud"
+excerpt: "In this article I would like to present how to detect motion with Raspberry Pi 2 device running Windows IoT Core system, connected to Microsoft Azure cloud."
 ---
 
 ![Image](/images/cloudyofthings/article1/assets/CloudyOfThingsArticle1.png?raw=true)

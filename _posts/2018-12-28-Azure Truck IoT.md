@@ -1,5 +1,6 @@
 ---
 title: "Azure Truck IoT"
+excerpt: "Azure Truck project was created to demonstrate how Microsoft technologies can be used together inside the car created by polish Microsoft Most Valuable Professionals."
 ---
 
 ![Image](/images/cloudyofthings/article3/assets/CloudyOfThingsArticle3.png?raw=true)

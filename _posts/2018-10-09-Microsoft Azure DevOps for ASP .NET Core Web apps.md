@@ -1,5 +1,6 @@
 ﻿---
 title: "Microsoft Azure DevOps for ASP .NET Core Web apps"
+excerpt: "In this article I would like to present how to use Azure DevOps to provide continuous integration and delivery for ASP .NET Core Web Apps."
 ---
 
 <p align="center">

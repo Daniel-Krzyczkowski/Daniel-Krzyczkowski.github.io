@@ -1,5 +1,6 @@
 ﻿---
 title: "Microsoft Bot Framework – part 1"
+excerpt: "In this article I would like to describe what exactly Microsoft Bot Framework offers and what are its key concepts and present how to create simple Bot in Azure portal."
 ---
 
 <p align="center">

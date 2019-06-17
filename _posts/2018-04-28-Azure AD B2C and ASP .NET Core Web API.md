@@ -1,5 +1,6 @@
 ﻿---
 title: "Azure AD B2C and ASP .NET Core Web API"
+excerpt: "In this article I would like to present how to configure Azure Active Directory B2C (Business-to-Consumer). Before that its worth to mention few words about Azure AD (Azure AD)."
 ---
 
 <p align="center">
@@ -7,7 +8,7 @@ title: "Azure AD B2C and ASP .NET Core Web API"
 </p>
 
 <h3><strong>Short introduction</strong></h3>
-Web API access can be protected to avoid unauthorized access. In this article I would like to present how to configure Azure Active Directory B2C (Business-to-Consumer). Before that its worth to mention few words about Azure AD  (Azure AD).
+Web API access can be protected to avoid unauthorized access. In this article I would like to present how to configure Azure Active Directory B2C (Business-to-Consumer). Before that its worth to mention few words about Azure AD (Azure AD).
 
 Azure Active Directory is a cloud identity provider service or Identity as a Service (IdaaS) provided by Microsoft.
 
