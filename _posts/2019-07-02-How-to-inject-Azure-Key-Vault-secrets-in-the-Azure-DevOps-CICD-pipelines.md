@@ -68,7 +68,7 @@ We have to integrate Azure subscription with our project in the Azure DevOps. In
 1. Open "Project settings" tab:
 
 <p align="center">
-<img src="/images/devisland/article18/assets/AzureDevOpsKeyVault5.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article18/assets/AzureDevOpsKeyVault5.png?raw=true" alt="Image not found"/>
 </p>
 
 2. Select "Service connections":
