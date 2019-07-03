@@ -60,7 +60,9 @@ ConnectionStrings:AppDatabase
 <img src="/images/devisland/article18/assets/AzureDevOpsKeyVault4.PNG?raw=true" alt="Image not found"/>
 </p>
 
-Please note that our secret has two parts. Because we cannot add ":" character we have to replace it with "--". This will work and during the incjection.
+Please note that our secret has two parts. Because we cannot add ":" character we have to replace it with "--".
+Interesting thing is that if you would like to pull this secret directly from the application it will also work - Key Vault SDK will threat "--" as ":" in the ASP .NET Core project.
+
 Once the secret is created we can proceed with the next steps.
 
 We have to integrate Azure subscription with our project in the Azure DevOps. In other words - we have to add new service connection. Below I presented steps how to do it:
