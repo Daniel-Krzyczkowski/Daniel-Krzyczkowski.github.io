@@ -164,7 +164,7 @@ Once you install it in the Azure DevOps organization please proceed with below s
 <img src="/images/devisland/article18/assets/AzureDevOpsKeyVault18.PNG?raw=true" alt="Image not found"/>
 </p>
 
-#### Please note that in the "Advanced" tab there is "token prefix" and "token suffix". We need this information to properly use the tokens in the "AppSettings.json" file. Please also note that "Target files" should be set to "**/*.json":
+Please note that in the "Advanced" tab there is "token prefix" and "token suffix". We need this information to properly use the tokens in the "AppSettings.json" file. Please also note that "Target files" should be set to "**/*.json":
 
 <p align="center">
 <img src="/images/devisland/article18/assets/AzureDevOpsKeyVault19.PNG?raw=true" alt="Image not found"/>
