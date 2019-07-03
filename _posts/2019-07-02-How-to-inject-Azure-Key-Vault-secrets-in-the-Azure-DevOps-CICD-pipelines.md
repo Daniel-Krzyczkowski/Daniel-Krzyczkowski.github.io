@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to inject Azure Key Vault secrets in the Azure DevOps CI/CD pipelines"
 excerpt: "In this article I would like to present how to inject Azure KeyVault secrets in the Azure DevOps CI/CD pipelines."
 ---
@@ -147,7 +147,7 @@ Select the group we created before and click "Link". Then save changes in the bu
 Done - secret from the Azure Key Vault are now available for us in the build pipeline. Let do the next step - create PowerShell script to replace connection string in the "AppSettings.json" file with the secrets obtained from the Key Vault.
 
 
-## Add Replace Tasks task for the credentials replacement and use secrets from the KeyVault
+## Add "Replace Tasks" task for the credentials replacement and use secrets from the KeyVault
 
 We have to add one more task to the build pipeline definition. This task will be "Replace Tokens" task required to inject secret from the Key Vault in the "AppSettings.json" file. "Replace Tokens" extensions is available fot free to be installed under <a href="https://marketplace.visualstudio.com/items?itemName=qetza.replacetokens">this</a> link.
 Once you install it in the Azure DevOps organization please proceed with below steps:
