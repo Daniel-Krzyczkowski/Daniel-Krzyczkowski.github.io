@@ -1,10 +1,10 @@
 ﻿---
 title: "How to inject Azure Key Vault secrets in the Azure DevOps CI/CD pipelines"
-excerpt: "In this article I would like to present how to inject Azure KeyVault secrets in the Azure DevOps CI/CD pipelines"
+excerpt: "In this article I would like to present how to inject Azure KeyVault secrets in the Azure DevOps CI/CD pipelines."
 ---
 
 <p align="center">
-<img src="/images/devisland/article18/assets/AzureDevOpsKeyVault1.PNG?raw=true" alt="How to inject Azure Key Vault secrets in the Azure DevOps CI/CD pipelines"/>
+<img src="/images/devisland/article18/assets/AzureDevOpsKeyVault1.png?raw=true" alt="How to inject Azure Key Vault secrets in the Azure DevOps CI/CD pipelines"/>
 </p>
 
 Managing secrets in the application is crucial part of the whole development process. Please look at the picture. There are two loops:
