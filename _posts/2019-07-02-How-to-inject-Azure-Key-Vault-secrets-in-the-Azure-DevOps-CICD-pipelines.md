@@ -152,19 +152,19 @@ Done - secret from the Azure Key Vault are now available for us in the build pip
 We have to add one more task to the build pipeline definition. This task will be "Replace Tokens" task required to inject secret from the Key Vault in the "AppSettings.json" file. "Replace Tokens" extensions is available fot free to be installed under <a href="https://marketplace.visualstudio.com/items?itemName=qetza.replacetokens">this</a> link.
 Once you install it in the Azure DevOps organization please proceed with below steps:
 
-1. Click "+" button in the agent job:
+1.Click "+" button in the agent job:
 
 <p align="center">
 <img src="/images/devisland/article18/assets/AzureDevOpsKeyVault17.PNG?raw=true" alt="Image not found"/>
 </p>
 
-2. Find and select "Replace Tokens" task:
+2.Find and select "Replace Tokens" task:
 
 <p align="center">
 <img src="/images/devisland/article18/assets/AzureDevOpsKeyVault18.PNG?raw=true" alt="Image not found"/>
 </p>
 
-3. Please note that in the "Advanced" tab there is "token prefix" and "token suffix". We need this information to properly use the tokens in the "AppSettings.json" file. Please also note that "Target files" should be set to "**/*.json":
+3.Please note that in the "Advanced" tab there is "token prefix" and "token suffix". We need this information to properly use the tokens in the "AppSettings.json" file. Please also note that "Target files" should be set to "**/*.json":
 
 <p align="center">
 <img src="/images/devisland/article18/assets/AzureDevOpsKeyVault19.PNG?raw=true" alt="Image not found"/>
