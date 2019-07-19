@@ -7,7 +7,7 @@ excerpt: "In this article I would like to present how to integrate Azure Functio
 <img src="/images/devisland/article19/assets/FunctionAppAndKeyVault1.png?raw=true" alt="Build IoT Solutions with Azure and Serverless"/>
 </p>
 
-There are a lot of different scenarios where Azure Functions can be used.Interation with other Azure components is possible but we can also call external services. The question in how to secure credentials and store them in the right place - in this case Azure Key Vault. In this article I would like to present how to integrate Azure Key Vault with Azure Functions to access Key Vault secrets from the source code in the secure way.
+There are a lot of different scenarios where Azure Functions can be used. Interation with other Azure components is possible but we can also call external services. The question in how to secure credentials and store them in the right place - in this case Azure Key Vault. In this article I would like to present how to integrate Azure Key Vault with Azure Functions to access Key Vault secrets from the source code in the secure way.
 
 
 ## Create Azure Key Vault and Azure Function App
