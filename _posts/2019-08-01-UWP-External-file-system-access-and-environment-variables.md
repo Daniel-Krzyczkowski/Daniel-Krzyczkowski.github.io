@@ -1,5 +1,5 @@
 ---
-title: "UWP - External file system access and environment variables"
+title: "UWP - external file system access and environment variables"
 excerpt: "In this article would like to present how to access external file system from UWP application and access environment variables."
 ---
 
