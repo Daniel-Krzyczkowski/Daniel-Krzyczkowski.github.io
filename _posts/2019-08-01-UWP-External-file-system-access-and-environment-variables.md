@@ -61,19 +61,19 @@ Besides declaration of permissions in the app manifest we have to grant access t
 Open "Settings" tab and select "Privacy":
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess8.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess8.png?raw=true" alt="Image not found"/>
 </p>
 
 Then select "File system":
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess9.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess9.png?raw=true" alt="Image not found"/>
 </p>
 
 In the section "Choose which apps can access your file system" select the right UWP application:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess10.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess10.png?raw=true" alt="Image not found"/>
 </p>
 
 After all above steps application will have access to the external file system.
@@ -86,29 +86,29 @@ I mentioned before that path to the file should be stored in the environment var
 Open Windows menu and type "environment variable", you should see below:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess3.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess3.png?raw=true" alt="Image not found"/>
 </p>
 
 Now lets add new environemnt variable for the current user. Click "New" button:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess4.png?raw=true" alt="Image not found"/>
 </p>
 
 Provide the name and the value for the new environment variable. In this case I provided file path and file name with extension:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess5.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess5.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess6.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess6.png?raw=true" alt="Image not found"/>
 </p>
 
 After clicking on "OK" button, variable should be displayed on the list:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess7.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess7.png?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -153,7 +153,7 @@ First of all we have to check if the name of the environment variable is not emp
 Once file content is returned we can display it in the application:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess11.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess11.png?raw=true" alt="Image not found"/>
 </p>
 
 ## Summary
