@@ -115,7 +115,7 @@ After clicking on "OK" button, variable should be displayed on the list:
 ## Update source code to access environment variable and file from external system
 
 Now we have to add the source code to read environment variable value (so the path to the file) and code to access the file content.
-For this article I created demo which is available on my Github here.
+For this article I created demo which is available on my Github [Back](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/FileAccessWithEnvironmentVariables).
 
 In the "FileService" class there is one method - "LoadFileContentUsingPathFromEnvironemntVariable":
 
