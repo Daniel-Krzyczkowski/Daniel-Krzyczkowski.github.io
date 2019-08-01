@@ -92,23 +92,23 @@ Open Windows menu and type "environment variable", you should see below:
 Now lets add new environemnt variable for the current user. Click "New" button:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess4.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess4.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Provide the name and the value for the new environment variable. In this case I provided file path and file name with extension:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess5.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess5.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess6.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess6.PNG?raw=true" alt="Image not found"/>
 </p>
 
 After clicking on "OK" button, variable should be displayed on the list:
 
 <p align="center">
-<img src="/images/devisland/article20/assets/UwpFileSystemAccess7.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article20/assets/UwpFileSystemAccess7.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
