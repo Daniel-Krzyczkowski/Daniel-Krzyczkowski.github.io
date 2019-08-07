@@ -7,7 +7,7 @@ excerpt: "In this article would like to present how to connect Azure Serverless 
 <img src="/images/devisland/article21/assets/ServerlessIoT1.png?raw=true" alt="IoT with Azure Serverless and UWP"/>
 </p>
 
-Recently I had a case where SignalR service was used toghether with ASP .NET Core Web API. I thought that it would be nice to check how SignalR service works with Azure Functions and UWP applications. This is why I created sample scenario where real time IoT data is displayed in the UPW application.
+Recently I had a case where SignalR service was used toghether with ASP .NET Core Web API. I thought that it would be nice to check how SignalR service works with Azure Functions and UWP applications. This is why I created sample scenario where real time IoT data is displayed in the UWP application.
 
 
 ## Solution architecture
