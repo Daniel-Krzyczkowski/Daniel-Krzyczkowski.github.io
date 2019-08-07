@@ -20,7 +20,7 @@ Once data is received, Function app connected with SignalR service is triggered.
 </p>
 
 <p align="center">
-<img src="/images/devisland/article21/assets/ServerlessIoT3.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article21/assets/ServerlessIoT7.gif?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -121,6 +121,10 @@ My final resource group looks like below:
 
 
 ## UWP application config
+
+<p align="center">
+<img src="/images/devisland/article21/assets/ServerlessIoT3.png?raw=true" alt="Image not found"/>
+</p>
 
 I created Universal Windows 10 Platform application to display real time data from the IoT device. UWP application first calls "negotiate" function app and once connection info is returned, app is connected to the SignalR service hub. This is done using two classes:
 
