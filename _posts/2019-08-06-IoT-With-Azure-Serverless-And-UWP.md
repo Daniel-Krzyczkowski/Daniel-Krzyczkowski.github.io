@@ -111,6 +111,8 @@ Negotiate Azure Function is used to connect to the SignalR service and get conne
         }
 ```
 
+Source code for the function apps is available on my [GitHub](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/ServerlessIoT).
+
 ## Azure resource group overview
 
 My final resource group looks like below:
@@ -126,7 +128,7 @@ My final resource group looks like below:
 <img src="/images/devisland/article21/assets/ServerlessIoT3.png?raw=true" alt="Image not found"/>
 </p>
 
-I created Universal Windows 10 Platform application to display real time data from the IoT device. UWP application first calls "negotiate" function app and once connection info is returned, app is connected to the SignalR service hub. This is done using two classes:
+I created Universal Windows 10 Platform application to display real time data from the IoT device. It is available on my [GitHub](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/ServerlessIoT-UWP). UWP application first calls "negotiate" function app and once connection info is returned, app is connected to the SignalR service hub. This is done using two classes:
 
 1. **SignalRAccessTokenProvider** - in this class there is a call to the "Negotiate" function app to retrieve SignalR connection info
 2. **ClientSignalR** - this class is responsible for connection with SignalR service (including messages subscription)
