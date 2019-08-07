@@ -29,13 +29,13 @@ Once data is received, Function app connected with SignalR service is triggered.
 Let's start from the Azure IoT Hub configuration. New IoT Hub instance has to be created - free plan is totally fine. Once IoT Hub is created, new device should be registered:
 
 <p align="center">
-<img src="/images/devisland/article21/assets/ServerlessIoT5.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article21/assets/ServerlessIoT5.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Copy connection string because we will use it in the next section to connect IoT device:
 
 <p align="center">
-<img src="/images/devisland/article21/assets/ServerlessIoT6.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article21/assets/ServerlessIoT6.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
