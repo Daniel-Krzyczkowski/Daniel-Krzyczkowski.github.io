@@ -232,7 +232,7 @@ Find "SelfAsserted-ProfileUpdate" technical profile in the "TrustFrameworkBase.x
         </TechnicalProfile>
 ```
 
-**Update "AAD-UserWriteProfileUsingObjectId" technical profile**
+**Update "AAD-UserWriteProfileUsingObjectId" technical profile in the TrustFrameworkBase.xml file**
 
 Find "AAD-UserWriteProfileUsingObjectId" technical profile in the "TrustFrameworkBase.xml" file and add "extension_external_system_id" claim the "PersistedClaims" block:
 
@@ -268,7 +268,7 @@ Find "AAD-UserWriteProfileUsingObjectId" technical profile in the "TrustFramewor
 
 This addition persists the value of the claim in the extension property for the current user in the directory.
 
-**Update "AAD-UserReadUsingObjectId" technical profile**
+**Update "AAD-UserReadUsingObjectId" technical profile in the TrustFrameworkBase.xml file**
 
 ```csharp
 <OutputClaim ClaimTypeReferenceId="extension_external_system_id" DefaultValue="external_system_id_1234"/>
