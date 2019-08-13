@@ -55,7 +55,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     Random rnd = new Random();
     int randomNumber  = rnd.Next(1, 100); 
 
-    var external_system_id = string.Concat(email, "_", randomNumber);
+    var external_system_id = string.Concat("NR_",email, "_", randomNumber);
 
     var externalSystemInfo = new ExternalSystemInfo
     {
@@ -66,7 +66,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 
     log.LogInformation($"GetExternalSystemIdOnRegistration got external system id for user: {serializEdexternalSystemInfo}");
 
-    return new OkObjectResult(serializEdexternalSystemInfo);
+    return new OkObjectResult(externalSystemInfo);
 }
 
 class ExternalSystemInfo
@@ -159,6 +159,20 @@ Copy token, open [jwt.ms](https://jwt.ms) website and paste the token. Additiona
 <img src="/images/devisland/article23/assets/B2cSeriesExternalServiceCall6.PNG?raw=true" alt="Image not found"/>
 </p>
 
+```csharp
+{
+...
+  "iat": 1565719626,
+  "auth_time": 1565719626,
+  "email": "danek22@op.pl",
+  "name": "Daniel",
+  "given_name": "Test",
+  "family_name": "Test",
+  "extension_external_system_id": "NR_danek22@op.pl_87",
+  "tid": "19f4ca09-c2f9-4901-a62a-e47dbb3bc1e8"
+}
+```
+
 
 ## Call external service (Azure Function) during the login process
 
@@ -187,7 +201,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     Random rnd = new Random();
     int randomNumber  = rnd.Next(1, 100); 
 
-    var external_system_id = string.Concat(email, "_", randomNumber);
+    var external_system_id = string.Concat("NR_",email, "_", randomNumber);
 
     var externalSystemInfo = new ExternalSystemInfo
     {
@@ -198,7 +212,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 
     log.LogInformation($"GetExternalSystemIdOnLogin got external system id for user: {serializEdexternalSystemInfo}");
 
-    return new OkObjectResult(serializEdexternalSystemInfo);
+    return new OkObjectResult(externalSystemInfo);
 }
 
 class ExternalSystemInfo
@@ -535,7 +549,20 @@ Final "SignUpOrSignIn" User Journey should look like below:
 
 Now to check whether everything works as expected, run "signup_signin" policy, try to login with the previously created user and check if JWT token was returned.
 
-Copy token, open [jwt.ms](https://jwt.ms) website and paste the token. Additional "extension_external_system_id" claim should be included and its value should be different than value returned during the registration.
+Copy token, open [jwt.ms](https://jwt.ms) website and paste the token. Additional "extension_external_system_id" claim should be included and its value should be different than value returned during the registration (because it is generated randomly):
+
+```csharp
+{
+...
+  "iat": 1565720125,
+  "auth_time": 1565720125,
+  "name": "Daniel",
+  "given_name": "Test",
+  "family_name": "Test",
+  "extension_external_system_id": "NR_danek22@op.pl_96",
+  "tid": "19f4ca09-c2f9-4901-a62a-e47dbb3bc1e8"
+}
+```
 
 
 # Summary
