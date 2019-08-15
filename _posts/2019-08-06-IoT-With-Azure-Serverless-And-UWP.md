@@ -9,6 +9,12 @@ excerpt: "In this article would like to present how to connect Azure Serverless 
 
 Recently I had a case where SignalR service was used toghether with ASP .NET Core Web API. I thought that it would be nice to check how SignalR service works with Azure Functions and UWP applications. This is why I created sample scenario where real time IoT data is displayed in the UWP application.
 
+## UPDATE!
+
+Thanks to [Anthony Chu](https://twitter.com/nthonyChu) who informed me that I do not have to use "SignalRAccessTokenProvider" to retrieve information about SignalR connection. The only thing to do is to provide URL of Azure function with "negotiate" endpoint to the "WithUrl" method of "HubConnectionBuilder"class.
+
+Remember that Function URL has to be without "negotiate" suffix - SDK will add it to the URL automatically. You can read my conversation with Anthony [here on Twitter](https://twitter.com/DKrzyczkowski/status/1158976221562187776).
+
 
 ## Solution architecture
 
@@ -104,7 +110,7 @@ Negotiate Azure Function is used to connect to the SignalR service and get conne
 ```csharp
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
-           [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req,
+           [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
            [SignalRConnectionInfo(HubName = "devicedata")] SignalRConnectionInfo connectionInfo)
         {
             return connectionInfo;
@@ -128,16 +134,13 @@ My final resource group looks like below:
 <img src="/images/devisland/article21/assets/ServerlessIoT3.png?raw=true" alt="Image not found"/>
 </p>
 
-I created Universal Windows 10 Platform application to display real time data from the IoT device. It is available on my [GitHub](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/ServerlessIoT-UWP). UWP application first calls "negotiate" function app and once connection info is returned, app is connected to the SignalR service hub. This is done using two classes:
+I created Universal Windows 10 Platform application to display real time data from the IoT device. It is available on my [GitHub](https://github.com/Daniel-Krzyczkowski/UniversalWindowsPlatform/tree/master/ServerlessIoT-UWP). UWP application first calls "negotiate" function app and once connection info is returned, app is connected to the SignalR service hub. This is done using below class:
 
-1. **SignalRAccessTokenProvider** - in this class there is a call to the "Negotiate" function app to retrieve SignalR connection info
-2. **ClientSignalR** - this class is responsible for connection with SignalR service (including messages subscription)
+**ClientSignalR** - this class is responsible for connection with SignalR service (including messages subscription)
 
 ```csharp
     public class ClientSignalR : IClientSignalR
     {
-        private ISignalRAccessTokenProvider _signalRAccessTokenProvider;
-
         private HubConnection _hub;
         public HubConnection Hub
         {
@@ -147,28 +150,14 @@ I created Universal Windows 10 Platform application to display real time data fr
             }
         }
 
-        public ClientSignalR(ISignalRAccessTokenProvider signalRAccessTokenProvider)
+        public ClientSignalR()
         {
-            _signalRAccessTokenProvider = signalRAccessTokenProvider;
         }
 
         public async Task Initialize()
         {
-            var connectionInfo = await _signalRAccessTokenProvider.AcquireSignalRConnectionInfoAsync();
-            if (connectionInfo == null)
-            {
-                throw new ArgumentNullException("SignalR connection info is empty");
-            }
-
             _hub = new HubConnectionBuilder()
-                .WithUrl(connectionInfo.Url, options =>
-                {
-                    options.AccessTokenProvider = async () =>
-                    {
-                        var accessToken = await _signalRAccessTokenProvider.AcquireSignalRConnectionInfoAsync();
-                        return accessToken?.AccessToken;
-                    };
-                })
+                .WithUrl(AppConfig.DeviceDataBroadcastFunctionUrl)
                 .Build();
 
             await _hub.StartAsync();
@@ -197,43 +186,7 @@ I created Universal Windows 10 Platform application to display real time data fr
     }
 ```
 
-Here is the **SignalRAccessTokenProvider** implementation:
-
-```csharp
-    public class SignalRAccessTokenProvider : ISignalRAccessTokenProvider
-    {
-        private HttpClient _httpClient;
-
-        public SignalRAccessTokenProvider()
-        {
-            _httpClient = new HttpClient()
-            {
-                BaseAddress = new Uri(AppConfig.DeviceDataBroadcastFunctionUrl)
-            };
-        }
-
-        public async Task<SignalRConnectionInfo> AcquireSignalRConnectionInfoAsync()
-        {
-            var responseMessage = await _httpClient.GetAsync("negotiate");
-            var responseContent = await responseMessage
-            .Content
-            .ReadAsStringAsync();
-
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                var signalRConnectionInfo = JsonConvert.DeserializeObject<SignalRConnectionInfo>(responseContent);
-
-                return signalRConnectionInfo;
-            }
-            else
-            {
-                System.Diagnostics.Debug.WriteLine($"No success for acquiring SignalR service token in method: {nameof(AcquireSignalRConnectionInfoAsync)}");
-                System.Diagnostics.Debug.WriteLine($"Http status code: {responseMessage.StatusCode} message: {responseContent}");
-                return null;
-            }
-        }
-    }
-```
+Remember that Azure Function URL provided to the "WithUrl" method has to be without "negotiate" suffix.
 
 
 ## Summary
