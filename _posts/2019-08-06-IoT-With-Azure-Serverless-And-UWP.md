@@ -11,7 +11,7 @@ Recently I had a case where SignalR service was used toghether with ASP .NET Cor
 
 ## UPDATE!
 
-Thanks to [Anthony Chu](https://twitter.com/nthonyChu) who informed me that I do not have to use "SignalRAccessTokenProvider" to retrieve information about SignalR connection. The only thing to do is to provide URL of Azure function with "negotiate" endpoint to the "WithUrl" method of "HubConnectionBuilder"class.
+Thanks to [Anthony Chu](https://twitter.com/nthonyChu) who informed me that I do not have to use "SignalRAccessTokenProvider" to retrieve information about SignalR connection in the UWP app. The only thing to do is to provide URL of Azure function with "negotiate" endpoint to the "WithUrl" method of "HubConnectionBuilder"class.
 
 Remember that Function URL has to be without "negotiate" suffix - SDK will add it to the URL automatically. You can read my conversation with Anthony [here on Twitter](https://twitter.com/DKrzyczkowski/status/1158976221562187776).
 
