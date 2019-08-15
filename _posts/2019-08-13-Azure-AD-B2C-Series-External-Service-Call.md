@@ -17,7 +17,7 @@ There are also links to the great content after opening "Identity Experience Fra
 
 ## Introduction
 
-In the previous article we added "extension_external_system_id" custom claim (attribute) to the final token. Value of this attribute was set to "external_system_id_1234" by default. This time we will fill the value of this claim using external service - in this case Azure Function. Let's see how to do it during the login and registration process.
+In the [previous article](https://daniel-krzyczkowski.github.io/Azure-AD-B2C-Series-Custom-Policies-With-Custom-Claims/) we added "extension_external_system_id" custom claim (attribute) to the final token. Value of this attribute was set to "external_system_id_1234" by default. This time we will fill the value of this claim using external service - in this case Azure Function. Let's see how to do it during the login and registration process.
 
 
 ## Create Azure Function instance
