@@ -1,6 +1,6 @@
 ---
 title: "Azure AD B2C Series - Azure Application Insights integration"
-excerpt: "In this article would like to present how to integrate Azure Application Insights with custom policies to discover errors.
+excerpt: "In this article would like to present how to integrate Azure Application Insights with custom policies to discover errors."
 ---
 
 <p align="center">
