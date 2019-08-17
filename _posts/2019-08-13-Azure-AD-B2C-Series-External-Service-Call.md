@@ -567,4 +567,4 @@ Copy token, open [jwt.ms](https://jwt.ms) website and paste the token. Additiona
 
 # Summary
 
-In this article I presented how to call external service (in this case Azure Function) to get value of the custom claim in the Azure AD B2C Custom Policies (Identity Experience Framework). There are a lot of custom scenarios where call to external service is required so I hope you found this article interesting. In the next article I will present how to display user friendly information about errors during the login and registration process and how to log errors in the custom policies usign Azure Application Insights.
+In this article I presented how to call external service (in this case Azure Function) to get value of the custom claim in the Azure AD B2C Custom Policies (Identity Experience Framework). There are a lot of custom scenarios where call to external service is required so I hope you found this article interesting. In the next article I will present how to log errors in the custom policies usign Azure Application Insights.
