@@ -1,6 +1,6 @@
 ---
 title: "Azure AD B2C Series - Azure Application Insights integration"
-excerpt: "In this article would like to present how to integrate Azure Application Insights with custom policies to discover errors."
+excerpt: "In this article I would like to present how to integrate Azure Application Insights with custom policies to discover errors."
 ---
 
 <p align="center">
@@ -18,7 +18,7 @@ There are also links to the great content after opening "Identity Experience Fra
 
 ## Introduction
 
-In my two previous articles I presented [how to use custom claims (attributes) in the Identity Experience Framework](https://daniel-krzyczkowski.github.io/Azure-AD-B2C-Series-Custom-Policies-With-Custom-Claims/) and [how to call external service (Azure Function) during the login and registration flow](https://daniel-krzyczkowski.github.io/Azure-AD-B2C-Series-External-Service-Call/).
+In my two previous articles I presented [how to use custom claims (attributes) in the Identity Experience Framework](https://daniel-krzyczkowski.github.io/Azure-AD-B2C-Series-Custom-Policies-With-Custom-Claims/) and [how to call external service (Azure Function) during the login and registration flow](https://daniel-krzyczkowski.github.io/Azure-AD-B2C-Series-External-Service-Call/). In this last article I would like to present how to integrate Azure Application Insights with custom policies to discover errors.
 
 
 ## Create Azure Application Insights instance
