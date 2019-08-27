@@ -62,7 +62,9 @@ Follow these steps to gather the information and configure the application:
 
 3. In an Azure Sphere Developer Command Prompt, issue the following command to get the tenant ID. Copy the returned value and paste it into the DeviceAuthentication field of the app_manifest.json file:
 
-4. azsphere tenant show-selected
+```csharp
+  	azsphere tenant show-selected
+```
 
 5. In an Azure Sphere Developer Command Prompt, run the ShowIoTCentralConfig.exe program from the sample repository (the ShowIoTCentralConfig program is located in the AzureIoT\Tools folder). Just type: ShowIoTCentralConfig
 
