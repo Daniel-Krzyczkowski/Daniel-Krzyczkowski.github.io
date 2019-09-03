@@ -355,7 +355,7 @@ Please note that in the section called "Override template parameters" we have to
 For the QA environment we will have the same steps like presented above. In this case we are creating web app in the QA resource group in the Azure:
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault31.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault31.png?raw=true" alt="Image not found"/>
 </p>
 
 
