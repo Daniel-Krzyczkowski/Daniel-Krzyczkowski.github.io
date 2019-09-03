@@ -340,7 +340,7 @@ We will use ARM template to deploy sample web app with the database connection s
 ```
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault30.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault30.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Please note that in the section called "Override template parameters" we have to replace parameter with the value for the database connection string from the Key Vault:
@@ -355,7 +355,7 @@ Please note that in the section called "Override template parameters" we have to
 For the QA environment we will have the same steps like presented above. In this case we are creating web app in the QA resource group in the Azure:
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault31.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault31.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -364,7 +364,7 @@ For the QA environment we will have the same steps like presented above. In this
 For the Production environment we will have the same steps like presented above. In this case we are creating web app in the Production resource group in the Azure:
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault32.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault32.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -373,23 +373,23 @@ For the Production environment we will have the same steps like presented above.
 Create new release. Once web app is created in each of the resource groups, check "Configuration" tab. You should see that each app has different database connection string retrieved from the Key Vault related with specific environment:
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault33.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault33.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault34.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault34.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault35.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault35.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault36.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault36.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article30/assets/AzureDevOpsReleasePipesKeyVault37.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault37.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
