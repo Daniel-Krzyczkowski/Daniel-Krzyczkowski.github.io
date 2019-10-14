@@ -4,6 +4,8 @@ main:
     url: /year-archive/
   - title: "About me"
     url: /about-me/
+  - title: "Test page"
+    url: /test-page/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Collections"
