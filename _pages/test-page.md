@@ -1,6 +1,6 @@
 ---
 title: "Test page"
 permalink: /test-page/
-layout: single-about-me
+layout: single
 author_profile: true
 ---
