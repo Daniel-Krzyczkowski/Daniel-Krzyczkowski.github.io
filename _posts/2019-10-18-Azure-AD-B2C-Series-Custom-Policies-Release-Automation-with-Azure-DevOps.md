@@ -263,6 +263,11 @@ Write-Host $URI
 Invoke-MSGraphQuery -method PUT -URI $URI -Body $customPolicyFileContent -token $token
 ```
 
+**Important**
+
+Please note that I am using beta endpoint for the policies updates using Microsoft Graph: https://graph.microsoft.com/beta
+
+This is because at the moment of writing this article endpoints to update policies with Graph API are in beta.
 
 ### Prepare release pipeline in Azure DevOps ###
 
