@@ -266,17 +266,12 @@ Invoke-MSGraphQuery -method PUT -URI $URI -Body $customPolicyFileContent -token 
 
 ### Prepare release pipeline in Azure DevOps ###
 
-From the "Pipelines" select "Release" and then click "New pipeline" button:
+From the "Pipelines" select "Release" and then click "New pipeline" button and select "Empty job":
 
 <p align="center">
 <img src="/images/devisland/article27/assets/B2cSeriesAutomaticRelease14.PNG?raw=true" alt="Image not found"/>
 </p>
 
-Select "Empty job":
-
-<p align="center">
-<img src="/images/devisland/article27/assets/B2cSeriesAutomaticRelease15.PNG?raw=true" alt="Image not found"/>
-</p>
 
 Type the name of the stage - in this case "Dev":
 
@@ -371,7 +366,7 @@ Below I present arguments for each task:
 
 Now we have to add variables that will be used in the automation script:
 
-| aa  |  aa |
+| Variable name  |  Variable value |
 |---|---|
 | AdB2cAutomationAppId  |  ***
 | AdB2cAutomationAppSecret  | ***
