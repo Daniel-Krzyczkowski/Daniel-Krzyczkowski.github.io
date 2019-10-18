@@ -378,7 +378,7 @@ Now we have to add variables that will be used in the automation script:
 | SignUpOrSignInPolicyFileName  | signup_signin
 | SignUpOrSignInPolicyName  | signup_signin
 | TrustFrameworkBasePolicyFileName  | TrustFrameworkBase
-| TrustFrameworkBasePolicyName  | TrustFrameworkBase***
+| TrustFrameworkBasePolicyName  | TrustFrameworkBase
 | TrustFrameworkExtensionsPolicyFileName  | TrustFrameworkExtensions
 | TrustFrameworkExtensionsPolicyName  | TrustFrameworkExtensions
 
