@@ -310,6 +310,10 @@ steps:
 
 You will notice that there is also "Roslyn Analyzers" task which I added to do some static code analysis.
 
+<p align="center">
+<img src="/images/devisland/article28/assets/Msca10.PNG?raw=true" alt="Image not found"/>
+</p>
+
 
 # Summary
 
