@@ -317,4 +317,4 @@ You will notice that there is also "Roslyn Analyzers" task which I added to do s
 
 # Summary
 
-In this article I presented Microsoft Security Code Analysis Extension which enables security scanning in the CI pipelines. This extension is important part of DevSecOps flow and definitely will be worth trying once it is generally available. If you would like to read more about Security Engineering I recommend to visit [Microsoft  Security Development Lifecycle (SDL) website.](https://www.microsoft.com/en-us/securityengineering/sdl/practices)
+In this article I presented Microsoft Security Code Analysis Extension which enables security scanning in the CI pipelines. This extension is important part of DevSecOps flow and definitely will be worth trying once it is generally available. If you would like to read more about Security Engineering I recommend to visit [Microsoft  Security Development Lifecycle (SDL) website.](https://www.microsoft.com/en-us/securityengineering/sdl/practices) If you would like to read more about the extension, there is [official documentation](https://docs.microsoft.com/en-us/azure/security/develop/security-code-analysis-overview) available.
