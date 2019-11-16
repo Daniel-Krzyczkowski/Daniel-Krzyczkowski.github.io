@@ -80,7 +80,6 @@ With the Post-Analysis build task, you can inject a build break that purposely c
 You can configure this task to break the build for issues found by specific tools or all tools. You can also configure it based on the severity of issues found, such as errors or warnings.
 
 
-
 # How to add Microsoft Security Code Analysis Extension task?
 
 Adding Microsoft Security Code Analysis tools to the Azure DevOps CI pipeline is as simple as adding other new tasks. Once task is added it is possible to use its default configuration or customize it.
@@ -133,6 +132,21 @@ Adding Microsoft Security Code Analysis tools to the Azure DevOps CI pipeline is
 Below I present integration of extension installed in my Azure DevOps organization and analysis result of tests.
 
 I created sample ASP .NET Core Web API application and I wanted to check Credential Scanner task. To do it I hard-coded database connection string in the "appsettings.json" file. Below I present step by step how I integrated the task.
+
+```csharp
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+    "ConnectionStrings": {
+    "DbContext": "Server=(localdb)\\mssqllocaldb;Database=CarsIsland;username=daniel;password=test1234;Trusted_Connection=True;"
+  }
+}
+```
+
 
 I used YAML build definition in this case.
 
