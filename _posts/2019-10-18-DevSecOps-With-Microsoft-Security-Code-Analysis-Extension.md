@@ -102,7 +102,7 @@ First we have to install extension. To do it sign in to your Azure DevOps organi
 </p>
 
 <p align="center">
-<img src="/images/devisland/article28/assets/Msca3.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article28/assets/Msca3.png?raw=true" alt="Image not found"/>
 </p>
 
 Open "Shared" extensions section and click "Install" button:
@@ -208,7 +208,7 @@ When I opened details about this task there was a clear information where creden
 It is great that ready report is prepared and it can be downloaded:
 
 <p align="center">
-<img src="/images/devisland/article28/assets/Msca18.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article28/assets/Msca18.png?raw=true" alt="Image not found"/>
 </p>
 
 Once I downloaded it I opened HTML file with report:
