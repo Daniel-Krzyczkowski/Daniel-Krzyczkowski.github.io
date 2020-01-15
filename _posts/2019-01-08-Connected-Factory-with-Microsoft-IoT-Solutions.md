@@ -237,6 +237,8 @@ More information about how Protocol Gateway works can be found [here.](https://g
 
 Below there are some interesting resources which are worth to check:
 
+[INTERNET OF THINGS STATISTICS FOR 2020 – TAKING THINGS APART](https://dataprot.net/statistics/iot-statistics/?msID=06bdb50b-6081-4a07-b140-cba1946e48ee)
+
 [IoT Platforms in Europe (preliminary results)](https://www.pac-online.com/sites/pac-online.com/files/upload_path/PDFs/Status%20Quo%20of%20IoT%20Platforms%20Webinar%20170706.pdf)
 
 [Industrial Interoperability from Sensor to Cloud
@@ -248,5 +250,3 @@ OPC UA Integration into Azure IoT Suite](https://opcfoundation.org/wp-content/up
 
 I tried to include all helpful information in this article from many different sources but of course this is just a drop in the ocean. There is a lot more to learn and investigate to properly integrate cloud services with factories and IoT Enterprise solutions.
 
-
-[Back](https://daniel-krzyczkowski.github.io/)
