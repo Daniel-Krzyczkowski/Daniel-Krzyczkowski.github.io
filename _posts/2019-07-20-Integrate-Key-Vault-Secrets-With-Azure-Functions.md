@@ -52,7 +52,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 
 ## Enable system-asigned managed identity for the Function App
 
-Before we can use Azure Key Vault secrets in the Azure Function code, we have to assign Managed Identity to it. If you are not familiar with Manged Identities I encourgae you to read more in [this](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) article.
+Before we can use Azure Key Vault secrets in the Azure Function code, we have to assign a Managed Identity to it. If you are not familiar with Managed Identities, I encourage you to read more in [this](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) article.
 
 Navigate to the "Platform features" tab and select "Identity":
 
