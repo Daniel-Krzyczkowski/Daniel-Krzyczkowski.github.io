@@ -228,7 +228,13 @@ In the project, we have to also create "wwwroot" folder and inside it we have to
 
 ### Deploy resources to Azure cloud ###
 
-To deploy resources to Azure we have to use "pulumi up" command. It is great because Pulumi will first preview the current stack and ask if we want to apply changes. Before that we will be asked for providing the password for the Azure SQL database: "pulumi config set azure-cloud-infrastructure-csharp:sqlPassword <value>". Then we can click enter. Pulumi will ask us if we would like to apply changes:
+To deploy resources to Azure we have to use "pulumi up" command. It is great because Pulumi will first preview the current stack and ask if we want to apply changes. Before that we will be asked for providing the password for the Azure SQL database:
+
+```csharp
+pulumi config set azure-cloud-infrastructure-csharp:sqlPassword <value>
+```
+
+Then we can click enter. Pulumi will ask us if we would like to apply changes:
 
 <p align="center">
 <img src="/images/devisland/article31/assets/Pulumi-IaC9.png?raw=true" alt="Image not found"/>
