@@ -257,7 +257,7 @@ We have to also remember to add URL in the "app.settings.json" file:
 Let's start the application and see if secret is successfully retrieved:
 
 <p align="center">
-<img src="/images/devisland/article33/assets/SecureApplicationDevelopment9.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article33/assets/SecureApplicationDevelopment9.png?raw=true" alt="Image not found"/>
 </p>
 
 
