@@ -4,7 +4,7 @@ excerpt: "In this article, I would like to present how to integrate Azure Key Va
 ---
 
 <p align="center">
-<img src="/images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault1.png?raw=true" alt="How to inject Azure Key Vault secrets in the Azure DevOps CI/CD pipelines"/>
+<img src="/images/devisland/article33/assets/SecureApplicationDevelopment1.png?raw=true" alt="Secure Application Development With Azure Key Vault SDK and Secret Manager"/>
 </p>
 
 ## Introduction
