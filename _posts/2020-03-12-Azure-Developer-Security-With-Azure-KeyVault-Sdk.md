@@ -115,7 +115,15 @@ Once above classes are implemented we can register their instances. This is done
         private static KeyVaultSecretClientClientFactory InitializeSecretClientInstanceAsync(IConfiguration configuration)
         {
             string keyVaultUrl = configuration["KeyVaultSettings:Url"];
-            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
+
+            TokenCredential credential = new DefaultAzureCredential();
+#if DEBUG
+            credential = new ClientSecretCredential(configuration["AZURE_TENANT_ID"],
+                                                    configuration["AZURE_CLIENT_ID"],
+                                                    configuration["AZURE_CLIENT_SECRET"]);
+#endif
+
+            var secretClient = new SecretClient(new Uri(keyVaultUrl), credential);
             var keyVaultSecretClientClientFactory = new KeyVaultSecretClientClientFactory(secretClient);
             return keyVaultSecretClientClientFactory;
         }
