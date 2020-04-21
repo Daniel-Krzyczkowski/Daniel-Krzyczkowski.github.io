@@ -1,6 +1,8 @@
 ---
 title: "Designing a Disaster Recovery Strategy on Microsoft Azure"
 excerpt: "This is special article about my Pluralsight course."
+header:
+  image: /images/devisland/article30/assets/DesigningDisasterRecoveryOnAzure1.png
 ---
 
 <p align="center">

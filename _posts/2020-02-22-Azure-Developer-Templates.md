@@ -1,6 +1,8 @@
 ---
 title: "Azure Developer Templates"
 excerpt: "This is special article about my Azure Developer Templates project on GitHub."
+header:
+  image: /images/devisland/article32/assets/AzureDeveloperTemplates.png
 ---
 
 <p align="center">

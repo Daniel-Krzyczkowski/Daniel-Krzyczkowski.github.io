@@ -1,6 +1,8 @@
 ---
 title: "Manage Azure infrastructure with Pulumi and .NET C#"
 excerpt: "In this article would like to present how to use Pulumi - a tool to declare cloud infrastructure using real languages like .NET C#"
+header:
+  image: /images/devisland/article31/assets/Pulumi-IaC1.png
 ---
 
 <p align="center">
