@@ -15,6 +15,12 @@
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+<style>
+body {
+  background-image: url('https://seekvectorlogo.com/wp-content/uploads/2018/01/microsoft-azure-vector-logo.png');
+  background-repeat: no-repeat;
+}
+</style>
 
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
