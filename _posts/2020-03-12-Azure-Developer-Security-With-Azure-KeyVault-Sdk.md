@@ -1,7 +1,8 @@
 ---
 title: "Secure Application Development With Azure Key Vault SDK and Secret Manager"
 excerpt: "In this article, I would like to present how to integrate Azure Key Vault .NET SDK to eliminate storing credentials in the source code"
-featured_img: /images/devisland/article33/assets/SecureApplicationDevelopment1.png
+header:
+  teaser: /images/devisland/article33/assets/SecureApplicationDevelopment1.png
 ---
 
 <p align="center">
