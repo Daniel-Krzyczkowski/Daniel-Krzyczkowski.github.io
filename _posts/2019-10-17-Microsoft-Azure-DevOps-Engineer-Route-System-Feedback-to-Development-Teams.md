@@ -1,6 +1,8 @@
 ---
 title: "Microsoft Azure DevOps Engineer Route System Feedback to Development Teams"
 excerpt: "This is special article about my Pluralsight course."
+header:
+  image: /images/devisland/article26/assets/PluralsightCourseAzureDevOps1.png
 ---
 
 <p align="center">

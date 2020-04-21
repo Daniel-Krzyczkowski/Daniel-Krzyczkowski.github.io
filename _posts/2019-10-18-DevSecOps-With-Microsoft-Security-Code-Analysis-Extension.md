@@ -1,6 +1,8 @@
 ---
 title: "DevSecOps With Microsoft Security Code Analysis Extension"
 excerpt: "In this article would like to present Microsoft Security Code Analysis Extension for Azure DevOps to enable security scanning in the CI pipelines."
+header:
+  image: /images/devisland/article28/assets/Msca.png
 ---
 
 <p align="center">

@@ -1,6 +1,8 @@
 ---
 title: "Azure AD B2C Series - Custom Policies release automation with Azure DevOps"
 excerpt: "In this article would like to present how to setup release pipeline in Azure DevOps to automatically update custom policies in the Azure AD B2C (Identity Experience Framework)."
+header:
+  image: /images/devisland/article27/assets/B2cSeriesAutomaticRelease1.png
 ---
 
 <p align="center">

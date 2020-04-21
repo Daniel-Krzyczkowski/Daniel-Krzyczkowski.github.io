@@ -1,6 +1,8 @@
 ---
 title: "Azure AD B2C Series - external service call during login and registration"
 excerpt: "In this article would like to present how to call external service to get value of the custom claim in the Azure AD B2C Custom Policies (Identity Experience Framework)."
+header:
+  image: /images/devisland/article23/assets/B2cSeriesExternalServiceCall1.png
 ---
 
 <p align="center">

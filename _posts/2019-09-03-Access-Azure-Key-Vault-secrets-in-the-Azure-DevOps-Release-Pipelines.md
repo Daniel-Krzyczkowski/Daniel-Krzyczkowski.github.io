@@ -1,6 +1,8 @@
 ---
 title: "Access Azure Key Vault secrets in the Azure DevOps Release Pipelines"
 excerpt: "In this article I would like to present how to inject Azure KeyVault secrets in the Azure DevOps Release pipelines including different environments (Dev, QA and Prod)."
+header:
+  image: /images/devisland/article25/assets/AzureDevOpsReleasePipesKeyVault1.png
 ---
 
 <p align="center">
