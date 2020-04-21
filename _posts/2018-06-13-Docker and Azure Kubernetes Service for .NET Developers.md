@@ -1,6 +1,8 @@
 ﻿---
 title: "Docker and Azure Kubernetes Service for .NET Developers"
 excerpt: "In this article I would like to describe some concepts around containerized ASP .NET Core applications, Docker, Azure Container Registry and Azure Kubernetes Service."
+header:
+  image: /images/devisland/article9/assets/aksintro01.png
 ---
 
 <p align="center">

@@ -1,6 +1,8 @@
 ﻿---
 title: "Industry 4.0 - Connected Factory with Microsoft IoT Solutions"
 excerpt: "In this article you will find interesting details about Industry 4.0 and Microsoft IoT Solutions."
+header:
+  image: /images/cloudyofthings/article4/assets/CloudyOfThingsArticle4.png
 ---
 
 ![Image](/images/cloudyofthings/article4/assets/CloudyOfThingsArticle4.png?raw=true)

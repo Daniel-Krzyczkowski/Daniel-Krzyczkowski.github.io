@@ -1,6 +1,8 @@
 ﻿---
 title: "Easy mocking in C# code with FakeItEasy library"
 excerpt: "In this article I would like to present mocking library called Fake It Easy but before I present some code, let me do some introduction about terms from unit tests dictionary."
+header:
+  image: /images/devisland/article6/assets/fakeit11.png
 ---
 
 <p align="center">

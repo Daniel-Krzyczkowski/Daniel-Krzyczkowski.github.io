@@ -1,6 +1,8 @@
 ﻿---
 title: "Microsoft Bot Framework – part 3"
 excerpt: "In this article I would like to discuss how to use Bot Emulator and how to connect Bot to different channels like Skype and how to communicate with it."
+header:
+  image: /images/devisland/article4/assets/botframeworkcover.png
 ---
 
 <p align="center">

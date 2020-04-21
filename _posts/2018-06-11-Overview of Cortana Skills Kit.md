@@ -1,6 +1,8 @@
 ﻿---
 title: "Overview of Cortana Skills Kit"
 excerpt: "Lets dive into Cortana Skills Kit."
+header:
+  image: /images/devisland/article8/assets/cortanaskills1.png
 ---
 
 <p align="center">

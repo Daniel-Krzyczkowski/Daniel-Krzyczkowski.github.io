@@ -1,6 +1,8 @@
 ---
 title: "How to inject Azure Key Vault secrets in the Azure DevOps CI/CD pipelines"
 excerpt: "In this article I would like to present how to inject Azure KeyVault secrets in the Azure DevOps CI/CD pipelines."
+header:
+  image: /images/devisland/article18/assets/AzureDevOpsKeyVault1.png
 ---
 
 <p align="center">

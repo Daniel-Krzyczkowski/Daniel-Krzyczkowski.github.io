@@ -1,6 +1,8 @@
 ﻿---
 title: "Entity Framework Core with ASP .Net Core Web API - useful hints"
 excerpt: "In this, second article I would like to share some hints connected with Entity Framework Core."
+header:
+  image: /images/devisland/article13/assets/efh1.png
 ---
 
 <p align="center">

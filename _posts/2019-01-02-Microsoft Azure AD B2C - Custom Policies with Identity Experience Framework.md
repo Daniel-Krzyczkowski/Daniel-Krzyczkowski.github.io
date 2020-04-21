@@ -1,6 +1,8 @@
 ﻿---
 title: "Microsoft Azure AD B2C - Custom Policies with Identity Experience Framework"
 excerpt: "In this article I would like to present how to use Identity Experience Framework together with custom policies which are designed primarily to address complex scenarios like connecting with external service during the registration."
+header:
+  image: /images/devisland/article15/assets/adbc1.png
 ---
 
 <p align="center">

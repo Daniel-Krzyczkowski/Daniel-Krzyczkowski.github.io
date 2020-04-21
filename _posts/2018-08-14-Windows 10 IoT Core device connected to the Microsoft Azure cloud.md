@@ -1,6 +1,8 @@
 ﻿---
 title: "Windows 10 IoT Core device connected to the Microsoft Azure cloud"
 excerpt: "In this article I would like to introduce you to the Windows 10 IoT core system, show how to install it and use together with Raspberry Pi 2 and how to connect this device with Microsoft Azure IoT Hub in the cloud."
+header:
+  image: /images/devisland/article11/assets/winiotcore1_1.jpg
 ---
 
 <p align="center">

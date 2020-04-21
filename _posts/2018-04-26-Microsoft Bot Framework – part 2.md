@@ -1,6 +1,8 @@
 ﻿---
 title: "Microsoft Bot Framework – part 2"
 excerpt: "In the first part I described some key concepts connected with Bot Framework and in this article I would like to discuss the source code of created Bot."
+header:
+  image: /images/devisland/article3/assets/botframeworkcover.png
 ---
 
 <p align="center">

@@ -1,6 +1,8 @@
 ﻿---
 title: "Entity Framework Core with ASP .Net Core Web API - jump start"
 excerpt: "In this article I would like to briefly introduce you to Entity Framework Core object-relational mapper used together with ASP .NET Core Web API."
+header:
+  image: /images/devisland/article12/assets/ef1.png
 ---
 
 <p align="center">

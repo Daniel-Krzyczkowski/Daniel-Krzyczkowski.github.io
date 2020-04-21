@@ -1,6 +1,8 @@
 ---
 title: "Face detector - automatic e-mail alerts with Windows IoT Core and Microsoft Azure cloud"
 excerpt: "In this article I would like to extend previous sample with face detection using camera connected to the IoT device and Microsoft Cognitive Serivces (Face API service)."
+header:
+  image: /images/cloudyofthings/article2/assets/CloudyOfThingsArticle2.png
 ---
 
 ![Image](/images/cloudyofthings/article2/assets/CloudyOfThingsArticle2.png?raw=true)

@@ -1,6 +1,8 @@
 ---
 title: "IoT with Azure Serverless and UWP"
 excerpt: "In this article would like to present how to connect Azure Serverless services together with IoT device to display real time data in the UWP application."
+header:
+  image: /images/devisland/article21/assets/ServerlessIoT1.png
 ---
 
 <p align="center">

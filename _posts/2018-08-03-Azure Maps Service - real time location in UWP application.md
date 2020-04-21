@@ -1,6 +1,8 @@
 ﻿---
 title: "Azure Maps Service - real time location in UWP application"
 excerpt: "In this article I want to show how to display real time location together with route in the UWP application."
+header:
+  image: /images/devisland/article10/assets/azuremaps1.png
 ---
 
 <p align="center">

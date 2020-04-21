@@ -1,6 +1,8 @@
 ﻿---
 title: "Azure AD B2C and ASP .NET Core Web API"
 excerpt: "In this article I would like to present how to configure Azure Active Directory B2C (Business-to-Consumer). Before that its worth to mention few words about Azure AD (Azure AD)."
+header:
+  image: /images/devisland/article5/assets/adb2c1.png
 ---
 
 <p align="center">

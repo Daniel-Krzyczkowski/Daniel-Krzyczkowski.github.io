@@ -1,6 +1,8 @@
 ---
 title: "Integrate Key Vault Secrets With Azure Functions"
 excerpt: "In this article I would like to present how to integrate Azure Functions with Key Vault to inject secrets in the settings."
+header:
+  image: /images/devisland/article19/assets/FunctionAppAndKeyVault1.png
 ---
 
 <p align="center">

@@ -1,6 +1,8 @@
 ﻿---
 title: "PowerShell parameters in the Azure DevOps pipelines"
 excerpt: "In this article I would like to present how to use PowerShell Arguments in the Azure DevOps build and release pipelines."
+header:
+  image: /images/devisland/article17/assets/PowerShellParametersAzureDevOps1.PNG
 ---
 
 <p align="center">

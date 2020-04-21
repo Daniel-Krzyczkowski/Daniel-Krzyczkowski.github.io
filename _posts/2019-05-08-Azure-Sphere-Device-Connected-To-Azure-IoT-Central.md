@@ -1,6 +1,8 @@
 ﻿---
 title: "Azure Sphere Device Connected To Azure IoT Central"
 excerpt: "In this article you can find my latest project in which I connected Azure Sphere IoT device to the Azure IoT Central service to display data from sensors and take up some actions."
+header:
+  image: /images/cloudyofthings/article6/assets/IoTCentralWithAzureSphere1.PNG
 ---
 
 <p align="center">
