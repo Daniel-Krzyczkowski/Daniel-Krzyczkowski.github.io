@@ -2,6 +2,8 @@
 main:
   - title: "Posts"
     url: /year-archive/
+  - title: "Videos"
+    url: https://www.youtube.com/channel/UCd1ok8ZkihdRBd8xqcbzxBw
   - title: "About me"
     url: /about-me/
   # - title: "Sample Collections"
