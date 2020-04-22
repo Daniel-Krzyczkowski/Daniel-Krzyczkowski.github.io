@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "Posts"
+  - title: "Post library"
     url: /year-archive/
-  - title: "Videos"
+  - title: "Video library"
     url: https://www.youtube.com/channel/UCd1ok8ZkihdRBd8xqcbzxBw
+  - title: "Code library"
+    url: https://github.com/Daniel-Krzyczkowski
   - title: "About me"
     url: /about-me/
   # - title: "Sample Collections"
