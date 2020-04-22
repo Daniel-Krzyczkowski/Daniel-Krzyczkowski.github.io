@@ -124,10 +124,13 @@ author:
       # url: "https://facebook.com/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/daniel-krzyczkowski-6a3910b4/"
+      url: "https://pl.linkedin.com/in/daniel-krzyczkowski"
     - label: "Github"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/daniel-krzyczkowski"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCd1ok8ZkihdRBd8xqcbzxBw"
 
 # Site Footer
 footer:
