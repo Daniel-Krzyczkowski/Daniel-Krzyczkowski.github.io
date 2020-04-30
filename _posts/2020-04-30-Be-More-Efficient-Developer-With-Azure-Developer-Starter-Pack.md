@@ -301,4 +301,4 @@ I encourage you ti visit Azure Developer Templates repository on [my GitHub](htt
 
 ## Summary
 
-In this article, I presented Azure Developer Starter Pack project I developed. I hope this project will be helpful for other Azure Developers and everyone who would like to quickly start building apps using Azure services.
+In this article, I presented Azure Developer Starter Pack project I developed. I hope this project will be helpful for other Azure Developers and everyone who would like to quickly start building apps using Azure services. I also created [video on YouTube](https://www.youtube.com/watch?v=8XJQLaWAPro&t=1s) about this project.
