@@ -133,7 +133,7 @@ author:
       url: "https://www.youtube.com/channel/UCd1ok8ZkihdRBd8xqcbzxBw"
     - label: "Pluralsight"
       icon: "fas fa-fw fa-link"
-      # url: "https://www.pluralsight.com/authors/daniel-krzyczkowski"
+      url: "https://www.pluralsight.com/authors/daniel-krzyczkowski"
 
 # Site Footer
 footer:
