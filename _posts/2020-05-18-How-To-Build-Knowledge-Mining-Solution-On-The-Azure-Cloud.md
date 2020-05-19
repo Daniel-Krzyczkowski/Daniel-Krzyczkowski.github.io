@@ -85,24 +85,23 @@ Microsoft Azure cloud provides services to build first-class knowledge mining so
 
 There are two basic approaches used for ingesting data and populating an index in Azure Cognitive Search:
 
-1. Pull data into the index using an Azure Cognitive Search indexer from the supported Azure data source:
-* Azure Blob Storage
-* Azure Data Lake Storage Gen2 (in preview at the moment of writing this article)
-* Azure Table Storage
-* Azure Cosmos DB
-* Azure SQL Database
-* SQL Server on Azure Virtual Machines
-* SQL Managed instances on Azure
+ 1. Pull data into the index using an Azure Cognitive Search indexer from the supported Azure data source:
+ * Azure Blob Storage
+ * Azure Data Lake Storage Gen2 (in preview at the moment of writing this article)
+ * Azure Table Storage
+ * Azure Cosmos DB
+ * Azure SQL Database
+ * SQL Server on Azure Virtual Machines
+ * SQL Managed instances on Azure
 
 <p align="center">
 <img src="/images/devisland/article35/assets/AzureKnowledgeMining7.PNG?raw=true" alt="Image not found"/>
 </p>
 
-2. Push data into the index programmatically
+ 2. Push data into the index programmatically
 
-   The push model relies on custom applications to push documents directly into a search index programmatically.
-   Applications can use either the Azure Cognitive Search REST API or the Azure Search SDK for .NET to send data into the
-  index.
+    The push model relies on custom applications to push documents directly into a search index programmatically.
+    Applications can use either the Azure Cognitive Search REST API or the Azure Search SDK for .NET to send data into the index.
 
 <p align="center">
 <img src="/images/devisland/article35/assets/AzureKnowledgeMining8.PNG?raw=true" alt="Image not found"/>
