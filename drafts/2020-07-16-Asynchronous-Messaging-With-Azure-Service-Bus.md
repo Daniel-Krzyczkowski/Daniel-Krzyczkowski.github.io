@@ -1,5 +1,5 @@
 ---
-title: "Asynchronous Messaging With Azure Service Bus"
+title: "Asynchronous Messaging with Azure Service Bus"
 excerpt: "This article presents how to implement asynchronous communication between microservices using Azure Service Bus"
 header:
   image: /images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.PNG
