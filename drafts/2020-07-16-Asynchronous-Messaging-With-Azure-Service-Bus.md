@@ -16,7 +16,7 @@ The Microservices architecture style becomes more and more popular. There are ma
 
 # Solution architecture
 
-To demonstrate how to use Azure Service Bus to provide asynchronous communication between microservices I decided to start the development of a sample solution called Cars Island. Source code is available on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/asp-net-core-microservices-with-azure-and-docker/asp-net-core-microservices-with-azure-and-docker/src/CarsIsland) Some of the patterns are taken from the Microsoft's sample called [eShop on containers.](https://github.com/dotnet-architecture/eShopOnContainers) which I found a bit heavy so that is why I decided to create my solution. In the Cars Island solution there are four microservices:
+To demonstrate how to use Azure Service Bus to provide asynchronous communication between microservices I decided to start the development of a sample solution called Cars Island. Source code is available on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/asp-net-core-microservices-with-azure-and-docker) which I found a bit heavy so that is why I decided to create my solution. In the Cars Island solution there are four microservices:
 
 <p align="center">
 <img src="/images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication2.png?raw=true" alt="Image not found"/>
@@ -585,5 +585,5 @@ Please note that we filter events using [rules and labels](https://docs.microsof
 
 # Summary
 
-In this article I presented how to implement asynchronous communication between microservices using Azure Service Bus. It is a powerful service available in the Azure cloud. I encourage you to check the source code for the whole solution on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/asp-net-core-microservices-with-azure-and-docker/asp-net-core-microservices-with-azure-and-docker/src/CarsIsland).
+In this article I presented how to implement asynchronous communication between microservices using Azure Service Bus. It is a powerful service available in the Azure cloud. I encourage you to check the source code for the whole solution on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/asp-net-core-microservices-with-azure-and-docker).
 
