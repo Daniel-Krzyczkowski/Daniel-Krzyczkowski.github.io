@@ -2,11 +2,11 @@
 title: "Asynchronous messaging with Azure Service Bus"
 excerpt: "This article presents how to implement asynchronous communication between microservices using Azure Service Bus"
 header:
-  image: /images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.PNG
+  image: /images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.png
 ---
 
 <p align="center">
-<img src="/images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.PNG?raw=true" alt="Asynchronous messaging With Azure Service Bus"/>
+<img src="/images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.png?raw=true" alt="Asynchronous messaging With Azure Service Bus"/>
 </p>
 
 # Introduction
