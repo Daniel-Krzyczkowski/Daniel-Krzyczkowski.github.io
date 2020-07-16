@@ -1,12 +1,12 @@
 ---
-title: "Asynchronous Messaging with Azure Service Bus"
+title: "Asynchronous messaging with Azure Service Bus"
 excerpt: "This article presents how to implement asynchronous communication between microservices using Azure Service Bus"
 header:
   image: /images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.PNG
 ---
 
 <p align="center">
-<img src="/images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.PNG?raw=true" alt="Asynchronous Messaging With Azure Service Bus"/>
+<img src="/images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication1.PNG?raw=true" alt="Asynchronous messaging With Azure Service Bus"/>
 </p>
 
 # Introduction
@@ -16,7 +16,7 @@ The Microservices architecture style becomes more and more popular. There are ma
 
 # Solution architecture
 
-To demonstrate how to use Azure Service Bus to provide asynchronous communication between microservices I decided to start the development of a sample solution called Cars Island. Source code is available on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/asp-net-core-microservices-with-azure-and-docker) which I found a bit heavy so that is why I decided to create my solution. In the Cars Island solution there are four microservices:
+To demonstrate how to use Azure Service Bus to provide asynchronous communication between microservices I decided to start the development of a sample solution called Cars Island. Source code is available on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/asp-net-core-microservices-with-azure-and-docker). This project is based on the [eShop on containers solution](https://github.com/dotnet-architecture/eShopOnContainers) which I found a bit heavy so that is why I decided to create my solution. In the Cars Island solution there are four microservices:
 
 <p align="center">
 <img src="/images/devisland/article37/assets/MicroservicesAzureServiceBusCommunication2.png?raw=true" alt="Image not found"/>
