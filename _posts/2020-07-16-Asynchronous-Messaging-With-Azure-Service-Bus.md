@@ -585,5 +585,5 @@ Please note that we filter events using [rules and labels](https://docs.microsof
 
 # Summary
 
-In this article I presented how to implement asynchronous communication between microservices using Azure Service Bus. It is a powerful service available in the Azure cloud. I encourage you to check the source code for the whole solution on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/asp-net-core-microservices-with-azure-and-docker).
+In this article I presented how to implement asynchronous communication between microservices using Azure Service Bus. It is a powerful service available in the Azure cloud. I encourage you to check the source code for the whole solution on [my GitHub.](https://github.com/Daniel-Krzyczkowski/MicrosoftAzure/tree/master/asp-net-core-microservices-with-azure-and-docker)
 
