@@ -105,7 +105,7 @@ As we can see there are two operations within the transaction:
 1. We want to save changes in the catalog database - *await _carCatalogDbContext.SaveChangesAsync()*
 2. We want to save information about the event that occurred and was handled in our microservice - *await _eventLogService.SaveEventAsync(@event, _carCatalogDbContext.Database.CurrentTransaction)*
 
-You probably notice that we are using Entity Framework Core transaction here and code responsible for this is located in the *ResilientTransaction* class:
+You probably notice that we are using [Entity Framework Core transaction](https://docs.microsoft.com/en-us/ef/core/saving/transactions) here and code responsible for this is located in the *ResilientTransaction* class:
 
 ```csharp
     public class ResilientTransaction
