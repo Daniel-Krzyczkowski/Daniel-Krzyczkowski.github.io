@@ -212,6 +212,12 @@ The last step is to declare *extension_authorization_groups* claim as *OutputCla
   </RelyingParty>
 ```
 
+Once user signs in, there is information about authorization groups included in the JWT token:
+
+<p align="center">
+<img src="/images/devisland/article39/assets/AzureAdB2cExternalAuthorization6.PNG?raw=true" alt="Image not found"/>
+</p>
+
 
 ## Web application configuration
 
