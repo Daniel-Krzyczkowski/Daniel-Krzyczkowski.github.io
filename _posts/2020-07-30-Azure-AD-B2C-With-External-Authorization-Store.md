@@ -31,9 +31,9 @@ To be able to build an authorization store and connect it with Azure AD B2C, we 
 
 The below diagram presents a solution where we use a custom authorization store connected with Azure AD B2C. As we can see there are Azure Functions used which are great for this kind of scenario. In this solution there are three Azure Functions:
 
-1. get-user-authorization-groups-identifiers-func - get IDs of groups to which user belongs
-2. get-user-authorization-groups-func - get IDs of groups together with names to which user belongs
-3. get-authorization-groups-func - get all authorization groups to which user can be assigned
+1. **get-user-authorization-groups-identifiers-func** - get IDs of groups to which user belongs
+2. **get-user-authorization-groups-func** - get IDs of groups together with names to which user belongs
+3. **get-authorization-groups-func** - get all authorization groups to which user can be assigned
 
 First function is called by Azure AD B2C during user login flow. Function calls Azure SQL database then and gets all group identifiers to which user belongs. These identifiers are returned to the AD B2C and stored in the JWT token returned to web application.
 
