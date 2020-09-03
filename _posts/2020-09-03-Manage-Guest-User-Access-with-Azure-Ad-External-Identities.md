@@ -13,10 +13,6 @@ header:
 
 Managing application security and access can be complex. Especially when we would like to provide access not only to the organization's users but also enable partners (or guests) to use our applications. In this article, I would like to present a feature available in the Azure Active Directory called External Identities. With this feature, we can make it possible for guest users to self-sign up and also to sign in with one-time passcode (OTP) without creating a new Microsoft account.
 
-<p align="center">
-<img src="/images/devisland/article41/assets/template.png?raw=true" alt="Image not found"/>
-</p>
-
 # What is Azure AD External Identities?
 
 External Identities feature allows people outside of our organization to access our apps and resources while letting them sign in using whatever identity they prefer (their private email account). Whether they are part of Azure AD or another IT-managed system or have an unmanaged social identity like Google or Facebook, they can use their own credentials to sign in and use our application.
