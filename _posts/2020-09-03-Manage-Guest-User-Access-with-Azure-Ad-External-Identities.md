@@ -92,6 +92,10 @@ Once user flow is enabled, we can assign applications to it. Please remember tha
 
 Guest user can sign up providing the email address:
 
+**IMPORTANT**
+
+This is unfortunately unintuitive. Guest user has to be registered in any other Azure AD tenant to be able to sign up this way. For guest users outside of Azure AD (that use other domains), there still has to be an invitation send and there is no way to sign up this way.
+
 <p align="center">
 <img src="/images/devisland/article41/assets/AureADExternalIdentities11.PNG?raw=true" alt="Image not found"/>
 </p>
