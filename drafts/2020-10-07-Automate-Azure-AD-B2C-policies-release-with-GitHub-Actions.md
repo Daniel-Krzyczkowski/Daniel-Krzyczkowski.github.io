@@ -255,6 +255,13 @@ jobs:
           clean_destination_folder: true
 ```
 
+Secrets are kept in the "Secrets" section of GitHub repository:
+
+<p align="center">
+<img src="/images/devisland/article43/assets/AdB2CGitHubActionsRelease4.PNG?raw=true" alt="Image not found"/>
+</p>
+
+
 This is the final result of executing above GitHub Action:
 
 <p align="center">
