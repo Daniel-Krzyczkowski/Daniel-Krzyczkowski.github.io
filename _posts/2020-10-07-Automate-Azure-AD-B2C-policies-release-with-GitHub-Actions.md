@@ -16,7 +16,7 @@ Azure Active Directory B2C is a great service to secure solution built with the 
 Before we start, here is the final result after release. My customized login and registration experience for users:
 
 <p align="center">
-<img src="/images/devisland/article43/assets/AdB2CGitHubActionsRelease1.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article43/assets/AdB2CGitHubActionsRelease2.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
