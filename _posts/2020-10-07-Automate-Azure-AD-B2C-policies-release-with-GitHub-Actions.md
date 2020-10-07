@@ -272,4 +272,4 @@ This is the final result of executing above GitHub Action:
 
 # Summary
 
-In this article we went through continuous delivery for the Azure AD B2C custom policies using GitHub Actions. It is very helpful to have custom policies generic files because we can easily use them with different Azure AD B2C tenants. If you want to see implementation detalis here is the link to my GitHub repository.
+In this article we went through continuous delivery for the Azure AD B2C custom policies using GitHub Actions. It is very helpful to have custom policies generic files because we can easily use them with different Azure AD B2C tenants. If you want to see implementation detalis here is the [link to my GitHub](https://github.com/Daniel-Krzyczkowski/IdentityDeveloperTemplates/blob/master/README.md#Azure-Active-Directory-B2C-generic-templates-with-continuous-delivery) repository.
