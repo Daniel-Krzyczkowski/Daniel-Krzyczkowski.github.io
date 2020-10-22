@@ -92,7 +92,7 @@ Then we can setup approvals for each environment:
 </p>
 
 <p align="center">
-<img src="/images/devisland/article45/assets/ReleaseFlowWithAzureDevOpsPipelines10.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article45/assets/ReleaseFlowWithAzureDevOpsPipelines10.png?raw=true" alt="Image not found"/>
 </p>
 
 
