@@ -81,13 +81,13 @@ Azure Functions are perfect for the scenarios where we want to handle events - i
 Let's talk about implementation details. First of all, to communicate with the Azure DevOps API we need to obtaind [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page):
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki8.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki8.PNG?raw=true" alt="Image not found"/>
 </p>
 
 When creating new Personal Access Token, we have to indicate scopes so we can get information about work items from the backlog and gain access to modify project's wiki pages:
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki9.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki9.PNG?raw=true" alt="Image not found"/>
 </p>
 
 In the source code of the Function App, I use *HttpClient* to make calls to the Azure DevOps API. Authentication is done using PAT token in the *Authorization* header:
@@ -261,23 +261,23 @@ How the Function App is triggered? I used *HttpTrigger* function that receives p
 Once Azure Function App is published on the Azure cloud, we can setup web hook in the Azure DevOps to call it once there is successful merge from the *release-1.0.0* branch to the *master* branch:
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki13.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki13.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki14.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki14.PNG?raw=true" alt="Image not found"/>
 </p>
 
 We can apply filters, in this case I set filter on the repository, branch and merge result to make sure that Azure Function is called only after successful merge to the *master* branch:
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki15.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki15.PNG?raw=true" alt="Image not found"/>
 </p>
 
 In the last step we have to provide the URL address of the Azure Function App (together with the code):
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki16.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki16.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -286,11 +286,11 @@ In the last step we have to provide the URL address of the Azure Function App (t
 Below I presented the final result. Once pull request is completed, there is a merge to *master* branch and Function App is then triggered. All user stories and bugs are then listed in the Wiki:
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki17.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki17.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article46/assets/ReleaseManagementWiki12.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article46/assets/ReleaseManagementWiki12.PNG?raw=true" alt="Image not found"/>
 </p>
 
 # Summary
