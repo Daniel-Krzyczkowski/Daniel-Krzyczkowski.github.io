@@ -9,7 +9,7 @@ header:
 <img src="/images/devisland/article48/assets/PluralsightCourse5.jpg?raw=true" alt="Microsoft Azure Developer: Implement API Management"/>
 </p>
 
-## This is special article because I am happy to announce that my fourth Pluralsight course is available.
+## This is special article because I am happy to announce that my fifth Pluralsight course is available.
 
 In this course, you will learn how to use Microsoft Azure API Management to control who uses your APIs, to enforce usage policies, and to present a professional front-end to developers using the API.
 
