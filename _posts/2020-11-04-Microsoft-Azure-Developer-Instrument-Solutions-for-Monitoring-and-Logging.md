@@ -2,11 +2,11 @@
 title: "Microsoft Azure Developer: Instrument Solutions for Monitoring and Logging"
 excerpt: "This is special article about my Pluralsight course."
 header:
-  image: /images/devisland/article30/assets/PluralsightCourse4.jpg
+  image: /images/devisland/article47/assets/PluralsightCourse4.jpg
 ---
 
 <p align="center">
-<img src="/images/devisland/article30/assets/PluralsightCourse4.jpg?raw=true" alt="Microsoft Azure Developer: Instrument Solutions for Monitoring and Logging"/>
+<img src="/images/devisland/article47/assets/PluralsightCourse4.jpg?raw=true" alt="Microsoft Azure Developer: Instrument Solutions for Monitoring and Logging"/>
 </p>
 
 ## This is special article because I am happy to announce that my fourth Pluralsight course is available.
