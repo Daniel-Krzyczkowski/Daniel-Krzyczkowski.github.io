@@ -1,6 +1,6 @@
 ---
 title: "Cars Island Car Rental on Azure cloud"
-excerpt: "This article presents an introduction to the implementation of Car Island fake car rental solution built with Microsoft Azure cloud."
+excerpt: "This article presents an introduction to the implementation of Car Island fake car rental solution built on the Microsoft Azure cloud."
 header:
   image: /images/devisland/article50/assets/CarsIslandOnAzurePart1-1.png
 ---
