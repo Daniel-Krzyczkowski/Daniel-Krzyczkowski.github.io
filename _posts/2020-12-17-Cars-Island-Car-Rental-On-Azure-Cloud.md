@@ -29,11 +29,11 @@ Just to make it clear, this project presents some concepts and patterns which ca
 There is a web portal where customers can see all available cars for rent in the Cars Island car rental company. Once the customer signs in, there is an option to reserve a specific car. Once the reservation is completed, there is a confirmation email sent. Customers can also send a new enquiry (anonymously).
 
 <p align="center">
-<img src="/images/devisland/article50/assets/CarsIslandOnAzurePart1-3.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article50/assets/CarsIslandOnAzurePart1-4.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article50/assets/CarsIslandOnAzurePart1-4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article50/assets/CarsIslandOnAzurePart1-5.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
