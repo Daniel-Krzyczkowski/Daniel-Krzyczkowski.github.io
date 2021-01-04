@@ -133,7 +133,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
 ## 4. Cars Island ASP .NET Core API - integration with Azure Storage Account 
 
-- Explanation of Azure Cosmos DB functionalities (including multi-region read and write) 
+- Explanation of Azure Storage Account functionalities (including multi-region read and write) 
 
 - Azure Storage integration with the new Azure SDK 
 
