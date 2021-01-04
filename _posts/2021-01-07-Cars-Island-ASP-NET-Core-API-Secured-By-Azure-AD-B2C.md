@@ -1,6 +1,6 @@
 ---
 title: "Cars Island ASP .NET Core API secured by Azure AD B2C - part 2"
-excerpt: "This article presents how to secure ASP .NET CORE API with Azure AD B2C using Microsoft Identity Web library"
+excerpt: "This article presents how to secure ASP .NET CORE API with Azure AD B2C using Microsoft Identity Web library."
 header:
   image: /images/devisland/article51/assets/CarsIslandWebApiAdB2C1.PNG
 ---
