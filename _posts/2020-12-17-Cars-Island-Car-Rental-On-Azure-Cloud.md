@@ -1,12 +1,12 @@
 ---
-title: "Cars Island Car Rental on Azure cloud"
+title: "Cars Island Car Rental on the Azure cloud - part 1"
 excerpt: "This article presents an introduction to the implementation of Car Island fake car rental solution built on the Microsoft Azure cloud."
 header:
   image: /images/devisland/article50/assets/CarsIslandOnAzurePart1-1.png
 ---
 
 <p align="center">
-<img src="/images/devisland/article50/assets/CarsIslandOnAzurePart1-2.png?raw=true" alt="Cars Island Car Rental on Microsoft Azure cloud"/>
+<img src="/images/devisland/article50/assets/CarsIslandOnAzurePart1-2.png?raw=true" alt="Cars Island Car Rental on the Microsoft Azure cloud - part 1"/>
 </p>
 
 
