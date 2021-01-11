@@ -94,34 +94,6 @@ CosmosClient client = new CosmosClient(connectionString, options);
 The SDK can be used without any code changes like presented above. Then the SDK automatically directs both reads and writes to the current write region.
 
 
-## Web API application registration in the Azure AD B2C
-
-To secure ASP .NET Core Web API application we have to register a new application in the Azure AD B2C directory first.
-
-<p align="center">
-<img src="/images/devisland/article52/assets/CarsIslandWebApiAdB2C4.PNG?raw=true" alt="Image not found"/>
-</p>
-
-Once the application is created there is *Application (client) ID* value generated. It is used to uniquely identify the application in the Azure AD B2C tenant.
-
-<p align="center">
-<img src="/images/devisland/article52/assets/CarsIslandWebApiAdB2C5.PNG?raw=true" alt="Image not found"/>
-</p>
-
-Then we have to expose an API to make it possible to request access token with specific scope. This is why under the *Expose an API* section we have to add new scope:
-
-
-<p align="center">
-<img src="/images/devisland/article52/assets/CarsIslandWebApiAdB2C6.PNG?raw=true" alt="Image not found"/>
-</p>
-
-<p align="center">
-<img src="/images/devisland/article52/assets/CarsIslandWebApiAdB2C7.PNG?raw=true" alt="Image not found"/>
-</p>
-
-That's it. Now we have an application registered in the Azure AD B2C and we exposed the scope to make it possible to request an access token for this specific Web API (Cars Island API).
-
-
 # Azure Cosmos DB .NET SDK integration
 
 In the Cars Island project, I integrated ASP .NET Core Web API application with Azure Cosmos DB using [new library](https://www.nuget.org/packages/Azure.Cosmos). Please note that this NuGet package is in the preview at the moment of writing this article. I decided to use this library because it follows best practices and implement common patterns. If you want to learn more about new Azure SDKs, please check this [official documentation](https://azure.microsoft.com/en-us/downloads/).
