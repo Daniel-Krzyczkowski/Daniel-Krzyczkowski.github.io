@@ -81,7 +81,7 @@ As I mentioned above, in the Cars Island solution there is *Read-access Geo-redu
 
 
 <p align="center">
-<img src="/images/devisland/article53/assets/CarsIslandWebApiAzureStorageAccount5.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article53/assets/CarsIslandWebApiAzureStorageAccount5.png?raw=true" alt="Image not found"/>
 </p>
 
 
