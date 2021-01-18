@@ -1,6 +1,6 @@
 ---
 title: "Cars Island ASP .NET Core API - integration with Azure Storage Account - part 4"
-excerpt: "This article presents how to integrate ASP .NET CORE API with Azure Blob Storage using new .NET C# library."
+excerpt: "This article presents how to integrate ASP .NET CORE API with Azure Blob Storage using the new .NET C# library."
 header:
   image: /images/devisland/article53/assets/CarsIslandWebApiAzureStorageAccount1.jpg
 ---
@@ -20,7 +20,7 @@ In the Cars Island solution, Azure Storage Account is used to store cars images,
 <img src="/images/devisland/article53/assets/CarsIslandWebApiAzureStorageAccount2.png?raw=true" alt="Image not found"/>
 </p>
 
-As you can see, Azure Cosmos DB is used by Cars Island Web API and Azure Function responsible for sending confirmation emails. In this article we are goind to dicuss how Azure Cosmos DB is integrated in the ASP .NET Core Web API project but please note that the same techniques are used to use this SDK in the [Azure Function](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/tree/master/src/func-app) source code.
+Car images are publicly accessible so anybody with the link can display car images in the browser. Files attached to the enquiries are private.
 
 *[Cars Island project is available on my GitHub](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure)*
 
@@ -54,7 +54,7 @@ Microsoft recommends general-purpose v2 accounts for most scenarios. For the *Re
 
 ## Azure Storage Account - data redundancy and high availability
 
-When you create Azure Storage Account it is worth to consider the tradeoffs between lower costs and higher availability. You have to decice what kind of data you plan to store and how important this data to make your solution high available.
+When you create an Azure Storage Account it is worth considering the tradeoffs between lower costs and higher availability. You have to decide what kind of data you plan to store and how important this data is to make your solution high available.
 
 Azure Storage provides below redundancy options to choose:
 
@@ -68,7 +68,7 @@ Redundancy for scenarios requiring high availability. Zone-redundant storage (ZR
 
 **Geo-redundant storage (GRS)** 
 
-Cross-regional redundancy to protect against regional outages. Data is copied synchronously three times in the primary region, then copied asynchronously to the secondary region. However, that data is available to be read only if the customer or Microsoft initiates a failover from the primary to secondary region. For read access to data in the secondary region, you have to enable read-access geo-redundant storage (RA-GRS). When you enable read access to the secondary region, your data is available to be read at all time.
+Cross-regional redundancy to protect against regional outages. Data is copied synchronously three times in the primary region, then copied asynchronously to the secondary region. However, that data is available to be read-only if the customer or Microsoft initiates a failover from the primary to secondary region. For read access to data in the secondary region, you have to enable read-access geo-redundant storage (RA-GRS). When you enable read access to the secondary region, your data is available to be read at all time.
 
 **Geo-zone-redundant storage (GZRS)**
 
@@ -87,7 +87,7 @@ As I mentioned above, in the Cars Island solution there is *Read-access Geo-redu
 
 # Azure Storage Account .NET SDK integration
 
-In the Cars Island project, I integrated ASP .NET Core Web API application with Azure Storage Account using [new library](https://www.nuget.org/packages/Azure.Storage.Blobs). This library because it follows best practices and implement common patterns. If you want to learn more about new Azure SDKs, please check this [official documentation](https://azure.microsoft.com/en-us/downloads/).
+In the Cars Island project, I integrated the ASP .NET Core Web API application with Azure Storage Account using [new library](https://www.nuget.org/packages/Azure.Storage.Blobs). This library because follows best practices and implements common patterns. If you want to learn more about new Azure SDKs, please check this [official documentation](https://azure.microsoft.com/en-us/downloads/).
 
 Let's start with an explanation of how the initial setup looks like. In the *[StorageServiceCollectionExtensions.cs](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.API/Core/DependencyInjection/StorageServiceCollectionExtensions.cs)* file you can find out how *BlobServiceClient* is instantiated. To follow [best practices related to lifetime management](https://devblogs.microsoft.com/azure-sdk/lifetime-management-and-thread-safety-guarantees-of-azure-sdk-net-clients/), *BlobServiceClient* type is registered as a singleton in the IoC container. You can also ask why I have used *services.AddSingleton* with *implementationFactory* instead of just using *services.AddSingleton*. I did it because it enables automatic object disposal so once the application is closed, all resources will be released automatically. You can read more about [service registration methods](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection#service-registration-methods).
 
@@ -108,11 +108,11 @@ Let's start with an explanation of how the initial setup looks like. In the *[St
     }
 ```
 
-There is also [*BlobStorageService*](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.Infrastructure/Services/Storage/BlobStorageService.cs) instance registered. Let's discuss its structure.
-
 # Data operations
 
-Once we discussed Azure Cosmos DB setup and integration with the .NET SDK in the source code, we can discuss how one of the repositories is used. Let's talk about *[CarReservationService](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.Core/Services/CarReservationService.cs)* class presented below. As you can see we call methods on *CarRepository* and *CarReservationRepository* instances to check if car exists or is not already reserved:
+Once we discussed Azure Storage Account setup and integration with the .NET SDK in the source code, we can discuss how it can be used.
+
+There is [*BlobStorageService*](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.Infrastructure/Services/Storage/BlobStorageService.cs) instance registered. Let's discuss its structure. As you can see below *BlobStorageService* class uses *BlobServiceClient* instance to communicate with the Azure Storage Account. There are methods for deleting the blob, checking if blob exists or even operation responsible for generating shared access signatures (SAS):
 
 ```csharp
     public class BlobStorageService : IBlobStorageService
@@ -246,11 +246,10 @@ Once we discussed Azure Cosmos DB setup and integration with the .NET SDK in the
     }
 ```
 
-*CarReservationService* is used in the *[CarReservationController](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.API/Controllers/CarReservationController.cs)*.
+*BlobStorageService* is used in the *[EnquiryController](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.API/Controllers/EnquiryController.cs)*. Once there is file attached to the new customer's enquiry, it is stored on the blob storage in the Azure cloud.
 
 # Summary
 
-In this article, I described how to set up an Azure Cosmos DB account and how to integrate it in the ASP .NET Core Web API application. Source code of the Cars Island solution is available on [my GitHub](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure) so you can see all implementation details.
+In this article, I described how to set up an Azure Storage Account and how to integrate it into the ASP .NET Core Web API application. Source code of the Cars Island solution is available on [my GitHub](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure) so you can see all implementation details.
 
-If you want to learn more about Azure Cosmos DB service, check this [official documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/).
-
+If you want to learn more about the Azure Storage Account service, check this [official documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction).
