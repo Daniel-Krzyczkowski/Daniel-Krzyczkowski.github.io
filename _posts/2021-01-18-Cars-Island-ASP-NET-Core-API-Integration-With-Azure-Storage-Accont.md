@@ -1,6 +1,6 @@
 ---
 title: "Cars Island ASP .NET Core API - integration with Azure Storage Account - part 4"
-excerpt: "This article presents how to integrate ASP .NET CORE API with Azure Blob Storage using the new .NET C# library."
+excerpt: "This article presents how to integrate ASP .NET Core API with Azure Blob Storage using the new .NET C# library."
 header:
   image: /images/devisland/article53/assets/CarsIslandWebApiAzureStorageAccount1.jpg
 ---

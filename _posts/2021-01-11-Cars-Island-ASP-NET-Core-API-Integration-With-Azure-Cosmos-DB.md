@@ -1,6 +1,6 @@
 ---
 title: "Cars Island ASP .NET Core API - integration with Azure Cosmos DB - part 3"
-excerpt: "This article presents how to integrate ASP .NET CORE API with Azure Cosmos DB using new .NET C# library."
+excerpt: "This article presents how to integrate ASP .NET Core API with Azure Cosmos DB using new .NET C# library."
 header:
   image: /images/devisland/article52/assets/CarsIslandWebApiCosmosDB1.jpg
 ---
