@@ -49,8 +49,6 @@ Once Azure Service Bus namespace is created, we can setup new queue. Let's discu
 <img src="/images/devisland/article54/assets/CarsIslandWebApiAzureServiceBusQueue6.PNG?raw=true" alt="Image not found"/>
 </p>
 
-Azure Storage provides below redundancy options to choose:
-
 **Name**
 
 Name of the queue. In my case, this is set to *reservations*.
