@@ -1,6 +1,6 @@
 ---
 title: "Cars Island ASP .NET Core API - integration with Azure Service Bus Queue - part 5"
-excerpt: "This article presents how to integrate ASP .NET CORE API with Azure Service Bus Queue using the new .NET C# library."
+excerpt: "This article presents how to integrate ASP .NET Core API with Azure Service Bus Queue using the new .NET C# library."
 header:
   image: /images/devisland/article54/assets/CarsIslandWebApiAzureServiceBusQueue1.jpg
 ---
