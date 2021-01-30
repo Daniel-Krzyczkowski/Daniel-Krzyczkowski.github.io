@@ -225,7 +225,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-### 12. Cars Island – DevOps practices for the Azure Infrastructure 
+## 12. Cars Island – DevOps practices for the Azure Infrastructure 
 
 - Creating a release pipeline in the Azure DevOps using YAML files 
 
@@ -237,7 +237,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-### 13. Cars Island – DevOps practices for the application release 
+## 13. Cars Island – DevOps practices for the application release 
 
 - Creating a release pipeline in the Azure DevOps using YAML files 
 
