@@ -181,7 +181,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-## Controlled access to Cars Island ASP .NET Core API with Azure API Management 
+## 9. Controlled access to Cars Island ASP .NET Core API with Azure API Management 
 
 - Azure API Management functionalities and configuration 
 
@@ -189,7 +189,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-## 9. Cars Island Blazor Web App - secured by Azure AD B2C 
+## 10. Cars Island Blazor Web App - secured by Azure AD B2C 
 
 - Information about integration with Azure AD B2C 
 
@@ -205,7 +205,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-## 10. Cars Island - Azure Infrastructure as a Code  
+## 11. Cars Island - Azure Infrastructure as a Code  
 
 - ARM templates structure  
 
@@ -213,7 +213,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-## 11. Cars Island – backlog structure and definition 
+## 12. Cars Island – backlog structure and definition 
 
 - Backlog definition in the Azure DevOps 
 
@@ -225,7 +225,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-## 12. Cars Island – DevOps practices for the Azure Infrastructure 
+## 13. Cars Island – DevOps practices for the Azure Infrastructure 
 
 - Creating a release pipeline in the Azure DevOps using YAML files 
 
@@ -237,7 +237,7 @@ Azure API Management is a service that works as a gateway to different APIs behi
 
  
 
-## 13. Cars Island – DevOps practices for the application release 
+## 14. Cars Island – DevOps practices for the application release 
 
 - Creating a release pipeline in the Azure DevOps using YAML files 
 
