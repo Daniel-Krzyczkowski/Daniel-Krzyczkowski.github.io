@@ -2,12 +2,10 @@
 main:
   - title: "Posts library"
     url: /year-archive/
-  - title: "Video library"
-    url: https://www.youtube.com/channel/UCd1ok8ZkihdRBd8xqcbzxBw
-  - title: "Code library"
-    url: https://github.com/Daniel-Krzyczkowski
   - title: "About me"
     url: /about-me/
+  - title: "Subscribe"
+    url: https://sendfox.com/lp/1yvwye
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

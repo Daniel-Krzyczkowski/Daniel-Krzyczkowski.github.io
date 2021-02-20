@@ -6,7 +6,7 @@ header:
 ---
 
 <p align="center">
-<img src="/images/devisland/article56/assets/CarsIslandWebAzureFunctionsWithSendGrid1.jpg?raw=true" alt="Cars Island ASP .NET Core API and Azure Functions - integration with Azure Application Insights - part 6"/>
+<img src="/images/devisland/article56/assets/CarsIslandWebAzureFunctionsWithSendGrid1.jpg?raw=true" alt="Cars Island Azure Functions - integration with SendGrid - part 7"/>
 </p>
 
 
