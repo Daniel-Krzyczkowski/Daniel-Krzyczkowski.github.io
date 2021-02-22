@@ -169,7 +169,7 @@ Finally, in the [*CarReservationMessagingService*](https://github.com/Daniel-Krz
 Final result is presetned below, in the email message we include customer first name and last name retrieved from the Azure AD B2C:
 
 <p align="center">
-<img src="/images/devisland/article57/assets/CarsIslandAzureFunctionsWithGraphApi9.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article57/assets/CarsIslandAzureFunctionsWithGraphApi9.png?raw=true" alt="Image not found"/>
 </p>
 
 
