@@ -17,7 +17,7 @@ In [my first article](https://daniel-krzyczkowski.github.io/Cars-Island-Car-Rent
 In the Cars Island solution, Azure API Management is used to control and secure access to the Cars Island ASP .NET Core API. Below I present solution architecture:
 
 <p align="center">
-<img src="/images/devisland/article58/assets/CarsIslandAzureFunctionsWithGraphApi2.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article58/assets/CarsIslandAzureApiManagement2.png?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -352,7 +352,7 @@ Once everything is configured on the Azure API Management side, we can call the 
 
 
 <p align="center">
-<img src="/images/devisland/article58/assets/CarsIslandAzureApiManagement189.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article58/assets/CarsIslandAzureApiManagement19.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
