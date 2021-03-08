@@ -34,25 +34,25 @@ First of all, it is worth reminding the solution architecture. As you can see be
 To secure Blazor Server application we have to register a new application in the Azure AD B2C directory first:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C3.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C3.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Once the application is created there is *Application (client) ID* value generated. It is used to uniquely identify the application in the Azure AD B2C tenant:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C9.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C9.PNG?raw=true" alt="Image not found"/>
 </p>
 
 We have to also add information about the platform (application type). In this case we are talking about web application. Please note that we have to also define *Redirect URIs* where token can be returned once user is successfully authenticated:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C4.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C4.PNG?raw=true" alt="Image not found"/>
 </p>
 
 We have to also enable implicit flow (it is currently required to get access token from the Azure AD B2C and access edit profile policy):
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C5.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C5.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -60,23 +60,23 @@ Then we have to enable access to the Cars Island Web API (I have registered anot
 
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C6.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C6.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C7.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C7.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Once we add permission to access Cars Island Web API, we have to grant admin consent:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C8.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C8.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Last step is to create app secret. To do it, open *Certificates & secrets* section and generate new secret by clicking the *+ New client secret*:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C13.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C13.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -126,7 +126,7 @@ In the *appsettings.json* file we have to also include information about the Web
 * Scope - The scope that we added in the Azure AD B2C application management blade
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C12.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C12.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Now in the *[Startup.cs](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-app/CarsIsland.WebApp/Startup.cs)* file we have to add below lines in the *ConfigureServices* method:
@@ -227,7 +227,7 @@ Before we call car reservation endpoint, we have to get the access token. If the
 To make a new reservation, user has to sign in first:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C14.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C14.PNG?raw=true" alt="Image not found"/>
 </p>
 
 This is the place where [*IdentityService*](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-app/CarsIsland.WebApp/Services/IdentityService.cs) is used:
@@ -287,11 +287,11 @@ You can find the full implementation of this page on [my GitHub](https://github.
 Once user is authenticated, the name is displayed with greeting in the top-right corner. If user clicks the link, edit profile policy is displayed from the Azure AD B2C:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C11.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C11.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C10.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C10.PNG?raw=true" alt="Image not found"/>
 </p>
 
 You can also ask how this login button and username is displayed on the navigation bar. I created shared Razor view called [*LoginDisplay*](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-app/CarsIsland.WebApp/Shared/LoginDisplay.razor):
