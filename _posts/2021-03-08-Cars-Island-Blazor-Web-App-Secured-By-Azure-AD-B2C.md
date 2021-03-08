@@ -207,7 +207,7 @@ To call Web API with access token returned from the Azure AD B2C, we have to use
 As you can see we have to use *GetAccessTokenForUserAsync* method, where we pass the scope (the same scope that was displayed from the Azure AD B2C portal) - just to remind:
 
 <p align="center">
-<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C12.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article59/assets/CarsIslandBlazorWebWithAdB2C12.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Before we call car reservation endpoint, we have to get the access token. If there is already an access token in the cache, it will be used. If there is no access token, new one will be issued by the Azure AD B2C:
