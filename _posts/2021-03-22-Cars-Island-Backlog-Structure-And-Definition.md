@@ -17,7 +17,7 @@ In [my first article](https://daniel-krzyczkowski.github.io/Cars-Island-Car-Rent
 Below I present solution architecture:
 
 <p align="center">
-<img src="/images/devisland/article61/assets/CarsIslandAzureInfra2.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article61/assets/CarsIslandBacklog2.png?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -96,7 +96,7 @@ One of the great functionalities provided by Azure DevOps is related to iteratio
 As you can see we can also set dates for these iterations. Once iterations are set, we can decide which *User Stories* we are going to implement in each iteration:
 
 <p align="center">
-<img src="/images/devisland/article61/assets/CarsIslandBacklog7.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article61/assets/CarsIslandBacklog7.png?raw=true" alt="Image not found"/>
 </p>
 
 Once you set iterations, you can open *Sprints* tab and see all the *User Stories* for the specific iteration:
