@@ -107,7 +107,7 @@ Once you set iterations, you can open *Sprints* tab and see all the *User Storie
 
 
 <p align="center">
-<img src="/images/devisland/article61/assets/CarsIslandBacklog9.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article61/assets/CarsIslandBacklog9.png?raw=true" alt="Image not found"/>
 </p>
 
 
