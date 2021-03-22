@@ -148,7 +148,7 @@ Wikis in the Azure DevOps can be helpful when it comes to collecting information
 Cool feature is an option to keep Wiki in the GIT repository. Using it in this way we can review the proposed changes before the will apprear officially in the Wiki:
 
 <p align="center">
-<img src="/images/devisland/article61/assets/CarsIslandBacklog15.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article61/assets/CarsIslandBacklog15.png?raw=true" alt="Image not found"/>
 </p>
 
 
