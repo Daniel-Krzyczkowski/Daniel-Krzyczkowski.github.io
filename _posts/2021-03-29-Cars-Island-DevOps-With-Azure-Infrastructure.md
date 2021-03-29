@@ -91,7 +91,7 @@ Let's talk about variable group created for DEV environment. As you can see I de
 We can mark some variable values to be secrets - then they will not appear in the pipeline's logs and they will be hidden:
 
 <p align="center">
-<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps8.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps8.png?raw=true" alt="Image not found"/>
 </p>
 
 **Important**
