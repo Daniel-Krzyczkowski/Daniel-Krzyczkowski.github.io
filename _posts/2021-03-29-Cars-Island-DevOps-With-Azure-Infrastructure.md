@@ -42,7 +42,7 @@ Before I continue, a small disclaimer. You can use different branching strategie
 In the Cars Island GIT repository for ARM templates I have one branch: *master*. This branch has policies enabled so direct commits are not allowed:
 
 <p align="center">
-<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps4.png?raw=true" alt="Image not found"/>
 </p>
 
 For the *master* branch I applied the below policies:
@@ -406,7 +406,7 @@ Once we define new pipeline in the Azure DevOps, we can link variable groups so 
 Then select *Triggers*:
 
 <p align="center">
-<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps12.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps12.png?raw=true" alt="Image not found"/>
 </p>
 
 Then switch to the *Variables* section and select *Variable groups*. From this place you can link any variable group to use variables in the pipeline:
@@ -432,7 +432,7 @@ What about scenarios in which we want to control when there is a deployment done
 As you remember, I defined three environments in the Azure DevOps mentioned above in the article: DEV, TEST, and PROD. Now for each environment, I can define approvals and checks. To do it, we have to open specific environment, like PROD, and select three dots, and then select *Approvals and checks*:
 
 <p align="center">
-<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps15.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article62/assets/CarsIslandInfrastructureDevOps15.png?raw=true" alt="Image not found"/>
 </p>
 
 
