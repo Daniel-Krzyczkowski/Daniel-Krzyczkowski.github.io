@@ -1,6 +1,6 @@
 ---
 title: "Cars Island - DevOps practices for the application built on Azure - part 14"
-excerpt: "This article presents how to use some DevOps practices to control the release of the application built on the Azure cloud."
+excerpt: "This article presents how to use some DevOps practices to control the release of the application built on the Azure cloud"
 header:
   image: /images/devisland/article63/assets/CarsIslandAzureAppDevOps1.jpg
 ---
