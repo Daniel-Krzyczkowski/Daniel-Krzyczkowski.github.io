@@ -48,23 +48,23 @@ Below I present modified node.js application which is used to display QR codes:
 Below I the user experience in the Microsoft Authenticator App:
 
 <p align="center">
-<img src="/images/devisland/article64/assets/tmf-vc6.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article64/assets/tmf-vc6.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article64/assets/tmf-vc7.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article64/assets/tmf-vc7.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article64/assets/tmf-vc8.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article64/assets/tmf-vc8.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article64/assets/tmf-vc9.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article64/assets/tmf-vc9.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article64/assets/tmf-vc10.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article64/assets/tmf-vc10.png?raw=true" alt="Image not found"/>
 </p>
 
 
