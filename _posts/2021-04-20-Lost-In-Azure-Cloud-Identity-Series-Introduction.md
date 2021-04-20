@@ -35,13 +35,13 @@ We will use below solution architecture to discuss and implement user authentica
 
 As you can see above (you can zoom in on the image, or open it in the new tab) there is a sample solution built on the Azure cloud. Let's discuss this architecture in detail because we will focus on each part of it in the next articles.
 
-### Azure Active Directory
+### Azure Active Directory and Corporate Web App
 
 Azure Active Directory is used to manage access to corporate applications - in this case to the Tech Mind Factory Corporate Web Application. Employees of Tech Mind Factory company can sign in using their corporate accounts and access web app functionalities. Important fact - these employees can have different application roles assigned. The authorization mechanism implemented in the application prevents access to unauthorized pages once the user role is verified. Roles are injected in the tokens returned from the Azure Active Directory service, once the user is authenticated.
 
-### Azure Active Directory B2C
+### Azure Active Directory B2C and Customer Desktop App
 
-Tech Mind Factory company has also an application that is available for customers - Tech Mind Factory Customer Application. This is a desktop application (Universal Window Platform app) where customers can register and sign in. To easily manage users and their access to the application, Azure Active Directory B2C service is used. Why second Active Directory? Because we do not want to store user accounts, corporate users and customers, in one directory. What is more, we want to provide flexibility to customers so they can create their accounts themselves and use social media accounts (Facebook) to sign in.
+Tech Mind Factory company has also an application that is available for customers - Tech Mind Factory Customer Application. This is a desktop application (Universal Window Platform app) where customers can register and sign in. To easily manage users and their access to the application, Azure Active Directory B2C service is used. Why second Active Directory? Because we do not want to store user accounts, corporate users and customers, in one directory. What is more, we want to provide flexibility to customers so they can create their accounts themselves and use social media accounts (Facebook) to sign in. One important point - because of federation between Azure AD and Azure AD B2C tenants, Tech Mind Factory employees (corporate users) can access customer application using their corporate accounts registered in the Azure AD tenant.
 
 ### Tech Mind Factory Shared Web API
 
