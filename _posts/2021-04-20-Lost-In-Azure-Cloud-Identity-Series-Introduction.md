@@ -2,11 +2,11 @@
 title: "Lost in Azure cloud identity - part 1"
 excerpt: "This article presents an introduction to the series about using Azure cloud services for identity management"
 header:
-  image: /images/devisland/article65/assets/CarsIslandAzureAppDevOps1.png
+  image: /images/devisland/article65/assets/IdentityOnAzure-part1-1.png
 ---
 
 <p align="center">
-<img src="/images/devisland/article65/assets/CarsIslandAzureAppDevOps1.png?raw=true" alt="Lost in Azure cloud identity - part 1"/>
+<img src="/images/devisland/article65/assets/IdentityOnAzure-part1-1.png?raw=true" alt="Lost in Azure cloud identity - part 1"/>
 </p>
 
 
@@ -17,7 +17,7 @@ Once I finished the Cars Island series on my blog (you can check previous articl
 It does not matter what kind of application you build, probably always you will touch the identity area. User authentication, authorization, ID Token, Access Token, Scopes, Authority - sounds familiar? In this series we will go through the solution and topics I present below. I hope this series will help you - the developer, understand the integration and concepts behind identity implementation using Azure cloud services.
 
 <p align="center">
-<img src="/images/devisland/article65/assets/CarsIslandAzureAppDevOps5.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article65/assets/IdentityOnAzure-part1-5.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -30,17 +30,46 @@ This series assumes that you already have some basic knowledge around identity c
 We will use below solution architecture to discuss and implement user authentication and authorization. We will see how to use Azure Active Directory and Azure Active Directory B2C to secure applications:
 
 <p align="center">
-<img src="/images/devisland/article65/assets/CarsIslandAzureAppDevOps2.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article65/assets/IdentityOnAzure-part1-2.png?raw=true" alt="Image not found"/>
 </p>
+
+As you can see above (you can zoom in on the image, or open it in the new tab) there is a sample solution built on the Azure cloud. Let's discuss this architecture in detail because we will focus on each part of it in the next articles.
+
+#### Azure Active Directory
+
+Azure Active Directory is used to manage access to corporate applications - in this case to the Tech Mind Factory Corporate Web Application. Employees of Tech Mind Factory company can sign in using their corporate accounts and access web app functionalities. Important fact - these employees can have different application roles assigned. The authorization mechanism implemented in the application prevents access to unauthorized pages once the user role is verified. Roles are injected in the tokens returned from the Azure Active Directory service, once the user is authenticated.
+
+#### Azure Active Directory B2C
+
+Tech Mind Factory company has also an application that is available for customers - Tech Mind Factory Customer Application. This is a desktop application (Universal Window Platform app) where customers can register and sign in. To easily manage users and their access to the application, Azure Active Directory B2C service is used. Why second Active Directory? Because we do not want to store user accounts, corporate users and customers, in one directory. What is more, we want to provide flexibility to customers so they can create their accounts themselves and use social media accounts (Facebook) to sign in.
+
+#### Tech Mind Factory Shared Web API
+
+Web API is written in ASP .NET Core .NET 5, which returns data for both applications - TMF Customer Application and TMF Corporate Web Application. This Web API is written in a way that enables users to access tokens returned from both identity services - Azure Active Directory and Azure Active Directory B2C. I want to present how to use multiple bearer token authentication schemes.
+
+#### Tech Mind Factory Identity Web API
+
+This API, written in ASP .NET Core .NET 5, was created to provide an easy way to create user accounts in the Azure AD B2C using Microsoft Graph API (programmatically) and to provide a migration mechanism. There are some scenarios in the real world where we want to migrate user account from one identity system to another. This API presents how to do it using Azure AD B2C and Microsoft Graph API.
+
+#### Tech Mind Factory Identity Monitoring
+
+In the Tech Mind Factory corporation, there is a requirement to monitor Azure AD B2C tenants and collect sign-in and auditing logs. Azure Monitor is used to route Azure Active Directory B2C (Azure AD B2C) sign-in and auditing logs to Log Analytics workspace to analyze data, create dashboards, and alert on specific events.
+
+#### Key Vault and Azure Application Insights
+
+Each solution requires good monitoring, this is why the Azure Application Insights service is used to monitor APIs performance and issues. Key Vault is a must-have if we want to store configuration securely in the cloud.
+
+
+## Source code?
 
 There will be also a dedicated repository on my GitHub shared with the next articles where you will find code samples used in this solution.
 
 <p align="center">
-<img src="/images/devisland/article65/assets/CarsIslandAzureAppDevOps3.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article65/assets/IdentityOnAzure-part1-3.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article65/assets/CarsIslandAzureAppDevOps4.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article65/assets/IdentityOnAzure-part1-4.png?raw=true" alt="Image not found"/>
 </p>
 
 Below I present the articles which will be included in the series:
