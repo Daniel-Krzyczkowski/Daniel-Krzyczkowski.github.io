@@ -35,27 +35,27 @@ We will use below solution architecture to discuss and implement user authentica
 
 As you can see above (you can zoom in on the image, or open it in the new tab) there is a sample solution built on the Azure cloud. Let's discuss this architecture in detail because we will focus on each part of it in the next articles.
 
-#### Azure Active Directory
+### Azure Active Directory
 
 Azure Active Directory is used to manage access to corporate applications - in this case to the Tech Mind Factory Corporate Web Application. Employees of Tech Mind Factory company can sign in using their corporate accounts and access web app functionalities. Important fact - these employees can have different application roles assigned. The authorization mechanism implemented in the application prevents access to unauthorized pages once the user role is verified. Roles are injected in the tokens returned from the Azure Active Directory service, once the user is authenticated.
 
-#### Azure Active Directory B2C
+### Azure Active Directory B2C
 
 Tech Mind Factory company has also an application that is available for customers - Tech Mind Factory Customer Application. This is a desktop application (Universal Window Platform app) where customers can register and sign in. To easily manage users and their access to the application, Azure Active Directory B2C service is used. Why second Active Directory? Because we do not want to store user accounts, corporate users and customers, in one directory. What is more, we want to provide flexibility to customers so they can create their accounts themselves and use social media accounts (Facebook) to sign in.
 
-#### Tech Mind Factory Shared Web API
+### Tech Mind Factory Shared Web API
 
 Web API is written in ASP .NET Core .NET 5, which returns data for both applications - TMF Customer Application and TMF Corporate Web Application. This Web API is written in a way that enables users to access tokens returned from both identity services - Azure Active Directory and Azure Active Directory B2C. I want to present how to use multiple bearer token authentication schemes.
 
-#### Tech Mind Factory Identity Web API
+### Tech Mind Factory Identity Web API
 
 This API, written in ASP .NET Core .NET 5, was created to provide an easy way to create user accounts in the Azure AD B2C using Microsoft Graph API (programmatically) and to provide a migration mechanism. There are some scenarios in the real world where we want to migrate user account from one identity system to another. This API presents how to do it using Azure AD B2C and Microsoft Graph API.
 
-#### Tech Mind Factory Identity Monitoring
+### Tech Mind Factory Identity Monitoring
 
 In the Tech Mind Factory corporation, there is a requirement to monitor Azure AD B2C tenants and collect sign-in and auditing logs. Azure Monitor is used to route Azure Active Directory B2C (Azure AD B2C) sign-in and auditing logs to Log Analytics workspace to analyze data, create dashboards, and alert on specific events.
 
-#### Key Vault and Azure Application Insights
+### Key Vault and Azure Application Insights
 
 Each solution requires good monitoring, this is why the Azure Application Insights service is used to monitor APIs performance and issues. Key Vault is a must-have if we want to store configuration securely in the cloud.
 
