@@ -40,7 +40,7 @@ There will be also a dedicated repository on my GitHub shared with the next arti
 </p>
 
 <p align="center">
-<img src="/images/devisland/article65/assets/CarsIslandAzureAppDevOps4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article65/assets/CarsIslandAzureAppDevOps4.png?raw=true" alt="Image not found"/>
 </p>
 
 Below I present the articles which will be included in the series:
