@@ -769,42 +769,7 @@ Great. Now it is time to add permission for TMF Customer UWP app to obtain acces
 <img src="/images/devisland/article66/assets/IdentityOnAzure-part2-53.PNG?raw=true" alt="Image not found"/>
 </p>
 
-Great, that's it. Now it is time to see the application source code. Again, you can find TMF Shared Web API source code on my [GitHub](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/tree/main/src/tmf-identity-shared-web-api). We already discussed its structure when we talk about integration with Azure AD but let's see what has to be added to integrate TMF Shared API with Azure AD B2C. In the *[appsettings.json](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/main/src/tmf-identity-shared-web-api/TMF.Shared.API/appsettings.json)* file include below section:
-
-
-```json
-  "AzureAdB2C": {
-    "Instance": "https://<<azure-ad-b2c-tenant-name>>.b2clogin.com",
-    "TenantId": "",
-    "ClientId": "",
-    "Domain": "<<azure-ad-b2c-tenant-name>>.onmicrosoft.com",
-    "SignUpSignInPolicyId": "B2C_1A_SigninSignUp"
-  }
-```
-
-* Tenant - the name of your Azure AD B2C tenant, in my case this is *techmindfactoryidentity* with *b2clogin.com* suffix
-* Tenant ID - identifier of the Azure AD B2C tenant. It can be found under *Overview* tab in the Azure AD B2C catalog, when clicking Azure Active Directory in the Azure portal
-* ClientId - ID of the TMF Shared API application we registered before in the Azure portal
-* Domain - the name of your Azure AD B2C tenant, in my case this is *techmindfactoryidentity* with *onmicrosoft.com* suffix
-* SignUpSignInPolicyId - name of the [custom policy](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/main/src/tmf-identity-ad-b2c/custom-policies/Signup_Signin.xml) responsible for user authentication and registration
-
-As you remember, in the [Startup.cs](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/main/src/tmf-identity-shared-web-api/TMF.Shared.API/Startup.cs) file in the *[ConfigureServices](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/02ccec67cfd9c7d12bfaf3b56bc6ee40633def3d/src/tmf-identity-shared-web-api/TMF.Shared.API/Startup.cs#L22)* method we have to add below code:
-
- ```csharp
-            services.AddMicrosoftIdentityWebApiAuthentication(Configuration, "AzureAdB2C", "AADB2C", false);
-            services.AddMicrosoftIdentityWebApiAuthentication(Configuration, "AzureAd", "AAD", false);
-
-            services
-                    .AddAuthorization(options =>
-                    {
-                        options.DefaultPolicy = new AuthorizationPolicyBuilder()
-                            .RequireAuthenticatedUser()
-                            .AddAuthenticationSchemes("AAD", "AADB2C")
-                            .Build();
-                    });
-```
-
-Notice that in the above code we add two authentication schemes: *AAD* for the Azure Active Directory tokens and *AADB2C* for the Azure Active Directory B2C tokens. This is it. Now we can see how to setup TMF Customer UWP application and how to call TMF Shared API.
+Great, that's it. Now it is time to see the application source code. 
 
 
 ### Integrate UWP desktop app with Azure AD B2C using Microsoft Identity Client library
@@ -855,10 +820,10 @@ First, let's look at the constructor code:
         }
 ```
 
-We have to create instance which implements *IPublicClientApplication* interface. As you can see, we have to pass parameters from the *AuthenticationServiceConfiguration* class described above. Then there is *[Authenticate](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/02ccec67cfd9c7d12bfaf3b56bc6ee40633def3d/src/tmf-identity-customer-uwp-app/TMF.Customer.UWP/Services/Authentication/AuthenticationService.cs#L23)* method:
+We have to create instance which implements *IPublicClientApplication* interface. As you can see, we have to pass parameters from the *AuthenticationServiceConfiguration* class described above. Then there is *[AuthenticateAsync](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/02ccec67cfd9c7d12bfaf3b56bc6ee40633def3d/src/tmf-identity-customer-uwp-app/TMF.Customer.UWP/Services/Authentication/AuthenticationService.cs#L23)* method:
 
  ```csharp
-        public async Task<AuthenticationData> Authenticate()
+        public async Task<AuthenticationData> AuthenticateAsync()
         {
             AuthenticationResult authResult = null;
             IEnumerable<IAccount> accounts = await _publicClientApp.GetAccountsAsync();
@@ -898,10 +863,10 @@ We have to create instance which implements *IPublicClientApplication* interface
 ```
 Please note that first time we call *_publicClientApp.AcquireTokenSilent* method. This is because MSAL caches tokens so once the user is authenticated, ID token, access token and refresh tokens are cached automatically. You can read more about token cache handling on different platforms in the [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-token-cache-serialization).
 
-If there is an access token in the cache but it is expired, MSAL will use refresh token to obtain a new access token and will update it in the cache. If there are no tokens in a cache, *MsalUiRequiredException* is handled and we have to call *[HandleFirstTimeAuthentication](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/02ccec67cfd9c7d12bfaf3b56bc6ee40633def3d/src/tmf-identity-customer-uwp-app/TMF.Customer.UWP/Services/Authentication/AuthenticationService.cs#L78)* method then:
+If there is an access token in the cache but it is expired, MSAL will use refresh token to obtain a new access token and will update it in the cache. If there are no tokens in a cache, *MsalUiRequiredException* is handled and we have to call *[HandleFirstTimeAuthenticationAsync](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/02ccec67cfd9c7d12bfaf3b56bc6ee40633def3d/src/tmf-identity-customer-uwp-app/TMF.Customer.UWP/Services/Authentication/AuthenticationService.cs#L78)* method then:
 
  ```csharp
-        private async Task<AuthenticationResult> HandleFirstTimeAuthentication(IEnumerable<IAccount> accounts)
+        private async Task<AuthenticationResult> HandleFirstTimeAuthenticationAsync(IEnumerable<IAccount> accounts)
         {
             try
             {
@@ -953,12 +918,6 @@ If the user wants to sign out, there is *_publicClientApp.RemoveAsync* method in
 
 Please notice that at the moment of writing this article, tokens are just removed from the cache. If you copied the token before, it is still valid before its expiration date.
 
-First, we have to register a new user account. To do it we have to click the signup link on the login page. There should be a registration page displayed. As you can see, users can register themselves and start using the app:
-
-<p align="center">
-<img src="/images/devisland/article66/assets/IdentityOnAzure-part2-87.PNG?raw=true" alt="Image not found"/>
-</p>
-
 
 Once we obtain access token after authentication, we can call TMF Shared API from the *[ApiService class](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/blob/main/src/tmf-identity-customer-uwp-app/TMF.Customer.UWP/Services/Api/ApiService.cs)*:
 
@@ -985,7 +944,7 @@ Once we obtain access token after authentication, we can call TMF Shared API fro
     }
 ```
 
-As you can see above, the access token is passed in the *Authorization* header. If you do not add it, API will return 401 HTTP status code, unauthorized. When call is successfull you should see greeting response.
+As you can see above, the access token is passed in the *Authorization* header. If you do not add it, API will return 401 HTTP status code, unauthorized.
 
 Below you can see the content of the access token. Note that it contains *scp* claim with value *API.Read.Access*. There is also *iss* claim which stands for *issuer*. This claim identifies the principal that issued the JWT so in this case our Azure AD B2C tenant. *aud* claim identifies the recipients that the JWT is intended for so in this case TMF Shared API registered in our Azure AD B2C tenant. There is also information about the user like the first name and last name:
 
@@ -996,9 +955,9 @@ Below you can see the content of the access token. Note that it contains *scp* c
 
 ## Federation between Azure Active Directory and Azure Active Directory B2C
 
-You probably have noticed that on the login page displayed by Azure AD B2C I have also *Facebook* and *TMF Corporate User* buttons. *Facebook* button enables login with your existing Facebook account. The user is redirected to Facebook, provides credentials there, and then is redirected to the Azure AD B2C again. Why Azure AD B2C trusts Facebook? There is a federation in place I described at the beginning of this article. Under [this link](https://docs.microsoft.com/en-us/azure/active-directory-b2c/identity-provider-facebook?pivots=b2c-custom-policy) you can read more about how to setup federation between Azure AD B2C and Facebook. Notice that you have to register an application in Facebook Developers Portal and make a reference to this application in the custom policies code.
+You probably have noticed that on the login page displayed by Azure AD B2C I have also *Facebook* and *TMF Corporate User* buttons. *Facebook* button enables login with your existing Facebook account. User is redirected to Facebook, provides credentias there and then is redirected to the Azure AD B2C again. Why Azure AD B2C trusts Facebook? There is a federation in place I described at the beginning of this article. Under [this link](https://docs.microsoft.com/en-us/azure/active-directory-b2c/identity-provider-facebook?pivots=b2c-custom-policy) you can read more about how to setup federation between Azure AD B2C and Facebook. Notice that you have to register an application in Facebook Developers Portal and make a reference to this application in the custom policies code.
 
-When it comes to signing in with a corporate account, the mechanism is the same. In the [official documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/identity-provider-azure-ad-single-tenant?pivots=b2c-custom-policy) you can read more about how to setup federation between Azure AD and Azure AD B2C. Notice that, exactly like for Facebook and any other identity provider, you have to register an application in the Azure AD Portal and make a reference to this application in the custom policies code.
+When it comes to signing in with a corporate account, the mechanism is exactly the same. In the [official documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/identity-provider-azure-ad-single-tenant?pivots=b2c-custom-policy) you can read more about how to setup federation between Azure AD and Azure AD B2C. Notice that, exactly like for Facebook and any other identity provider, you have to register an application in the Azure AD Portal and make a reference to this application in the custom policies code.
 
 
 # Summary
