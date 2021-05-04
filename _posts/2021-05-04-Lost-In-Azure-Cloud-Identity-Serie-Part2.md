@@ -40,6 +40,14 @@ In my articles, I will focus on particular topics and I will make some assumptio
 [Overview of the Microsoft identity platform for developers](https://www.youtube.com/watch?v=zjezqZPPOfc)
 
 
+**Solution architecture discussed in this series**
+
+<p align="center">
+<img src="/images/devisland/article66/assets/IdentityOnAzure-part2-2.png?raw=true" alt="Image not found"/>
+</p>
+
+
+
 ## Difference between Azure Active Directory and Azure Active Directory B2C
 
 
