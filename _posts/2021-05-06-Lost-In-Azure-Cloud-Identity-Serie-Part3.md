@@ -58,7 +58,7 @@ If you have read my [previous](https://daniel-krzyczkowski.github.io/Lost-In-Azu
 These two above users were assigned to the Tech Mind Factory Corporate Web Application (Blazor app):
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part3-17.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article67/assets/IdentityOnAzure-part3-17.PNG?raw=true" alt="Image not found"/>
 </p>
 
 As you can see above, TMF Corporate Web App has two tabs:
