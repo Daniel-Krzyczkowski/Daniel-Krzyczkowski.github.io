@@ -48,7 +48,7 @@ In this specific article I will focus on the custom policies with branded pages 
 Once you [create Azure AD B2C tenant](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-tenant) and [configure Identity Experience Framework](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy) you are ready to start using custom policies and branded pages. As you probably read in the docuemntation, Microsoft provides [custom policies starter pack](https://github.com/Azure-Samples/active-directory-b2c-custom-policy-starterpack) on GitHub. Once you upload them to the Azure AD B2C, you will see the default look & feel:
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-3.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-3.PNG?raw=true" alt="Image not found"/>
 </p>
 
 This is quite nice but our goal is to provided tailored user experience and branding which is aligned with our company branding. In my case I modified custom policies to use my Tech Mind Factory branding:
