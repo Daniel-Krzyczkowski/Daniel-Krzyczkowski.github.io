@@ -14,7 +14,7 @@ header:
 
 I have decided to create series related to identity and access management using Azure cloud services. Important note first - I will focus more on the development side and integration aspects. This series is focused on developers who would like to understand different concepts and mechanisms around identity using Azure cloud services like Azure Active Directory and Azure Active Directory B2C. It does not mean that if you are an architect or administrator, you will not find anything interesting. I think that this series can be helpful for everyone who wants to learn more about identity services in the Microsoft Azure cloud.
 
-This is the fourth article from the series. In this article, we are going to talk about Azure AD B2C custom policies with branded pages to provide tailored user experience for login and registration pages.
+This is the fourth article from the series. In this article, we are going to talk about Azure AD B2C custom policies with branded pages to provide a tailored user experience for login and registration pages.
 
 **Important**
 
@@ -26,7 +26,7 @@ Source code of all applications and AD B2C custom policies are available on my [
 
 **Links to additional helpful resources**
 
-In this specific article I will focus on the custom policies with branded pages but I will not show how to setup Identity Experience Framework in the Azure Active Directory B2C. There is really good documentation I recommend you to check:
+In this specific article, I will focus on the custom policies with branded pages but I will not show how to set up Identity Experience Framework in the Azure Active Directory B2C. There is really good documentation I recommend you to check:
 
 [Tutorial: Create an Azure Active Directory B2C tenant](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-tenant)
 
@@ -51,7 +51,7 @@ Once you [create Azure AD B2C tenant](https://docs.microsoft.com/en-us/azure/act
 <img src="/images/devisland/article68/assets/IdentityOnAzure-part4-3.PNG?raw=true" alt="Image not found"/>
 </p>
 
-This is quite nice but our goal is to provided tailored user experience and branding which is aligned with our company branding. In my case I modified custom policies to use my Tech Mind Factory branding:
+This is quite nice but our goal is to provide a tailored user experience and branding which is aligned with our company branding. In my case I modified custom policies to use my Tech Mind Factory branding:
 
 <p align="center">
 <img src="/images/devisland/article68/assets/IdentityOnAzure-part4-4.PNG?raw=true" alt="Image not found"/>
@@ -82,7 +82,7 @@ Under [this link](https://docs.microsoft.com/en-us/azure/active-directory-b2c/cu
 <img src="/images/devisland/article68/assets/IdentityOnAzure-part4-9.PNG?raw=true" alt="Image not found"/>
 </p>
 
-There is also a great explanation how Azure AD B2C injects content in the *api* div section:
+There is also a great explanation of how Azure AD B2C injects content in the *api* div section:
 
 Each page in the user experience loads its content from the URL you specify for that page (from the Azure Blob Storage in this case). After content is loaded from the blob URL, it's merged with an HTML fragment inserted by Azure AD B2C (in the *api* div section), and then the page is displayed to the user:
 
@@ -188,7 +188,7 @@ Once you upload above HTML, CSS, and assets file to the Azure Blob Storage, you 
       </ContentDefinition>
 ```
 
-As you can see above, in the *LoadUri* I reference the specific branding page hosted on the Azure Blob Storage. Note that for the *RecoveryUri* I also repladed the default value with the link to the exception page html.
+As you can see above, in the *LoadUri* I reference the specific branding page hosted on the Azure Blob Storage. Note that for the *RecoveryUri* I also replaced the default value with the link to the exception page html.
 
 Important note - each html file name matches *ContentDefinition ID* so for instance in the content definition called  *api.selfasserted* we reference the *selfAsserted.html* file.
 
@@ -205,4 +205,4 @@ The final result after uploading to the portal should look like below:
 
 # Summary
 
-In this article we discussed how to implement user authorization using Azure Active Directory App Roles and authorization handlers. I encourage you to check the source code on my [GitHub](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/tree/main/src/tmf-identity-corporate-web-app) for the Tech Mind Factory Corporate Web App to learn more in detials. You can also ask if the same mechanism can be used with ASP .NET Core Web APIs. Of course it can be used and here is the sample from [my GitHub](https://github.com/Daniel-Krzyczkowski/IdentityDeveloperTemplates/tree/master/src/app-templates/IdentityDeveloperTemplates.AzureAD.Authz.API) how to achieve that. I hope this will help you.
+In this article, we discussed how to implement user authorization using Azure Active Directory App Roles and authorization handlers. I encourage you to check the source code on my [GitHub](https://github.com/Daniel-Krzyczkowski/Lost-In-Azure-Cloud-Identity/tree/main/src/tmf-identity-corporate-web-app) for the Tech Mind Factory Corporate Web App to learn more in details. You can also ask if the same mechanism can be used with ASP .NET Core Web APIs. Of course, it can be used, and here is the sample from [my GitHub](https://github.com/Daniel-Krzyczkowski/IdentityDeveloperTemplates/tree/master/src/app-templates/IdentityDeveloperTemplates.AzureAD.Authz.API) how to achieve that. I hope this will help you.
