@@ -2,11 +2,11 @@
 title: "Lost in Azure cloud identity - part 4"
 excerpt: "This article presents how to use Azure AD B2C custom policies with branded pages"
 header:
-  image: /images/devisland/article68/assets/IdentityOnAzure-part3-1.png
+  image: /images/devisland/article68/assets/IdentityOnAzure-part4-1.png
 ---
 
 <p align="center">
-<img src="/images/devisland/article68/assets/IdentityOnAzure-part3-1.png?raw=true" alt="Lost in Azure cloud identity - part 4"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-1.png?raw=true" alt="Lost in Azure cloud identity - part 4"/>
 </p>
 
 
