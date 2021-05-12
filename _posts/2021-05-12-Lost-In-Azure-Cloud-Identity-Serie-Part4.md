@@ -38,7 +38,7 @@ In this specific article I will focus on the custom policies with branded pages 
 **Solution architecture discussed in this series**
 
 <p align="center">
-<img src="/images/devisland/article68/assets/IdentityOnAzure-part3-2.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-2.png?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -54,7 +54,7 @@ Once you [create Azure AD B2C tenant](https://docs.microsoft.com/en-us/azure/act
 This is quite nice but our goal is to provided tailored user experience and branding which is aligned with our company branding. In my case I modified custom policies to use my Tech Mind Factory branding:
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-4.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -64,22 +64,22 @@ This is quite nice but our goal is to provided tailored user experience and bran
 User interface customization is possible in the Azure AD B2C with HTML templates. These templates can be found on [GitHub](https://github.com/azure-ad-b2c/html-templates). They are provided by Microsoft. As you can see there are three default templates you can use as a base for modifications:
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-6.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-6.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-7.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-7.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-8.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-8.png?raw=true" alt="Image not found"/>
 </p>
 
 
 Under [this link](https://docs.microsoft.com/en-us/azure/active-directory-b2c/customize-ui-with-html?pivots=b2c-custom-policy) you can find step-by-step explanation how to modify above branding pages and host them on the Azure Blob Storage. I did the same, my branded pages are hosted on the public blob in the Azure cloud:
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-9.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-9.PNG?raw=true" alt="Image not found"/>
 </p>
 
 There is also a great explanation how Azure AD B2C injects content in the *api* div section:
@@ -87,7 +87,7 @@ There is also a great explanation how Azure AD B2C injects content in the *api* 
 Each page in the user experience loads its content from the URL you specify for that page (from the Azure Blob Storage in this case). After content is loaded from the blob URL, it's merged with an HTML fragment inserted by Azure AD B2C (in the *api* div section), and then the page is displayed to the user:
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-5.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-5.png?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -195,11 +195,11 @@ Important note - each html file name matches *ContentDefinition ID* so for insta
 The final result after uploading to the portal should look like below:
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-4.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article67/assets/IdentityOnAzure-part4-10.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article68/assets/IdentityOnAzure-part4-10.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
