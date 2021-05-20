@@ -17,7 +17,7 @@ I have decided to create series related to identity and access management using 
 This is the last article from the series where I would like to write a little bit about integration with Azure Monitor to route Azure Active Directory B2C sign-in and auditing logs to different monitoring solutions. In this specific article, we will see how to enable log routing to the Log Analytics Workspace.
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part4-3.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-3.PNG?raw=true" alt="Image not found"/>
 </p>
 
 **Important**
@@ -38,7 +38,7 @@ In this specific article, I will focus on the final result of the integration. I
 **Solution architecture discussed in this series**
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part4-2.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-2.png?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -48,15 +48,15 @@ In this specific article, I will focus on the final result of the integration. I
 Workbooks provide a flexible canvas for data analysis and the creation of rich visual reports within the Azure portal. I created workboob accordingly to the documentation and here is the final result:
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part4-4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-4.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part4-5.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-5.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part4-6.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-6.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -68,7 +68,7 @@ As you can see there are two tabs:
 You can also switch to the *Logs* tab and use *Kusto* queries to display charts:
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part4-7.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-7.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -77,7 +77,7 @@ You can also switch to the *Logs* tab and use *Kusto* queries to display charts:
 Once the Log Analytics Workspace is ready and you have your workbook created, you can benefit from using *Alerts*:
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part4-8.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-8.PNG?raw=true" alt="Image not found"/>
 </p>
 
 You can create alerts based on specific performance metrics or when certain events are created, the absence of an event or several events are created within a particular time window. For example, alerts can be used to notify you when an average number of sign-in exceeds a certain threshold.
