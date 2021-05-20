@@ -17,7 +17,7 @@ I have decided to create series related to identity and access management using 
 This is the last article from the series where I would like to write a little bit about integration with Azure Monitor to route Azure Active Directory B2C sign-in and auditing logs to different monitoring solutions. In this specific article, we will see how to enable log routing to the Log Analytics Workspace.
 
 <p align="center">
-<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-3.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article72/assets/IdentityOnAzure-part8-3.png?raw=true" alt="Image not found"/>
 </p>
 
 **Important**
