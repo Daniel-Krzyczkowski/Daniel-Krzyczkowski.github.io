@@ -18,8 +18,9 @@ In my previous series called *Lost in Azure Cloud Identity* (you can find the fi
 # FEITIAN BioPass FIDO2 Security Keys
 
 For tests I used [FEITIAN BioPass FIDO2 Security Keys](https://www.ftsafe.com/Products/FIDO/Bio) model K26 (USB-C), and K27 (USB-A). It is worth to mention that FEITIAN is a member of Microsoft Intelligent Security Association (MISA).
+
 <p align="center">
-<img src="/images/devisland/article74/assets/AzureAdPasswordless1.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article74/assets/AzureAdPasswordless2.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Configuration is straightforward so let me explain the steps.
