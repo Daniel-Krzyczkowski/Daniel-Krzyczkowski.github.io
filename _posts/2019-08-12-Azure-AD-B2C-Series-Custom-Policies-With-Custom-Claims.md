@@ -58,7 +58,7 @@ They can be found in the [official documentation](https://docs.microsoft.com/en-
 
 **Custom claims (attributes)**
 
-Built-in claims are fine but what about scenarios where we would like to use custom claims - like uniqie ID from external system or birthday? Then we need to add custom clais. In this section I will present how to do it.
+Built-in claims are fine but what about scenarios where we would like to use custom claims - like uniqie ID from external system or birthday? Then we need to add custom claims. In this section I will present how to do it.
 
 # Create new application in the Azure Active Directory
 
