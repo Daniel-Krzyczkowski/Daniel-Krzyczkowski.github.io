@@ -132,7 +132,7 @@ Open the file. In the "ClaimsProviders" block you will see that there is already
 
 Let's discuss what is happening here.
 
-First of all we have to declare Azure Function as a Claims Provider. In the "Metadata" block we have to provide Azure Function URL togethe with code parameter - it is required because if we do not add it, unauthorized response will be returned.
+First of all we have to declare Azure Function as a Claims Provider. In the "Metadata" block we have to provide Azure Function URL together with code parameter - it is required because if we do not add it, unauthorized response will be returned.
 
 <p align="center">
 <img src="/images/devisland/article23/assets/B2cSeriesExternalServiceCall5.PNG?raw=true" alt="Image not found"/>
