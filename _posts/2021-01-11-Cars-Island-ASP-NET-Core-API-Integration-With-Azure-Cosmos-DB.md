@@ -239,7 +239,7 @@ Now let's look at *[CosmosDbDataRepository](https://github.com/Daniel-Krzyczkows
     }
 ```
 
-As you can see it implementes *IDataRepository<T>* interface and handles operations on data (including logging which can be optional here). Now in the final repositories, there is only one property initialized with the name of the container created in the Azure Cosmos DB. Here is *[CarRepository](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.Infrastructure/Data/CarRepository.cs)* example:
+As you can see it implementes *IDataRepository<T>* interface and handles operations on data (including logging which can be optional here). Now in the final repositories, there is only one property initialized with the name of the container created in the Azure Cosmos DB. Here is [*CarRepository*](https://github.com/Daniel-Krzyczkowski/Cars-Island-On-Azure/blob/master/src/web-api/CarsIsland.Infrastructure/Data/CarRepository.cs) example:
 
 ```csharp
     public class CarRepository : CosmosDbDataRepository<Car>
