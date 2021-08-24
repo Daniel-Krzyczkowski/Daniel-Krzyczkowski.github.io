@@ -83,7 +83,7 @@ Azure SendGrid service enables sending customized emails. It is great because we
 
 ## Azure Cosmos DB
 
-Azure Service Bus is a globally distributed database available in the Azure cloud. Data about all cars and reservations is stored in this database in the Cars Island solution.
+Azure Cosmos DB is a globally distributed database available in the Azure cloud. Data about all cars and reservations is stored in this database in the Cars Island solution.
 
 
 ## Azure Storage Account

@@ -73,62 +73,63 @@ Smart Accounting web application was created for end users. Users can register a
 
 ## Azure Active Directory B2C (Azure AD B2C)
 
-Aaa
+Azure Active Directory B2C is an identity service in the Azure cloud that enables user authentication and management. Implementing own identity service can be challenging. Try to think about data storage, secure connections, or token generation and validation. With Azure AD B2C, adding user authentication is much easier. In the Smart Accounting solution users can create accounts and login to access some of the functionalities. What is more - with Azure AD B2C, login, registration, password reset, or profile edit pages can be customized and branded (like with the company logo or background). You do not have to implement login, or registration views yourself.
 
 
 ## Azure Storage Account
 
-Aaa
+Azure Storage Account is one of the oldest services available in the Azure cloud. It provides an easy way to store different kind of files using Blob Storage. In the Smart Accounting solution, it is used to store invoice files uploaded by users.
+
 
 ## Azure SendGrid
 
-Aaa
+Azure SendGrid service enables sending customized emails. It is great because we can create email templates but also it provides SDK that we can use to implement emails sending in the source code. In the Smart Accounting solution it is used to send emails with verification codes when user registers using Azure AD B2C identity service.
 
 
 ## Azure Cosmos DB
 
-Aaa
+Azure Cosmos DB is a globally distributed database available in the Azure cloud. User invoice data is stored in this database in the Smart Accounting solution.
 
 
 ## Azure SQL Database
 
-Aaa
+Azure SQL is relational database. In the Smart Accounting solution it is used to store logs about events, like successfully processed invoices.
 
 
 ## Azure API Management
 
-Aaa
+Azure API Management is a service that works as a gateway to different APIs behind it. With Azure API Management you can secure your APIs. It provides a different kind of policies so for instance we can implement throttling or validate tokens. In the Smart Accounting solution, it was used to protect access to backend microservices hosted in the Kubernetes cluster.
 
 
 ## Azure Form Recognizer
 
-Aaa
+Azure Form Recognizer is a part of Azure Applied AI Services that enables building automated data processing software using machine learning technology. With this service we can Identify and extract text, key/value pairs, selection marks, tables, and structure from the scanned documents. In the Smart Accounting solution it was used to scan invoices and extract data so it can be stored in the Azure Cosmos DB.
 
 
 ## Azure SignalR Service
 
-Aaa
+Azure SignalR Service simplifies the process of adding real-time web functionality to applications over HTTP. As a result, clients are updated without the need to poll the server, or submit new HTTP requests for updates. In the Smart Accounting it is used to send real-time notifications to Smart Accounting web application once invoice file is processed successfully.
 
 
 ## Azure Service Bus
 
-Aaa
+Azure Service Bus service is a cloud messaging service. With Azure Service Bus we can build reliable and elastic cloud apps with messaging. In the Smart Accounting solution, Azure Service Bus topics and subscriptions were used to exchange information about events between microservices. Using Azure Service Bus enables building loosely-coupled microservices.
 
 
 ## Azure Key Vault
 
-Aaa
+Security is a very important aspect of every project. Secrets and credentials should be stored in the secure store. This is why Azure Key Vault is used in the Smart Accounting solution. Parameters like connection string to the database or storage key are stored in the Azure Key Vault instance.
 
 
 ## Azure Application Insights
 
-Aaa
+Tracking issues in cloud solutions can be challenging. Collecting logs and detecting bugs can be hard. This is why it is good to use an Application Performance Management service like Azure Application Insights. With this Azure cloud service, we can log all events and errors that occure in our solution. Azure Application Insights provides SDKs in many languages (like C# oraz Java) so we can easily integrate them with our application. All logs are then available in the Azure portal, where rich dashboards are displayed with collected log data.
 
 
 
 ## Azure Monitor
 
-Aaa
+Azure Monitor delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from cloud and on-premises environments. In the Smart Accounting solution, Azure Monitor is used to monitor Kubernetes cluster performance, and as mentioned above, Application Insights service (which is the part of Azure Monitor) is integrated with microservices (using .NET C# SDK).
 
 
 # Backend microservices - project structure
@@ -238,14 +239,16 @@ I encourage you to read more [how Visual Studio builds containerized apps](https
 
 Each backend service is deployed using Kubernetes manifests files. These files can be found in the [*kubernetes*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/tree/main/src/smart-accounting-backend-services/kubernetes) folder.
 
-We will dicuss these files later in the article.
-
-
 
 
 # Blazor web application - project structure
 
-AAA
+In this section I would like to discuss Blazor Web Application project structure in the Visual Studio.
+You can find the source code in the [*smart-accounting-web-app*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/tree/main/src/smart-accounting-web-app) folder.
+
+<p align="center">
+<img src="/images/devisland/article76/assets/SmartAccounting4.PNG?raw=true" alt="Image not found"/>
+</p>
 
 
 # Continuous Integration and Deployment in the Azure DevOps
