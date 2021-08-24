@@ -261,36 +261,27 @@ In the *ApiService* base class there are two methods:
 
 To receive real-time notifications, there is [*SignalRCommunicationService*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Application/Infrastructure/SignalRCommunicationService.cs) class implemented. At the moment of writing this article there is an issue with authorization - once I solve it out I will publish required changes.
 
-Users have to register and authenticate before they can access application's functionalities. In the [*Startup.cs*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Startup.cs) class, in the [*ConfigureServices*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Startup.cs#L26) method there is code responsible for handling authorization:
-
-```csharp
-            services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAdB2C"))
-                .EnableTokenAcquisitionToCallDownstreamApi()
-                .AddInMemoryTokenCaches();
-            services.AddControllersWithViews()
-                .AddMicrosoftIdentityUI();
-
-            services.AddRazorPages();
-            services.AddServerSideBlazor()
-                .AddMicrosoftIdentityConsentHandler();
-
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("AuthenticatedUserAccess", configurePolicy =>
-                {
-                    configurePolicy.AddRequirements(new ClaimRequirement("User.Access"));
-                });
-            });
-            services.AddSingleton<IAuthorizationHandler, ClaimAuthorizationHandler>();
-```
+Users have to register and authenticate before they can access application's functionalities. In the [*Startup.cs*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Startup.cs) class, in the [*ConfigureServices*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Startup.cs#L26) method there is code responsible for handling authorization.
 
 
 # Continuous Integration and Deployment in the Azure DevOps
 
-AAA
+There are pipelines created in the Azure DevOps for backend microservices and web application.
+
+## Smart Accounting Web App
+
+In the [*azure-pipelines*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/tree/main/src/smart-accounting-web-app/azure-pipelines) folder there are three YAML files:
+
+* azure-pipelines-build-template.yml - this file contains steps responsible for building package with Blazor web application
+* azure-pipelines-deployment-template.yml - this file contains steps responsible for publishing Blazor web application package to Azure Web App
+* azure-pipelines.yml - this file contains stages with referenced template files mentioned above
 
 
-# Summary
+## Smart Accounting microservices
 
-Aaa
+Process of publishing microservices to Azure Kubernetes Cluster is the following:
+
+1. Docker image is created for each backend microservice using Dockerfile
+2. Docker images are pushed to the Azure Container Registry
+3. Once all images are pushed to the Azure Container Registry, there is deployment triggered to start containers in the Kubernetes cluster
+4. Once all microservices are pushed, Ingress is updated to make it possible to communicate with microservices
