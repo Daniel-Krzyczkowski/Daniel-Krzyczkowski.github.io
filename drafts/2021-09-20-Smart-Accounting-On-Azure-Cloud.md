@@ -250,6 +250,41 @@ You can find the source code in the [*smart-accounting-web-app*](https://github.
 <img src="/images/devisland/article76/assets/SmartAccounting4.PNG?raw=true" alt="Image not found"/>
 </p>
 
+## Communication with microservices
+
+Communication with microservices is implemented in the the [*FileProcessorApiService*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Application/Infrastructure/FileProcessorApiService.cs), and [*ProcessedDocumentApiService*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Application/Infrastructure/ProcessedDocumentApiService.cs) classes which derives from the abstract class called [*ApiService*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Application/Infrastructure/ApiService.cs).
+
+In the *ApiService* base class there are two methods:
+
+* GetAndAddApiAccessTokenToAuthorizationHeaderAsync - method responsible for adding access token to the authorization HTTP header
+* GetAndAddApiSubscriptionKeyHeaderAsync - method responsible for adding Azure API Management subscription key to the HTTP request
+
+To receive real-time notifications, there is [*SignalRCommunicationService*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Application/Infrastructure/SignalRCommunicationService.cs) class implemented. At the moment of writing this article there is an issue with authorization - once I solve it out I will publish required changes.
+
+Users have to register and authenticate before they can access application's functionalities. In the [*Startup.cs*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Startup.cs) class, in the [*ConfigureServices*](https://github.com/Daniel-Krzyczkowski/Smart-Accounting/blob/main/src/smart-accounting-web-app/SmartAccounting.WebPortal/Startup.cs#L26) method there is code responsible for handling authorization:
+
+```csharp
+            services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+                .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAdB2C"))
+                .EnableTokenAcquisitionToCallDownstreamApi()
+                .AddInMemoryTokenCaches();
+            services.AddControllersWithViews()
+                .AddMicrosoftIdentityUI();
+
+            services.AddRazorPages();
+            services.AddServerSideBlazor()
+                .AddMicrosoftIdentityConsentHandler();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AuthenticatedUserAccess", configurePolicy =>
+                {
+                    configurePolicy.AddRequirements(new ClaimRequirement("User.Access"));
+                });
+            });
+            services.AddSingleton<IAuthorizationHandler, ClaimAuthorizationHandler>();
+```
+
 
 # Continuous Integration and Deployment in the Azure DevOps
 
