@@ -32,7 +32,7 @@ During the creation of the new Azure Cosmos DB account, we can enable *Geo-Redun
 When we select the primary region where our Azure Cosmos DB should be deployed, and enable *Geo-Redundancy* option, there will be another paired region added automatically during creation. Let me put an example. If I create my account with the West Europe region, Azure will automatically assign second paired region which is North Europe in this case:
 
 <p align="center">
-<img src="/images/devisland/article76/assets/CosmosDbGlobalDistribution4.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article76/assets/CosmosDbGlobalDistribution4.png?raw=true" alt="Image not found"/>
 </p>
 
 *Multi-region Writes* option enabled will mark above read regions as write regions too.
