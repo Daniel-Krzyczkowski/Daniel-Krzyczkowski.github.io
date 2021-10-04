@@ -1,6 +1,6 @@
 ---
 title: "Improve security with Azure Front Door and Azure Web Apps access restrictions"
-excerpt: "This article presents how to use Azure Fron Door with WAF and Azure Web App access restrictions"
+excerpt: "This article presents how to use Azure Front Door with WAF and Azure Web App access restrictions"
 header:
   image: /images/devisland/article77/assets/AzureFrontDoorWihWaf1.png
 ---
