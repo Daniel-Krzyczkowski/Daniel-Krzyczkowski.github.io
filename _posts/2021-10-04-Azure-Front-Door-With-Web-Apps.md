@@ -164,25 +164,25 @@ Now we can also decide how our backend application (hosted on another Azure Web 
 In this case, we can set IP restrictions. We will enable calling our backend Azure Web App only from the outbound IP addresses assigned to the Azure Web App which hosts our front-end application. Still, in the *Networking* tab, we can copy *Outbound addresses*:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf18.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf18.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Then we have to open *Networking* tab of our Azure Web App which hosts the backend application. Then, we have to add rules for all the copied IP addresses from above:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf19.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf19.PNG?raw=true" alt="Image not found"/>
 </p>
 
 This is the final list of IP addresses used in my solution:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf20.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf20.PNG?raw=true" alt="Image not found"/>
 </p>
 
 In this case, my backend application cannot be accessed directly:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf21.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf21.PNG?raw=true" alt="Image not found"/>
 </p>
 
 When there are one or more entries, an implicit deny all exists at the end of the list.
@@ -208,43 +208,43 @@ In our scenario, we will use a collection of Azure-managed pre-configured set of
 We have to first create an Azure Web Application Firewall policy. We will do it and configure it in the Azure portal:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf22.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf22.PNG?raw=true" alt="Image not found"/>
 </p>
 
 First, we have to indicate the resource type to protect with the use of a WAF policy. In our case, this is Azure Front Door. Policy mode should be set to *Prevention* because we want to be sure that WAF takes the specified action if a request matches a rule. The name of the rule in my case is *wafPolicyForFrontDoor*:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf23.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf23.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Then, we have to select the rules set. This ruleset protects our web application from common threats defined in the top-ten Open Web Application Security Project (OWASP) categories:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf24.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf24.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Next, we can customize the response status code sent by WAF when a request is blocked. In this case, let's leave it as 403 forbidden:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf25.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf25.PNG?raw=true" alt="Image not found"/>
 </p>
 
 We can also add our custom rules. Once a rule is matched, the corresponding action defined in the rule is applied to the request. In this scenario I did not specify any custom rules:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf26.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf26.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Next, we have to associate WAF policy with our current Azure Front Door instance by selecting front end host:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf27.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf27.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Once we do it, we can create a new WAF policy by clicking *Create* button. After few minutes we should see that WAF policy was successfully integrated with our Front Door instance:
 
 <p align="center">
-<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf28.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article77/assets/AzureFrontDoorWihWaf28.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Now if anyone wants to use our application, all requests must be sent through the Azure Front Door front end interface.
