@@ -18,6 +18,10 @@ To demonstrate how to implement the above scenario, we are going to use two appl
 * **Azure Function App** - this one will obtain an access token from the Azure AD B2C using client credentials flow
 * **ASP .NET Core Web API** - this one will be secured by Azure AD B2C and provide access to endpoint only for the requests with access tokens added in the authorization header
 
+<p align="center">
+<img src="/images/devisland/article78/assets/AdB2cClientCredentialsFlow17.png?raw=true" alt="Image not found"/>
+</p>
+
 
 **IMPORTANT**
 
@@ -317,6 +321,10 @@ Now let's see how to secure API controller with the policy we created above:
 ```
 
 From this point, if we try to call *Get* method without the access token, API will return 403 status code forbidden. If we try to use the access token without the *access:test-api* role, the result will be the same.
+
+<p align="center">
+<img src="/images/devisland/article78/assets/AdB2cClientCredentialsFlow16.PNG?raw=true" alt="Image not found"/>
+</p>
 
 
 # Summary
