@@ -19,7 +19,7 @@ The main challenge is to eliminate storing any credentials/secrets in the source
 
 ## Solution
 
-In this example, we will use ASP .NET Core Web API application template. You can find the sample on my GitHub [here](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/master/src/azure-key-vault-sdk-asp-net-core-template).
+In this example, we will use ASP .NET Core Web API application template. You can find the sample on my GitHub [here](https://github.com/Daniel-Krzyczkowski/AzureDeveloperTemplates/tree/b8d8600d64ad01b0ec0800c5bd1f0581414bc047/src/azure-key-vault-sdk-asp-net-core-template).
 
 We will use two Azure SDK libraries there:
 
