@@ -20,3 +20,9 @@ The topics you will find in this video include:
 5. We will talk bout DevOps practices and automation
 6. We will discover how to monitor identity platform with Azure Sentinel to make it more secure
 7. We will see Verifiable Credentials in action in the context of modern, decentralized identity approach
+
+## Solution architecture diagram
+
+<p align="center">
+<img src="/images/devisland/article85/assets/architecture.jpg?raw=true" alt="Modern Identity Platform powered by Azure cloud (Azure AD B2C/CIAM)"/>
+</p>
