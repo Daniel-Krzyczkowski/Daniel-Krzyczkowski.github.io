@@ -43,35 +43,35 @@ Below I provided some screenshots to show the end result.
 ### Azure DevOps pipeline
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-03.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-03.PNG?raw=true" alt="Image not found"/>
 </p>
 
 ### Scanning result
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-04.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-04.PNG?raw=true" alt="Image not found"/>
 </p>
 
 ### Microsoft Sentinel dashboard
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-05.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-05.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-06.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-06.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-07.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-07.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-08.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-08.PNG?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-11.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-11.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -343,13 +343,13 @@ Once logs are sent, I want to break the pipeline execution if there are HIGH sev
 Here is the structure of stages, jobs, and tasks in the Azure DevOps for this process:
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-09.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-09.PNG?raw=true" alt="Image not found"/>
 </p>
 
 I also created dedicated variable group to keep all required variables:
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-10.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-10.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -373,7 +373,7 @@ InfrastructureSecurityScan_CL
 ```
 
 <p align="center">
-<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-11.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article86/assets/azure-hints-01-devsecops-for-infra-11.PNG?raw=true" alt="Image not found"/>
 </p>
 
 # Scanning infrastructure code on local machine
