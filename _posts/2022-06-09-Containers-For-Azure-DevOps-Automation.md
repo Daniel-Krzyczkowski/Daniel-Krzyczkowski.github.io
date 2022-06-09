@@ -248,7 +248,7 @@ resource containerApp 'Microsoft.App/containerApps@2022-03-01' = {
 Let's focus on the custom scaling rule with KEDA:
 
 
- ```bicep
+ ```json
 resource containerApp 'Microsoft.App/containerApps@2022-03-01' = {
   name: contianerAppName
 ...
