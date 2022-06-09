@@ -384,7 +384,7 @@ In the Azure cloud, we can utilize the Azure Container Registry service to store
 * 100 GB storage space for our images
 * $0.667 cost per day
 
-To summarize, the estimated cost will be around $20:
+To summarize, the estimated monthly cost will be around $20:
 
 <p align="center">
 <img src="/images/devisland/article88/assets/azure-hints-03-containers-for-azure-devops-automation-14.PNG?raw=true" alt="Image not found"/>
