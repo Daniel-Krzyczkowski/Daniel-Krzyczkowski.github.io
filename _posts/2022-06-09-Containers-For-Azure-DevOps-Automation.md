@@ -168,7 +168,7 @@ Why do we talk about KEDA and how it is related to Azure DevOps Self-Hosted Agen
 
 Below code presents Azure Container App definition using Azure Bicep with enabled KEDA auto-scaling when there are more queued pipelines in Azure DevOps:
 
- ```bicep
+ ```json
 resource containerApp 'Microsoft.App/containerApps@2022-03-01' = {
   name: contianerAppName
   tags: {
