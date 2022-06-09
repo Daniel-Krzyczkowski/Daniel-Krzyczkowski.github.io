@@ -1,6 +1,6 @@
 ---
 title: "Azure Hints Series - Containers for Azure DevOps Automation"
-excerpt: "This article presents how to setup Azure API Management with custom domain behind Azure Front door"
+excerpt: "This article presents how to utilize container services in Azure to run Azure DevOps Agents"
 header:
   image: /images/devisland/article88/assets/azure-hints-03-containers-for-azure-devops-automation.png
 ---
