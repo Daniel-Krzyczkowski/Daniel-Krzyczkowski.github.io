@@ -44,9 +44,9 @@ Attackers might exploit weaknesses in the development process (attackers might f
 
 To summarize, when we talk about DevSecOps, these three parts should be kept in mind:
 
-1. Dev - Application development aligned with business and user needs, which are often rapidly evolving.
-2. Sec - Application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses
-3. Ops - Application must be reliable and perform efficiently
+1. **Dev** - Application development aligned with business and user needs, which are often rapidly evolving.
+2. **Sec** - Application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses
+3. **Ops** - Application must be reliable and perform efficiently
 
 
 
@@ -151,7 +151,7 @@ This is one of the recommendations from the generated report:
 In this article, I explained what DevSecOps is and what good practices should be used when building Azure cloud solutions. This topic is huge, and obviously, I did not touch every aspect of DevSecOps on Azure but I hope that this introduction article helped you understand some concepts. Below I present what will be included in the next articles as I planned a series of articles about DevSecOps on Azure.
 
 <p align="center">
-<img src="/images/devisland/article89/assets/devsecopsazure-intro-10.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article89/assets/devsecopsazure-intro-10.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
