@@ -48,11 +48,72 @@ In this article I would like to present how to utilize Snyk extension for Visual
 
 # Secure Cloud Development Environments
 
-## Setup secure dev environment with GitHub Codespaces
+We can do our best to keep our local development machine secure however still there are some threats around. Security is one thing but also we can talk about power and configuration here. When working locally, each person in the team can have different type of cumputer, with different power. What is more - each developer can have own development environment setup. This can be problematic, and time consuming, especially when new person joins development team. Making sure that all required tools and plugins are correctly installed and configured is time consuming. This is why Cloud Development Environments can be really helpful and they can help improve security aspect of local development. Of course first thing that comes to mind is virtual machine, and remote access. However please remember that it can be challenging to maintain it, and provide proper (and secure access to all team members). This is why in this article I would like to talk about two helpful tools which can help keep development environments more secure - GitHub Codespaces, and Microsoft Dev Box.
 
-Aaa
+## Secure dev environment with GitHub Codespaces
 
-## Setup secure dev environment with Microsoft Dev Box
+GitHub Codespaces provides cloud-powered development environments, which can be pre-configured and enabled for developers. With Codespaces we do not have to worry about setup of our local development environment. We can customize our project for GitHub Codespaces by committing configuration files to the repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project. Just to clarify - a codespace is a development environment that's hosted in the cloud.
+
+It is worth to mention that GitHub Codespaces are powered by Microsoft Azure cloud infrastructure.
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev04.png?raw=true" alt="Image not found"/>
+</p>
+
+As a developer we have access to editor which is Visual Studio Code. We can either use VS Code in the browser or use desktop version with [GitHub Codespaces plugin](https://code.visualstudio.com/docs/remote/codespaces) installed.
+
+I recommend checking [official docuemntation](https://docs.github.com/en/codespaces/getting-started/quickstart) to read more. We can manage Codespaces for our organization. We can decide for which repositories Codespaces are available, restrict machine types, or set retention period.
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev06.PNG?raw=true" alt="Image not found"/>
+</p>
+
+Once we launch Codespaces, we have exactly the same experience as in the standard Visual Studio Code:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev05.PNG?raw=true" alt="Image not found"/>
+</p>
+
+It is worht to mention that when we work in a Codespaces, the environment is created using a development container, or dev container, hosted on a virtual machine. These are Docker containers that are specifically configured to provide a full-featured development environment. We can configure the dev container for a repository so that codespaces created for that repository give us a tailored development environment, complete with all the tools and runtimes we need to work on a specific project. The configuration files for a dev container are contained in a .devcontainer directory in our source code repository on GitHub.
+
+When we create new Codespaces, we can decide which branch, region, and machine size we want to use:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev07.PNG?raw=true" alt="Image not found"/>
+</p>
+
+Then cloud development environment is configured for us:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev08.PNG?raw=true" alt="Image not found"/>
+</p>
+
+With command palete we can select container configuration definition:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev09.PNG?raw=true" alt="Image not found"/>
+</p>
+
+
+We can also specify additional features that should be installed, like Azure CLI, or PowerShell. Once we do it, .devcontainer.json file lands in our repository together with DockerFile:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev10.PNG?raw=true" alt="Image not found"/>
+</p>
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev11.PNG?raw=true" alt="Image not found"/>
+</p>
+
+We can also launch VS Code locally also but powered by Codespaces. If we want to finish development, we can stop our Codespace:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev12.PNG?raw=true" alt="Image not found"/>
+</p>
+
+This is just a short overview of course. I encourage you to read more about Codespaces features in the [official ducumentation](https://docs.github.com/en/codespaces/overview).
+
+## Secure dev environment with Microsoft Dev Box
 
 Aaa
 
@@ -60,11 +121,6 @@ Aaa
 # Summary
 
 Aaa
-
-<p align="center">
-<img src="/images/devisland/article89/assets/devsecopsazure-intro-10.PNG?raw=true" alt="Image not found"/>
-</p>
-
 
 
 *If you like my articles, and find them helpful, please by me a coffee:*
