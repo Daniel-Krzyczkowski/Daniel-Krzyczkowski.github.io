@@ -45,6 +45,10 @@ Another good DevSecOps practice is to utilize security plugins for Integrated De
 
 In this article I would like to present how to utilize Snyk extension for Visual Studio Code to enable code scanning each time when new changes in the code are saved. Of course there are many more plugins and tools that can be used, however I found [Snyk](https://snyk.io/) the most comprechensive tool (it provides code scanning, license scanning, open source packages scanning, infrastructure scanning, containers scanning, and more).
 
+### Enchance code security on local machine with Snyk
+
+Aaaa
+
 
 # Secure Cloud Development Environments
 
@@ -115,8 +119,63 @@ This is just a short overview of course. I encourage you to read more about Code
 
 ## Secure dev environment with Microsoft Dev Box
 
-Aaa
+Microsoft Dev Box (in preview at the moment of writing this article) is a new cloud service that provides developers with secure, ready-to-code developer workstations. Development teams preconfigure Dev Boxes for specific projects and tasks, enabling devs to get started quickly with an environment that’s ready to build and run their app in minutes.
 
+Dev Box can be created directly from the Azure portal. Once it is ready, we can configure it and adjust to our needs:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev13.PNG?raw=true" alt="Image not found"/>
+</p>
+
+### Can we compare Dev Box to GitHub Actions?
+
+There can be question asked - is DevBox the same as GitHub Codespaces? The anser is: not exactly. They are similar in their functionalities and targets but dirrenet when it comes to scope. Let me explain.
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev14.png?raw=true" alt="Image not found"/>
+</p>
+
+As we can see in the picture above, developer teams create and maintain dev box images with all the tools and dependencies their developers need to build and run their applications. Developer leads can instantly deploy the right size dev box for specific roles in a team anywhere in the world. By deploying dev boxes in the closest Azure region and connecting via the Azure Global Network dev teams ensure a smooth and responsive experience with gigabit connection speeds for developers around the world. This is similar to what GitHub Codespaces offers. However, Dev Box is focused on the organization needs, and enterprise environments.
+
+Using Azure Active Directory groups, IT admins can grant access to sensitive source code and customer data for each project. With role-based permissions and custom network configurations, developer leads can give vendors limited access to the resources they need to contribute to the project—eliminating the need to ship hardware to short-term contractors and helping keep development more secure. Microsoft Dev Box builds on Windows 365, making it easy for IT administrators to manage dev boxes together with physical devices and Cloud PCs through Microsoft Intune and Microsoft Endpoint Manager. IT administrators can set conditional access policies to ensure users only access dev boxes from compliant devices while keeping dev boxes up to date using expedited quality updates to deploy zero-day patches across the organization and quickly isolate compromised devices.
+
+### Sample configuration
+
+Once we created Dev Box instance in the Azure portal, we can start configuring our development environments. Here is example of my *tmf-dev-box-definition-01* definition where I was able to inditace the target operating system for the Dev Box:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev15.png?raw=true" alt="Image not found"/>
+</p>
+
+What is really helpful when it comes to Dev Box is the fact that we can configure networking. With this feature we can connect our Dev Box to existing Azure Virtual Network, and securely develop, test, and deploy our solutions leveraging Microsoft backbone network infrastructure in Azure. This is another differentiator between GitHub Codespaces, and Microsoft Dev Box.
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev16.png?raw=true" alt="Image not found"/>
+</p>
+
+Once we configure networking (if needed obviously), we can setup new project. Projects enable us to manage team level settings and empower development teams to self-serve Dev Boxes:
+
+<p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev17.png?raw=true" alt="Image not found"/>
+</p>
+
+ After we create the Dev Box, and configure it accordingly to our needs, we connect to it with a remote desktop (RD) session through a browser, or through a remote desktop app. It is great that we can use RBAC to control and grant access to Dev Box:
+
+ <p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev18.png?raw=true" alt="Image not found"/>
+</p>
+
+As a developer, we can now sign in to [Dev Box portal](https://devbox.microsoft.com/), and create new development station for us:
+
+ <p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev19.png?raw=true" alt="Image not found"/>
+</p>
+
+ <p align="center">
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev20.png?raw=true" alt="Image not found"/>
+</p>
+
+This is just a short overview of course. I encourage you to read more about Microsoft Dev Box features in the [official ducumentation](https://docs.microsoft.com/en-us/azure/dev-box/overview-what-is-microsoft-dev-box).
 
 # Summary
 
