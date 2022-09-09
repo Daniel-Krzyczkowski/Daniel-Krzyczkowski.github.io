@@ -14,7 +14,7 @@ header:
 In my [previous article](https://techmindfactory.com/DevSecOpsOnAzure-Introduction/) I made an introduction to DevSecOps practices and explained the concept. In this next article, I would like to focus on development environment security. Many of us focus on security in the CI/CD pipeline implementation, or Azure infrastructure. This is correct however vulnerabilities extend to the integrations which developers use in their local development environments as well. This is why it is important to utilize some secure DevOps practices when working with the code locally.
 
 <p align="center">
-<img src="/images/devisland/article90/assets/ddevsecopsazure-local-dev02.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev02.png?raw=true" alt="Image not found"/>
 </p>
 
 As we can see above, there are many threats related to the development environment. Let's talk about how to incorporate security at an early stage on the local development machine.
@@ -29,7 +29,7 @@ There are many ways to avoid storing credentials in the code depending on what k
 However, it is very important to mention that Secret Manager doesn't encrypt the stored secrets and shouldn't be treated as a trusted store. It's for development purposes only. The keys and values are stored in a JSON configuration file in the user profile directory. This is why when the development machine or process is compromised, environment variables can be accessed by untrusted parties.
 
 <p align="center">
-<img src="/images/devisland/article90/assets/ddevsecopsazure-local-dev03.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article90/assets/devsecopsazure-local-dev03.png?raw=true" alt="Image not found"/>
 </p>
 
 As we can see, with the approach mentioned above, we can eliminate the chance to commit any credentials to the source code repository but there is potential still for security issues when someone will get access to the development machine. This is why cloud development environments are becoming more and more popular. They provide centralized control and templates in a cloud environment to securely configure, manage and grant access to developers. We are going to talk about Secure Cloud Development Environments later in this article.
