@@ -1,5 +1,5 @@
 ---
-title: "DevSecOps on Azure - part2: Incorporate security at an early stage on local dev machine"
+title: "DevSecOps on Azure - part2: Incorporate security at an early stage"
 excerpt: "This article presents approaches to secure development environment"
 header:
   image: /images/devisland/article90/assets/devsecopsazure-local-dev01.png
