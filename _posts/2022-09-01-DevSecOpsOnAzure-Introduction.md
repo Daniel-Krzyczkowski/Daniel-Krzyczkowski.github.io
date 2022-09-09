@@ -156,6 +156,6 @@ In this article, I explained what DevSecOps is and what good practices should be
 
 
 
-*If you like my articles, and find them helpful, please by me a coffee:*
+*If you like my articles, and find them helpful, please buy me a coffee:*
 
 <a href="https://www.buymeacoffee.com/techmindfactory" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
