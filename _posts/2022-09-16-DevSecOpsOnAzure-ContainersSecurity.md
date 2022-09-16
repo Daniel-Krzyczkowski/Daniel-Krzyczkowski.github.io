@@ -196,7 +196,9 @@ With all the above we definitely can improve security around Docker containers t
 Defender for Containers supports the three core aspects of container security:
 
 **1. Environment hardening** - Defender for Containers protects Kubernetes clusters whether they're running on Azure Kubernetes Service, Kubernetes on-premises/IaaS, or Amazon EKS. Defender for Containers continuously assesses clusters to provide visibility into misconfigurations and guidelines to help mitigate identified threats.
+
 **2. Vulnerability assessment** - Vulnerability assessment and management tools for images stored in ACR registries and running in Azure Kubernetes Service.
+
 **3. Run-time threat protection for nodes and clusters** - Threat protection for clusters and Linux nodes generates security alerts for suspicious activities.
 
 I encourage you to read more in the [official documentation](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction).
