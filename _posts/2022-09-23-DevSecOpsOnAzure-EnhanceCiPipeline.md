@@ -395,7 +395,7 @@ stages:
 We have to remember that we have to first link the variable group from the pipeline settings:
 
 <p align="center">
-<img src="/images/devisland/article92/assets/devsecopsazure-enhance-ci-security-12.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article92/assets/devsecopsazure-enhance-ci-security-12.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
