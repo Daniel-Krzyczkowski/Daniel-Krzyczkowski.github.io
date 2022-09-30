@@ -2,11 +2,11 @@
 title: "DevSecOps on Azure - part5: Keep Azure infrastructure code secure"
 excerpt: "This article presents practices to keep Azure infrastructure code secure"
 header:
-  image: /images/devisland/article93/assets/devsecopsazure-enhance-ci-security-01.png
+  image: /images/devisland/article93/assets/devsecopsazure-secure-infra-01.png
 ---
 
 <p align="center">
-<img src="/images/devisland/article93/assets/devsecopsazure-enhance-ci-security-01.png?raw=true" alt="DevSecOps on Azure - part5"/>
+<img src="/images/devisland/article93/assets/devsecopsazure-secure-infra-01.png?raw=true" alt="DevSecOps on Azure - part5"/>
 </p>
 
 # Introduction
@@ -151,7 +151,7 @@ Once we check the report, we can apply improvements so for the above recommendat
 The below diagram explains the process implemented using Azure DevOps pipelines:
 
 <p align="center">
-<img src="/images/devisland/article93/assets/devsecopsazure-secure-infra-06.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article93/assets/devsecopsazure-secure-infra-06.png?raw=true" alt="Image not found"/>
 </p>
 
 Let me explain the steps:
