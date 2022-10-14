@@ -265,7 +265,7 @@ Please note that I do not grant access to this connection from any Azure DevOps 
 Now in the *Security* settings, I can set access to this specific service connection from specific pipelines:
 
 <p align="center">
-<img src="/images/devisland/article95/assets/devsecopsazure-control-azure-with-ad-rbac-25.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article95/assets/devsecopsazure-control-azure-with-ad-rbac-25.png?raw=true" alt="Image not found"/>
 </p>
 
 <p align="center">
