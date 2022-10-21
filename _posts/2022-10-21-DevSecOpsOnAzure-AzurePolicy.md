@@ -69,7 +69,7 @@ Azure arranges Management Groups in a single hierarchy. This hierarchy can be de
 # Enforce rules on Azure resources
 
 <p align="center">
-<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-04.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-04.png?raw=true" alt="Image not found"/>
 </p>
 
 Now we understand the management of levels and hierarchy of Azure, it is time to talk about how to organize Azure resources, and enforce organizational standards like naming conventions or Azure regions where resources can be created. If we have only a few subscriptions, it is quite easy to manage them independently. However, managing compliance at scale requires a more efficient approach. **Azure Policy** helps to enforce organizational standards and to assess compliance at scale. Provides governance and resource consistency with regulatory compliance, security, cost, and management. We can define multiple policies to enforce different rules over Azure resource configurations so the configurations stay compliant with corporate standards. We can apply the policies to Azure Resources by using **Management Groups**.
@@ -564,7 +564,7 @@ We can also utilize Azure DevOps or GitHub to deploy Azure Policies and Initiati
 In the Azure Portal we can verify compliance after applying specific policies:
 
 <p align="center">
-<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-21.png?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-21.PNG?raw=true" alt="Image not found"/>
 </p>
 
 
@@ -575,7 +575,7 @@ Azure Policies can be stored in the source code repository, so they can be teste
 Here I would like to present a simple test written with Pester to validate Azure Policy. This is the structure of the files on my local machine:
 
 <p align="center">
-<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-14.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-16.PNG?raw=true" alt="Image not found"/>
 </p>
 
 Under *Bicep* directory I have *main.bicep* file together with parameters file:
@@ -779,7 +779,7 @@ Here is the error message displayed in the logs:
 There is also one more approach which was recently described in detail on [Tech Community Blog here](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/azure-enterprise-policy-as-code-a-new-approach/ba-p/3607843). This approach utilizes pure JSON policies and Initiatives together with PowerShell scripts. It is also worth checking!
 
 <p align="center">
-<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-16.PNG?raw=true" alt="Image not found"/>
+<img src="/images/devisland/article96/assets/devsecopsazure-compliance-with-azure-policy-15.png?raw=true" alt="Image not found"/>
 </p>
 
 # Summary
