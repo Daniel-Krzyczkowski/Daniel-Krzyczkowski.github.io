@@ -23,6 +23,14 @@ The topics you will find in this video include:
 
 ## Solution architecture diagram
 
+### Version with Azure Functions:
+
 <p align="center">
 <img src="/images/devisland/article85/assets/architecture.jpg?raw=true" alt="Modern Identity Platform powered by Azure cloud (Azure AD B2C/CIAM)"/>
+</p>
+
+### Version with Azure Container Apps:
+
+<p align="center">
+<img src="/images/devisland/article85/assets/architecture-02.jpg?raw=true" alt="Modern Identity Platform powered by Azure cloud (Azure AD B2C/CIAM)"/>
 </p>
