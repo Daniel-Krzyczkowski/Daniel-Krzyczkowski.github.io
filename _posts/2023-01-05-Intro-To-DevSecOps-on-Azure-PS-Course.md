@@ -1,6 +1,6 @@
 ---
 title: "Introduction to DevSecOps on Azure"
-excerpt: "This is special article about my Pluralsight course."
+excerpt: "This is special article about my Pluralsight course"
 header:
   image: /images/devisland/article99/assets/Intro-To-DevSevOps-Course.PNG
 ---
