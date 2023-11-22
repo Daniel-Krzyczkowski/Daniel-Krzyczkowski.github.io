@@ -1,0 +1,48 @@
+{
+  "id": "did:web:techmindfactory.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:techmindfactory.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://techmindfactory.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/28585c0c-c5a5-42f8-aba3-d108b91b0c7b"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#6559ae46947a4239823fa1a2f5ee32fevcSigningKey-f893e",
+      "controller": "did:web:techmindfactory.com",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "Ob-PTnrvnk632p3x4xtVAqObGw7n86CS6JZplAY7ugw",
+        "y": "oR2qAEmCsVJ1aBYkUJOv3nRDHBh_oE85dwIb09QrC8Q"
+      }
+    }
+  ],
+  "authentication": [
+    "#6559ae46947a4239823fa1a2f5ee32fevcSigningKey-f893e"
+  ],
+  "assertionMethod": [
+    "#6559ae46947a4239823fa1a2f5ee32fevcSigningKey-f893e"
+  ]
+}
